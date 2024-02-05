@@ -3,6 +3,7 @@ import styled from "styled-components";
 import "../style/header.css";
 import { Link } from "react-router-dom";
 
+// Header BTN 영역(Button 역할)
 const NavigtionSpan = styled.span`
   display: inline-flex;
   flex-wrap: wrap;
@@ -11,32 +12,34 @@ const NavigtionSpan = styled.span`
   height: 70px;
   border: 1px solid black;
 
+  //문자 중앙정렬
   justify-content: center;
-  align-items: center; //문자 중앙정렬
+  align-items: center;
 `;
 
 function Header() {
   return (
-    <div className="navigation">
+    <div className="header">
+      {/* Header Logo 부분 */}
       <img
         className="img_logo"
         src="https://bit.ly/3OtSJYc"
         alt="via-flight-logo"
       ></img>
 
-      <div className="Navigtion-BTN">
-        <NavigtionSpan id="ticket">
-          {" "}
-          <Link to={`/`}>항공권 조회</Link>
-        </NavigtionSpan>
+      {/* Header BTN 부분 */}
+      <div className="header-BTN">
+        <Link to={`/`}>
+          <NavigtionSpan id="ticket">항공권 조회</NavigtionSpan>
+        </Link>
 
-        <NavigtionSpan id="schedule">
-          <Link to={`/schedule`}>맞춤형 여행 일정</Link>
-        </NavigtionSpan>
+        <Link to={`/schedule`}>
+          <NavigtionSpan id="schedule">맞춤형 여행 일정</NavigtionSpan>
+        </Link>
 
-        <NavigtionSpan id="about">
-          <Link to={`/about`}>About </Link>
-        </NavigtionSpan>
+        <Link to={`/about`}>
+          <NavigtionSpan id="about">About</NavigtionSpan>
+        </Link>
       </div>
     </div>
   );

@@ -1,35 +1,34 @@
-.navigation {
-  position: relative;
+/*header 영역 구분선*/
+.header {
+  position: relative; /*BTN, img_logo 위치 조정을 위해서 사용, [기준 위치]*/
   border: 1px solid blue;
   height: 96.33px;
   background-color: white;
 }
 
+/*header 영역 LOGO 부분*/
 .img_logo {
-  /* display: inline-block; */
-  position: absolute;
-  top: 10%;
+  position: absolute; /*Logo 위치 조정*/
+  top: 0%; /*Logo 위치 수직방향 위치, [Logo의 위치]*/
   width: 120px;
-  object-fit: cover;
 
-  left: 5%;
+  left: 5%; /*좌측 배치 간격*/
 }
 
-.Navigtion-BTN {
-  position: absolute;
-  top: 10%;
-  right: 20%;
+/*header 영역 BTN 부분*/
+.header-BTN {
+  position: absolute; /*BTN 위치 조정*/
+  top: 10%; /*BTN 위치 수직방향 위치, [BTN의 위치]*/
+  right: 20%; /*우측 배치 간격*/
   background-color: white;
 }
 
-#ticket:hover {
-  background-color: orange;
+/*BTN hover시 text 색상*/
+a:hover {
+  color: white;
 }
 
-#schedule:hover {
-  background-color: orange;
-}
-
-#about:hover {
+/*BTN hover시 span 영역 색상*/
+span:hover {
   background-color: orange;
 }
