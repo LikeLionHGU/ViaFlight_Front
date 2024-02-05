@@ -1,0 +1,35 @@
+.navigation {
+  position: relative;
+  border: 1px solid blue;
+  height: 96.33px;
+  background-color: white;
+}
+
+.img_logo {
+  /* display: inline-block; */
+  position: absolute;
+  top: 10%;
+  width: 120px;
+  object-fit: cover;
+
+  left: 5%;
+}
+
+.Navigtion-BTN {
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  background-color: white;
+}
+
+#ticket:hover {
+  background-color: orange;
+}
+
+#schedule:hover {
+  background-color: orange;
+}
+
+#about:hover {
+  background-color: orange;
+}
