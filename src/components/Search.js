@@ -1,4 +1,7 @@
 import * as React from "react";
+import styled from "styled-components";
+
+const Below = styled.div``;
 
 function Search() {
   return (
