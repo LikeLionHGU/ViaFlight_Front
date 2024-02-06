@@ -1,8 +1,11 @@
 import * as React from "react";
 import { useState } from "react";
 import styled from "styled-components";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 
 const Main = styled.div`
+  // 페이지 전체
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,9 +13,11 @@ const Main = styled.div`
   font-size: 30px;
 `;
 const MainInner = styled.div`
+  // 페이지 전체에서 70%만 사용하기 위해
   width: 70%;
 `;
 const Input = styled.input`
+  // 모든 input 태그들
   width: 300px;
   border: none;
   background-color: #d9d9d9;
@@ -20,9 +25,11 @@ const Input = styled.input`
 `;
 
 const Above = styled.div`
+  // 위쪽 부분
   height: 250px;
 `;
 const Toggle = styled.div`
+  // 현재 항공사 상태, 토글, 조회 버튼
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -30,15 +37,18 @@ const Toggle = styled.div`
   padding-bottom: 20px;
 `;
 const SameOrDifferent = styled.div`
+  // 현재 항공사 상태
   width: 200px;
 `;
 const ToggleBtns = styled.div`
+  // 버튼들
   display: flex;
   background-color: #d9d9d9;
   border-radius: 20px;
   border: 1px solid #d9d9d9;
 `;
 const SameBtn = styled.button`
+  // 같은 항공사 버튼
   width: 200px;
   border: none;
   border-radius: 20px;
@@ -46,18 +56,12 @@ const SameBtn = styled.button`
 
   font-size: 20px;
 `;
-const DiffBtn = styled.button`
-  width: 200px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-
-  font-size: 20px;
-`;
-const SearchBtn = styled(DiffBtn)``;
-const Inputinfo = styled.div``;
-const SameFlight = styled.div``;
+const DiffBtn = styled(SameBtn)``; // 다른 항공사 버튼
+const SearchBtn = styled.button``; // 조회 버튼
+const Inputinfo = styled.div``; // 정보 입력 부분
+const SameFlight = styled.div``; // 같은 항공사 버튼을 눌렀을 경우
 const SameAbove = styled.div`
+  // 항공사, 예약 번호, 출국일 input
   display: flex;
   justify-content: space-between;
   padding-bottom: 20px;
@@ -65,22 +69,25 @@ const SameAbove = styled.div`
 `;
 
 const SameBelow = styled.div`
+  // 여행자 성 input
   display: flex;
   height: 40px;
 `;
 
-const DiffFlight = styled.div``;
-const DiffAbove = styled(SameAbove)``;
-const DiffMiddle = styled(SameAbove)``;
-const DiffBelow = styled(SameBelow)``;
+const DiffFlight = styled.div``; // 다른 항공사 버튼을 눌렀을 경우
+const DiffAbove = styled(SameAbove)``; // 출발 항공사, 출발 예약 번호, 출국일 input
+const DiffMiddle = styled(SameAbove)``; // 경유지 항공사, 경유지 예약 번호, 경유지 출국일 input
+const DiffBelow = styled(SameBelow)``; // 여행자 성 input
 
 const Middle = styled.div`
+  // 중간 배너 부분
   display: flex;
   justify-content: center;
 
-  height: 500px;
+  height: 400px;
 `;
 const Sentence = styled.div`
+  // 배너 문장
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,7 +95,25 @@ const Sentence = styled.div`
   text-align: center;
 `;
 
-const Bottom = styled.div``;
+const Below = styled.div`
+  // FAQs 들
+  text-align: center;
+`;
+const BelowTitle = styled.div`
+  // FAQs 제목
+  padding-bottom: 100px;
+`;
+const BelowQnABox = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+`;
+const BelowSlide = styled.div``;
+const BelowQ = styled.div`
+  // 질문
+  padding-bottom: 50px;
+`;
+const BelowA = styled.div``; // 답변
 
 function Search() {
   const [isToggle, setIsToggle] = useState(true); // 동일한 항공사
@@ -144,9 +169,9 @@ function Search() {
                   <Input placeholder="출국일"></Input>
                 </DiffAbove>
                 <DiffMiddle>
-                  <Input placeholder="출국일(경유)"></Input>
                   <Input placeholder="경유 항공사"></Input>
                   <Input placeholder="예약 번호(경유)"></Input>
+                  <Input placeholder="출국일(경유)"></Input>
                 </DiffMiddle>
                 <DiffBelow>
                   <Input placeholder="여행자 성"></Input>
@@ -161,7 +186,17 @@ function Search() {
             <div>모든 순간이 의미있게</div>
           </Sentence>
         </Middle>
-        <Bottom></Bottom>
+        <Below>
+          <BelowTitle>자주 물어보는 질문 FAQs</BelowTitle>
+          <BelowQnABox>
+            <IoIosArrowBack />
+            <BelowSlide>
+              <BelowQ>Q. 경유지에서 짐은 어떡하나요?</BelowQ>
+              <BelowA>A. 찾아야 합니다.</BelowA>
+            </BelowSlide>
+            <IoIosArrowForward />
+          </BelowQnABox>
+        </Below>
       </MainInner>
     </Main>
   );
