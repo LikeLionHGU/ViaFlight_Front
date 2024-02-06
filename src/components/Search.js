@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
+import { useInterval } from "@uidotdev/usehooks";
 import styled from "styled-components";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
@@ -18,7 +19,7 @@ const MainInner = styled.div`
 `;
 const Input = styled.input`
   // 모든 input 태그들
-  width: 300px;
+  width: 30%;
   border: none;
   background-color: #d9d9d9;
   font-size: 20px;
@@ -108,14 +109,23 @@ const BelowQnABox = styled.div`
   justify-content: space-evenly;
   align-items: center;
 `;
-const BelowSlide = styled.div``;
+const BelowSlide = styled.div`
+  transform: "translate(-" + (selected-1) * 300 + "px, 0px)";
+`;
 const BelowQ = styled.div`
   // 질문
   padding-bottom: 50px;
 `;
 const BelowA = styled.div``; // 답변
 
+export const question = [
+  "Q. 경유지에서 짐은 어떡하나요?",
+  "Q. 경유지 공항에서 밖으로 나가볼 수 있나요?",
+];
+export const answer = ["A. 찾아야 합니다.", "A. 공항에 따라 다릅니다."];
+
 function Search() {
+  // 항공사 토글 버튼
   const [isToggle, setIsToggle] = useState(true); // 동일한 항공사
   const DiffToggle = () => {
     setIsToggle(false);
@@ -124,6 +134,26 @@ function Search() {
   const SameToggle = () => {
     setIsToggle(true);
   };
+
+  // 슬라이드
+  const [slideIndex, setSlideIndex] = useState(0);
+  const nextSlide = () => {
+    if (slideIndex < question.length - 1) {
+      setSlideIndex(slideIndex + 1);
+    } else {
+      setSlideIndex(0);
+    }
+  };
+  const prevSlide = () => {
+    if (slideIndex > 0) {
+      setSlideIndex(slideIndex - 1);
+    } else {
+      setSlideIndex(question.length - 1);
+    }
+  };
+  useInterval(() => {
+    nextSlide();
+  }, 8000);
 
   return (
     <Main>
