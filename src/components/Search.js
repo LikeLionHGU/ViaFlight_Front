@@ -156,6 +156,7 @@ function Search() {
   // 슬라이드
   const [slideIndex, setSlideIndex] = useState(0);
   const nextSlide = () => {
+    console.log(slideIndex);
     if (slideIndex < question.length - 1) {
       setSlideIndex(slideIndex + 1);
     } else {
@@ -237,14 +238,12 @@ function Search() {
         <Below>
           <BelowTitle>자주 물어보는 질문 FAQs</BelowTitle>
           <BelowQnABox>
-            <IoIosArrowBack />
+            <IoIosArrowBack onClick={prevSlide} />
             <BelowSlide>
-              {question.map((data, index) => (
-                <BelowQ>`${}`</BelowQ>
-              ))}
-              <BelowA>A. 찾아야 합니다.</BelowA>
+              <BelowQ> {question[slideIndex]}</BelowQ>
+              <BelowA>{answer[slideIndex]}</BelowA>
             </BelowSlide>
-            <IoIosArrowForward />
+            <IoIosArrowForward onClick={nextSlide} />
           </BelowQnABox>
         </Below>
       </MainInner>
