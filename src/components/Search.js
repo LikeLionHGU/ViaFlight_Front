@@ -1,9 +1,27 @@
-import * as React from "react";
-import { useState } from "react";
-import { useInterval } from "@uidotdev/usehooks";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
+
+function useInterval(callback, delay) {
+  const savedCallback = useRef();
+
+  // Remember the latest callback.
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
+
+  // Set up the interval.
+  useEffect(() => {
+    function tick() {
+      savedCallback.current();
+    }
+    if (delay !== null) {
+      let id = setInterval(tick, delay);
+      return () => clearInterval(id);
+    }
+  }, [delay]);
+}
 
 const Main = styled.div`
   // 페이지 전체
@@ -221,7 +239,9 @@ function Search() {
           <BelowQnABox>
             <IoIosArrowBack />
             <BelowSlide>
-              <BelowQ>Q. 경유지에서 짐은 어떡하나요?</BelowQ>
+              {question.map((data, index) => (
+                <BelowQ>`${}`</BelowQ>
+              ))}
               <BelowA>A. 찾아야 합니다.</BelowA>
             </BelowSlide>
             <IoIosArrowForward />
