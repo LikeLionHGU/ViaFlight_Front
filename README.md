@@ -15,6 +15,7 @@
 |   :--------:   |    :--------:    |
 |   <a href="https://github.com/HansungJang"><img src="https://github.com/LikeLionHGU/12th-frontend/blob/main/img/%EC%9E%A5%ED%95%9C%EC%84%B1.jpg?raw=true" width="300" height="300"></a>  |  <a href="https://github.com/hwan129"><img src="https://github.com/LikeLionHGU/L-wenfoto/blob/master/src/img/%EC%8B%AC%EC%84%B1%ED%99%98.jpg?raw=true" width="300" height="230"></a>    |
 
+|  |  |  |
 | --- | --- | --- |
 | type | Description | Example |
 | feat | 새로운 기능 추가, 구현 | feat : 로그인 기능 구현 |
