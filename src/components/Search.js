@@ -124,7 +124,7 @@ const BelowTitle = styled.div`
 `;
 const BelowQnABox = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 `;
 const BelowSlide = styled.div`
