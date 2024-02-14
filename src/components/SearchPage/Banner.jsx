@@ -69,7 +69,7 @@ function Banner() {
 
           {/*#2. 경유공항 도착시간 fix-> Q1.(승환) 도착시간 정보 넘겨줄 때 시간만? + MCT합산한 시간인지? */}
 
-          <input type="time" value={arrivalTime} onChange={onDTime}></input>
+          <input type="time" value={arrivalTime} onChange={onATime}></input>
 
           {/*#3. 경유공항 경유시간 구분 fix-> Q2.(동신, 승환)님께 질문(단위)*/}
 
@@ -77,7 +77,7 @@ function Banner() {
             className="Time"
             type="text"
             value={durationTime}
-            onChange={onATime}
+            onChange={onDTime}
           >
             <option>경유시간</option>
             <option value={"under 2hours"}>under 2(hours)</option>
