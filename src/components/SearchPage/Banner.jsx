@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../layout/Header"; //header import
 import styled from "styled-components";
+import "./banner.css";
 
 const Border = styled.div`
   border: 1px solid red;
@@ -40,14 +41,15 @@ function Banner() {
     <div className="banner">
       <Border className="Enter">
         <Header></Header>
+
         {/* 이미지는 background로 작업 */}
         <Border>
           Enter flight information
           <br />
           for your best trip
         </Border>
-        {/* <img src="" alt="via-flight_logo"></img> */}
-        <form>
+        <img src="" alt="via-flight_logo"></img>
+        <form className="form_style">
           {/*#1. 경유공항 이름*/}
           <input
             className="Airport"

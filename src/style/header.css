@@ -8,27 +8,46 @@
 
 /*header 영역 LOGO 부분*/
 .img_logo {
-  position: absolute; /*Logo 위치 조정*/
-  top: 0%; /*Logo 위치 수직방향 위치, [Logo의 위치]*/
-  width: 120px;
+  /*position: absolute;Logo 위치 조정*/
+  /*top: 0%; Logo 위치 수직방향 위치, [Logo의 위치]*/
+  /* left: 0%; */
 
-  left: 5%; /*좌측 배치 간격*/
+  width: 150px;
+  height: 70px;
+  overflow: hidden;
+  object-fit: scale-down;
+  /* left: 5%; 좌측 배치 간격 */
 }
 
 /*header 영역 BTN 부분*/
 .header-BTN {
   position: absolute; /*BTN 위치 조정*/
-  top: 10%; /*BTN 위치 수직방향 위치, [BTN의 위치]*/
-  right: 20%; /*우측 배치 간격*/
+  /*top: 10%; BTN 위치 수직방향 위치, [BTN의 위치]*/
+  /*right: 20%; 우측 배치 간격*/
+
+  display: flex; /*요소들 높이 정렬 요인 [style-componet로 정렬되지 않은 높이를 맞출 수 있음]*/
+  width: 100%;
+  height: 100%;
+
   background-color: white;
 }
 
 /*BTN hover시 text 색상*/
 a:hover {
-  color: white;
+  color: orange;
 }
 
 /*BTN hover시 span 영역 색상*/
 span:hover {
   background-color: orange;
+}
+
+/*header-logo부분*/
+.header_logo {
+  width: 300px;
+}
+
+/*header-location부분*/
+.header_location {
+  margin-left: 200px;
 }

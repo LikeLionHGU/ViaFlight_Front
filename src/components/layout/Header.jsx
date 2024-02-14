@@ -6,9 +6,11 @@ import { Link } from "react-router-dom";
 // Header BTN 영역(Button 역할)
 const NavigtionSpan = styled.div`
   display: inline-flex;
+  flex-direction: row;
+  space-between: 5px;
 
   width: 150px;
-  height: 70px;
+  height: 100%;
   border: 1px solid black;
 
   //문자 좌측하단 정렬
@@ -19,7 +21,16 @@ const NavigtionSpan = styled.div`
 
   .location {
     width: 200px;
-    font-size: 8px;
+    font-size: 9px;
+  }
+
+  .img_logo {
+    position: absolute; /*Logo 위치 조정*/
+    /*Logo 위치 수직방향 위치, [Logo의 위치]*/
+  }
+
+  .header_logo {
+    width: 300px;
   }
 `;
 
@@ -48,14 +59,23 @@ function Header() {
   return (
     <div className="header">
       {/* Header Logo 부분 */}
-      <img
-        className="img_logo"
-        src="https://bit.ly/3OtSJYc"
-        alt="via-flight-logo"
-      ></img>
+      {/* <img
+          className="img_logo"
+          src="https://bit.ly/3OtSJYc"
+          alt="via-flight-logo"
+        ></img> */}
 
       {/* Header BTN 부분 */}
       <div className="header-BTN">
+        {/* Header Logo 부분 */}
+        <div className="header_logo">
+          <img
+            className="img_logo"
+            src="https://bit.ly/3OtSJYc"
+            alt="via-flight-logo"
+          ></img>
+        </div>
+
         <Link to={`/`}>
           <NavigtionSpan id="ticket">내 경유지 조회</NavigtionSpan>
         </Link>
@@ -68,7 +88,7 @@ function Header() {
           <NavigtionSpan id="about">ABOUT US</NavigtionSpan>
         </Link>
 
-        <NavigtionSpan>
+        <NavigtionSpan className="header_location">
           <Location></Location>
         </NavigtionSpan>
       </div>
