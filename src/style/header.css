@@ -1,9 +1,27 @@
+@font-face {
+  font-family: "EsaManru";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
 /*header 영역 구분선*/
 .header {
   position: relative; /*BTN, img_logo 위치 조정을 위해서 사용, [기준 위치]*/
-  border: 1px solid blue;
-  height: 96.33px;
-  background-color: white;
+  border-bottom: 1px solid #ec4d27;
+  height: 80px;
+  /* background-color: white; */
+  /* background-color: transparent; 투명효과 */
+  background-color: rgba(255, 255, 255, 0.2); /*header 불투명도 주기*/
 }
 
 /*header 영역 LOGO 부분*/
@@ -11,9 +29,11 @@
   /*position: absolute;Logo 위치 조정*/
   /*top: 0%; Logo 위치 수직방향 위치, [Logo의 위치]*/
   /* left: 0%; */
+  /* border: 1px solid blue; */
 
-  width: 150px;
-  height: 70px;
+  margin-left: 67px;
+  width: 245px;
+  height: 103px;
   overflow: hidden;
   object-fit: scale-down;
   /* left: 5%; 좌측 배치 간격 */
@@ -29,7 +49,61 @@
   width: 100%;
   height: 100%;
 
-  background-color: white;
+  /* background-color: white; */
+  background-color: transparent; /*투명효과*/
+  /* color: #ec4d27; */
+}
+
+/*btn 요소별 간격 hard-coding*/
+#ticket {
+  margin-left: 360px;
+}
+.ticket_text {
+  font-family: "EsaManru";
+  font-size: 18px;
+  line-height: 20.97px;
+  margin-bottom: 18px;
+}
+
+#schedule {
+  margin-left: 187px;
+}
+.schedule_text {
+  font-family: "EsaManru";
+  font-size: 18px;
+  line-height: 20.97px;
+  margin-bottom: 18px;
+}
+
+#about {
+  margin-left: 171px;
+}
+.about_text {
+  font-family: "EsaManru";
+  font-size: 18px;
+  line-height: 20.97px;
+  margin-bottom: 18px;
+}
+
+/*location 부모요소(width조정에 사용)*/
+#header_location {
+  width: 100%;
+  margin-left: 120px;
+}
+
+.location {
+  display: flex; /*icon, text 한줄 정렬*/
+  font-family: "EsaManru";
+  font-size: 17px;
+  margin-bottom: 18px;
+}
+
+.location_icon {
+  width: 14px; /*icon, width폭에 맞춤*/
+}
+
+.location_text {
+  margin-left: 9px;
 }
 
 /*BTN hover시 text 색상*/
@@ -50,4 +124,12 @@ span:hover {
 /*header-location부분*/
 .header_location {
   margin-left: 200px;
+}
+
+/*스타일 요소를 위해서 삽입된 div*/
+.style_box {
+  position: absolute;
+  border: 1px solid red;
+  width: 1755px;
+  height: 10px;
 }

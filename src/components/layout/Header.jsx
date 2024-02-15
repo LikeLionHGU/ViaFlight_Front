@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import "../../style/header.css";
 import { Link } from "react-router-dom";
+import header_Logo from "../../style/headerStyle/header_logo.png";
+import Earth_Icon from "../../style/headerStyle/Earth_Icon.png";
 
 // Header BTN 영역(Button 역할)
 const NavigtionSpan = styled.div`
@@ -11,18 +13,14 @@ const NavigtionSpan = styled.div`
 
   width: 150px;
   height: 100%;
-  border: 1px solid black;
+  border-left: 1px solid #ec4d27;
+
+  color: #ec4d27;
 
   //문자 좌측하단 정렬
-
   justify-content: flex-start;
   align-content: center;
   align-items: flex-end;
-
-  .location {
-    width: 200px;
-    font-size: 9px;
-  }
 
   .img_logo {
     position: absolute; /*Logo 위치 조정*/
@@ -41,16 +39,21 @@ function Location() {
   function onGeoOk(position) {
     setlat(position.coords.latitude); // 위도 정보 추출
     setlon(position.coords.longitude); // 경도 정보 추출
-    console.log(position);
+    // console.log(position);
   }
   function onGeoError() {
-    alert("Can't find you. No weather for you");
+    alert("Can't find you. No location for you");
   }
-
+  //🌐
   return (
     <div className="location">
       {navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError)}
-      🌐 {lat}°N, {lon}°E
+      <div className="location_icon">
+        <img src={Earth_Icon}></img>
+      </div>
+      <div className="location_text">
+        {lat}° N, {lon}° E
+      </div>
     </div>
   );
 }
@@ -71,24 +74,30 @@ function Header() {
         <div className="header_logo">
           <img
             className="img_logo"
-            src="https://bit.ly/3OtSJYc"
+            src={header_Logo}
             alt="via-flight-logo"
           ></img>
         </div>
 
         <Link to={`/`}>
-          <NavigtionSpan id="ticket">내 경유지 조회</NavigtionSpan>
+          <NavigtionSpan id="ticket">
+            <div className="ticket_text">내 경유지 조회</div>
+          </NavigtionSpan>
         </Link>
 
         <Link to={`/schedule`}>
-          <NavigtionSpan id="schedule">맞춤형 여행 일정</NavigtionSpan>
+          <NavigtionSpan id="schedule">
+            <div className="schedule_text">맞춤형 여행 일정</div>
+          </NavigtionSpan>
         </Link>
 
         <Link to={`/about`}>
-          <NavigtionSpan id="about">ABOUT US</NavigtionSpan>
+          <NavigtionSpan id="about">
+            <div className="about_text">ABOUT US</div>
+          </NavigtionSpan>
         </Link>
 
-        <NavigtionSpan className="header_location">
+        <NavigtionSpan id="header_location">
           <Location></Location>
         </NavigtionSpan>
       </div>

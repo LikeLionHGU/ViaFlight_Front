@@ -1,0 +1,235 @@
+/* div {
+  border: 1px solid blue;
+} */
+
+@font-face {
+  font-family: "EsaManru";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EsaManru";
+  font-weight: 500;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EsaManru";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+.Enter {
+  /* background-color: gray; */
+  background-image: url(Mainimage.png);
+  background-size: cover;
+
+  color: #ec4d27;
+}
+
+/*첫번째 글상자 양식*/
+.Enterphrase {
+  margin-left: 80px;
+  margin-top: 42px;
+  width: 1125px;
+  height: 225px;
+
+  font-size: 62px;
+  font-weight: 400;
+  line-height: 73.94px;
+}
+
+/*Via-flight logo공간*/
+.Via_flight_logoNForm {
+  width: 1686px;
+  height: 643px;
+  margin-top: 22px;
+  margin-left: 80px;
+
+  .logo_text {
+    font-family: "EsaManru";
+    width: fit-content;
+    font-size: 236px;
+    font-weight: 700;
+    line-height: 250px;
+  }
+
+  .Flight_textNlogo {
+    display: flex;
+  }
+  .Flight_textNlogo > img {
+    height: 250px;
+    object-fit: scale-down;
+  }
+}
+
+/*설문지 양식*/
+.form_style {
+  font-family: "EsaManru";
+
+  margin-top: 32px;
+  display: flex;
+  /* justify-content: center; */
+  height: 52px;
+  position: relative;
+
+  /*경유지 도착 시간 input type:time은 palceholder가 적용이 되지 않음, Notice.은진 알릴 것*/
+  .Atime::before {
+    content: "경유지 도착 시간: ";
+  }
+
+  /*placeholder는 별도로 color지정하여 색상 지정*/
+  input::placeholder {
+    font-family: "EsaManru";
+    color: #ec4d27;
+  }
+  input,
+  select {
+    font-family: "EsaManru";
+    background-color: transparent;
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.2
+    ); /*rgba로 요소별 blur효과 주기 성공*/
+
+    color: #ec4d27;
+    margin-right: 76px;
+    border-bottom: 2.5px solid red;
+    width: 440px;
+  }
+
+  .searchBtn {
+    border: 1px solid#ec4d27;
+    border-radius: 5px;
+    /*text 중앙 정렬*/
+    text-align: center;
+    line-height: 52px;
+
+    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.22);
+    color: #ec4d27;
+    height: 52px;
+    width: 284px;
+  }
+
+  .searchBtn:hover {
+    background-color: rgba(236, 77, 39, 1);
+    color: rgba(25, 25, 25, 1);
+  }
+}
+
+.scrollIcon {
+  margin-top: 15px;
+  border: 1px solid #ec4d27;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+/*About 소개 paige*/
+.about {
+  background-color: #ec4d27;
+
+  height: 535px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.AboutBox {
+  margin-top: 118px;
+  margin-bottom: 118px;
+  margin-left: 755.5px;
+  margin-right: 755.5px;
+  width: 409px;
+  height: 299px;
+}
+
+.About1 {
+  font-family: "EsaManru";
+  color: white;
+
+  height: 100px;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 50px;
+  text-align: center;
+  letter-spacing: 2%;
+}
+
+.About2 {
+  font-family: "EsaManru";
+  color: white;
+
+  width: 352px;
+  height: 78px;
+  margin-top: 24px;
+  margin-left: 28.5px;
+  margin-right: 28.5px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20.29px;
+  text-align: center;
+}
+
+.aboutBtn_container {
+  display: flex;
+  justify-content: center;
+}
+
+.AboutBtn {
+  font-family: "EsaManru";
+  color: #ec4d27;
+
+  font-size: 15px;
+
+  background-color: #f4f0e7;
+
+  border: 1px solid #ec4d27;
+  border-radius: 5px;
+
+  margin-top: 24px;
+  height: 73px;
+  width: 172px;
+}
+
+.AboutBtn:hover {
+  color: rgba(244, 240, 231, 1);
+
+  background-color: #ec4d27;
+  border: 1px solid #f4f0e7;
+}
