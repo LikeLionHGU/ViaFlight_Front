@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 import SwiperCore from "swiper";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/free-mode";
-import "swiper/css/navigation";
+import "swiper/css/autoplay";
 import "../../style/Slider.css";
+import Arrow from "../../img/UpArrow.svg";
 
 import { ServiceData } from "./SliderContents";
 
@@ -25,7 +25,7 @@ const Title = styled.div`
   display: flex;
   align-items: center;
 
-  padding: 30px 0px;
+  padding: 40px 50px;
 `;
 
 const TitleMain = styled.div`
@@ -39,8 +39,8 @@ const TitleSub = styled.div`
   font-weight: 400;
 `;
 
-const Message = styled.div`
-  padding: 30px 0;
+const BigCont = styled.div`
+  padding: 50px;
 
   font-size: 160px;
   font-weight: 700;
@@ -50,8 +50,9 @@ const Contents = styled.div`
   display: flex;
   flex-direction: row-reverse;
   padding-right: 50px;
+  padding-top: 50px;
 
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
 `;
 
@@ -60,19 +61,48 @@ const UpBtn = styled.div`
   flex-direction: column;
   align-items: center;
 
-  padding: 100px;
+  padding: 100px 0;
+`;
+
+const UpArrow = styled.img`
+  white-space: normal;
+
+  animation: motion 0.3s linear 0s infinite alternate; /* 무한 반복 */
+  @keyframes motion {
+    0% {
+      margin-top: 0px;
+    } /* 처음 위치 */
+    100% {
+      margin-top: 10px;
+    } /* 마지막 위치 */
+  }
 `;
 
 const UpBtnStyled = styled.button`
-  padding: 15px 40px;
+  margin-top: 20px;
+  padding: 21px 80px;
   border: none;
+  border: 1px solid rgba(236, 77, 39, 1);
   border-radius: 5px;
+
+  font-size: 17px;
 
   background-color: #ec4d27;
   color: white;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(244, 240, 231, 1);
+    color: rgba(236, 77, 39, 1);
+  }
 `;
 
 function Slider() {
+  const scrollToTop = () => {
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <StyledContainer>
       <Title>
@@ -92,12 +122,11 @@ function Slider() {
           },
         }}
         // freeMode={true}  // 자유로운가
-        pagination={{
-          // 밑에 개수 표현
-          clickable: true,
-          // el: ".swiper-custom-pagination",
-        }}
+        loop={true}
+        speed={1000}
+        loopAdditionalSlides={true}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
+        slidesOffsetBefore={50}
         slideToClickedSlide={true}
         className="swiper"
       >
@@ -111,7 +140,6 @@ function Slider() {
               ></div>
               <div className="swiperslide2" id="sliderhoverbg"></div>
               <div className="swiperslide3" id="slidertext">
-                <item.icon className="swiperslide4" id="slidericon"></item.icon>
                 <h1 className="swiperslide5">{item.title}</h1>
                 <p className="swiperslide6">{item.content}</p>
               </div>
@@ -119,10 +147,10 @@ function Slider() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <Message>
+      <BigCont>
         Discover
         <br /> New Journey
-      </Message>
+      </BigCont>
       <Contents>
         <div>
           경유지 정보만 입력하면, 경유지에서의 대기 시간별로 맞춤화 된 투어
@@ -137,7 +165,10 @@ function Slider() {
         </div>
       </Contents>
       <UpBtn>
-        <UpBtnStyled>경유지 정보 입력하러 가기</UpBtnStyled>
+        <UpArrow src={Arrow} alt="logo" />
+        <UpBtnStyled onClick={scrollToTop}>
+          경유지 정보 입력하러 가기
+        </UpBtnStyled>
       </UpBtn>
     </StyledContainer>
   );
