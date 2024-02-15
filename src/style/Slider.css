@@ -1,0 +1,85 @@
+/*#1. 요소들간의 간격*/
+.swiper {
+  max-width: 70%;
+}
+
+.swiperslide {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: white;
+  padding: 2rem 1.5rem;
+  height: 250px;
+}
+
+.swiperslide:hover {
+  .swiperslide2 {
+    opacity: 0.5;
+  }
+  .swiperslide4 {
+    color: #60a5fa;
+  }
+  .arrow {
+    color: #60a5fa;
+    transform: rotate(45deg);
+    transition-duration: 100ms;
+  }
+}
+
+/*#2. slider 카드 기본 구성*/
+.swiperslide1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+/*#3. slider 카드 불투명도(hover시 bg 흐려지는 바탕조절)*/
+.swiperslide2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.1;
+}
+
+/*#4. slider안에 들어가는 (아이콘, 제목, 글)*/
+.swiperslide3 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/*#5. slider 카드(아이콘 요소) */
+.swiperslide4 {
+  color: #2563eb;
+  width: 32px;
+  height: 32px;
+}
+
+/*#5. slider 카드(제목(title)) */
+.swiperslide5 {
+  font-size: 1.25rem;
+}
+@media (min-width: 900px) {
+  .swiper {
+    max-width: 80%;
+  }
+  .swiperslide {
+    height: 400px;
+  }
+
+  .swiperslide5 {
+    font-size: 1.875rem;
+  }
+
+  .swiperslide6 {
+    font-size: 18px;
+  }
+}
