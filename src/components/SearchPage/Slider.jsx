@@ -7,6 +7,7 @@ import "swiper/css/free-mode";
 import "swiper/css/autoplay";
 import "../../style/Slider.css";
 import Arrow from "../../img/UpArrow.svg";
+import Tip from "../../img/TipIcon.svg";
 
 import { ServiceData } from "./SliderContents";
 
@@ -128,7 +129,7 @@ function Slider() {
         loop={true}
         speed={1000}
         loopAdditionalSlides={true}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        autoplay={{ delay: 3111111111111000, disableOnInteraction: false }}
         slidesOffsetBefore={50}
         slideToClickedSlide={true}
         className="swiper"
@@ -143,11 +144,18 @@ function Slider() {
               ></div>
               <div className="swiperslide2" id="sliderhoverbg"></div>
               <div className="swiperslide3" id="slidertext">
-                <div className="question">{item.qusetion}</div>
+                <div className="question">{item.question}</div>
                 <div className="title">{item.title}</div>
                 <div className="content">{item.content}</div>
-                <div>TIP</div>
-                <div className="tip">{item.tip}</div>
+                <div>
+                  <img
+                    src={Tip}
+                    alt="logo"
+                    style={{ width: "30px", height: "30px" }}
+                  />
+                  <div>TIP</div>
+                  <div className="tip">{item.tip}</div>
+                </div>
               </div>
             </div>
           </SwiperSlide>
