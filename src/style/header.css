@@ -20,10 +20,17 @@
   top: 0;
 }
 
+/*header_bar_line 이미지 위치 조정*/
+.header_bar_line {
+  margin-top: 74px;
+  margin-left: 70px;
+  width: 1800px;
+}
+
 /*header 영역 구분선*/
 .header {
   position: relative; /*BTN, img_logo 위치 조정을 위해서 사용, [기준 위치]*/
-  border-bottom: 1px solid #ec4d27;
+  /* border-bottom: 1px solid #ec4d27; */
   height: 80px;
   /* background-color: white; */
   /* background-color: transparent; 투명효과 */
@@ -60,10 +67,12 @@
   /* color: #ec4d27; */
 }
 
-/*btn 요소별 간격 hard-coding*/
+/*Link영역과 div영역 크기 맞추기 위해서 (.~_link) 작업함*/
+
+/*btn 요소별 간격 hard-coding (btn별로 하단, line이미지 참고하여 간격 조정)*/
 .ticket_link {
   /* border: 1px solid blue; */
-  margin-left: 360px;
+  margin-left: 375px;
 }
 
 #ticket {
@@ -81,7 +90,7 @@
 
 .schedule_link {
   /* border: 1px solid blue; */
-  margin-left: 187px;
+  margin-left: 151px;
 }
 
 /* #schedule {
@@ -94,10 +103,9 @@
   margin-bottom: 18px;
 } */
 
-/*Link영역과 div영역 크기 맞추기 위해서 (.~_link) 작업함*/
 .about_link {
   /* border: 1px solid blue; */
-  margin-left: 171px;
+  margin-left: 153px;
 }
 
 /* #about {
@@ -113,13 +121,13 @@
 /*location 부모요소(width조정에 사용)*/
 #header_location {
   width: 100%;
-  margin-left: 120px;
+  margin-left: 160px;
 }
 
 .location {
   display: flex; /*icon, text 한줄 정렬*/
   font-family: "EsaManru";
-  font-size: 17px;
+  font-size: 14px;
   margin-bottom: 18px;
 }
 
