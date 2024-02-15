@@ -1,7 +1,6 @@
-import React, { useState } from "react";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Pagination, Autoplay } from "swiper/modules";
+import { FreeMode, Autoplay } from "swiper/modules";
 import SwiperCore from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -12,7 +11,7 @@ import Arrow from "../../img/UpArrow.svg";
 import { ServiceData } from "./SliderContents";
 
 // Initialize required modules
-SwiperCore.use([FreeMode, Pagination, Autoplay]);
+SwiperCore.use([FreeMode, Autoplay]);
 
 const StyledContainer = styled.div`
   display: flex;
@@ -64,16 +63,20 @@ const UpBtn = styled.div`
   padding: 100px 0;
 `;
 
+const ContainArrow = styled.div`
+  height: 30px;
+`;
+
 const UpArrow = styled.img`
   white-space: normal;
 
-  animation: motion 0.3s linear 0s infinite alternate; /* 무한 반복 */
+  animation: motion 0.5s linear 0s infinite alternate; /* 무한 반복 */
   @keyframes motion {
     0% {
       margin-top: 0px;
     } /* 처음 위치 */
     100% {
-      margin-top: 10px;
+      margin-top: 15px;
     } /* 마지막 위치 */
   }
 `;
@@ -140,8 +143,11 @@ function Slider() {
               ></div>
               <div className="swiperslide2" id="sliderhoverbg"></div>
               <div className="swiperslide3" id="slidertext">
-                <h1 className="swiperslide5">{item.title}</h1>
-                <p className="swiperslide6">{item.content}</p>
+                <div className="question">{item.qusetion}</div>
+                <div className="title">{item.title}</div>
+                <div className="content">{item.content}</div>
+                <div>TIP</div>
+                <div className="tip">{item.tip}</div>
               </div>
             </div>
           </SwiperSlide>
@@ -165,7 +171,9 @@ function Slider() {
         </div>
       </Contents>
       <UpBtn>
-        <UpArrow src={Arrow} alt="logo" />
+        <ContainArrow>
+          <UpArrow src={Arrow} alt="logo" />
+        </ContainArrow>
         <UpBtnStyled onClick={scrollToTop}>
           경유지 정보 입력하러 가기
         </UpBtnStyled>
