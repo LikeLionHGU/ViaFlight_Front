@@ -1,6 +1,11 @@
+body {
+  margin: 0;
+  padding-left: 50px;
+}
+
 /*#1. 요소들간의 간격*/
 .swiper {
-  max-width: 70%;
+  max-width: 100%;
 }
 
 .swiperslide {
@@ -69,10 +74,10 @@
 }
 @media (min-width: 900px) {
   .swiper {
-    max-width: 80%;
+    max-width: 100%;
   }
   .swiperslide {
-    height: 400px;
+    height: 500px;
   }
 
   .swiperslide5 {
