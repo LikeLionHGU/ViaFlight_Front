@@ -14,6 +14,12 @@
   font-display: swap;
 }
 
+/*sticky 효과 주기*/
+.header_sticky {
+  position: sticky;
+  top: 0;
+}
+
 /*header 영역 구분선*/
 .header {
   position: relative; /*BTN, img_logo 위치 조정을 위해서 사용, [기준 위치]*/
@@ -55,35 +61,54 @@
 }
 
 /*btn 요소별 간격 hard-coding*/
-#ticket {
+.ticket_link {
+  /* border: 1px solid blue; */
   margin-left: 360px;
 }
-.ticket_text {
-  font-family: "EsaManru";
-  font-size: 18px;
-  line-height: 20.97px;
-  margin-bottom: 18px;
-}
 
-#schedule {
-  margin-left: 187px;
+#ticket {
+  /* border: 1px solid blue; */
+  /* margin-left: 360px; */
 }
-.schedule_text {
-  font-family: "EsaManru";
-  font-size: 18px;
-  line-height: 20.97px;
-  margin-bottom: 18px;
-}
-
-#about {
-  margin-left: 171px;
-}
+.ticket_text,
+.schedule_text,
 .about_text {
   font-family: "EsaManru";
   font-size: 18px;
   line-height: 20.97px;
   margin-bottom: 18px;
 }
+
+.schedule_link {
+  /* border: 1px solid blue; */
+  margin-left: 187px;
+}
+
+/* #schedule {
+  margin-left: 187px;
+} */
+/* .schedule_text {
+  font-family: "EsaManru";
+  font-size: 18px;
+  line-height: 20.97px;
+  margin-bottom: 18px;
+} */
+
+/*Link영역과 div영역 크기 맞추기 위해서 (.~_link) 작업함*/
+.about_link {
+  /* border: 1px solid blue; */
+  margin-left: 171px;
+}
+
+/* #about {
+  margin-left: 171px;
+} */
+/* .about_text {
+  font-family: "EsaManru";
+  font-size: 18px;
+  line-height: 20.97px;
+  margin-bottom: 18px;
+} */
 
 /*location 부모요소(width조정에 사용)*/
 #header_location {
@@ -105,17 +130,6 @@
 .location_text {
   margin-left: 9px;
 }
-
-/*BTN hover시 text 색상*/
-a:hover {
-  color: orange;
-}
-
-/*BTN hover시 span 영역 색상*/
-span:hover {
-  background-color: orange;
-}
-
 /*header-logo부분*/
 .header_logo {
   width: 300px;
@@ -126,10 +140,12 @@ span:hover {
   margin-left: 200px;
 }
 
-/*스타일 요소를 위해서 삽입된 div*/
-.style_box {
-  position: absolute;
-  border: 1px solid red;
-  width: 1755px;
-  height: 10px;
+/* header-logo부분
+.header_logo {
+  width: 300px;
 }
+
+/*header-location부분
+.header_location {
+  margin-left: 200px;
+} */

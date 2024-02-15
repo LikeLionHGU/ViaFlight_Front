@@ -101,6 +101,7 @@
   margin-top: 32px;
   display: flex;
   /* justify-content: center; */
+  width: 1900px; /*입력창이 좌측으로 츼우쳐져 있어 width크기를 조정 */
   height: 52px;
   position: relative;
 
@@ -151,12 +152,32 @@
   }
 }
 
-.scrollIcon {
+.scrollIcon_container {
   margin-top: 15px;
-  border: 1px solid #ec4d27;
+  height: 30px;
+
+  /* border: 1px solid #ec4d27; */
   display: flex;
   justify-content: center;
-  padding-top: 15px;
+  /* padding-top: 15px; */
+}
+
+.scrollIcon_arrow {
+  /* border: 1px solid blue; */
+  animation: motion 0.4s /*반복되는 시간*/ linear 0s /*효과 일정하게 반복*/
+    infinite alternate /*애니매이션 효과 무한으로 반복*/; /*상하로 움직이는 효과*/
+}
+
+/*위-아래로 움직이는 효과*/
+@keyframes motion {
+  /*처음 위치*/
+  0% {
+    padding-top: 0px;
+  }
+  /*마지막 위치*/
+  100% {
+    padding-top: 10px;
+  }
 }
 
 /*About 소개 paige*/

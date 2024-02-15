@@ -60,46 +60,48 @@ function Location() {
 
 function Header() {
   return (
-    <div className="header">
-      {/* Header Logo 부분 */}
-      {/* <img
+    <div className="header_sticky">
+      <div className="header">
+        {/* Header Logo 부분 */}
+        {/* <img
           className="img_logo"
           src="https://bit.ly/3OtSJYc"
           alt="via-flight-logo"
         ></img> */}
 
-      {/* Header BTN 부분 */}
-      <div className="header-BTN">
-        {/* Header Logo 부분 */}
-        <div className="header_logo">
-          <img
-            className="img_logo"
-            src={header_Logo}
-            alt="via-flight-logo"
-          ></img>
+        {/* Header BTN 부분 */}
+        <div className="header-BTN">
+          {/* Header Logo 부분 */}
+          <div className="header_logo">
+            <img
+              className="img_logo"
+              src={header_Logo}
+              alt="via-flight-logo"
+            ></img>
+          </div>
+
+          <Link to={`/`} className="ticket_link">
+            <NavigtionSpan id="ticket">
+              <div className="ticket_text">내 경유지 조회</div>
+            </NavigtionSpan>
+          </Link>
+
+          <Link to={`/schedule`} className="schedule_link">
+            <NavigtionSpan id="schedule">
+              <div className="schedule_text">맞춤형 여행 일정</div>
+            </NavigtionSpan>
+          </Link>
+
+          <Link to={`/about`} className="about_link">
+            <NavigtionSpan id="about">
+              <div className="about_text">ABOUT US</div>
+            </NavigtionSpan>
+          </Link>
+
+          <NavigtionSpan id="header_location">
+            <Location></Location>
+          </NavigtionSpan>
         </div>
-
-        <Link to={`/`}>
-          <NavigtionSpan id="ticket">
-            <div className="ticket_text">내 경유지 조회</div>
-          </NavigtionSpan>
-        </Link>
-
-        <Link to={`/schedule`}>
-          <NavigtionSpan id="schedule">
-            <div className="schedule_text">맞춤형 여행 일정</div>
-          </NavigtionSpan>
-        </Link>
-
-        <Link to={`/about`}>
-          <NavigtionSpan id="about">
-            <div className="about_text">ABOUT US</div>
-          </NavigtionSpan>
-        </Link>
-
-        <NavigtionSpan id="header_location">
-          <Location></Location>
-        </NavigtionSpan>
       </div>
     </div>
   );

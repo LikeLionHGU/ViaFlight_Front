@@ -7,8 +7,8 @@ import scroll_Icon from "./bannerStyle/scrolldown_icon.png";
 import banner_Logo from "./bannerStyle/bannner_logo.png";
 
 const Border = styled.div`
-  border: 1px solid red;
-  width: 1920px;
+  // border: 1px solid red;
+  width: auto;
 `;
 
 function Banner() {
@@ -70,7 +70,6 @@ function Banner() {
     <div className="banner">
       <Border className="Enter">
         <Header></Header>
-
         {/* 이미지는 background로 작업 */}
         <div className="Enterphrase">
           Enter flight information
@@ -135,11 +134,16 @@ function Banner() {
             {/* S1. (은진) - 초기화 버튼 (제안해보기)*/}
             {/* <div className="blurBox"> </div> */}
           </form>
+        </div>
 
-          {/* 페이지 아래부분으로 scroll*/}
-          <div className="scrollIcon">
-            <img src={scroll_Icon} width={17.33} height={16}></img>
-          </div>
+        {/* 페이지 아래부분으로 scroll*/}
+        <div className="scrollIcon_container">
+          <img
+            className="scrollIcon_arrow"
+            src={scroll_Icon}
+            width={17.33}
+            height={16}
+          ></img>
         </div>
       </Border>
 
