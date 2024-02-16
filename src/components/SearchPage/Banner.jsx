@@ -9,6 +9,7 @@ import banner_Logo from "./bannerStyle/bannner_logo.png";
 const Border = styled.div`
   // border: 1px solid red;
   width: auto;
+  // height: 1000px; // sticky확인 위해서
 `;
 
 function Banner() {
@@ -68,8 +69,9 @@ function Banner() {
 
   return (
     <div className="banner">
+      <Header></Header>
+
       <Border className="Enter">
-        <Header></Header>
         {/* 이미지는 background로 작업 */}
         <div className="Enterphrase">
           Enter flight information
