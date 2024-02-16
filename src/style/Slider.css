@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  background-color: rgba(244, 240, 231, 1);
+}
+
+/*#1. 요소들간의 간격*/
+.swiper {
+  max-width: 100%;
+}
+
+.swiperslide {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: white;
+  padding: 2rem 1.5rem;
+  height: 250px;
+}
+
+.swiperslide:hover {
+  .swiperslide2 {
+    opacity: 0.7;
+  }
+}
+
+/*#2. slider 카드 기본 구성*/
+.swiperslide1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+
+/*#3. slider 카드 불투명도(hover시 bg 흐려지는 바탕조절)*/
+.swiperslide2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.5;
+  border-radius: 5px;
+}
+
+/*#4. slider안에 들어가는 (아이콘, 제목, 글)*/
+.swiperslide3 {
+  position: relative;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 900px) {
+  .swiper {
+    max-width: 100%;
+  }
+  .swiperslide {
+    height: 550px;
+  }
+}
