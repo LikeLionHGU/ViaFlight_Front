@@ -69,10 +69,10 @@ const CardTip = styled.div`
 `;
 
 const BigCont = styled.div`
-  padding: 50px;
+  padding: 150px 50px;
 
   font-family: EsaManru;
-  font-size: 160px;
+  font-size: 140px;
   font-weight: 700;
 `;
 
@@ -80,7 +80,6 @@ const Contents = styled.div`
   display: flex;
   flex-direction: row-reverse;
   padding-right: 50px;
-  padding-top: 50px;
 
   font-family: Pretendard-Regular;
   font-size: 20px;
@@ -92,7 +91,7 @@ const UpBtn = styled.div`
   flex-direction: column;
   align-items: center;
 
-  padding: 100px 0;
+  padding: 150px 0;
 `;
 
 const ContainArrow = styled.div`
@@ -147,7 +146,7 @@ function Slider() {
         <TitleSub>Relieving discomfort and fear</TitleSub>
       </Title>
       <Swiper
-        style={{ margin: "0" }}
+        style={{ margin: "0", whiteSpace: "pre-wrap" }}
         breakpoints={{
           0: {
             slidesPerView: 2.5,
