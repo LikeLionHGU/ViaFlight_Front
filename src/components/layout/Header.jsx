@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import "../../style/header.css";
 import { Link } from "react-router-dom";
-import header_Logo from "../../style/headerStyle/header_logo.png";
-import Earth_Icon from "../../style/headerStyle/Earth_Icon.png";
-import Navigation_Bar_line from "../../style/headerStyle/Navigation_Bar_Line.png";
+import header_Logo from "../../img/header_logo.png";
+import Earth_Icon from "../../img/Earth_Icon.png";
+import Navigation_Bar_line from "../../img/Navigation_Bar_Line.png";
 
 // Header BTN 영역(Button 역할)
 const NavigtionSpan = styled.div`

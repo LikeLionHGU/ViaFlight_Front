@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../layout/Header"; //header import
 import styled from "styled-components";
-import "./bannerStyle/banner.css";
-import scroll_Icon from "./bannerStyle/scrolldown_icon.png";
-import banner_Logo from "./bannerStyle/bannner_logo.png";
+import "../../style/banner.css";
+import scroll_Icon from "../../img/scrolldown_icon.png";
+import banner_Logo from "../../img/bannner_logo.png";
 
 const Border = styled.div`
   // border: 1px solid red;
