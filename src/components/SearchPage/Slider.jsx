@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/autoplay";
 import "../../style/Slider.css";
+import "../../font/font.css";
 import Arrow from "../../img/UpArrow.svg";
 import Tip from "../../img/TipIcon.svg";
 
@@ -31,6 +32,7 @@ const Title = styled.div`
 const TitleMain = styled.div`
   padding-right: 30px;
 
+  font-family: EsaManru;
   font-size: 40px;
   font-weight: 500;
 `;
@@ -39,9 +41,37 @@ const TitleSub = styled.div`
   font-weight: 400;
 `;
 
+const CardQuestion = styled.div`
+  font-size: 18px;
+  font-weight: 400;
+`;
+const CardTitle = styled.div`
+  font-family: Pretendard-Regular;
+  font-size: 30px;
+  font-weight: 600;
+`;
+const CardContent = styled.div`
+  font-family: Pretendard-Regular;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 35px;
+`;
+const TipContainer = styled.div`
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+`;
+
+const CardTip = styled.div`
+  font-family: Pretendard-Regular;
+  font-weight: 100;
+  font-size: 13px;
+`;
+
 const BigCont = styled.div`
   padding: 50px;
 
+  font-family: EsaManru;
   font-size: 160px;
   font-weight: 700;
 `;
@@ -52,6 +82,7 @@ const Contents = styled.div`
   padding-right: 50px;
   padding-top: 50px;
 
+  font-family: Pretendard-Regular;
   font-size: 20px;
   font-weight: 500;
 `;
@@ -89,6 +120,8 @@ const UpBtnStyled = styled.button`
   border: 1px solid rgba(236, 77, 39, 1);
   border-radius: 5px;
 
+  font-family: EsaManru;
+  font-weight: 300;
   font-size: 17px;
 
   background-color: #ec4d27;
@@ -144,17 +177,23 @@ function Slider() {
               ></div>
               <div className="swiperslide2" id="sliderhoverbg"></div>
               <div className="swiperslide3" id="slidertext">
-                <div className="question">{item.question}</div>
-                <div className="title">{item.title}</div>
-                <div className="content">{item.content}</div>
+                <CardQuestion>{item.question}</CardQuestion>
+                <CardTitle>{item.title}</CardTitle>
+                <CardContent>{item.content}</CardContent>
                 <div>
-                  <img
-                    src={Tip}
-                    alt="logo"
-                    style={{ width: "30px", height: "30px" }}
-                  />
-                  <div>TIP</div>
-                  <div className="tip">{item.tip}</div>
+                  <TipContainer>
+                    <img
+                      src={Tip}
+                      alt="logo"
+                      style={{
+                        width: "30px",
+                        height: "30px",
+                        paddingRight: "15px",
+                      }}
+                    />
+                    <div>TIP</div>
+                  </TipContainer>
+                  <CardTip>{item.tip}</CardTip>
                 </div>
               </div>
             </div>
