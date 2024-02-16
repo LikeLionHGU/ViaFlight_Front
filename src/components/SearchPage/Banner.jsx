@@ -69,9 +69,11 @@ function Banner() {
 
   return (
     <div className="banner">
-      <Header></Header>
+      {/* <Header></Header> */}
 
       <Border className="Enter">
+        <Header></Header>
+
         {/* 이미지는 background로 작업 */}
         <div className="Enterphrase">
           Enter flight information
@@ -113,7 +115,7 @@ function Banner() {
               onChange={onATime}
             ></input>
             {/*#3. 경유공항 경유시간 구분 fix-> Q2.(동신, 승환)님께 질문(단위)*/}
-            <select
+            {/* <select
               className="Dtime"
               type="text"
               value={durationTime}
@@ -126,7 +128,18 @@ function Banner() {
               <option value={6}>6 ~ 8(hours)</option>
               <option value={8}>8 ~ 10(hours)</option>
               <option value={"over 10hours"}>over 10(hours)</option>
-            </select>
+            </select> */}
+            <div className="Dtime_style">
+              <input
+                className="Dtime"
+                type="number"
+                min="0" /* 입력 가능 범위*/
+                max="24"
+                value={durationTime}
+                onChange={onDTime}
+                placeholder="경유시간"
+              ></input>
+            </div>
             {/*schedule-paige에 연결*/}
             <Link to={`/schedule`} style={{ textDecoration: "none" }}>
               <div className="searchBtn" onClick={OnCheckInput}>
