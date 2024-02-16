@@ -24,7 +24,7 @@
 .header_bar_line {
   margin-top: 74px;
   margin-left: 70px;
-  width: 1800px;
+  width: 1700px; /*1800px 수정(가로 scroll 없애기 위해서 수정)*/
 }
 
 /*header 영역 구분선*/
@@ -72,7 +72,7 @@
 /*btn 요소별 간격 hard-coding (btn별로 하단, line이미지 참고하여 간격 조정)*/
 .ticket_link {
   /* border: 1px solid blue; */
-  margin-left: 375px;
+  margin-left: 342px; /*375px(수정됨)*/
 }
 
 #ticket {
@@ -90,7 +90,7 @@
 
 .schedule_link {
   /* border: 1px solid blue; */
-  margin-left: 151px;
+  margin-left: 133px; /*151px*/
 }
 
 /* #schedule {
@@ -105,7 +105,7 @@
 
 .about_link {
   /* border: 1px solid blue; */
-  margin-left: 153px;
+  margin-left: 135px; /*153px(수정됨)*/
 }
 
 /* #about {
@@ -120,6 +120,7 @@
 
 /*location 부모요소(width조정에 사용)*/
 #header_location {
+  /* border: 1px solid blue; */
   width: 100%;
   margin-left: 160px;
 }
@@ -127,7 +128,7 @@
 .location {
   display: flex; /*icon, text 한줄 정렬*/
   font-family: "EsaManru";
-  font-size: 14px;
+  font-size: 12px; /*14px(수정됨)*/
   margin-bottom: 18px;
 }
 
