@@ -60,12 +60,14 @@
 
 /*banner 전체 화면 구성*/
 .banner {
-  width: 1920px;
-  height: 5000px;
+  display: block;
+  /* width: 1920px; */
+  /* height: 5000px; */
 }
 
 .Enter {
   /* background-color: gray; */
+  /* height: 1600px; */
   background-image: url(../img/Mainimage.png);
   background-size: cover;
 
@@ -76,37 +78,38 @@
 .Enterphrase {
   font-family: "Pretendard-Regular";
 
-  margin-left: 80px;
-  margin-top: 42px;
+  margin-left: 50px; /*80px*/
+  /* margin-top: 42px; */
+  padding-top: 40px;
   width: 1125px;
   height: 225px;
 
   font-size: 62px;
   font-weight: 400;
-  line-height: 73.94px;
+  line-height: 73.99px;
 }
 
 /*Via-flight logo공간*/
 .Via_flight_logoNForm {
-  width: 1686px;
-  height: 643px;
+  /* width: 1686px; */
+  height: 600px; /* 643px*/
   margin-top: 22px;
-  margin-left: 80px;
+  margin-left: 50px; /*80px*/
 
   .logo_text {
     font-family: "EsaManru";
 
     width: fit-content;
-    font-size: 236px;
+    font-size: 195px; /*236px*/
     font-weight: 700;
-    line-height: 250px;
+    line-height: 207px; /*250px*/
   }
 
   .Flight_textNlogo {
     display: flex;
   }
   .Flight_textNlogo > img {
-    height: 250px;
+    height: 200px; /*250px*/
     object-fit: scale-down;
   }
 }
@@ -115,16 +118,16 @@
 .form_style {
   font-family: "EsaManru";
 
-  margin-top: 32px;
+  margin-top: 65px; /*32px*/
   display: flex;
   /* justify-content: center; */
-  width: 1900px; /*입력창이 좌측으로 츼우쳐져 있어 width크기를 조정 */
+  /*width: 1900px; 입력창이 좌측으로 츼우쳐져 있어 width크기를 조정 */
   height: 52px;
   position: relative;
 
   /*경유지 도착 시간 input type:time은 palceholder가 적용이 되지 않음, Notice.은진 알릴 것*/
   .Atime::before {
-    content: "경유지 도착 시간: ";
+    content: "경유지 도착 시간:";
   }
 
   /*placeholder는 별도로 color지정하여 색상 지정*/
@@ -149,7 +152,29 @@
     width: 440px;
   }
 
-  /*경유 시간 입력 화살표 주기*/
+  /*Time 아이콘 색상 입히기*/
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(34%) sepia(24%) saturate(5549%) hue-rotate(350deg)
+      brightness(99%) contrast(86%); /* RGB 색상 변경 */
+  }
+
+  /*경유 시간 입력 화살표 색상*/
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    /* -webkit-appearance: none;
+    background: transparent;
+    width: 1em;
+    border-left: 1px solid #bbb;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0; */
+    /* background-color: blue; */
+    filter: invert(34%) sepia(24%) saturate(5549%) hue-rotate(350deg)
+      brightness(99%) contrast(86%);
+  }
+
   /*input 화살표 style입히기*/
   /* input[type="number"]::-webkit-inner-spin-button {
   opacity: 0.3;
@@ -158,6 +183,9 @@
   .searchBtn {
     border: 1px solid#ec4d27;
     border-radius: 5px;
+
+    margin-right: 46.87px; /*우측 간격 주기 위해서 삽입*/
+
     /*text 중앙 정렬*/
     text-align: center;
     line-height: 52px;
@@ -166,7 +194,7 @@
     background-color: rgba(255, 255, 255, 0.22);
     color: #ec4d27;
     height: 52px;
-    width: 284px;
+    width: 230px; /*284px*/
   }
 
   .searchBtn:hover {
@@ -177,9 +205,9 @@
 
 .scrollIcon_container {
   margin-top: 15px;
-  height: 30px;
+  height: 50px;
 
-  border: 1px solid #ec4d27;
+  /* border: 1px solid #ec4d27; */
   display: flex;
   justify-content: center;
   /* padding-top: 15px; */
@@ -187,6 +215,9 @@
 
 .scrollIcon_arrow {
   /* border: 1px solid blue; */
+  /*img 가로, 세로 크기*/
+  width: 20px;
+  height: 20px;
   animation: motion 0.4s /*반복되는 시간*/ linear 0s /*효과 일정하게 반복*/
     infinite alternate; /*애니매이션 효과 무한으로 반복; 상하로 움직이는 효과 */
 }
