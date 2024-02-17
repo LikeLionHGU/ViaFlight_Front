@@ -40,7 +40,6 @@ function Location() {
   function onGeoOk(position) {
     setlat(position.coords.latitude); // 위도 정보 추출
     setlon(position.coords.longitude); // 경도 정보 추출
-    // console.log(position);
   }
   function onGeoError() {
     alert("Can't find you. No location for you");
@@ -53,7 +52,7 @@ function Location() {
         <img src={Earth_Icon}></img>
       </div>
       <div className="location_text">
-        {lat}° N, {lon}° E
+        {lat.toFixed(4)}° N, {lon.toFixed(4)}° E
       </div>
     </div>
   );
