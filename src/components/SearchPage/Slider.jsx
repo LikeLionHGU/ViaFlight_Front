@@ -157,9 +157,10 @@ function Slider() {
             spaceBetween: 10,
           },
         }}
-        // freeMode={true}  // 자유로운가
-        // loop={true} // 무한 루프
-        speed={2000} // 슬라이드 이동 속도
+        // freeMode={true} // 자유로운가
+        loop={true} // 무한 루프
+        speed={3000} // 슬라이드 이동 속도
+        loopedSlides={1}
         loopAdditionalSlides={true}
         autoplay={{ delay: 3000, disableOnInteraction: false }} // 자동 이동
         slidesOffsetBefore={50} // 슬라이드 출발 지점에 빈 공간
