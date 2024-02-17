@@ -41,17 +41,17 @@ function Banner() {
     localStorage.setItem("viaAirport", e.target.value);
   };
 
-  const onDTime = (e) => {
+  const onATime = (e) => {
     // if (savedATime == null) alert("경유공항에 도착한 시간을 입력해주세요");
     if (savedATime !== null) localStorage.removeItem("arrivalTime");
-    setDTime(e.target.value);
+    setATime(e.target.value);
     localStorage.setItem("arrivalTime", e.target.value);
   };
 
-  const onATime = (e) => {
+  const onDTime = (e) => {
     // if (savedDTime == null) alert("경유 시간을 선택해주세요");
     if (savedDTime !== null) localStorage.removeItem("durationTime");
-    setATime(e.target.value);
+    setDTime(e.target.value);
     localStorage.setItem("durationTime", e.target.value);
   };
 
