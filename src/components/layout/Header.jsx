@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import "../../style/header.css";
 import { Link } from "react-router-dom";
-
 import header_Logo from "../../img/header_logo.png";
 import Earth_Icon from "../../img/Earth_Icon.png";
-import Navigation_Bar_line from "../../img/Navigation_Bar_Line.png";
-
+// import Navigation_Bar_line from "../../img/Navigation_Bar_Line.png";
 
 // Header BTN 영역(Button 역할)
 const NavigtionSpan = styled.div`
@@ -42,7 +40,6 @@ function Location() {
   function onGeoOk(position) {
     setlat(position.coords.latitude); // 위도 정보 추출
     setlon(position.coords.longitude); // 경도 정보 추출
-    // console.log(position);
   }
   function onGeoError() {
     alert("Can't find you. No location for you");
@@ -55,13 +52,30 @@ function Location() {
         <img src={Earth_Icon}></img>
       </div>
       <div className="location_text">
-        {lat}° N, {lon}° E
+        {typeof lat === "number" ? lat.toFixed(4) : ""}° N,
+        {typeof lon === "number" ? lon.toFixed(4) : ""}° E
       </div>
     </div>
   );
 }
 
 function Header() {
+  //localstorage가 empty인 경우 확인(입력 유도 페이지 결정하는 변수)
+  const [emptyCheck, setCheck] = useState(true);
+
+  //localstorage에 저장된 입력값 불러오기
+  const savedAirport = localStorage.getItem("viaAirport");
+  const savedATime = localStorage.getItem("arrivalTime");
+  const savedDTime = localStorage.getItem("durationTime");
+  //localStorage에 입력 여부에 따라서, 유도페이지 연결
+  const onEmptyCheck = () => {
+    if (savedAirport === null && savedATime == null && savedDTime == null) {
+      setCheck(false);
+    } else {
+      setCheck(true);
+    }
+  };
+
   return (
     <div className="header_sticky">
       <div className="header">
@@ -89,7 +103,11 @@ function Header() {
             </NavigtionSpan>
           </Link>
 
-          <Link to={`/schedule`} className="schedule_link">
+          <Link
+            to={emptyCheck ? `/schedule` : `/`} //true: 입력 페이지로, flase: 유도 페이지로
+            className="schedule_link"
+            onClick={onEmptyCheck}
+          >
             <NavigtionSpan id="schedule">
               <div className="schedule_text">맞춤형 여행 일정</div>
             </NavigtionSpan>
@@ -105,7 +123,9 @@ function Header() {
             <Location></Location>
           </NavigtionSpan>
         </div>
-        <img className="header_bar_line" src={Navigation_Bar_line}></img>
+      </div>
+      <div className="Navigation_bar_line_div">
+        {/* <img className="header_bar_line" src={Navigation_Bar_line}></img> */}
       </div>
     </div>
   );

@@ -14,19 +14,46 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Plaid";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf");
+  src: url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf")
+      format("embedded-opentype"),
+    url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf") format("woff2"),
+    url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf") format("woff"),
+    url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf") format("truetype");
+
+  font-display: swap;
+}
+
 /*sticky 효과 주기*/
 .header_sticky {
   position: sticky;
   top: 0;
+  z-index: 2; /*slider안으로 들어가지 않게 하는 것*/
 }
 
 /*header_bar_line 이미지 위치 조정*/
-.header_bar_line {
+.Navigation_bar_line_div /*test*/ {
+  /* margin-top: 74px;
+  margin-left: 70px; */
+  /* width: 1800px; */
+  background-image: url("../img/Navigation_Bar_Line.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 15px;
+  margin-left: 5.5556vw; /*80px 해당*/
+  margin-right: 5.5556vw;
+}
+
+/*img태그를 사용하는 경우*/
+/* .header_bar_line {
   margin-top: 74px;
   margin-left: 70px;
-
-  width: 1350px; /*1800px 수정(가로 scroll 없애기 위해서 수정) / 2차 수정: 1700px(issue 화면 확대)*/
-}
+  width: 1800px;
+} */
 
 /*header 영역 구분선*/
 .header {
@@ -73,8 +100,7 @@
 /*btn 요소별 간격 hard-coding (btn별로 하단, line이미지 참고하여 간격 조정)*/
 .ticket_link {
   /* border: 1px solid blue; */
-
-  margin-left: 225px; /*375px(수정됨), 2차 수정[24.02.17]*/
+  margin-left: 15.7%; /*155px*/
 }
 
 #ticket {
@@ -82,18 +108,22 @@
   /* margin-left: 360px; */
 }
 .ticket_text,
-.schedule_text,
-.about_text {
+.schedule_text {
   font-family: "EsaManru";
-  font-size: 13px; /*[24.02.17] 수정 from 18px*/
+  font-size: 18px;
   line-height: 20.97px;
-  margin-bottom: 13px; /*[24.02.17] 수정 from 18px*/
+  margin-bottom: 18px;
+}
+.about_text {
+  font-family: "Plaid"; /*font_style변경*/
+  font-size: 18px;
+  line-height: 20.97px;
+  margin-bottom: 18px;
 }
 
 .schedule_link {
   /* border: 1px solid blue; */
-
-  margin-left: 75px; /*151px, 2차 수정됨[24.02.17]*/
+  margin-left: 5%; /*151px*/
 }
 
 /* #schedule {
@@ -108,8 +138,7 @@
 
 .about_link {
   /* border: 1px solid blue; */
-
-  margin-left: 75px; /*153px(수정됨), 2차 수정[24.02.17]*/
+  margin-left: 5%; /*153px*/
 }
 
 /* #about {
@@ -125,27 +154,20 @@
 /*location 부모요소(width조정에 사용)*/
 #header_location {
   /* border: 1px solid blue; */
+  margin-left: 5%; /*160px*/
 
   width: 100%;
-  margin-left: 100px;
 }
 
 .location {
   display: flex; /*icon, text 한줄 정렬*/
-  font-family: "EsaManru";
-
-  font-size: 9px; /*14px(수정됨) ,2차 수정[24.02.17]*/
-
+  font-family: "Plaid"; /*font_style변경*/
+  font-size: 13px;
   margin-bottom: 18px;
 }
 
 .location_icon {
   width: 14px; /*icon, width폭에 맞춤*/
-}
-
-.location_icon > img {
-  /*icon 크기 조절, ,2차 수정[24.02.17] */
-  width: 12px;
 }
 
 .location_text {
