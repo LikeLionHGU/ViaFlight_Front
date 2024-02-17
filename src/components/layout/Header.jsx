@@ -52,7 +52,8 @@ function Location() {
         <img src={Earth_Icon}></img>
       </div>
       <div className="location_text">
-        {lat}° N, {lon}° E
+        {typeof lat === "number" ? lat.toFixed(4) : ""}° N,
+        {typeof lon === "number" ? lon.toFixed(4) : ""}° E,
       </div>
     </div>
   );
