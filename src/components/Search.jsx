@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import Banner from "./SearchPage/Banner";
 import Slider from "./SearchPage/Slider";
 
