@@ -5,7 +5,7 @@ import "../../font/font.css";
 const StyleContainer = styled.div`
   background-color: black;
   color: rgba(244, 240, 231, 1);
-  padding: 10px 50px;
+  padding: 10px 5%;
   padding-bottom: 30px;
 
   font-family: Plaid;
@@ -20,7 +20,8 @@ const Below = styled.div`
   display: flex;
   flex-direction: column;
 
-  padding: 14px;
+  padding: 14px; // 로고와 일직선 상에 있기위해 위해
+  padding-top: 80px;
 `;
 
 const BelowOver = styled.div`
@@ -55,15 +56,15 @@ const BelowUnder = styled.div`
   padding-top: 10px;
 `;
 const UnderLine = styled.div`
-  border-bottom: 0.8px solid rgba(244, 240, 231, 1);
-  border-right: 0.8px solid rgba(244, 240, 231, 1);
-  border-left: 0.8px solid rgba(244, 240, 231, 1);
+  border-bottom: 1px solid rgba(244, 240, 231, 0.7);
+  border-right: 1px solid rgba(244, 240, 231, 0.7);
+  border-left: 1px solid rgba(244, 240, 231, 0.7);
 
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 
   height: 10px;
-  width: 80%;
+  width: 85%;
 `;
 
 function Footer() {
