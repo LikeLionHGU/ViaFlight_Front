@@ -27,13 +27,13 @@ const BelowOver = styled.div`
   display: flex;
 `;
 const BelowCompany = styled.div`
-  padding-right: 10%;
+  padding-right: 9%;
 `;
 const BelowContact = styled.div`
   display: flex;
   justify-content: space-between;
 
-  width: 30%;
+  width: 20%;
   font-weight: 300;
 `;
 
