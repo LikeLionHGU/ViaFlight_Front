@@ -18,14 +18,27 @@
 .header_sticky {
   position: sticky;
   top: 0;
+  z-index: 2; /*slider안으로 들어가지 않게 하는 것*/
 }
 
 /*header_bar_line 이미지 위치 조정*/
-.header_bar_line {
+.Navigation_bar_line_div /*test*/ {
+  /* margin-top: 74px;
+  margin-left: 70px; */
+  /* width: 1800px; */
+  background-image: url("../img/Navigation_Bar_Line.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 15px;
+  margin-left: 5.5556vw; /*80px 해당*/
+}
+
+/*img태그를 사용하는 경우*/
+/* .header_bar_line {
   margin-top: 74px;
   margin-left: 70px;
   width: 1800px;
-}
+} */
 
 /*header 영역 구분선*/
 .header {
@@ -72,7 +85,7 @@
 /*btn 요소별 간격 hard-coding (btn별로 하단, line이미지 참고하여 간격 조정)*/
 .ticket_link {
   /* border: 1px solid blue; */
-  margin-left: 375px;
+  margin-left: 16.8%; /*155px*/
 }
 
 #ticket {
@@ -90,7 +103,7 @@
 
 .schedule_link {
   /* border: 1px solid blue; */
-  margin-left: 151px;
+  margin-left: 5.7%; /*151px*/
 }
 
 /* #schedule {
@@ -105,7 +118,7 @@
 
 .about_link {
   /* border: 1px solid blue; */
-  margin-left: 153px;
+  margin-left: 5.5%; /*153px*/
 }
 
 /* #about {
@@ -120,14 +133,16 @@
 
 /*location 부모요소(width조정에 사용)*/
 #header_location {
+  /* border: 1px solid blue; */
+  margin-left: 7%; /*160px*/
+
   width: 100%;
-  margin-left: 160px;
 }
 
 .location {
   display: flex; /*icon, text 한줄 정렬*/
   font-family: "EsaManru";
-  font-size: 14px;
+  font-size: 10px;
   margin-bottom: 18px;
 }
 

@@ -4,7 +4,7 @@ import "../../style/header.css";
 import { Link } from "react-router-dom";
 import header_Logo from "../../img/header_logo.png";
 import Earth_Icon from "../../img/Earth_Icon.png";
-import Navigation_Bar_line from "../../img/Navigation_Bar_Line.png";
+// import Navigation_Bar_line from "../../img/Navigation_Bar_Line.png";
 
 // Header BTN 영역(Button 역할)
 const NavigtionSpan = styled.div`
@@ -103,7 +103,9 @@ function Header() {
             <Location></Location>
           </NavigtionSpan>
         </div>
-        <img className="header_bar_line" src={Navigation_Bar_line}></img>
+      </div>
+      <div className="Navigation_bar_line_div">
+        {/* <img className="header_bar_line" src={Navigation_Bar_line}></img> */}
       </div>
     </div>
   );
