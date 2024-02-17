@@ -65,7 +65,7 @@ const UnderLine = styled.div`
   border-bottom-right-radius: 4px;
 
   height: 10px;
-  width: 80%;
+  width: 75%;
 `;
 
 function Footer() {
