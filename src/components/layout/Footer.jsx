@@ -53,6 +53,7 @@ const BelowUnder = styled.div`
   align-items: center;
   justify-content: space-between;
 
+  width: 100%;
   padding-top: 10px;
 `;
 const UnderLine = styled.div`
@@ -64,7 +65,7 @@ const UnderLine = styled.div`
   border-bottom-right-radius: 4px;
 
   height: 10px;
-  width: 85%;
+  width: 80%;
 `;
 
 function Footer() {
