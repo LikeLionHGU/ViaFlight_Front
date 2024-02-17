@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
 import Search from "./components/Search";
 
 function App() {
@@ -7,12 +8,13 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path={process.env.PUBLIC_URL + "/"} element={<Footer/>} />
+        <Route path={process.env.PUBLIC_URL + "/"} element={<Search />} />
         {/* <Route
         path={process.env.PUBLIC_URL + "/schedule"}
         element={<Schedule />}
       /> */}
       </Routes>
+      <Footer />
     </Router>
   );
 }
