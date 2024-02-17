@@ -14,33 +14,35 @@
   font-display: swap;
 }
 
-/*sticky È¿°ú ÁÖ±â*/
+/*sticky íš¨ê³¼ ì£¼ê¸°*/
 .header_sticky {
   position: sticky;
   top: 0;
 }
 
-/*header_bar_line ÀÌ¹ÌÁö À§Ä¡ Á¶Á¤*/
+/*header_bar_line ì´ë¯¸ì§€ ìœ„ì¹˜ ì¡°ì •*/
 .header_bar_line {
   margin-top: 74px;
   margin-left: 70px;
-  width: 1800px;
+
+  width: 1700px; /*1800px ìˆ˜ì •(ê°€ë¡œ scroll ì—†ì• ê¸° ìœ„í•´ì„œ ìˆ˜ì •)*/
+
 }
 
-/*header ¿µ¿ª ±¸ºĞ¼±*/
+/*header ì˜ì—­ êµ¬ë¶„ì„ */
 .header {
-  position: relative; /*BTN, img_logo À§Ä¡ Á¶Á¤À» À§ÇØ¼­ »ç¿ë, [±âÁØ À§Ä¡]*/
+  position: relative; /*BTN, img_logo ìœ„ì¹˜ ì¡°ì •ì„ ìœ„í•´ì„œ ì‚¬ìš©, [ê¸°ì¤€ ìœ„ì¹˜]*/
   /* border-bottom: 1px solid #ec4d27; */
   height: 80px;
   /* background-color: white; */
-  /* background-color: transparent; Åõ¸íÈ¿°ú */
-  background-color: rgba(255, 255, 255, 0.2); /*header ºÒÅõ¸íµµ ÁÖ±â*/
+  /* background-color: transparent; íˆ¬ëª…íš¨ê³¼ */
+  background-color: rgba(255, 255, 255, 0.2); /*header ë¶ˆíˆ¬ëª…ë„ ì£¼ê¸°*/
 }
 
-/*header ¿µ¿ª LOGO ºÎºĞ*/
+/*header ì˜ì—­ LOGO ë¶€ë¶„*/
 .img_logo {
-  /*position: absolute;Logo À§Ä¡ Á¶Á¤*/
-  /*top: 0%; Logo À§Ä¡ ¼öÁ÷¹æÇâ À§Ä¡, [LogoÀÇ À§Ä¡]*/
+  /*position: absolute;Logo ìœ„ì¹˜ ì¡°ì •*/
+  /*top: 0%; Logo ìœ„ì¹˜ ìˆ˜ì§ë°©í–¥ ìœ„ì¹˜, [Logoì˜ ìœ„ì¹˜]*/
   /* left: 0%; */
   /* border: 1px solid blue; */
 
@@ -49,30 +51,32 @@
   height: 103px;
   overflow: hidden;
   object-fit: scale-down;
-  /* left: 5%; ÁÂÃø ¹èÄ¡ °£°İ */
+  /* left: 5%; ì¢Œì¸¡ ë°°ì¹˜ ê°„ê²© */
 }
 
-/*header ¿µ¿ª BTN ºÎºĞ*/
+/*header ì˜ì—­ BTN ë¶€ë¶„*/
 .header-BTN {
-  position: absolute; /*BTN À§Ä¡ Á¶Á¤*/
-  /*top: 10%; BTN À§Ä¡ ¼öÁ÷¹æÇâ À§Ä¡, [BTNÀÇ À§Ä¡]*/
-  /*right: 20%; ¿ìÃø ¹èÄ¡ °£°İ*/
+  position: absolute; /*BTN ìœ„ì¹˜ ì¡°ì •*/
+  /*top: 10%; BTN ìœ„ì¹˜ ìˆ˜ì§ë°©í–¥ ìœ„ì¹˜, [BTNì˜ ìœ„ì¹˜]*/
+  /*right: 20%; ìš°ì¸¡ ë°°ì¹˜ ê°„ê²©*/
 
-  display: flex; /*¿ä¼Òµé ³ôÀÌ Á¤·Ä ¿äÀÎ [style-componet·Î Á¤·ÄµÇÁö ¾ÊÀº ³ôÀÌ¸¦ ¸ÂÃâ ¼ö ÀÖÀ½]*/
+  display: flex; /*ìš”ì†Œë“¤ ë†’ì´ ì •ë ¬ ìš”ì¸ [style-componetë¡œ ì •ë ¬ë˜ì§€ ì•Šì€ ë†’ì´ë¥¼ ë§ì¶œ ìˆ˜ ìˆìŒ]*/
   width: 100%;
   height: 100%;
 
   /* background-color: white; */
-  background-color: transparent; /*Åõ¸íÈ¿°ú*/
+  background-color: transparent; /*íˆ¬ëª…íš¨ê³¼*/
   /* color: #ec4d27; */
 }
 
-/*Link¿µ¿ª°ú div¿µ¿ª Å©±â ¸ÂÃß±â À§ÇØ¼­ (.~_link) ÀÛ¾÷ÇÔ*/
+/*Linkì˜ì—­ê³¼ divì˜ì—­ í¬ê¸° ë§ì¶”ê¸° ìœ„í•´ì„œ (.~_link) ì‘ì—…í•¨*/
 
-/*btn ¿ä¼Òº° °£°İ hard-coding (btnº°·Î ÇÏ´Ü, lineÀÌ¹ÌÁö Âü°íÇÏ¿© °£°İ Á¶Á¤)*/
+/*btn ìš”ì†Œë³„ ê°„ê²© hard-coding (btnë³„ë¡œ í•˜ë‹¨, lineì´ë¯¸ì§€ ì°¸ê³ í•˜ì—¬ ê°„ê²© ì¡°ì •)*/
 .ticket_link {
   /* border: 1px solid blue; */
-  margin-left: 375px;
+
+  margin-left: 342px; /*375px(ìˆ˜ì •ë¨)*/
+
 }
 
 #ticket {
@@ -90,7 +94,9 @@
 
 .schedule_link {
   /* border: 1px solid blue; */
-  margin-left: 151px;
+
+  margin-left: 133px; /*151px*/
+
 }
 
 /* #schedule {
@@ -105,7 +111,9 @@
 
 .about_link {
   /* border: 1px solid blue; */
-  margin-left: 153px;
+
+  margin-left: 135px; /*153px(ìˆ˜ì •ë¨)*/
+
 }
 
 /* #about {
@@ -118,42 +126,47 @@
   margin-bottom: 18px;
 } */
 
-/*location ºÎ¸ğ¿ä¼Ò(widthÁ¶Á¤¿¡ »ç¿ë)*/
+/*location ë¶€ëª¨ìš”ì†Œ(widthì¡°ì •ì— ì‚¬ìš©)*/
 #header_location {
+
+  /* border: 1px solid blue; */
+
   width: 100%;
   margin-left: 160px;
 }
 
 .location {
-  display: flex; /*icon, text ÇÑÁÙ Á¤·Ä*/
+  display: flex; /*icon, text í•œì¤„ ì •ë ¬*/
   font-family: "EsaManru";
-  font-size: 14px;
+
+  font-size: 12px; /*14px(ìˆ˜ì •ë¨)*/
+
   margin-bottom: 18px;
 }
 
 .location_icon {
-  width: 14px; /*icon, widthÆø¿¡ ¸ÂÃã*/
+  width: 14px; /*icon, widthí­ì— ë§ì¶¤*/
 }
 
 .location_text {
   margin-left: 9px;
 }
-/*header-logoºÎºĞ*/
+/*header-logoë¶€ë¶„*/
 .header_logo {
   width: 300px;
 }
 
-/*header-locationºÎºĞ*/
+/*header-locationë¶€ë¶„*/
 .header_location {
   margin-left: 200px;
 }
 
-/* header-logoºÎºĞ
+/* header-logoë¶€ë¶„
 .header_logo {
   width: 300px;
 }
 
-/*header-locationºÎºĞ
+/*header-locationë¶€ë¶„
 .header_location {
   margin-left: 200px;
 } */
