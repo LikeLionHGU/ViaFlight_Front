@@ -41,35 +41,52 @@ function Banner() {
     localStorage.setItem("viaAirport", e.target.value);
   };
 
-  const onATime = (e) => {
-    // if (savedATime == null) alert("경유공항에 도착한 시간을 입력해주세요");
-    if (savedATime !== null) localStorage.removeItem("arrivalTime");
-    setATime(e.target.value);
-    localStorage.setItem("arrivalTime", e.target.value);
-  };
-
   const onDTime = (e) => {
-    // if (savedDTime == null) alert("경유 시간을 선택해주세요");
-    if (savedDTime !== null) localStorage.removeItem("durationTime");
+    // if (savedATime == null) alert("경유공항에 도착한 시간을 입력해주세요");
+    if (savedATime !== null) localStorage.removeItem("durationTime");
     setDTime(e.target.value);
     localStorage.setItem("durationTime", e.target.value);
   };
 
-  //입력확인 함수
+  const onATime = (e) => {
+    // if (savedDTime == null) alert("경유 시간을 선택해주세요");
+    if (savedDTime !== null) localStorage.removeItem("arrivalTime");
+    setATime(e.target.value);
+    localStorage.setItem("arrivalTime", e.target.value);
+  };
+
+  //입력 유효성 검사하는 함수 [LocalStorage]
   const OnCheckInput = (e) => {
-    if (savedAirport === null || savedATime === null || savedDTime === null) {
+    //[Case1, 입력이 없는 경우]
+
+    if (savedAirport === null && savedATime === null && savedDTime === null) {
       e.preventDefault();
-      alert("입력이 누락된 부분이 있습니다. 다시 입력해주세요");
-    } else {
       alert(
-        `입력 정보 알림\n
-         공항: ${savedAirport}\n
-         도착시간: ${savedATime}\n
-         경유시간: ${savedDTime} \n
-         `
+        "입력 form을 작성하시면,\
+        \n경유 하시는 공항의 맟춤 액티비티를 보여드려요!\
+        \n\n하단 입력창에 찾으시는 정보를 입력해주세요!"
       );
     }
+    // [Case2, 입력이 일부 누락된 경우]
+    else if (
+      savedAirport === null ||
+      savedATime === null ||
+      savedDTime === null
+    ) {
+      e.preventDefault();
+      alert("입력이 누락된 부분이 있습니다. 다시 입력해주세요");
+    }
+
+    //[Case3, 모두 입력값이 존재하는 경우]
+    else {
+      alert(`입력 정보 알림\n\n 
+      공항: ${savedAirport}\n
+      도착시간: ${savedATime}\n
+      경유시간: ${savedDTime} `);
+    }
   };
+
+  //입력이 하나도 없는 경우 [Case2, 입력이 하나도 없는 경우 ]
 
   return (
     <>
