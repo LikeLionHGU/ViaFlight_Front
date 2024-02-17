@@ -1,5 +1,21 @@
 @font-face {
   font-family: "EsaManru";
+  font-weight: 200;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EsaManru";
   font-weight: 300;
   font-style: normal;
   src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.eot");
@@ -76,4 +92,16 @@
     format("woff");
   font-weight: 100;
   font-style: normal;
+}
+@font-face {
+  font-family: "Plaid";
+  font-weight: 300;
+  font-style: normal;
+  src: url("Plaid_FaktPro/FaktPro-normal-400-100.ttf");
+  src: url("Plaid_FaktPro/FaktPro-normal-400-100.ttf")
+      format("embedded-opentype"),
+    url("Plaid_FaktPro/FaktPro-normal-400-100.ttf") format("woff2"),
+    url("Plaid_FaktPro/FaktPro-normal-400-100.ttf") format("woff"),
+    url("Plaid_FaktPro/FaktPro-normal-400-100.ttf") format("truetype");
+  font-display: swap;
 }
