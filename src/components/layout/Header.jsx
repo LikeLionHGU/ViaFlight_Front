@@ -53,13 +53,29 @@ function Location() {
       </div>
       <div className="location_text">
         {typeof lat === "number" ? lat.toFixed(4) : ""}° N,
-        {typeof lon === "number" ? lon.toFixed(4) : ""}° E,
+        {typeof lon === "number" ? lon.toFixed(4) : ""}° E
       </div>
     </div>
   );
 }
 
 function Header() {
+  //localstorage가 empty인 경우 확인(입력 유도 페이지 결정하는 변수)
+  const [emptyCheck, setCheck] = useState(true);
+
+  //localstorage에 저장된 입력값 불러오기
+  const savedAirport = localStorage.getItem("viaAirport");
+  const savedATime = localStorage.getItem("arrivalTime");
+  const savedDTime = localStorage.getItem("durationTime");
+  //localStorage에 입력 여부에 따라서, 유도페이지 연결
+  const onEmptyCheck = () => {
+    if (savedAirport === null && savedATime == null && savedDTime == null) {
+      setCheck(false);
+    } else {
+      setCheck(true);
+    }
+  };
+
   return (
     <div className="header_sticky">
       <div className="header">
@@ -87,7 +103,11 @@ function Header() {
             </NavigtionSpan>
           </Link>
 
-          <Link to={`/schedule`} className="schedule_link">
+          <Link
+            to={emptyCheck ? `/schedule` : `/`} //true: 입력 페이지로, flase: 유도 페이지로
+            className="schedule_link"
+            onClick={onEmptyCheck}
+          >
             <NavigtionSpan id="schedule">
               <div className="schedule_text">맞춤형 여행 일정</div>
             </NavigtionSpan>
