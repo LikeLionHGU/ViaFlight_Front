@@ -9,6 +9,7 @@ const StyleContainer = styled.div`
   padding-bottom: 30px;
 
   font-family: Plaid;
+  white-space: nowrap;
 `;
 
 const Above = styled.div`
@@ -56,6 +57,9 @@ const BelowUnder = styled.div`
   width: 100%;
   padding-top: 10px;
 `;
+const LineCover = styled.div`
+  width: 100%;
+`;
 const UnderLine = styled.div`
   border-bottom: 1px solid rgba(244, 240, 231, 0.7);
   border-right: 1px solid rgba(244, 240, 231, 0.7);
@@ -65,7 +69,7 @@ const UnderLine = styled.div`
   border-bottom-right-radius: 4px;
 
   height: 10px;
-  width: 75%;
+  width: 90%;
 `;
 
 function Footer() {
@@ -89,7 +93,9 @@ function Footer() {
           </BelowContact>
         </BelowOver>
         <BelowUnder>
-          <UnderLine />
+          <LineCover>
+            <UnderLine />
+          </LineCover>
           <div>All rights reserved.</div>
         </BelowUnder>
       </Below>
