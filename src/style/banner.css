@@ -58,6 +58,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Plaid";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf");
+  src: url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf")
+      format("embedded-opentype"),
+    url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf") format("woff2"),
+    url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf") format("woff"),
+    url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf") format("truetype");
+
+  font-display: swap;
+}
+
 /*banner 전체 화면 구성*/
 .banner {
   display: block;
@@ -287,7 +301,7 @@
 }
 
 .AboutBtn {
-  font-family: "EsaManru";
+  font-family: "Plaid";
   color: #ec4d27;
 
   font-size: 15px;
