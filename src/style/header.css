@@ -14,6 +14,20 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Plaid";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf");
+  src: url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf")
+      format("embedded-opentype"),
+    url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf") format("woff2"),
+    url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf") format("woff"),
+    url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf") format("truetype");
+
+  font-display: swap;
+}
+
 /*sticky 효과 주기*/
 .header_sticky {
   position: sticky;
@@ -31,6 +45,7 @@
   background-repeat: no-repeat;
   height: 15px;
   margin-left: 5.5556vw; /*80px 해당*/
+  margin-right: 5.5556vw;
 }
 
 /*img태그를 사용하는 경우*/
@@ -85,7 +100,7 @@
 /*btn 요소별 간격 hard-coding (btn별로 하단, line이미지 참고하여 간격 조정)*/
 .ticket_link {
   /* border: 1px solid blue; */
-  margin-left: 16.8%; /*155px*/
+  margin-left: 15.7%; /*155px*/
 }
 
 #ticket {
@@ -93,9 +108,14 @@
   /* margin-left: 360px; */
 }
 .ticket_text,
-.schedule_text,
-.about_text {
+.schedule_text {
   font-family: "EsaManru";
+  font-size: 18px;
+  line-height: 20.97px;
+  margin-bottom: 18px;
+}
+.about_text {
+  font-family: "Plaid"; /*font_style변경*/
   font-size: 18px;
   line-height: 20.97px;
   margin-bottom: 18px;
@@ -103,7 +123,7 @@
 
 .schedule_link {
   /* border: 1px solid blue; */
-  margin-left: 5.7%; /*151px*/
+  margin-left: 5%; /*151px*/
 }
 
 /* #schedule {
@@ -118,7 +138,7 @@
 
 .about_link {
   /* border: 1px solid blue; */
-  margin-left: 5.5%; /*153px*/
+  margin-left: 5%; /*153px*/
 }
 
 /* #about {
@@ -134,15 +154,15 @@
 /*location 부모요소(width조정에 사용)*/
 #header_location {
   /* border: 1px solid blue; */
-  margin-left: 7%; /*160px*/
+  margin-left: 5%; /*160px*/
 
   width: 100%;
 }
 
 .location {
   display: flex; /*icon, text 한줄 정렬*/
-  font-family: "EsaManru";
-  font-size: 10px;
+  font-family: "Plaid"; /*font_style변경*/
+  font-size: 13px;
   margin-bottom: 18px;
 }
 
