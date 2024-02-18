@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import Airplane from "../../../img/airplane icon.svg";
+import "../../../font/font.css";
 
 const ToggleContainer = styled.div`
   position: relative;
@@ -8,6 +9,7 @@ const ToggleContainer = styled.div`
   cursor: pointer;
 
   font-size: 15px;
+  font-family: Esamanru;
 
   > .toggle-container {
     width: 160px;
@@ -65,13 +67,13 @@ const InOut = styled.div`
 
 const InAirport = styled.div`
   position: absolute;
-  top: 20px;
+  top: 22px;
   right: 32px;
 `;
 
 const OutAirport = styled.div`
   position: absolute;
-  top: 20px;
+  top: 22px;
   left: 25px;
 `;
 
