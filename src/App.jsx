@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path={process.env.PUBLIC_URL + "/"} element={<InAirport />} />
+        <Route path={process.env.PUBLIC_URL + "/"} element={<Search />} />
         {/* <Route
         path={process.env.PUBLIC_URL + "/schedule"}
         element={<Schedule />}
