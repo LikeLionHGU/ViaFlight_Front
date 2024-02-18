@@ -79,13 +79,6 @@ function Header() {
   return (
     <div className="header_sticky">
       <div className="header">
-        {/* Header Logo 부분 */}
-        {/* <img
-          className="img_logo"
-          src="https://bit.ly/3OtSJYc"
-          alt="via-flight-logo"
-        ></img> */}
-
         {/* Header BTN 부분 */}
         <div className="header-BTN">
           {/* Header Logo 부분 */}
@@ -124,9 +117,7 @@ function Header() {
           </NavigtionSpan>
         </div>
       </div>
-      <div className="Navigation_bar_line_div">
-        {/* <img className="header_bar_line" src={Navigation_Bar_line}></img> */}
-      </div>
+      <div className="Navigation_bar_line_div"></div>
     </div>
   );
 }

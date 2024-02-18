@@ -66,6 +66,15 @@
 }
 
 /*header 영역 LOGO 부분*/
+
+/*24.02.18. 실험
+.header_logo {
+  border: 1px solid blue;
+  background-image: url(../img/header_logo.png);
+  background-position: contain;
+  width: 500px;
+}
+*/
 .img_logo {
   /*position: absolute;Logo 위치 조정*/
   /*top: 0%; Logo 위치 수직방향 위치, [Logo의 위치]*/

@@ -1,0 +1,216 @@
+/*Font 사용*/
+@font-face {
+  font-family: "EsaManru";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plaid";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf");
+  src: url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf")
+      format("embedded-opentype"),
+    url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf") format("woff2"),
+    url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf") format("woff"),
+    url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf") format("truetype");
+
+  font-display: swap;
+}
+
+/*Header 부분 */
+.InAIrport_Header {
+  position: relative;
+  height: 439px;
+
+  text-align: center;
+  background-color: rgba(244, 240, 231, 1);
+  color: rgba(44, 110, 73, 1);
+}
+
+/*(공항in/out) 스위치, 컴포넌트 */
+.InAIrport_Header_btn {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%);
+
+  border: 1px solid red;
+}
+
+.InAIrport_Header_text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+
+  .text1 {
+    /* border: 1px solid blue; */
+    font-family: "EsaManru";
+    font-size: 19px;
+    line-height: 70px;
+    font-weight: 300;
+  }
+
+  .text2 {
+    /* border: 1px solid blue; */
+    font-family: "EsaManru";
+    font-size: 75px;
+    line-height: 92px;
+    font-weight: 300;
+  }
+}
+
+/*Banner 부분*/
+.InAIrport_Banner {
+  position: relative;
+  height: 780px;
+  background-image: url("../img/inairport_banner.png");
+  background-size: cover;
+  color: white;
+}
+
+/*공항 Icon - Banner 부분*/
+.InAirport_Banner_Icons {
+  border: 1px solid red;
+  position: absolute;
+  top: 40%;
+  left: 80px;
+
+  width: 314px;
+  height: 37px;
+
+  background-color: rgba(165, 165, 165, 0.5);
+}
+
+/*시간, 날씨 정보 - Banner 부분*/
+.InAirport_Banner_infoWeather {
+  position: absolute;
+  top: 40%;
+  right: 80px;
+
+  width: 314px;
+  height: 41px;
+
+  background-color: rgba(165, 165, 165, 0.5);
+  line-height: 41px;
+  text-align: center;
+
+  /*infoweather안의 요소들의 위치(width % 비율 조정)*/
+  display: flex;
+  .currentTime {
+    width: 50%;
+  }
+  .intervalTime {
+    border-left: 1px solid white;
+    width: 30%;
+  }
+  .weather {
+    border-left: 1px solid white;
+    width: 20%;
+  }
+}
+
+/*Grid1  부분*/
+.InAIrport_Grid1 {
+  position: relative;
+  height: 1712px;
+  background-color: rgba(44, 110, 73, 1);
+}
+
+.InAIrport_Grid1_title {
+  height: 166px;
+
+  padding-left: 102px;
+  padding-right: 102px;
+  padding-top: 72px;
+
+  color: rgba(255, 255, 255, 1);
+
+  font-family: "EsaManru";
+  font-size: 98px;
+  line-height: 45px;
+  font-weight: 300;
+
+  text-align: center;
+}
+
+/*추천 정보(시설/휴식/식사/면세) components - Grid1 부분*/
+.InAIrport_Grid1_recommend {
+  border: 3px solid red;
+  height: 1200px;
+  color: white;
+  line-height: 1200px;
+  text-align: center;
+}
+
+.InAIrport_Grid1_Arrow {
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  transform: translate(-50%);
+
+  height: 20px;
+  .Uparrow {
+    width: 32px;
+    animation: motion 0.4s linear 0s infinite alternate;
+  }
+}
+
+@keyframes motion {
+  0% {
+    padding-top: 10px;
+  }
+  100% {
+    padding-top: 0px;
+  }
+}
+
+.InAIrport_Grid1_Btn {
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-radius: 5px;
+
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%);
+
+  height: 46px;
+  width: 419px;
+
+  background-color: rgba(0, 0, 0, 1);
+  color: rgba(244, 240, 231, 1);
+
+  /*btn text 중앙 정렬(부모 tag의 높이와 같게 설정)*/
+  line-height: 46px;
+  text-align: center;
+
+  font-family: "EsaManru";
+  font-size: 20px;
+}
+
+.InAIrport_Grid1_Btn:hover {
+  background-color: rgba(44, 110, 73, 1);
+  color: rgba(0, 0, 0, 1);
+}
+
+/*Grid 2 - (기획전, 이벤트 소개)*/
+.InAIrport_Grid2 {
+  border: 3px solid red;
+  height: 700px;
+  line-height: 700px;
+  text-align: center;
+  background-color: rgba(25, 25, 25, 1);
+  color: white;
+}
