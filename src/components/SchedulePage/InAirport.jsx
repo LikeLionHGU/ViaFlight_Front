@@ -3,7 +3,7 @@ import React from "react";
 // import Header from "../layout/Header";
 import "../../style/InAirport.css";
 import upArrow from "../../img/inairport_grid_UpArrow.png";
-import styled from "styled-components";
+import ToggleBtn from "./Changing/ToggleBtn";
 
 /*header,banner,grid 영역별 position relative를 사용하여 가능*/
 function InAirport() {
@@ -17,7 +17,9 @@ function InAirport() {
   return (
     <>
       <div className="InAIrport_Header">
-        <div className="InAIrport_Header_btn"> In/Out 스위치 component</div>
+        <div className="InAIrport_Header_btn">
+          <ToggleBtn />
+        </div>
         <div className="InAIrport_Header_text">
           <div className="text1">one of the best airports in the world</div>
           <div className="text2">SINGAPORE CHANGI AIRPORT</div>
