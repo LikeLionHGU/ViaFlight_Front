@@ -1,7 +1,7 @@
-import travel1 from "../../img/img1.jpeg";
-import travel2 from "../../img/img2.jpg";
-import travel3 from "../../img/img3.jpg";
-import travel4 from "../../img/img4.jpg";
+import travel1 from "../../img/slide1.jpg";
+import travel2 from "../../img/slide2.jpg";
+import travel3 from "../../img/slide3.jpg";
+import travel4 from "../../img/slide4.jpg";
 
 export const ServiceData = [
   {
@@ -36,14 +36,14 @@ export const ServiceData = [
     tip: "분실 등 만약의 경우에 대비해 수하물 표를 잘 챙기세요!\n도착 시 수하물이 없다면 즉시 항공사에 알리세요.",
     backgroundImg: travel4,
   },
-  // {
-  //   question: "Question 05",
-  //   title: "환승할 때 수하물은\n어떻게 처리되나요?",
-  //   content:
-  //     "대부분 국제 항공편에서는 최종 목적지까지 수하물이 자동으로\n전송됩니다. 일부 국가 또는 항공사에서는 보안, 관세 검사 등의\n규정에 따라 수하물을 재수속해야 할 수 있으니 출발 전에 \n항공사에 확인하세요.(공항별 수하물 처리 규정을 우리 서비스에서 확인하세요.)",
-  //   tip: "분실 등 만약의 경우에 대비해 수하물 표를 잘 챙기세요!\n도착 시 수하물이 없다면 즉시 항공사에 알리세요.",
-  //   backgroundImg: travel2,
-  // },
+  {
+    question: "Question 05",
+    title: "환승할 때 수하물은\n어떻게 처리되나요?",
+    content:
+      "대부분 국제 항공편에서는 최종 목적지까지 수하물이 자동으로\n전송됩니다. 일부 국가 또는 항공사에서는 보안, 관세 검사 등의\n규정에 따라 수하물을 재수속해야 할 수 있으니 출발 전에 \n항공사에 확인하세요.(공항별 수하물 처리 규정을 우리 서비스에서 확인하세요.)",
+    tip: "분실 등 만약의 경우에 대비해 수하물 표를 잘 챙기세요!\n도착 시 수하물이 없다면 즉시 항공사에 알리세요.",
+    backgroundImg: travel2,
+  },
   // {
   //   question: "Question 06",
   //   title: "환승할 때 수하물은\n어떻게 처리되나요?",
