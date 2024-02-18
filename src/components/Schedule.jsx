@@ -1,7 +1,8 @@
 import React from "react";
+import InAirport from "./SchedulePage/InAirport";
 
 function Schedule() {
-  return <div>Schedule</div>;
+  return <InAirport />;
 }
 
 export default Schedule;

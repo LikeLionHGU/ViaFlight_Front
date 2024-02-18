@@ -1,4 +1,4 @@
-/*Font »ç¿ë*/
+/*Font ï¿½ï¿½ï¿½*/
 @font-face {
   font-family: "EsaManru";
   font-weight: 300;
@@ -29,7 +29,7 @@
   font-display: swap;
 }
 
-/*Header ºÎºÐ */
+/*Header ï¿½Îºï¿½ */
 .InAIrport_Header {
   position: relative;
   height: 439px;
@@ -39,14 +39,12 @@
   color: rgba(44, 110, 73, 1);
 }
 
-/*(°øÇ×in/out) ½ºÀ§Ä¡, ÄÄÆ÷³ÍÆ® */
+/*(ï¿½ï¿½ï¿½ï¿½in/out) ï¿½ï¿½ï¿½ï¿½Ä¡, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® */
 .InAIrport_Header_btn {
   position: absolute;
   top: 15%;
   left: 50%;
   transform: translate(-50%);
-
-  border: 1px solid red;
 }
 
 .InAIrport_Header_text {
@@ -72,7 +70,7 @@
   }
 }
 
-/*Banner ºÎºÐ*/
+/*Banner ï¿½Îºï¿½*/
 .InAIrport_Banner {
   position: relative;
   height: 780px;
@@ -81,7 +79,7 @@
   color: white;
 }
 
-/*°øÇ× Icon - Banner ºÎºÐ*/
+/*ï¿½ï¿½ï¿½ï¿½ Icon - Banner ï¿½Îºï¿½*/
 .InAirport_Banner_Icons {
   border: 1px solid red;
   position: absolute;
@@ -94,7 +92,7 @@
   background-color: rgba(165, 165, 165, 0.5);
 }
 
-/*½Ã°£, ³¯¾¾ Á¤º¸ - Banner ºÎºÐ*/
+/*ï¿½Ã°ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ - Banner ï¿½Îºï¿½*/
 .InAirport_Banner_infoWeather {
   position: absolute;
   top: 40%;
@@ -107,7 +105,7 @@
   line-height: 41px;
   text-align: center;
 
-  /*infoweather¾ÈÀÇ ¿ä¼ÒµéÀÇ À§Ä¡(width % ºñÀ² Á¶Á¤)*/
+  /*infoweatherï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Òµï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡(width % ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)*/
   display: flex;
   .currentTime {
     width: 50%;
@@ -122,7 +120,7 @@
   }
 }
 
-/*Grid1  ºÎºÐ*/
+/*Grid1  ï¿½Îºï¿½*/
 .InAIrport_Grid1 {
   position: relative;
   height: 1712px;
@@ -146,7 +144,7 @@
   text-align: center;
 }
 
-/*ÃßÃµ Á¤º¸(½Ã¼³/ÈÞ½Ä/½Ä»ç/¸é¼¼) components - Grid1 ºÎºÐ*/
+/*ï¿½ï¿½Ãµ ï¿½ï¿½ï¿½ï¿½(ï¿½Ã¼ï¿½/ï¿½Þ½ï¿½/ï¿½Ä»ï¿½/ï¿½é¼¼) components - Grid1 ï¿½Îºï¿½*/
 .InAIrport_Grid1_recommend {
   border: 3px solid red;
   height: 1200px;
@@ -192,7 +190,7 @@
   background-color: rgba(0, 0, 0, 1);
   color: rgba(244, 240, 231, 1);
 
-  /*btn text Áß¾Ó Á¤·Ä(ºÎ¸ð tagÀÇ ³ôÀÌ¿Í °°°Ô ¼³Á¤)*/
+  /*btn text ï¿½ß¾ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½Î¸ï¿½ tagï¿½ï¿½ ï¿½ï¿½ï¿½Ì¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)*/
   line-height: 46px;
   text-align: center;
 
@@ -205,7 +203,7 @@
   color: rgba(0, 0, 0, 1);
 }
 
-/*Grid 2 - (±âÈ¹Àü, ÀÌº¥Æ® ¼Ò°³)*/
+/*Grid 2 - (ï¿½ï¿½È¹ï¿½ï¿½, ï¿½Ìºï¿½Æ® ï¿½Ò°ï¿½)*/
 .InAIrport_Grid2 {
   border: 3px solid red;
   height: 700px;
