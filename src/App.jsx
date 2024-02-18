@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path={process.env.PUBLIC_URL + "/"} element={<Slider />} />
+        <Route path={process.env.PUBLIC_URL + "/"} element={<Search />} />
         {/* <Route
         path={process.env.PUBLIC_URL + "/schedule"}
         element={<Schedule />}
