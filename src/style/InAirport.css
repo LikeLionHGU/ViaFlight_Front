@@ -32,7 +32,6 @@
 /*Header 부분 */
 .InAIrport_Header {
   position: relative;
-  /* border: 1px solid red; */
   height: 439px;
 
   text-align: center;
@@ -50,13 +49,11 @@
   border: 1px solid red;
 }
 
-/*(text)상자 위치 조정*/
 .InAIrport_Header_text {
   position: absolute;
   top: 30%;
   left: 50%;
   transform: translate(-50%);
-  /* border: 1px solid red; */
 
   .text1 {
     /* border: 1px solid blue; */
@@ -77,15 +74,14 @@
 
 /*Banner 부분*/
 .InAIrport_Banner {
-  /* border: 1px solid blue; */
   position: relative;
-  height: 780px; /* banner 높이*/
+  height: 780px;
   background-image: url("../img/inairport_banner.png");
   background-size: cover;
   color: white;
 }
 
-/*Banner Icon 스타일*/
+/*공항 Icon - Banner 부분*/
 .InAirport_Banner_Icons {
   border: 1px solid red;
   position: absolute;
@@ -98,10 +94,8 @@
   background-color: rgba(165, 165, 165, 0.5);
 }
 
-/*Banner 시간, 날씨 정보*/
+/*시간, 날씨 정보 - Banner 부분*/
 .InAirport_Banner_infoWeather {
-  /*infoweather 박스 전체에 대한 위치*/
-  /* border: 1px solid red; */
   position: absolute;
   top: 40%;
   right: 80px;
@@ -112,10 +106,10 @@
   background-color: rgba(165, 165, 165, 0.5);
   line-height: 41px;
   text-align: center;
-  /*infoweather안의 요소들의 위치*/
+
+  /*infoweather안의 요소들의 위치(width % 비율 조정)*/
   display: flex;
   .currentTime {
-    /* border: 1px solid blue; */
     width: 50%;
   }
   .intervalTime {
@@ -131,13 +125,11 @@
 /*Grid1  부분*/
 .InAIrport_Grid1 {
   position: relative;
-  /* border: 1px solid red; */
   height: 1712px;
   background-color: rgba(44, 110, 73, 1);
 }
 
 .InAIrport_Grid1_title {
-  /* border: 1px solid blue; */
   height: 166px;
 
   padding-left: 102px;
@@ -154,7 +146,7 @@
   text-align: center;
 }
 
-/*추천 정보(시설/휴식/식사/면세) components*/
+/*추천 정보(시설/휴식/식사/면세) components - Grid1 부분*/
 .InAIrport_Grid1_recommend {
   border: 3px solid red;
   height: 1200px;
@@ -164,29 +156,22 @@
 }
 
 .InAIrport_Grid1_Arrow {
-  /* border: 1px solid blue; */
   position: absolute;
   bottom: 12%;
   left: 50%;
   transform: translate(-50%);
 
-  height: 20px; /*arroww움직임에 따라 크기 움직이지 않게 하기 위해 임의 높이 지정*/
-  /*arrow*/
+  height: 20px;
   .Uparrow {
-    /* border: 1px solid blue; */
     width: 32px;
-    animation: motion 0.4s /*반복되는 시간*/ linear 0s /*효과 일정하게 반복*/
-      infinite alternate; /*애니매이션 효과 무한으로 반복; 상하로 움직이는 효과 */
+    animation: motion 0.4s linear 0s infinite alternate;
   }
 }
 
-/*(아래-위)로 움직이는 효과*/
 @keyframes motion {
-  /*처음 위치*/
   0% {
     padding-top: 10px;
   }
-  /*마지막 위치*/
   100% {
     padding-top: 0px;
   }
@@ -220,7 +205,7 @@
   color: rgba(0, 0, 0, 1);
 }
 
-/*Grid 2*/
+/*Grid 2 - (기획전, 이벤트 소개)*/
 .InAIrport_Grid2 {
   border: 3px solid red;
   height: 700px;
