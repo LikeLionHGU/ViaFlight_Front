@@ -70,7 +70,7 @@
 
 /*header 영역 BTN 부분*/
 .header-BTN {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 
   position: absolute; /*BTN 위치 조정*/
 
@@ -87,14 +87,14 @@
 /*btn 요소별 간격 hard-coding (btn별로 하단, line이미지 참고하여 간격 조정)*/
 .ticket_link {
   /*logo와의 간격*/
-  margin-left: 15.7%; /*155px */
+  margin-left: 17%; /*155px */
 }
 
 /*BTN들의 link크기, text 정렬*/
 .ticket_link,
 .schedule_link,
 .about_link {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   width: 15%;
   display: table-cell;
   vertical-align: bottom;
