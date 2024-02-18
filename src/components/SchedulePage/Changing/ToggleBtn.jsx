@@ -4,59 +4,75 @@ import Airplane from "../../../img/airplane icon.svg";
 
 const ToggleContainer = styled.div`
   position: relative;
-  width: 150px;
+  width: 160px;
   cursor: pointer;
 
+  font-size: 15px;
+
   > .toggle-container {
-    width: 150px;
+    width: 160px;
     height: 60px;
     border-radius: 30px;
-    background-color: rgb(233, 233, 234);
+    background-color: rgba(204, 204, 204, 1);
   }
   //.toggle--checked 클래스가 활성화 되었을 경우의 CSS를 구현
-  > .toggle--checked {
-    background-color: rgb(0, 200, 102);
-    transition: 1s;
-  }
 
   > .toggle-circle {
     position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 56px;
-    height: 56px;
+    top: 6px;
+    left: 6px;
+    width: 47.5px;
+    height: 47.5px;
     border-radius: 50%;
-    background-color: rgb(255, 254, 255);
     transition: 1s;
 
+    background-color: rgba(244, 240, 231, 1);
     display: flex;
     align-items: center;
     justify-content: center;
     //.toggle--checked 클래스가 활성화 되었을 경우의 CSS를 구현
   }
   > .toggle--checked {
-    left: 92px;
+    left: 105px;
     transition: 1s;
   }
 `;
 
+const InOut = styled.div`
+  > .fadeout {
+    animation: fadeOut 0.5s forwards;
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+  > .fadein {
+    animation: fadeIn 2s;
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+`;
+
 const InAirport = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
-
-  padding-right: 15px;
-  height: 100%;
-
-  transition: all 5s ease-in-out;
+  position: absolute;
+  top: 20px;
+  right: 32px;
 `;
 
 const OutAirport = styled.div`
-  display: flex;
-  align-items: center;
-
-  padding-left: 15px;
-  height: 100%;
+  position: absolute;
+  top: 20px;
+  left: 25px;
 `;
 
 const InCircle = styled.img`
@@ -77,11 +93,19 @@ export default function ToggleBtn() {
     <>
       <ToggleContainer onClick={toggleHandler}>
         <div className={`toggle-container ${isOn ? "toggle--checked" : null}`}>
-          {isOn ? (
+          {/* {isOn ? (
             <OutAirport>공항 OUT</OutAirport>
           ) : (
             <InAirport>공항 IN</InAirport>
-          )}
+          )} */}
+          <InOut>
+            <OutAirport className={`${isOn ? "fadein" : "fadeout"}`}>
+              공항 OUT
+            </OutAirport>
+            <InAirport className={`${isOn ? "fadeout" : "fadein"}`}>
+              공항 IN
+            </InAirport>
+          </InOut>
         </div>
         <div className={`toggle-circle ${isOn ? "toggle--checked" : null}`}>
           <InCircle src={Airplane} />
