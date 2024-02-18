@@ -6,7 +6,6 @@ function Search() {
   return (
     <>
       <Banner />
-      <div style={{ padding: "10px" }}></div>
       <Toggle />
       <Slider />
     </>
