@@ -1,0 +1,324 @@
+/* div {
+  border: 1px solid blue;
+} */
+
+@font-face {
+  font-family: "EsaManru";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EsaManru";
+  font-weight: 500;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EsaManru";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Plaid";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf");
+  src: url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf")
+      format("embedded-opentype"),
+    url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf") format("woff2"),
+    url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf") format("woff"),
+    url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf") format("truetype");
+
+  font-display: swap;
+}
+
+/*banner 전체 화면 구성*/
+.banner {
+  display: block;
+  /* width: 1920px; */
+  /* height: 5000px; */
+}
+
+.Enter {
+  /* background-color: gray; */
+  /* height: 1600px; */
+  background-image: url(../img/Mainimage.png);
+  background-size: cover;
+
+  color: #ec4d27;
+}
+
+/*첫번째 글상자 양식*/
+.Enterphrase {
+  font-family: "Pretendard-Regular";
+
+  margin-left: 50px; /*80px*/
+  /* margin-top: 42px; */
+  padding-top: 40px;
+  width: 1125px;
+  height: 225px;
+
+  font-size: 62px;
+  font-weight: 400;
+  line-height: 73.99px;
+}
+
+/*Via-flight logo공간*/
+.Via_flight_logoNForm {
+  /* width: 1686px; */
+  height: 600px; /* 643px*/
+  margin-top: 22px;
+  margin-left: 50px; /*80px*/
+
+  .logo_text {
+    font-family: "EsaManru";
+
+    width: fit-content;
+    font-size: 195px; /*236px*/
+    font-weight: 700;
+    line-height: 207px; /*250px*/
+  }
+
+  .Flight_textNlogo {
+    display: flex;
+  }
+  .Flight_textNlogo > img {
+    height: 200px; /*250px*/
+    object-fit: scale-down;
+  }
+}
+
+/*설문지 양식*/
+.form_style {
+  font-family: "EsaManru";
+
+  margin-top: 65px; /*32px*/
+  display: flex;
+  /* justify-content: center; */
+  /*width: 1900px; 입력창이 좌측으로 츼우쳐져 있어 width크기를 조정 */
+  height: 52px;
+  position: relative;
+
+  /*경유지 도착 시간 input type:time은 palceholder가 적용이 되지 않음, Notice.은진 알릴 것*/
+  .Atime::before {
+    content: "경유지 도착 시간:";
+  }
+
+  /*placeholder는 별도로 color지정하여 색상 지정*/
+  input::placeholder {
+    font-family: "EsaManru";
+    color: #ec4d27;
+  }
+  input,
+  select {
+    font-family: "EsaManru";
+    background-color: transparent;
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.2
+    ); /*rgba로 요소별 blur효과 주기 성공*/
+
+    color: #ec4d27;
+    margin-right: 76px;
+    border-bottom: 2.5px solid red;
+    width: 440px;
+  }
+
+  /*Time 아이콘 색상 입히기*/
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(34%) sepia(24%) saturate(5549%) hue-rotate(350deg)
+      brightness(99%) contrast(86%); /* RGB 색상 변경 */
+  }
+
+  /*경유 시간 입력 화살표 색상*/
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    /* -webkit-appearance: none;
+    background: transparent;
+    width: 1em;
+    border-left: 1px solid #bbb;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0; */
+    /* background-color: blue; */
+    filter: invert(34%) sepia(24%) saturate(5549%) hue-rotate(350deg)
+      brightness(99%) contrast(86%);
+  }
+
+  /*input 화살표 style입히기*/
+  /* input[type="number"]::-webkit-inner-spin-button {
+  opacity: 0.3;
+} */
+
+  .searchBtn {
+    border: 1px solid#ec4d27;
+    border-radius: 5px;
+
+    margin-right: 46.87px; /*우측 간격 주기 위해서 삽입*/
+
+    /*text 중앙 정렬*/
+    text-align: center;
+    line-height: 52px;
+
+    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.22);
+    color: #ec4d27;
+    height: 52px;
+    width: 230px; /*284px*/
+  }
+
+  .searchBtn:hover {
+    background-color: rgba(236, 77, 39, 1);
+    color: rgba(25, 25, 25, 1);
+  }
+}
+
+.scrollIcon_container {
+  margin-top: 15px;
+  height: 50px;
+
+  /* border: 1px solid #ec4d27; */
+  display: flex;
+  justify-content: center;
+  /* padding-top: 15px; */
+}
+
+.scrollIcon_arrow {
+  /* border: 1px solid blue; */
+  /*img 가로, 세로 크기*/
+  width: 20px;
+  height: 20px;
+  animation: motion 0.4s /*반복되는 시간*/ linear 0s /*효과 일정하게 반복*/
+    infinite alternate; /*애니매이션 효과 무한으로 반복; 상하로 움직이는 효과 */
+}
+
+/*위-아래로 움직이는 효과*/
+@keyframes motion {
+  /*처음 위치*/
+  0% {
+    padding-top: 0px;
+  }
+  /*마지막 위치*/
+  100% {
+    padding-top: 10px;
+  }
+}
+
+/*About 소개 paige*/
+.about {
+  background-color: #ec4d27;
+
+  height: 535px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.AboutBox {
+  margin-top: 118px;
+  margin-bottom: 118px;
+  margin-left: 755.5px;
+  margin-right: 755.5px;
+  width: 409px;
+  height: 299px;
+}
+
+.About1 {
+  font-family: "EsaManru";
+  color: white;
+
+  height: 100px;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 50px;
+  text-align: center;
+  letter-spacing: 2%;
+}
+
+.About2 {
+  font-family: "Pretendard-Regular";
+  color: white;
+
+  width: 352px;
+  height: 78px;
+  margin-top: 24px;
+  margin-left: 28.5px;
+  margin-right: 28.5px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20.29px;
+  text-align: center;
+}
+
+.aboutBtn_container {
+  display: flex;
+  justify-content: center;
+}
+
+.AboutBtn {
+  font-family: "Plaid";
+  color: #ec4d27;
+
+  font-size: 15px;
+
+  background-color: #f4f0e7;
+
+  /* border: 1px solid #ec4d27; */
+  border-radius: 5px;
+
+  margin-top: 24px;
+  height: 73px;
+  width: 172px;
+}
+
+.AboutBtn:hover {
+  color: rgba(244, 240, 231, 1);
+
+  background-color: #ec4d27;
+  border: 1px solid #f4f0e7;
+}
