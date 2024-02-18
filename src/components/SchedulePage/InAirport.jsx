@@ -5,7 +5,15 @@ import "../../style/InAirport.css";
 import upArrow from "../../img/inairport_grid_UpArrow.png";
 import styled from "styled-components";
 
+/*header,banner,grid 영역별 position relative를 사용하여 가능*/
 function InAirport() {
+  const scrollTorecommend = () => {
+    // window.scroll({
+    //   top: 0,
+    //   behavior: "smooth",
+    // });
+    window.scrollTo({ top: 1299, behavior: "smooth" });
+  };
   return (
     <>
       <div className="InAIrport_Header">
@@ -27,7 +35,7 @@ function InAirport() {
         </div>
       </div>
 
-      <div className="InAIrport_Grid1">
+      <div className="InAIrport_Grid1" id="recommend_Grid1">
         <div className="InAIrport_Grid1_title">
           EXPERIENCE IN AIRPORT
           <hr />
@@ -38,7 +46,9 @@ function InAirport() {
         <div className="InAIrport_Grid1_Arrow">
           <img className="Uparrow" src={upArrow} alt="화살표"></img>
         </div>
-        <div className="InAIrport_Grid1_Btn">공항 속 새로운 경험하러가기</div>
+        <div className="InAIrport_Grid1_Btn" onClick={scrollTorecommend}>
+          공항 속 새로운 경험하러가기
+        </div>
       </div>
 
       <div className="InAIrport_Grid2">
