@@ -1,36 +1,10 @@
 import { useState } from "react";
 import styled from "styled-components";
-
-const ToggleSlider = styled.span`
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  border-radius: 34px;
-
-  &:before {
-    position: absolute;
-    content: "";
-    height: 15px;
-    width: 15px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    border-radius: 50%;
-  }
-`;
+import Airplane from "../../../img/airplane icon.svg";
 
 const ToggleContainer = styled.div`
   position: relative;
-  margin-top: 8rem;
-  left: 47%;
+  width: 150px;
   cursor: pointer;
 
   > .toggle-container {
@@ -54,12 +28,41 @@ const ToggleContainer = styled.div`
     border-radius: 50%;
     background-color: rgb(255, 254, 255);
     transition: 1s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     //.toggle--checked 클래스가 활성화 되었을 경우의 CSS를 구현
   }
   > .toggle--checked {
     left: 92px;
     transition: 1s;
   }
+`;
+
+const InAirport = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+
+  padding-right: 15px;
+  height: 100%;
+
+  transition: all 5s ease-in-out;
+`;
+
+const OutAirport = styled.div`
+  display: flex;
+  align-items: center;
+
+  padding-left: 15px;
+  height: 100%;
+`;
+
+const InCircle = styled.img`
+  width: 25px;
+  height: 25px;
+  padding-bottom: 6px;
 `;
 
 export default function ToggleBtn() {
@@ -72,19 +75,18 @@ export default function ToggleBtn() {
 
   return (
     <>
-      <ToggleContainer
-        // 클릭하면 토글이 켜진 상태(isOn)를 boolean 타입으로 변경하는 메소드가 실행
-        onClick={toggleHandler}
-      >
-        {/* 아래에 div 엘리먼트 2개가 있다. 각각의 클래스를 'toggle-container', 'toggle-circle' 로 지정 */}
-        {/* Toggle Switch가 ON인 상태일 경우에만 toggle--checked 클래스를 div 엘리먼트 2개에 모두 추가. 조건부 스타일링을 활용*/}
-        <div
-          className={`toggle-container ${isOn ? "toggle--checked" : null}`}
-        />
-        <div className={`toggle-circle ${isOn ? "toggle--checked" : null}`} />
+      <ToggleContainer onClick={toggleHandler}>
+        <div className={`toggle-container ${isOn ? "toggle--checked" : null}`}>
+          {isOn ? (
+            <OutAirport>공항 OUT</OutAirport>
+          ) : (
+            <InAirport>공항 IN</InAirport>
+          )}
+        </div>
+        <div className={`toggle-circle ${isOn ? "toggle--checked" : null}`}>
+          <InCircle src={Airplane} />
+        </div>
       </ToggleContainer>
-      {/* Desc 컴포넌트를 활용*/}
-      {/* Toggle Switch가 ON인 상태일 경우에 Desc 컴포넌트 내부의 텍스트를 'Toggle Switch ON'으로, 그렇지 않은 경우 'Toggle Switch OFF'. 조건부 렌더링을 활용. */}
     </>
   );
 }
