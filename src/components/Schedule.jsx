@@ -1,9 +1,16 @@
 import React from "react";
 import InAirport from "./SchedulePage/InAirport";
-import ScheduleFrame from "./SchedulePage/NoChanging/Schedule_Frame";
+import ToggleBtn from "./SchedulePage/Changing/ToggleBtn";
+import Header from "./layout/Header";
 
 function Schedule() {
-  return <ScheduleFrame />;
+  return (
+    <>
+      <Header />
+      <ToggleBtn />
+      <InAirport />;
+    </>
+  );
 }
 
 export default Schedule;

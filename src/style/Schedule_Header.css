@@ -1,4 +1,4 @@
-/*Font »ç¿ë*/
+/*Font ï¿½ï¿½ï¿½*/
 @font-face {
   font-family: "EsaManru";
   font-weight: 300;
@@ -29,7 +29,7 @@
   font-display: swap;
 }
 
-/*Header ºÎºÐ */
+/*Header ï¿½Îºï¿½ */
 .Schedule_Frame_Header {
   position: relative;
   height: 439px;
@@ -37,16 +37,6 @@
   text-align: center;
   background-color: rgba(244, 240, 231, 1);
   color: rgba(44, 110, 73, 1);
-}
-
-/*(°øÇ×in/out) ½ºÀ§Ä¡, ÄÄÆ÷³ÍÆ® */
-.Schedule_Frame_Header_btn {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%);
-
-  border: 1px solid red;
 }
 
 .Schedule_Frame_Header_text {

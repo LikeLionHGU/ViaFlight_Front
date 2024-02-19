@@ -3,6 +3,11 @@ import styled from "styled-components";
 import Airplane from "../../../img/airplane icon.svg";
 import "../../../font/font.css";
 
+const Main = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 const ToggleContainer = styled.div`
   position: relative;
   width: 160px;
@@ -92,7 +97,7 @@ export default function ToggleBtn() {
   };
 
   return (
-    <>
+    <Main>
       <ToggleContainer onClick={toggleHandler}>
         <div className={`toggle-container ${isOn ? "toggle--checked" : null}`}>
           {/* {isOn ? (
@@ -113,6 +118,6 @@ export default function ToggleBtn() {
           <InCircle src={Airplane} />
         </div>
       </ToggleContainer>
-    </>
+    </Main>
   );
 }
