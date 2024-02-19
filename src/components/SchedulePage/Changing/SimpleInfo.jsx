@@ -7,7 +7,9 @@ import CallIcon from "../../../img/call.svg";
 import ShowerIcon from "../../../img/shower.svg";
 
 const Main = styled.div`
+  width: 250px;
   display: flex;
+  justify-content: space-between;
 `;
 
 const Wifi = styled.img``;
