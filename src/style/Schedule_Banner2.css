@@ -1,4 +1,4 @@
-/*Font »ç¿ë*/
+/*Font ï¿½ï¿½ï¿½*/
 @font-face {
   font-family: "EsaManru";
   font-weight: 300;
@@ -29,7 +29,7 @@
   font-display: swap;
 }
 
-/*Banner ºÎºÐ*/
+/*Banner ï¿½Îºï¿½*/
 .Schedule_Frame_Banner {
   position: relative;
   height: 780px;
@@ -38,20 +38,21 @@
   color: white;
 }
 
-/*°øÇ× Icon - Banner ºÎºÐ*/
+/*ï¿½ï¿½ï¿½ï¿½ Icon - Banner ï¿½Îºï¿½*/
 .Schedule_Frame_Banner_Icons {
-  border: 1px solid red;
   position: absolute;
   top: 40%;
   left: 80px;
 
-  width: 314px;
+  padding: 10px 20px;
   height: 37px;
+  border-radius: 5px;
+  backdrop-filter: blur(15px);
 
-  background-color: rgba(165, 165, 165, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-/*½Ã°£, ³¯¾¾ Á¤º¸ - Banner ºÎºÐ*/
+/*ï¿½Ã°ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ - Banner ï¿½Îºï¿½*/
 .Schedule_Frame_Banner_infoWeather {
   position: absolute;
   top: 40%;
@@ -64,7 +65,7 @@
   line-height: 41px;
   text-align: center;
 
-  /*infoweather¾ÈÀÇ ¿ä¼ÒµéÀÇ À§Ä¡(width % ºñÀ² Á¶Á¤)*/
+  /*infoweatherï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Òµï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡(width % ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)*/
   display: flex;
   .currentTime {
     width: 50%;
