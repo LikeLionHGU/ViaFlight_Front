@@ -41,6 +41,8 @@
   margin-left: 70px; */
   /* width: 1800px; */
   /* background-image: url("../img/Navigation_Bar_Line.png"); */
+  /* border: 1px solid blue; */
+
   background-size: 100%;
   background-repeat: no-repeat;
   height: 15px;
@@ -60,8 +62,11 @@
 /*header 영역 LOGO 부분*/
 
 .img_logo {
+  /* border: 1px solid blue; */
+
   margin-left: 67px;
-  width: 245px;
+  /* width: 245px; */
+  width: 100%;
   height: 103px;
   overflow: hidden;
   object-fit: scale-down;
@@ -87,7 +92,7 @@
 /*btn 요소별 간격 hard-coding (btn별로 하단, line이미지 참고하여 간격 조정)*/
 .ticket_link {
   /*logo와의 간격*/
-  margin-left: 17%; /*155px */
+  margin-left: 15.8%; /*155px */
 }
 
 /*BTN들의 link크기, text 정렬*/
@@ -99,7 +104,7 @@
   display: table-cell;
   vertical-align: bottom;
   /* text-align: center; */
-  padding-top: 8px;
+  padding-top: 25px;
   /* margin-left: 5%; 151px */
   /* color: #ec4d27; */
   text-decoration-line: none;
@@ -120,11 +125,13 @@
 }
 
 .location {
+  /* border: 1px solid blue; */
+
   display: flex; /*icon, text 한줄 정렬*/
   font-family: "Plaid"; /*font_style변경*/
   font-size: 13px;
   /* margin-bottom: 18px; */
-  padding-top: 40px;
+  padding-top: 60px;
 }
 
 .location_icon {
