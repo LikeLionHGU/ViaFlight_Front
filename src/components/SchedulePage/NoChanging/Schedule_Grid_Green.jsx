@@ -1,6 +1,6 @@
 import React from "react";
-import "../../style/Schedule_Frame.css";
-import upArrow from "../../img/inairport_grid_UpArrow.png";
+import "../../../style/Schedule_Frame.css";
+import upArrow from "../../../img/inairport_grid_UpArrow.png";
 
 function Schedule_Grid_Green() {
   const scrollTorecommend = () => {

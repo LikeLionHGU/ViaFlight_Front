@@ -1,5 +1,5 @@
 import React from "react";
-import "../../style/Schedule_Banner.css";
+import "../../../style/Schedule_Banner.css";
 
 function Schedule_Banner() {
   return (

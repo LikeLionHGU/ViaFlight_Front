@@ -1,5 +1,5 @@
 import React from "react";
-import "../../style/Schedule_Grid_Black.css";
+import "../../../style/Schedule_Grid_Black.css";
 
 function Schedule_Grid_Black() {
   return (
