@@ -1,0 +1,73 @@
+/*Font 사용*/
+@font-face {
+  font-family: "EsaManru";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plaid";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf");
+  src: url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf")
+      format("embedded-opentype"),
+    url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf") format("woff2"),
+    url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf") format("woff"),
+    url("../font/Plaid_FaktPro/Plaid-normal-400-100.ttf") format("truetype");
+
+  font-display: swap;
+}
+
+/*Header 부분 */
+.Schedule_Frame_Header {
+  position: relative;
+  height: 439px;
+
+  text-align: center;
+  background-color: rgba(244, 240, 231, 1);
+  color: rgba(44, 110, 73, 1);
+}
+
+/*(공항in/out) 스위치, 컴포넌트 */
+.Schedule_Frame_Header_btn {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%);
+
+  border: 1px solid red;
+}
+
+.Schedule_Frame_Header_text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+
+  .text1 {
+    /* border: 1px solid blue; */
+    font-family: "EsaManru";
+    font-size: 19px;
+    line-height: 70px;
+    font-weight: 300;
+  }
+
+  .text2 {
+    /* border: 1px solid blue; */
+    font-family: "EsaManru";
+    font-size: 75px;
+    line-height: 92px;
+    font-weight: 300;
+  }
+}
