@@ -1,14 +1,14 @@
 import React from "react";
-import ScheduleHeader from "./NoChanging/Schedule_Header";
-import ScheduleBanner from "./NoChanging/Schedule_Banner";
+import ScheduleBanner1 from "./NoChanging/Schedule_Banner1";
+import ScheduleBanner2 from "./NoChanging/Schedule_Banner2";
 import ScheduleGridGreen from "./NoChanging/Schedule_Grid_Green";
 import ScheduleGridBlack from "./NoChanging/Schedule_Grid_Black";
 
 function InAirport() {
   return (
     <>
-      <ScheduleHeader />
-      <ScheduleBanner />
+      <ScheduleBanner1 />
+      <ScheduleBanner2 />
       <ScheduleGridGreen />
       <ScheduleGridBlack />
     </>
