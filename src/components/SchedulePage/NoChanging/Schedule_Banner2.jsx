@@ -1,7 +1,7 @@
 import React from "react";
-import "../../../style/Schedule_Banner.css";
+import "../../../style/Schedule_Banner2.css";
 
-function Schedule_Banner() {
+function Schedule_Banner2() {
   return (
     <>
       <div className="Schedule_Frame_Banner">
@@ -18,4 +18,4 @@ function Schedule_Banner() {
   );
 }
 
-export default Schedule_Banner;
+export default Schedule_Banner2;

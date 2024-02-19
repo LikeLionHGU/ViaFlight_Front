@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../style/Schedule_Frame.css";
+import "../../../style/Schedule_Grid_Green.css";
 import upArrow from "../../../img/inairport_grid_UpArrow.png";
 
 function Schedule_Grid_Green() {
