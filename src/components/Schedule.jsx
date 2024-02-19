@@ -8,7 +8,7 @@ function Schedule() {
     <>
       <ScheduleHeader />
       <ToggleBtn />
-      <InAirport />;
+      <InAirport />
     </>
   );
 }
