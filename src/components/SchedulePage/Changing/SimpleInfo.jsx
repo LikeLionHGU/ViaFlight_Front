@@ -5,6 +5,7 @@ import InfoIcon from "../../../img/info.svg";
 import CigaretteIcon from "../../../img/cigarette.svg";
 import CallIcon from "../../../img/call.svg";
 import ShowerIcon from "../../../img/shower.svg";
+import MedicineIcon from "../../../img/medicine.svg";
 
 const Main = styled.div`
   width: 250px;
@@ -15,8 +16,8 @@ const Main = styled.div`
 const Wifi = styled.img``;
 const Info = styled.img``;
 const Cigarette = styled.img``;
-const Call = styled.img``;
 const Shower = styled.img``;
+const Medicine = styled.img``;
 
 export default function SimpleInfo() {
   return (
@@ -24,8 +25,8 @@ export default function SimpleInfo() {
       <Wifi src={WifiIcon} />
       <Info src={InfoIcon} />
       <Cigarette src={CigaretteIcon} />
-      <Call src={CallIcon} />
       <Shower src={ShowerIcon} />
+      <Medicine src={MedicineIcon} />
     </Main>
   );
 }
