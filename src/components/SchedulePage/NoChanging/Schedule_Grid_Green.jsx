@@ -5,10 +5,22 @@ import upArrow from "../../../img/inairport_grid_UpArrow.png";
 const Main = styled.div`
   background-color: rgba(44, 110, 73, 1);
   color: rgba(255, 255, 255, 1);
-
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  /* white-space: nowrap; */
+  font-family: EsaManru;
+  font-size: 135px;
+  font-weight: 100;
+`;
+const TitleCover = styled.div`
+  border-bottom: 1px solid white;
+  padding-top: 130px;
+  margin: 0 3%;
+`;
+const Title = styled.div`
+  margin: 0 30px;
 `;
 const UpBtnCover = styled.div`
   padding: 60px 0;
@@ -29,7 +41,6 @@ const UpBtn = styled.button`
   }
 `;
 
-const Title = styled.div``;
 function Schedule_Grid_Green() {
   const scrollTorecommend = () => {
     // window.scroll({
@@ -40,7 +51,9 @@ function Schedule_Grid_Green() {
   };
   return (
     <Main>
-      <Title>EXPERIENCE IN AIRPORT</Title>
+      <TitleCover>
+        <Title>EXPERIENCE IN AIRPORT</Title>
+      </TitleCover>
 
       <div>
         <img src={upArrow} alt="화살표"></img>
