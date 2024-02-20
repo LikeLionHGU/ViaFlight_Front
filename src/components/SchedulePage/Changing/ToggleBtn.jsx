@@ -31,7 +31,7 @@ const ToggleContainer = styled.div`
     width: 47.5px;
     height: 47.5px;
     border-radius: 50%;
-    transition: 1s;
+    transition: 0.5s;
 
     background-color: rgba(244, 240, 231, 1);
     display: flex;
@@ -41,7 +41,7 @@ const ToggleContainer = styled.div`
   }
   > .toggle--checked {
     left: 105px;
-    transition: 1s;
+    transition: 0.5s;
   }
 `;
 
@@ -58,7 +58,7 @@ const InOut = styled.div`
     }
   }
   > .fadein {
-    animation: fadeIn 2s;
+    animation: fadeIn 1s;
     @keyframes fadeIn {
       0% {
         opacity: 0;
