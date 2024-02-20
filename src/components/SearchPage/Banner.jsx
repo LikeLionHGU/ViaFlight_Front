@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "../layout/Header"; //header import
 import styled from "styled-components";
@@ -30,14 +30,15 @@ function Banner() {
 
   const savedColor = localStorage.getItem("Headercolor");
 
-  //localStorage에 저장 (create), (사용자 입력 정보 기억을 위해서 사용)
+  /*Get한 데이터 저장하는 공간*/
+  const [infoAirport, setInfoAirport] = useState([]);
+
+  // fetch 함수
+  /*API 호출 방식*/
+  /*fetch:  호출 할 url*/
+  const url = `https://api.zionhann.shop/app/viaflight/all-layover-airport?layoverAirportName=${savedAirport}&layoverArrivalTime=${savedATime}&layoverTime=${savedDTime}`;
 
   const onAirport = (e) => {
-    // if (savedAirport == null || airport == null) {
-    //   alert("경유공항 이름을 입력해주세요");
-    //   console.log("공항이름 empty");
-    // }
-
     if (savedAirport !== null) {
       localStorage.removeItem("viaAirport");
     }
@@ -92,10 +93,20 @@ function Banner() {
       if (savedColor !== null) localStorage.removeItem("Headercolor");
       setColor(false);
       localStorage.setItem("Headercolor", false);
+
+      //# fetch 적용시키기 [API 호출]
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          setInfoAirport(data);
+        });
     }
   };
 
   //입력이 하나도 없는 경우 [Case2, 입력이 하나도 없는 경우 ]
+
+  console.log(infoAirport);
 
   return (
     <>
@@ -144,21 +155,7 @@ function Banner() {
                 onChange={onATime}
               ></input>
               {/*#3. 경유공항 경유시간 구분 fix-> Q2.(동신, 승환)님께 질문(단위)*/}
-              {/* <select
-              className="Dtime"
-              type="text"
-              value={durationTime}
-              onChange={onDTime}
-            >
-              <option>경유시간</option>
-              <option value={"under 2hours"}>under 2(hours)</option>
-              <option value={2}>2 ~ 4(hours)</option>
-              <option value={4}>4 ~ 6(hours)</option>
-              <option value={6}>6 ~ 8(hours)</option>
-              <option value={8}>8 ~ 10(hours)</option>
-              <option value={"over 10hours"}>over 10(hours)</option>
-            </select> */}
-              {/* <div className="Dtime_style"> */}
+
               <input
                 className="Dtime"
                 type="number"
