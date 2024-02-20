@@ -1,4 +1,4 @@
-/*Font ���*/
+/*Font*/
 @font-face {
   font-family: "EsaManru";
   font-weight: 300;
@@ -29,11 +29,11 @@
   font-display: swap;
 }
 
-/*Header �κ� */
+/*Banner 1 전체 */
 .Schedule_Frame_Header {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   position: relative;
-  height: 439px;
+  height: 290px;
 
   text-align: center;
   background-color: rgba(244, 240, 231, 1);
@@ -41,7 +41,7 @@
 }
 
 .Schedule_Frame_Header_text {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   position: absolute;
   top: 5%;

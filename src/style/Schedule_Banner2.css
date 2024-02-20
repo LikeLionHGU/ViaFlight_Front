@@ -40,7 +40,7 @@
 
 /*공항 Icon - Banner 부분*/
 .Schedule_Frame_Banner_Icons {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   position: absolute;
   top: 40%;
   left: 80px;
@@ -56,25 +56,4 @@
   position: absolute;
   top: 40%;
   right: 80px;
-
-  width: 314px;
-  height: 41px;
-
-  background-color: rgba(165, 165, 165, 0.5);
-  line-height: 41px;
-  text-align: center;
-
-  /*infoweather안의 요소들의 위치(width % 비율 조정)*/
-  display: flex;
-  .currentTime {
-    width: 50%;
-  }
-  .intervalTime {
-    border-left: 1px solid white;
-    width: 30%;
-  }
-  .weather {
-    border-left: 1px solid white;
-    width: 20%;
-  }
 }

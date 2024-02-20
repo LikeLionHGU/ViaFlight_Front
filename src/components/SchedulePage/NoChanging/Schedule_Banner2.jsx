@@ -1,6 +1,8 @@
 import React from "react";
 import "../../../style/Schedule_Banner2.css";
 
+import Schedule_Timebox from "./NoChangeComponents/Schedule_Timebox";
+
 function Schedule_Banner2() {
   return (
     <>
@@ -9,9 +11,7 @@ function Schedule_Banner2() {
           공항기본 정보 ICON Components
         </div>
         <div className="Schedule_Frame_Banner_infoWeather">
-          <div className="currentTime">현재시각</div>
-          <div className="intervalTime">시차</div>
-          <div className="weather">날씨</div>
+          <Schedule_Timebox /> {/*시간 정보*/}
         </div>
       </div>
     </>

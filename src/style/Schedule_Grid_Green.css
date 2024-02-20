@@ -55,7 +55,7 @@
 
 /*추천 정보(시설/휴식/식사/면세) components - Grid1 부분*/
 .Schedule_Frame_Grid1_recommend {
-  border: 3px solid red;
+  /* border: 3px solid red; */
   height: 1200px;
   color: white;
   line-height: 1200px;

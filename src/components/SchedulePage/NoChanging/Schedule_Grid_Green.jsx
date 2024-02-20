@@ -8,12 +8,14 @@ function Schedule_Grid_Green() {
     //   top: 0,
     //   behavior: "smooth",
     // });
-    window.scrollTo({ top: 1299, behavior: "smooth" });
+    const section = document.querySelector("#recommend_Grid1");
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+    // window.scrollTo({ top: 1299, behavior: "smooth" });
   };
   return (
     <>
       <div className="Schedule_Frame_Grid1" id="recommend_Grid1">
-        <div className="Schedule_Frame_Grid1_title">
+        <div className="Schedule_Frame_Grid1_title" id="Grid1_title">
           EXPERIENCE IN AIRPORT
           <hr />
         </div>

@@ -31,7 +31,7 @@
 
 /*Grid 2 - (기획전, 이벤트 소개)*/
 .Schedule_Frame_Grid2 {
-  border: 3px solid red;
+  /* border: 3px solid red; */
   height: 700px;
   line-height: 700px;
   text-align: center;
