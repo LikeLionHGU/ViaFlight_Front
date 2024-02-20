@@ -61,7 +61,6 @@ export default function ScheduleSldier() {
         loop={true} // 무한 루프
         speed={3000} // 슬라이드 이동 속도
         // loopedSlides={1}
-        lazyLoading={true}
         loopAdditionalSlides={true}
         autoplay={{ delay: 3000, disableOnInteraction: false }} // 자동 이동
         slideToClickedSlide={true} // 슬라이드 클릭 시 이동

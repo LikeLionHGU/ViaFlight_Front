@@ -21,8 +21,6 @@ function Banner() {
   const [arrivalTime, setATime] = useState(""); //경유공항 도착시간
   const [durationTime, setDTime] = useState(""); // 경유공항 경유시간
 
-  const [colorCheck, setColor] = useState(true); // Header 색상 판졀하는 변수;
-
   //localstorage에 저장된 입력값 불러오기
   const savedAirport = localStorage.getItem("viaAirport");
   const savedATime = localStorage.getItem("arrivalTime");
@@ -91,22 +89,17 @@ function Banner() {
 
       // 페이지 이동에 대해서 default
       if (savedColor !== null) localStorage.removeItem("Headercolor");
-      setColor(false);
-      localStorage.setItem("Headercolor", false);
 
       //# fetch 적용시키기 [API 호출]
       fetch(url)
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
           setInfoAirport(data);
         });
     }
   };
 
   //입력이 하나도 없는 경우 [Case2, 입력이 하나도 없는 경우 ]
-
-  console.log(infoAirport);
 
   return (
     <>
