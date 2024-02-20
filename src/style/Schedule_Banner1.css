@@ -31,7 +31,6 @@
 
 /*Header �κ� */
 .Schedule_Frame_Header {
-  border: 1px solid red;
   position: relative;
   height: 439px;
 
@@ -41,8 +40,6 @@
 }
 
 .Schedule_Frame_Header_text {
-  border: 1px solid red;
-
   position: absolute;
   top: 5%;
   left: 50%;

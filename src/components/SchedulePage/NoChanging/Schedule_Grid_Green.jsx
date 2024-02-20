@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import upArrow from "../../../img/inairport_grid_UpArrow.png";
+import View from "../Changing/View";
 
 const Main = styled.div`
   background-color: rgba(44, 110, 73, 1);
@@ -73,7 +74,7 @@ function Schedule_Grid_Green() {
       <TitleCover>
         <Title>EXPERIENCE IN AIRPORT</Title>
       </TitleCover>
-
+      <View />
       <ContainArrow>
         <UpArrow src={upArrow} alt="화살표"></UpArrow>
       </ContainArrow>
