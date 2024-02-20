@@ -22,8 +22,27 @@ const TitleCover = styled.div`
 const Title = styled.div`
   margin: 0 30px;
 `;
+const ContainArrow = styled.div`
+  height: 30px;
+`;
+
+const UpArrow = styled.img`
+  white-space: normal;
+
+  animation: motion 0.5s linear 0s infinite alternate; /* 무한 반복 */
+  @keyframes motion {
+    0% {
+      margin-bottom: 0px;
+    } /* 처음 위치 */
+    100% {
+      margin-bottom: 15px;
+    } /* 마지막 위치 */
+  }
+`;
+
 const UpBtnCover = styled.div`
-  padding: 60px 0;
+  padding: 20px 0;
+  padding-bottom: 80px;
 `;
 const UpBtn = styled.button`
   border: 1px solid black;
@@ -55,9 +74,9 @@ function Schedule_Grid_Green() {
         <Title>EXPERIENCE IN AIRPORT</Title>
       </TitleCover>
 
-      <div>
-        <img src={upArrow} alt="화살표"></img>
-      </div>
+      <ContainArrow>
+        <UpArrow src={upArrow} alt="화살표"></UpArrow>
+      </ContainArrow>
       <UpBtnCover>
         <UpBtn onClick={scrollTorecommend}>공항 속 새로운 경험하러가기</UpBtn>
       </UpBtnCover>
