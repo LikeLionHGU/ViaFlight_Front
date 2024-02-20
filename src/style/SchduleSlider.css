@@ -1,0 +1,78 @@
+body {
+  background-color: rgba(244, 240, 231, 1);
+}
+.swiper-container {
+  overflow: visible;
+}
+.swiper-slide {
+  opacity: 0;
+  transition: opacity 2s;
+}
+.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide {
+  opacity: 0.6;
+}
+
+.swiper-slide-active,
+.swiper-slide-active + .swiper-slide,
+.swiper-slide-active + .swiper-slide + .swiper-slide {
+  opacity: 0.9;
+}
+/*#1. 요소들간의 간격*/
+.schedule_swiper {
+  max-width: 100%;
+}
+
+.schedule_swiperslide {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: rgba(244, 240, 231, 1);
+  color: rgba(25, 25, 25, 1);
+  padding: 2rem 1.5rem;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.schedule_swiperslide:hover {
+  .swiperslide2 {
+    opacity: 0.7;
+  }
+}
+
+/*#2. slider 카드 이미지*/
+.schedule_swiperslide1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 40%;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+
+/*#3. slider 카드 불투명도(hover시 bg 흐려지는 바탕조절)*/
+.schedule_swiperslide2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+}
+
+/*#4. slider안에 들어가는 (아이콘, 제목, 글)*/
+.schedule_swiperslide3 {
+  position: relative;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 900px) {
+  .schedule_swiperslide {
+    height: 300px;
+  }
+}

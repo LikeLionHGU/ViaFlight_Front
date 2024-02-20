@@ -2,7 +2,7 @@ import React from "react";
 import ScheduleBanner1 from "./NoChanging/Schedule_Banner1";
 import ScheduleBanner2 from "./NoChanging/Schedule_Banner2";
 import ScheduleGridGreen from "./NoChanging/Schedule_Grid_Green";
-import Others from "./Changing/Others";
+import ScheduleSlider from "./Changing/ScheduleSlider";
 
 function InAirport() {
   return (
@@ -10,7 +10,7 @@ function InAirport() {
       <ScheduleBanner1 />
       <ScheduleBanner2 />
       <ScheduleGridGreen />
-      <Others />
+      <ScheduleSlider />
     </>
   );
 }

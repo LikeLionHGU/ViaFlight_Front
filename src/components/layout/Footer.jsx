@@ -5,7 +5,7 @@ import "../../font/font.css";
 const StyleContainer = styled.div`
   background-color: black;
   color: rgba(244, 240, 231, 1);
-  padding: 10px 5%;
+  padding: 10px 3%;
   padding-bottom: 30px;
 
   font-family: Plaid;
