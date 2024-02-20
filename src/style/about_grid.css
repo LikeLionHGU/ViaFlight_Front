@@ -1,0 +1,38 @@
+.about_Grid1 {
+  display: block;
+  border: 1px solid red;
+
+  .about_Grid1_tittle {
+    border: 1px solid blue;
+    font-size: 20px;
+  }
+  .about_Grid1_description {
+    border: 1px solid blue;
+    height: 300px;
+  }
+}
+
+.about_Grid2 {
+  border: 1px solid red;
+
+  .about_Grid2_title {
+    border: 1px solid blue;
+    font-size: 20px;
+  }
+
+  .about_Grid2_topic {
+    display: flex;
+    margin-top: 20px;
+    .topic_text {
+      border: 1px solid blue;
+
+      .topic_title {
+        border: 1px solid blue;
+        font-size: 20px;
+      }
+    }
+    img {
+      border: 1px solid blue;
+    }
+  }
+}
