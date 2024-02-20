@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.time_box {
+  display: flex;
+  width: 314px;
+  height: 76px;
+  background-color: rgba(165, 165, 165, 0.5);
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+}
+
+.clock,
+.interval,
+.weather {
+  font-family: "Pretendard-Regular";
+  /* border: 1px solid red; */
+  font-size: 25px;
+}
+
+.clock {
+  width: 50%;
+  line-height: 76px;
+  font-weight: 300;
+}
+
+.interval {
+  border-left: 1px solid white;
+
+  width: 20%;
+  .interval_contry {
+    padding-top: 25%;
+    font-size: 12px;
+  }
+}
+
+.weather {
+  border-left: 1px solid white;
+
+  width: 30%;
+  img {
+    width: 50px;
+  }
+  font-size: 15px;
+}
