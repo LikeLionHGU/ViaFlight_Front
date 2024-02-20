@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 function Schedule_Clock() {
-  //Á¤º¸ ÀúÀåÇÏ´Â º¯¼ö
+  //ì •ë³´ ì €ìž¥í•˜ëŠ” ë³€ìˆ˜
   const [IntervalTime, setIntervalTime] = useState("");
 
-  // ½Ã°è Á¤º¸
+  // ì‹œê³„ ì •ë³´
   const nowTime = () => {
     let now = new Date();
     console.log(now);
@@ -26,14 +26,14 @@ function Schedule_Clock() {
     // return `${now.toLocaleTimeString}`;
   };
 
-  // useState ÀÌ¿ë, ·£´õ¸µ ÈÄ Ã¹ °ªÀº nowTime return °ª »ç¿ë
+  // useState ì´ìš©, ëžœë”ë§ í›„ ì²« ê°’ì€ nowTime return ê°’ ì‚¬ìš©
   const [Time, setTime] = useState(nowTime);
 
-  // 1ÃÊ¸¶´Ù clockÀÇ °ªÀ» ´Ù½Ã °è»ê ÈÄ ·£´õ¸µ (setClock ÀÌ¿ë)
+  // 1ì´ˆë§ˆë‹¤ clockì˜ ê°’ì„ ë‹¤ì‹œ ê³„ì‚° í›„ ëžœë”ë§ (setClock ì´ìš©)
   setInterval(() => setTime(nowTime), 60000);
 
   // getclock();
-  // 1ÃÊ ¸¶´Ù ÇÔ¼ö¸¦ ¹Ýº¹ È£Ãâ; (´ÜÀ§, mili-second)
+  // 1ì´ˆ ë§ˆë‹¤ í•¨ìˆ˜ë¥¼ ë°˜ë³µ í˜¸ì¶œ; (ë‹¨ìœ„, mili-second)
   // setInterval(getclock, 600000);
 
   return (
