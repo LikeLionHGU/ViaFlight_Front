@@ -5,13 +5,44 @@ import upArrow from "../../../img/inairport_grid_UpArrow.png";
 const Main = styled.div`
   background-color: rgba(44, 110, 73, 1);
   color: rgba(255, 255, 255, 1);
-
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  /* white-space: nowrap; */
+  font-family: EsaManru;
+  font-size: 135px;
+  font-weight: 100;
 `;
+const TitleCover = styled.div`
+  border-bottom: 1px solid white;
+  padding-top: 130px;
+  margin: 0 3%;
+`;
+const Title = styled.div`
+  margin: 0 30px;
+`;
+const ContainArrow = styled.div`
+  height: 30px;
+`;
+
+const UpArrow = styled.img`
+  white-space: normal;
+
+  animation: motion 0.5s linear 0s infinite alternate; /* 무한 반복 */
+  @keyframes motion {
+    0% {
+      margin-bottom: 0px;
+    } /* 처음 위치 */
+    100% {
+      margin-bottom: 15px;
+    } /* 마지막 위치 */
+  }
+`;
+
 const UpBtnCover = styled.div`
-  padding: 60px 0;
+  padding: 20px 0;
+  padding-bottom: 80px;
 `;
 const UpBtn = styled.button`
   border: 1px solid black;
@@ -29,7 +60,6 @@ const UpBtn = styled.button`
   }
 `;
 
-const Title = styled.div``;
 function Schedule_Grid_Green() {
   const scrollTorecommend = () => {
     // window.scroll({
@@ -40,11 +70,13 @@ function Schedule_Grid_Green() {
   };
   return (
     <Main>
-      <Title>EXPERIENCE IN AIRPORT</Title>
+      <TitleCover>
+        <Title>EXPERIENCE IN AIRPORT</Title>
+      </TitleCover>
 
-      <div>
-        <img src={upArrow} alt="화살표"></img>
-      </div>
+      <ContainArrow>
+        <UpArrow src={upArrow} alt="화살표"></UpArrow>
+      </ContainArrow>
       <UpBtnCover>
         <UpBtn onClick={scrollTorecommend}>공항 속 새로운 경험하러가기</UpBtn>
       </UpBtnCover>
