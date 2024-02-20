@@ -1,41 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-/*³¯¾¾ ApI ¹«·á È£Ãâ È½¼ö Á¦ÇÑÀÌ ÀÖ´Ù! (ºÐ´ç 60È¸) */
 function Schedule_Weather() {
-  const [Weather, setWeather] = useState("");
-  const [IconPath, setIconPath] = useState("");
-
-  // ³¯¾¾ Á¤º¸ È£Ãâ
-  const API_KEY = "73f3a7c92991adcee8b72c74b5d49a50";
+  const [Temp, setTemperature] = useState(""); //ê¸°ì˜¨!
+  const [Weather_Icon_path, setIconPath] = useState("");
 
   function onGeoOk(position) {
-    // JavascriptÀÇ props, °´Ã¼ µ¥ÀÌÅÍ¸¦ ¹Þ¾ÆÁØ´Ù.
-    const lat = position.coords.latitude; // À§µµ Á¤º¸ ÃßÃâ
-    const lon = position.coords.longitude; // °æµµ Á¤º¸ ÃßÃâ
-    //console.log("you live in", lat, lon);
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`; // ³¯¾¾ Á¤º¸¸¦ ¹ÞÀ»¼ö ÀÖ´Â API ÁÖ¼Ò Çü½Ä
+    const lat = position.coords.latitude; // ìœ„ë„ ì •ë³´ ì¶”ì¶œ
+    const lon = position.coords.longitude; // ê²½ë„ ì •ë³´ ì¶”ì¶œ
 
-    fetch(url)
+    const url2 = `https://api.weatherapi.com/v1/current.json?q=${lat}%2C${lon}&key=68edd069dfbe4b0fbcf163925241902`;
+
+    fetch(url2)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        console.log(data.current.temp_c); // ê¸°ì˜¨ ì •ë³´
+        console.log(data.current.condition.icon);
 
-        // setWeather(data.weather[0].main);
-        // setIconPath(
-        //   `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
-        // );
+        setTemperature(data.current.temp_c);
+        setIconPath(`https:${data.current.condition.icon}`);
       });
   }
   function onGeoError() {
     alert("Can't find you. No weather for you");
   }
 
-  navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError); // geolocation ÇÔ¼ö¸¦ ÅëÇØ¼­ ÇöÀç (À§Ä¡ Á¤º¸¸¦ ¹Þ¾Æ¿Ã ¼ö ÀÖÀ½)
-
+  //ë°˜ë³µ í˜¸ì¶œ ë§‰ê¸° ìœ„í•´ì„œ
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+  }, []);
   return (
     <>
-      <div>weather: {Weather}</div>
-      <img src={IconPath} alt="weateher"></img>
+      <img src={Weather_Icon_path} alt="weateher"></img>
+      <div>{Temp} Â°C</div>
     </>
   );
 }

@@ -1,15 +1,28 @@
 import React from "react";
 
-// ½ÃÂ÷ °è»ê (UTC ±âÁØ ½Ã°£À¸·Î °è»ê)
-// idea, ÇÑ±¹Àº UTC -9 h (-: ºü¸£ ´Ù´Â °Í)
-// get. DateÀ¸·Î ÇöÁö UTC °ªÀ» ÇÑ±¹ °ª°ú ºñ±³ ¿¬»êÇÑ ½Ã°£À» ¹İÈ¯
+// ì‹œì°¨ ê³„ì‚° (UTC ê¸°ì¤€ ì‹œê°„ìœ¼ë¡œ ê³„ì‚°)
+// idea, í•œêµ­ì€ UTC -9 h (-: ë¹ ë¥´ ë‹¤ëŠ” ê²ƒ)
+// get. Dateìœ¼ë¡œ í˜„ì§€ UTC ê°’ì„ í•œêµ­ ê°’ê³¼ ë¹„êµ ì—°ì‚°í•œ ì‹œê°„ì„ ë°˜í™˜
 
 function Schedule_Interval() {
   const KorUTC = -540;
   const LocalUTC = new Date().getTimezoneOffset();
   const TimeInterval = (LocalUTC - KorUTC) / 60;
+  let letter = "+";
 
-  return <div>½ÃÂ÷: {TimeInterval}</div>;
+  if (TimeInterval < 0) letter = "-";
+  else {
+    letter = "+";
+  }
+
+  return (
+    <>
+      <div className="Time">
+        {letter}
+        {TimeInterval} hr
+      </div>
+    </>
+  );
 }
 
 export default Schedule_Interval;
