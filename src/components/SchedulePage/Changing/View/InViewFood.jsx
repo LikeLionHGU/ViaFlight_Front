@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import InViewFoodBtnArrow from "../../../../img/InViewFoodBtnArrow.svg";
+import InViewCard from "./InViewCard";
 
 const StyleContainer = styled.div``;
 
@@ -30,10 +31,37 @@ const FoodBtn = styled.button`
   font-size: 20px;
 `;
 
+const FoodCard = styled.div`
+  display: flex;
+`;
+
+const RestaurantImg = styled.img`
+  width: 40%;
+  height: 500px;
+
+  object-fit: cover;
+`;
+
 export default function Food() {
   const [inRestaurant, setInRestaurnat] = useState(true);
   const [inCafe, setInCafe] = useState(false);
   const [inDessert, setInDessert] = useState(false);
+
+  const savedAirport = localStorage.getItem("viaAirport");
+  const savedATime = localStorage.getItem("arrivalTime");
+  const savedDTime = localStorage.getItem("durationTime");
+
+  const [infoAirport, setInfoAirport] = useState([]);
+
+  const url = `https://api.zionhann.shop/app/viaflight/layover-airport-in?layoverAirportName=${savedAirport}&layoverArrivalTime=${savedATime}&layoverTime=${savedDTime}`;
+
+  useEffect(() => {
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        setInfoAirport(data);
+      });
+  }, []);
 
   const handleRestaurant = () => {
     setInRestaurnat(true);
@@ -100,15 +128,17 @@ export default function Food() {
           <img src={InViewFoodBtnArrow} alt="화살표" />
         </FoodBtn>
       </FoodBtnContainer>
-      <div style={{ color: " blue" }}>
-        {inDessert ? (
-          <div>Dessert</div>
-        ) : inCafe ? (
-          <div>Cafe</div>
-        ) : (
-          <div>Restaurant</div>
-        )}
-      </div>
+      {infoAirport?.foods?.map((item) => (
+        <div>
+          {inDessert ? (
+            <div></div>
+          ) : inCafe ? (
+            <div>Cafe</div>
+          ) : (
+            <InViewCard key={item.mealName}, url={url}, type={item.type} />
+          )}
+        </div>
+      ))}
     </StyleContainer>
   );
 }
