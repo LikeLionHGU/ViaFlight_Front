@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Header from "../layout/Header"; //header import
 import styled from "styled-components";
 import "../../style/banner.css";
@@ -30,6 +30,7 @@ function Banner() {
 
   /*Get한 데이터 저장하는 공간*/
   const [infoAirport, setInfoAirport] = useState([]);
+  const navigate = useNavigate();
 
   // fetch 함수
   /*API 호출 방식*/
@@ -96,6 +97,11 @@ function Banner() {
         .then((data) => {
           setInfoAirport(data);
         });
+      navigate("/Schedule", {
+        state: {
+          infoAirport: infoAirport,
+        },
+      });
     }
   };
 
@@ -160,11 +166,9 @@ function Banner() {
               ></input>
               {/* </div> */}
               {/*schedule-paige에 연결*/}
-              <Link to={`/schedule`} style={{ textDecoration: "none" }}>
-                <div className="searchBtn" onClick={OnCheckInput}>
-                  경유지 정보 입력
-                </div>
-              </Link>
+              <div className="searchBtn" onClick={OnCheckInput}>
+                경유지 정보 입력
+              </div>
               {/* S1. (은진) - 초기화 버튼 (제안해보기)*/}
               {/* <div className="blurBox"> </div> */}
             </form>
