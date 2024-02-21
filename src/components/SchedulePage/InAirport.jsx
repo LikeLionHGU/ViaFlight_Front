@@ -4,7 +4,7 @@ import ScheduleBanner2 from "./NoChanging/Schedule_Banner2";
 import ScheduleGridGreen from "./NoChanging/Schedule_Grid_Green";
 import ScheduleSlider from "./Changing/ScheduleSlider";
 
-import Fadein from "../AboutPage/About_fadin"; //fadein È¿°ú
+import Fadein from "../AboutPage/About_fadin"; //fadein È¿ï¿½ï¿½
 
 function InAirport() {
   return (

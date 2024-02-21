@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import upArrow from "../../../img/inairport_grid_UpArrow.png";
-import View from "../Changing/View";
+import View from "../Changing/InView";
 
 const Main = styled.div`
   background-color: rgba(44, 110, 73, 1);
@@ -11,24 +11,13 @@ const Main = styled.div`
   align-items: center;
 
   /* white-space: nowrap; */
-  font-family: EsaManru;
-  font-size: 135px;
-  font-weight: 100;
 `;
-const TitleCover = styled.div`
-  border-bottom: 1px solid white;
-  padding-top: 130px;
-  margin: 0 3%;
-`;
-const Title = styled.div`
-  margin: 0 30px;
-  text-align: center;
-`;
+
 const ContainArrow = styled.div`
   height: 30px;
 `;
 
-const UpArrow = styled.img`
+const ScheduleUpArrow = styled.img`
   white-space: normal;
 
   animation: motionSchedule 0.5s linear 0s infinite alternate; /* 무한 반복 */
@@ -72,12 +61,9 @@ function Schedule_Grid_Green() {
   };
   return (
     <Main>
-      <TitleCover>
-        <Title>EXPERIENCE IN AIRPORT</Title>
-      </TitleCover>
       <View />
       <ContainArrow>
-        <UpArrow src={upArrow} alt="화살표"></UpArrow>
+        <ScheduleUpArrow src={upArrow} alt="화살표"></ScheduleUpArrow>
       </ContainArrow>
       <UpBtnCover>
         <UpBtn onClick={scrollTorecommend}>공항 속 새로운 경험하러가기</UpBtn>
