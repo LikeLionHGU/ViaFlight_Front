@@ -47,8 +47,8 @@ const ToggleContainer = styled.div`
 
 const InOut = styled.div`
   > .fadeout {
-    animation: fadeOut 0.5s forwards;
-    @keyframes fadeOut {
+    animation: ToggleFadeOut 0.5s forwards;
+    @keyframes ToggleFadeOut {
       0% {
         opacity: 1;
       }
@@ -58,8 +58,8 @@ const InOut = styled.div`
     }
   }
   > .fadein {
-    animation: fadeIn 1s;
-    @keyframes fadeIn {
+    animation: ToggleFadeIn 1s;
+    @keyframes ToggleFadeIn {
       0% {
         opacity: 0;
       }
