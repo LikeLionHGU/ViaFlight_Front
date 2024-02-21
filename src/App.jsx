@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route path={process.env.PUBLIC_URL + "/"} element={<Search />} />
         <Route
-          path={process.env.PUBLIC_URL + "/Schedule"}
+          path={process.env.PUBLIC_URL + "/schedule"}
           element={<Schedule />}
         />
         <Route path={process.env.PUBLIC_URL + "/about"} element={<About />} />
