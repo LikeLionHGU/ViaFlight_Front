@@ -1,38 +1,117 @@
+@font-face {
+  font-family: "EsaManru1";
+  font-weight: 500;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EsaManru2";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css")
+    format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.about_Grid {
+  background-color: #f4f0e7;
+}
+
 .about_Grid1 {
-  display: block;
+  margin-top: 134.5%; /*banner, absolute °í·Á*/
+
   border: 1px solid red;
 
-  .about_Grid1_tittle {
-    border: 1px solid blue;
-    font-size: 20px;
-  }
   .about_Grid1_description {
-    border: 1px solid blue;
-    height: 300px;
+    color: #ec4d27;
+    font-family: "Pretendard-Regular";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 42px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+
+    .text-bold {
+      font-family: "Pretendard";
+      font-weight: 800;
+    }
   }
 }
 
 .about_Grid2 {
   border: 1px solid red;
 
-  .about_Grid2_title {
-    border: 1px solid blue;
-    font-size: 20px;
+  .about_Grid2_tittle {
+    color: #ec4d27;
+    font-family: "EsaManru2";
+    font-weight: 700;
+    font-size: 100px;
+    padding-left: 80px;
   }
 
   .about_Grid2_topic {
+    border: 1px solid blue;
     display: flex;
-    margin-top: 20px;
+
+    height: 200px;
+
+    padding-top: 140px;
+    padding-bottom: 140px;
+    padding-left: 80px;
+
+    .Grid2_img {
+      width: 30%;
+      border: 1px solid red;
+    }
     .topic_text {
-      border: 1px solid blue;
+      width: 30%;
+      border: 1px solid red;
 
       .topic_title {
-        border: 1px solid blue;
-        font-size: 20px;
+        color: #ec4d27;
+        .topic_title_num {
+          font-family: "EsaManru2";
+        }
+        .topic_title_key {
+          font-family: "EsaManru1";
+        }
       }
-    }
-    img {
-      border: 1px solid blue;
+
+      font-size: 76px;
     }
   }
 }
