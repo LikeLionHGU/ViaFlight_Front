@@ -1,25 +1,39 @@
-              function Card(url, type){
-                return(
-              {item.type === {type} ? (
-                <RestaurantImg
-                  src={`${item.type === {type} ? `${item.imageURL}` : ""}`}
-                  alt="img"
-                />
-              ) : (
-                ""
-              )}
-              <div>
-                <div>{item.type === {type} ? `${item.mealName}` : ""}</div>
-                <div>{item.type === {type} ? `${item.businessHours}` : ""}</div>
-                <div>{item.type === {type} ? `${item.location}` : ""}</div>
-                <div>
-                  {item.type === {type}
-                    ? `${
-                        item.information.length > 55
-                          ? `${item.information.slice(0, 55)}...`
-                          : item.information
-                      }`
-                    : ""}
-                </div>
-              </div>)
-              }
+import styled from "styled-components";
+
+const StyleContainer = styled.div``;
+const ImageCard = styled.img`
+  width: 40%;
+  height: 500px;
+
+  object-fit: cover;
+`;
+
+function InViewCard({
+  key,
+  imageURL,
+  name,
+  businessHours,
+  location,
+  information,
+}) {
+  return (
+    <StyleContainer>
+      <ImageCard src={imageURL} />
+      <div>{name}</div>
+      <div>{businessHours}</div>
+      <div>{location}</div>
+      <div>{information}</div>
+    </StyleContainer>
+  );
+}
+
+// InViewCard.propTypes = {
+//   key: PropTypes.number.isRequired,
+//   coverImg: PropTypes.string.isRequired,
+//   title: PropTypes.string.isRequired,
+//   summary: PropTypes.string.isRequired,
+//   rating: PropTypes.number.isRequired,
+//   genres: PropTypes.arrayOf(PropTypes.string).isRequired,
+// };
+
+export default InViewCard;

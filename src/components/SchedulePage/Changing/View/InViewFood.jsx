@@ -31,17 +31,6 @@ const FoodBtn = styled.button`
   font-size: 20px;
 `;
 
-const FoodCard = styled.div`
-  display: flex;
-`;
-
-const RestaurantImg = styled.img`
-  width: 40%;
-  height: 500px;
-
-  object-fit: cover;
-`;
-
 export default function Food() {
   const [inRestaurant, setInRestaurnat] = useState(true);
   const [inCafe, setInCafe] = useState(false);
@@ -135,7 +124,16 @@ export default function Food() {
           ) : inCafe ? (
             <div>Cafe</div>
           ) : (
-            <InViewCard key={item.mealName}, url={url}, type={item.type} />
+            item.type === "Meal" && (
+              <InViewCard
+                key={item.mealName}
+                imageURL={item.imageURL}
+                name={item.mealName}
+                businessHours={item.businessHours}
+                location={item.location}
+                information={item.information}
+              />
+            )
           )}
         </div>
       ))}
