@@ -38,12 +38,24 @@
   color: white;
 }
 
+.Schedule_Frame_Banner_infoBox {
+  position: sticky;
+  top: 10px;
+
+  padding-top: 105px;
+
+  /* border: 1px solid red; */
+  /* position: absolute; */
+  /*header와의 간격*/
+  top: 30%;
+
+  display: flex;
+}
+
 /*���� Icon - Banner �κ�*/
 .Schedule_Frame_Banner_Icons {
-  position: absolute;
-  top: 40%;
-  left: 80px;
-
+  /* left: 80px; */
+  margin-left: 80px;
   padding: 10px 20px;
   height: 37px;
   border-radius: 5px;
@@ -54,7 +66,11 @@
 
 /*�ð�, ���� ���� - Banner �κ�*/
 .Schedule_Frame_Banner_infoWeather {
-  position: absolute;
+  /* position: absolute;
   top: 40%;
-  right: 80px;
+  right: 80px; */
+  backdrop-filter: blur(15px);
+  background-color: rgba(255, 255, 255, 0.1);
+
+  margin-left: 50vw;
 }
