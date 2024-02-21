@@ -3,6 +3,7 @@ import Footer from "./components/layout/Footer";
 import Search from "./components/Search";
 import Schedule from "./components/Schedule";
 import About from "./components/About";
+
 function App() {
   return (
     <Router>
