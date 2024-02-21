@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 
 function Schedule_Clock() {
-  //Á¤º¸ ÀúÀåÇÏ´Â º¯¼ö
+  //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½
   const [IntervalTime, setIntervalTime] = useState("");
 
-  // ½Ã°è Á¤º¸
+  // ï¿½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½
   const nowTime = () => {
     let now = new Date();
-    console.log(now);
 
     let hour = now.getHours();
     let minute = now.getMinutes();
@@ -26,14 +25,14 @@ function Schedule_Clock() {
     // return `${now.toLocaleTimeString}`;
   };
 
-  // useState ÀÌ¿ë, ·£´õ¸µ ÈÄ Ã¹ °ªÀº nowTime return °ª »ç¿ë
+  // useState ï¿½Ì¿ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Ã¹ ï¿½ï¿½ï¿½ï¿½ nowTime return ï¿½ï¿½ ï¿½ï¿½ï¿½
   const [Time, setTime] = useState(nowTime);
 
-  // 1ÃÊ¸¶´Ù clockÀÇ °ªÀ» ´Ù½Ã °è»ê ÈÄ ·£´õ¸µ (setClock ÀÌ¿ë)
+  // 1ï¿½Ê¸ï¿½ï¿½ï¿½ clockï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (setClock ï¿½Ì¿ï¿½)
   setInterval(() => setTime(nowTime), 60000);
 
   // getclock();
-  // 1ÃÊ ¸¶´Ù ÇÔ¼ö¸¦ ¹Ýº¹ È£Ãâ; (´ÜÀ§, mili-second)
+  // 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½Ýºï¿½ È£ï¿½ï¿½; (ï¿½ï¿½ï¿½ï¿½, mili-second)
   // setInterval(getclock, 600000);
 
   return (

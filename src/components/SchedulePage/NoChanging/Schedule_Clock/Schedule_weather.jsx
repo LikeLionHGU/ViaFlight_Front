@@ -1,25 +1,23 @@
 import React, { useState } from "react";
 
-/*³¯¾¾ ApI ¹«·á È£Ãâ È½¼ö Á¦ÇÑÀÌ ÀÖ´Ù! (ºÐ´ç 60È¸) */
+/*ï¿½ï¿½ï¿½ï¿½ ApI ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½ È½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½! (ï¿½Ð´ï¿½ 60È¸) */
 function Schedule_Weather() {
   const [Weather, setWeather] = useState("");
   const [IconPath, setIconPath] = useState("");
 
-  // ³¯¾¾ Á¤º¸ È£Ãâ
+  // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½
   const API_KEY = "73f3a7c92991adcee8b72c74b5d49a50";
 
   function onGeoOk(position) {
-    // JavascriptÀÇ props, °´Ã¼ µ¥ÀÌÅÍ¸¦ ¹Þ¾ÆÁØ´Ù.
-    const lat = position.coords.latitude; // À§µµ Á¤º¸ ÃßÃâ
-    const lon = position.coords.longitude; // °æµµ Á¤º¸ ÃßÃâ
+    // Javascriptï¿½ï¿½ props, ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½Þ¾ï¿½ï¿½Ø´ï¿½.
+    const lat = position.coords.latitude; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    const lon = position.coords.longitude; // ï¿½æµµ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     //console.log("you live in", lat, lon);
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`; // ³¯¾¾ Á¤º¸¸¦ ¹ÞÀ»¼ö ÀÖ´Â API ÁÖ¼Ò Çü½Ä
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ API ï¿½Ö¼ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-
         // setWeather(data.weather[0].main);
         // setIconPath(
         //   `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
@@ -30,7 +28,7 @@ function Schedule_Weather() {
     alert("Can't find you. No weather for you");
   }
 
-  navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError); // geolocation ÇÔ¼ö¸¦ ÅëÇØ¼­ ÇöÀç (À§Ä¡ Á¤º¸¸¦ ¹Þ¾Æ¿Ã ¼ö ÀÖÀ½)
+  navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError); // geolocation ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¾Æ¿ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
 
   return (
     <>
