@@ -13,11 +13,11 @@ const Main = styled.div`
 
   display: flex;
   padding: 130px 0;
-  padding-left: 3%;
+  padding-left: 4.5%;
 `;
 
 const Left = styled.div`
-  width: 30%;
+  width: 80%;
   padding-right: 80px;
 
   font-size: 18px;
@@ -26,11 +26,11 @@ const Left = styled.div`
 `;
 
 const Title = styled.div`
-  padding-bottom: 100px;
+  padding-bottom: 150px;
 
   font-family: EsaManru;
   font-weight: 300;
-  font-size: 35px;
+  font-size: 40px;
 `;
 
 const TextContainer = styled.div`
@@ -43,11 +43,13 @@ const TextContainer = styled.div`
 const EventName = styled.div`
   font-family: Esamanru;
   font-size: 22px;
+
+  padding-bottom: 10px;
 `;
 
 const TimeLocation = styled.div`
   font-size: 13px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 `;
 
 export default function ScheduleSldier() {
@@ -83,11 +85,11 @@ export default function ScheduleSldier() {
         breakpoints={{
           0: {
             slidesPerView: 3.5,
-            spaceBetween: 20,
+            spaceBetween: 0,
           },
           900: {
             slidesPerView: 3.5,
-            spaceBetween: 20,
+            spaceBetween: 0,
           },
         }}
         // freeMode={true} // 자유로운가
@@ -113,14 +115,14 @@ export default function ScheduleSldier() {
                   {/* <Attr>Attraction 01</Attr> */}
                   <EventName>
                     {/* {item.eventName} */}
-                    {item.eventName.length > 23
-                      ? `${item.eventName.slice(0, 23)}...`
+                    {item.eventName.length > 17
+                      ? `${item.eventName.slice(0, 17)}...`
                       : item.eventName}
                   </EventName>
                   <TimeLocation>{`${item.businessHours} | ${item.location}`}</TimeLocation>
                   <div>
-                    {item.information.length > 80
-                      ? `${item.information.slice(0, 80)}...`
+                    {item.information.length > 120
+                      ? `${item.information.slice(0, 120)}...`
                       : item.information}
                   </div>
                 </TextContainer>
