@@ -3,53 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
 import "swiper/css";
 import "../../../style/SchduleSlider.css";
-// import { ServiceData } from "./SliderContents";
 import "../../../font/font.css";
 
-import travel1 from "../../../img/slide1.jpg";
-import travel2 from "../../../img/slide1.jpg";
-import travel3 from "../../../img/slide1.jpg";
-import travel4 from "../../../img/slide1.jpg";
-import { useLocation } from "react-router-dom";
-
-const ServiceData = [
-  {
-    name: "1Api",
-    time: "연결",
-    cost: "해야함",
-    backgroundImg: travel1,
-  },
-  {
-    name: "2Api",
-    time: "연결",
-    cost: "해야함",
-    backgroundImg: travel2,
-  },
-  {
-    name: "3Api",
-    time: "연결",
-    cost: "해야함",
-    backgroundImg: travel3,
-  },
-  {
-    name: "4Api",
-    time: "연결",
-    cost: "해야함",
-    backgroundImg: travel4,
-  },
-  {
-    name: "5Api",
-    time: "연결",
-    cost: "해야함",
-    backgroundImg: travel1,
-  },
-  {
-    name: "6Api",
-    time: "연결",
-    cost: "해야함",
-    backgroundImg: travel2,
-  },
-];
+import { useEffect, useState } from "react";
 
 const Main = styled.div`
   background-color: black;
@@ -77,12 +33,39 @@ const Title = styled.div`
   font-size: 35px;
 `;
 
+const TextContainer = styled.div`
+  font-family: Pretendard-Regular;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+const EventName = styled.div`
+  font-family: Esamanru;
+  font-size: 22px;
+`;
+
+const TimeLocation = styled.div`
+  font-size: 13px;
+`;
+
 export default function ScheduleSldier() {
-  const location = useLocation();
-  const { airport, arrivalTime, durationTime } = location.state;
-  console.log(airport);
-  console.log(arrivalTime);
-  console.log(durationTime);
+  const savedAirport = localStorage.getItem("viaAirport");
+  const savedATime = localStorage.getItem("arrivalTime");
+  const savedDTime = localStorage.getItem("durationTime");
+
+  const [infoAirport, setInfoAirport] = useState([]);
+  const url = `https://api.zionhann.shop/app/viaflight/layover-airport-in?layoverAirportName=${savedAirport}&layoverArrivalTime=${savedATime}&layoverTime=${savedDTime}`;
+
+  useEffect(() => {
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        setInfoAirport(data);
+      });
+  }, []);
+
   return (
     <Main>
       <Left>
@@ -112,23 +95,30 @@ export default function ScheduleSldier() {
         speed={3000} // 슬라이드 이동 속도
         // loopedSlides={1}
         loopAdditionalSlides={true}
-        autoplay={{ delay: 3000, disableOnInteraction: false }} // 자동 이동
+        autoplay={{ delay: 999999, disableOnInteraction: false }} // 자동 이동
         slideToClickedSlide={true} // 슬라이드 클릭 시 이동
         className="schedule_swiper"
       >
-        {ServiceData.map((item, index) => (
-          <SwiperSlide key={item.title}>
+        {infoAirport?.airportEvents?.map((item) => (
+          <SwiperSlide key={item.eventName}>
             <div className="schedule_swiperslide">
               <div
                 className="schedule_swiperslide1"
                 id="sliderbg"
-                style={{ backgroundImage: `url(${item.backgroundImg})` }}
+                style={{ backgroundImage: `url(${item.imageURL})` }}
               ></div>
               <div className="schedule_swiperslide2" id="sliderhoverbg"></div>
               <div className="schedule_swiperslide3" id="slidertext">
-                <div>{item.name}</div>
-                <div>{item.time}</div>
-                <div>{item.cost}</div>
+                <TextContainer>
+                  {/* <Attr>Attraction 01</Attr> */}
+                  <EventName>{item.eventName}</EventName>
+                  <TimeLocation>{`${item.businessHours} | ${item.location}`}</TimeLocation>
+                  <div>
+                    {item.information.length > 55
+                      ? `${item.information.slice(0, 55)}...`
+                      : item.information}
+                  </div>
+                </TextContainer>
               </div>
             </div>
           </SwiperSlide>
