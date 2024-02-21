@@ -6,6 +6,8 @@ import "../../../font/font.css";
 const Main = styled.div`
   display: flex;
   justify-content: center;
+  padding-top: 85px;
+  padding-bottom: 10px;
 `;
 
 const ToggleContainer = styled.div`
