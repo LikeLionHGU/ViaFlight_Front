@@ -80,11 +80,12 @@
 }
 
 .Enter {
+  top: 0;
   /* background-color: gray; */
   /* height: 1600px; */
+  height: 700px;
   background-image: url(../img/Mainimage.png);
   background-size: cover;
-
   color: #ec4d27;
 }
 
@@ -94,36 +95,36 @@
 
   margin-left: 50px; /*80px*/
   /* margin-top: 42px; */
-  padding-top: 40px;
+  padding-top: 30px;
   width: 1125px;
-  height: 225px;
 
-  font-size: 62px;
+  font-size: 40px;
   font-weight: 400;
-  line-height: 73.99px;
+  line-height: 49px;
 }
 
 /*Via-flight logo공간*/
 .Via_flight_logoNForm {
   /* width: 1686px; */
-  height: 600px; /* 643px*/
-  margin-top: 22px;
+  /* border: 1px solid red; */
+  /* height: 500px; 643px*/
   margin-left: 50px; /*80px*/
+  padding-top: 70px;
 
   .logo_text {
     font-family: "EsaManru";
 
     width: fit-content;
-    font-size: 195px; /*236px*/
+    font-size: 152px; /*236px*/
     font-weight: 700;
-    line-height: 207px; /*250px*/
+    line-height: 161px; /*250px*/
   }
 
   .Flight_textNlogo {
     display: flex;
   }
   .Flight_textNlogo > img {
-    height: 200px; /*250px*/
+    height: 152px; /*250px*/
     object-fit: scale-down;
   }
 }
@@ -132,7 +133,7 @@
 .form_style {
   font-family: "EsaManru";
 
-  margin-top: 65px; /*32px*/
+  margin-top: 18px; /*32px */
   display: flex;
   /* justify-content: center; */
   /*width: 1900px; 입력창이 좌측으로 츼우쳐져 있어 width크기를 조정 */
@@ -153,17 +154,19 @@
   select {
     font-family: "EsaManru";
     background-color: transparent;
-    background-color: rgba(
-      255,
-      255,
-      255,
-      0.2
-    ); /*rgba로 요소별 blur효과 주기 성공*/
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.22);
+    /* background-color: hsla(
+      0,
+      2%,
+      33%,
+      0.4
+    ); rgba로 요소별 blur효과 주기 성공 */
 
     color: #ec4d27;
     margin-right: 76px;
     border-bottom: 2.5px solid red;
-    width: 440px;
+    width: 300px;
   }
 
   /*Time 아이콘 색상 입히기*/
@@ -205,7 +208,11 @@
     line-height: 52px;
 
     background-color: transparent;
-    background-color: rgba(255, 255, 255, 0.22);
+    /* background-color: rgba(255, 255, 255, 0.22); */
+
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.1);
+
     color: #ec4d27;
     height: 52px;
     width: 230px; /*284px*/

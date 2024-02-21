@@ -12,6 +12,8 @@ import Tip from "../../img/TipIcon.svg";
 
 import { ServiceData } from "./SliderContents";
 
+import Fadein from "../AboutPage/About_fadin"; //fadein 효과
+
 // Initialize required modules
 SwiperCore.use([FreeMode, Autoplay]);
 
@@ -142,90 +144,104 @@ function Slider() {
 
   return (
     <StyledContainer>
-      <Title>
-        <TitleMain>VIA FLIGHT FAQS</TitleMain>
-        <TitleSub>Relieving discomfort and fear</TitleSub>
-      </Title>
-      <Swiper
-        style={{ margin: "0", whiteSpace: "pre-wrap" }}
-        breakpoints={{
-          0: {
-            slidesPerView: 2.5,
-            spaceBetween: 10,
-          },
-          900: {
-            slidesPerView: 2.5,
-            spaceBetween: 10,
-          },
-        }}
-        // freeMode={true} // 자유로운가
-        loop={true} // 무한 루프
-        speed={3000} // 슬라이드 이동 속도
-        // loopedSlides={1}
-        loopAdditionalSlides={true}
-        autoplay={{ delay: 3000, disableOnInteraction: false }} // 자동 이동
-        slidesOffsetBefore={50} // 슬라이드 출발 지점에 빈 공간
-        slideToClickedSlide={true} // 슬라이드 클릭 시 이동
-        className="swiper"
-      >
-        {ServiceData.map((item, index) => (
-          <SwiperSlide key={item.title}>
-            <div className="swiperslide">
-              <div
-                className="swiperslide1"
-                id="sliderbg"
-                style={{ backgroundImage: `url(${item.backgroundImg})` }}
-              ></div>
-              <div className="swiperslide2" id="sliderhoverbg"></div>
-              <div className="swiperslide3" id="slidertext">
-                <CardQuestion>{item.question}</CardQuestion>
-                <CardTitle>{item.title}</CardTitle>
-                <CardContent>{item.content}</CardContent>
-                <div>
-                  <TipContainer>
-                    <img
-                      src={Tip}
-                      alt="logo"
-                      style={{
-                        width: "30px",
-                        height: "30px",
-                        paddingRight: "15px",
-                      }}
-                    />
-                    <div>TIP</div>
-                  </TipContainer>
-                  <CardTip>{item.tip}</CardTip>
+      <Fadein>
+        <Title>
+          <TitleMain>VIA FLIGHT FAQS</TitleMain>
+          <TitleSub>Relieving discomfort and fear</TitleSub>
+        </Title>
+      </Fadein>
+
+      <Fadein>
+        <Swiper
+          style={{ margin: "0", whiteSpace: "pre-wrap" }}
+          breakpoints={{
+            0: {
+              slidesPerView: 2.5,
+              spaceBetween: 10,
+            },
+            900: {
+              slidesPerView: 2.5,
+              spaceBetween: 10,
+            },
+          }}
+          // freeMode={true} // 자유로운가
+          loop={true} // 무한 루프
+          speed={3000} // 슬라이드 이동 속도
+          // loopedSlides={1}
+          loopAdditionalSlides={true}
+          autoplay={{ delay: 3000, disableOnInteraction: false }} // 자동 이동
+          slidesOffsetBefore={50} // 슬라이드 출발 지점에 빈 공간
+          slideToClickedSlide={true} // 슬라이드 클릭 시 이동
+          className="swiper"
+        >
+          {ServiceData.map((item, index) => (
+            <SwiperSlide key={item.title}>
+              <div className="swiperslide">
+                <div
+                  className="swiperslide1"
+                  id="sliderbg"
+                  style={{ backgroundImage: `url(${item.backgroundImg})` }}
+                ></div>
+                <div className="swiperslide2" id="sliderhoverbg"></div>
+                <div className="swiperslide3" id="slidertext">
+                  <CardQuestion>{item.question}</CardQuestion>
+                  <CardTitle>{item.title}</CardTitle>
+                  <CardContent>{item.content}</CardContent>
+                  <div>
+                    <TipContainer>
+                      <img
+                        src={Tip}
+                        alt="logo"
+                        style={{
+                          width: "30px",
+                          height: "30px",
+                          paddingRight: "15px",
+                        }}
+                      />
+                      <div>TIP</div>
+                    </TipContainer>
+                    <CardTip>{item.tip}</CardTip>
+                  </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <BigCont>
-        Discover
-        <br /> New Journey
-      </BigCont>
-      <Contents>
-        <div>
-          경유지 정보만 입력하면, 경유지에서의 대기 시간별로 맞춤화 된 투어
-          코스,
-          <br />
-          액티비티를 추천드립니다. 여행의 모든 순간을 알차게 구성해보세요!
-          <br />
-          경유 시간이 짧아도 걱정하지 마세요. Via Flight와 함께라면 공항도
-          여행지입니다.
-          <br />
-          공항 관련 각종 정보, 이벤트, 기획전 등의 정보를 찾아보세요.
-        </div>
-      </Contents>
-      <UpBtn>
-        <ContainArrow>
-          <UpArrow src={Arrow} alt="logo" />
-        </ContainArrow>
-        <UpBtnStyled onClick={scrollToTop}>
-          경유지 정보 입력하러 가기
-        </UpBtnStyled>
-      </UpBtn>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Fadein>
+
+      <Fadein>
+        <BigCont>
+          Discover
+          <br /> New Journey
+        </BigCont>
+      </Fadein>
+
+      <Fadein>
+        <Contents>
+          <div>
+            경유지 정보만 입력하면, 경유지에서의 대기 시간별로 맞춤화 된 투어
+            코스,
+            <br />
+            액티비티를 추천드립니다. 여행의 모든 순간을 알차게 구성해보세요!
+            <br />
+            경유 시간이 짧아도 걱정하지 마세요. Via Flight와 함께라면 공항도
+            여행지입니다.
+            <br />
+            공항 관련 각종 정보, 이벤트, 기획전 등의 정보를 찾아보세요.
+          </div>
+        </Contents>
+      </Fadein>
+
+      <Fadein>
+        <UpBtn>
+          <ContainArrow>
+            <UpArrow src={Arrow} alt="logo" />
+          </ContainArrow>
+          <UpBtnStyled onClick={scrollToTop}>
+            경유지 정보 입력하러 가기
+          </UpBtnStyled>
+        </UpBtn>
+      </Fadein>
     </StyledContainer>
   );
 }
