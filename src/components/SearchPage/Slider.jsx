@@ -101,15 +101,14 @@ const BigCont = styled.div`
 const Contents = styled.div`
   display: flex;
   flex-direction: row-reverse;
-  padding-right: 120px;
+  padding: 200px 150px;
 
   letter-spacing: 1px;
   line-height: 40px;
   font-family: Pretendard-Regular;
-  font-size: 15px;
+  font-size: 22px;
   font-weight: 500;
-
-  line-height: 26px;
+  line-height: 37px;
 `;
 
 const UpBtn = styled.div`
