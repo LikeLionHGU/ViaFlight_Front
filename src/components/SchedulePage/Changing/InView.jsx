@@ -8,13 +8,14 @@ const StyleContainer = styled.div`
 const TitleCover = styled.div`
   border-bottom: 1px solid white;
   padding-top: 130px;
-  margin: 0 3%;
+  /* margin: 0 3%; */
 
   font-family: EsaManru;
   font-size: 135px;
   font-weight: 100;
 `;
 const Title = styled.div`
+  white-space: nowrap;
   margin: 0 30px;
   text-align: center;
 `;
