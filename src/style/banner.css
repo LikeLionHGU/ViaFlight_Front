@@ -232,12 +232,12 @@
   /*img 가로, 세로 크기*/
   width: 20px;
   height: 20px;
-  animation: motion 0.4s /*반복되는 시간*/ linear 0s /*효과 일정하게 반복*/
-    infinite alternate; /*애니매이션 효과 무한으로 반복; 상하로 움직이는 효과 */
+  animation: bannerMotion 0.4s /*반복되는 시간*/ linear 0s
+    /*효과 일정하게 반복*/ infinite alternate; /*애니매이션 효과 무한으로 반복; 상하로 움직이는 효과 */
 }
 
 /*위-아래로 움직이는 효과*/
-@keyframes motion {
+@keyframes bannerMotion {
   /*처음 위치*/
   0% {
     padding-top: 0px;

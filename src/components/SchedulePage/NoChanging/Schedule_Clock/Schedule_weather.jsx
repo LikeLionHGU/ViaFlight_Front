@@ -13,9 +13,6 @@ function Schedule_Weather() {
     fetch(url2)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.current.temp_c); // 기온 정보
-        console.log(data.current.condition.icon);
-
         setTemperature(data.current.temp_c);
         setIconPath(`https:${data.current.condition.icon}`);
       });

@@ -20,13 +20,14 @@ const StyledContainer = styled.div`
   flex-direction: column;
 
   color: #ec4d27;
+  padding-top: 80px;
 `;
 
 const Title = styled.div`
   display: flex;
   align-items: center;
 
-  padding: 40px 50px;
+  padding: 50px 50px;
 `;
 
 const TitleMain = styled.div`
@@ -101,8 +102,8 @@ const ContainArrow = styled.div`
 const UpArrow = styled.img`
   white-space: normal;
 
-  animation: motion 0.5s linear 0s infinite alternate; /* 무한 반복 */
-  @keyframes motion {
+  animation: sliderMotion 0.5s linear 0s infinite alternate; /* 무한 반복 */
+  @keyframes SliderMotion {
     0% {
       margin-top: 0px;
     } /* 처음 위치 */
