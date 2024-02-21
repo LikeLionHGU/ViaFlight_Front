@@ -12,12 +12,16 @@ import Tip from "../../img/TipIcon.svg";
 
 import { ServiceData } from "./SliderContents";
 
-import Fadein from "../AboutPage/About_fadin"; //fadein 효과
+import Fadein from "../AboutPage/About_fadin";
 
 // Initialize required modules
 SwiperCore.use([FreeMode, Autoplay]);
 
 const StyledContainer = styled.div`
+  // 추가된 부분
+  margin-top: 580px;
+  // hard 코딩으로 간격 조정
+
   display: flex;
   flex-direction: column;
 
@@ -37,7 +41,7 @@ const TitleMain = styled.div`
   padding-right: 30px;
 
   font-family: EsaManru;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 500;
 `;
 const TitleSub = styled.div`
@@ -84,7 +88,9 @@ const CardTip = styled.div`
 `;
 
 const BigCont = styled.div`
-  padding: 150px 50px;
+  padding-top: 220px;
+  padding-left: 50px;
+  //padding: 350px 50px;
 
   line-height: 160px;
   font-family: EsaManru;
@@ -100,8 +106,10 @@ const Contents = styled.div`
   letter-spacing: 1px;
   line-height: 40px;
   font-family: Pretendard-Regular;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
+
+  line-height: 26px;
 `;
 
 const UpBtn = styled.div`
@@ -109,7 +117,8 @@ const UpBtn = styled.div`
   flex-direction: column;
   align-items: center;
 
-  padding: 150px 0;
+  // padding: 150px 0;
+  padding: 50px;
 `;
 
 const ContainArrow = styled.div`
@@ -230,8 +239,7 @@ function Slider() {
       <Fadein>
         <BigCont>
           DISCOVER
-          <br />
-          NEW JOURNEY
+          <br /> NEW JOURNEY
         </BigCont>
       </Fadein>
 
