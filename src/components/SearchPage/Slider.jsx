@@ -20,13 +20,14 @@ const StyledContainer = styled.div`
   flex-direction: column;
 
   color: #ec4d27;
+  padding-top: 80px;
 `;
 
 const Title = styled.div`
   display: flex;
   align-items: center;
 
-  padding: 40px 50px;
+  padding: 50px 50px;
 `;
 
 const TitleMain = styled.div`
