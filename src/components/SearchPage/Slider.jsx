@@ -30,6 +30,7 @@ const Title = styled.div`
   align-items: center;
 
   padding: 50px 50px;
+  padding-left: 65px;
 `;
 
 const TitleMain = styled.div`
@@ -40,24 +41,34 @@ const TitleMain = styled.div`
   font-weight: 500;
 `;
 const TitleSub = styled.div`
-  font-size: 20px;
+  padding-top: 10px;
+
+  font-family: Plaid;
+  font-size: 17px;
   font-weight: 400;
 `;
 
 const CardQuestion = styled.div`
+  font-family: Plaid;
+
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
+
+  padding-bottom: 45px;
 `;
 const CardTitle = styled.div`
-  font-family: Pretendard-Regular;
+  padding-bottom: 60px;
+
+  font-family: Pretendard;
   font-size: 30px;
-  font-weight: 600;
+  font-weight: bold;
+  line-height: 48px;
 `;
 const CardContent = styled.div`
-  font-family: Pretendard-Regular;
-  font-weight: 300;
-  font-size: 17px;
-  line-height: 35px;
+  font-family: Pretendard-ExtraLight;
+  font-size: 19px;
+  line-height: 33px;
+  letter-spacing: 1px;
 `;
 const TipContainer = styled.div`
   display: flex;
@@ -66,24 +77,28 @@ const TipContainer = styled.div`
 `;
 
 const CardTip = styled.div`
-  font-family: Pretendard-Regular;
-  font-weight: 100;
-  font-size: 13px;
+  font-family: Pretendard-ExtraLight;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 1px;
 `;
 
 const BigCont = styled.div`
   padding: 150px 50px;
 
+  line-height: 160px;
   font-family: EsaManru;
-  font-size: 140px;
+  font-size: 170px;
   font-weight: 700;
 `;
 
 const Contents = styled.div`
   display: flex;
   flex-direction: row-reverse;
-  padding-right: 50px;
+  padding-right: 120px;
 
+  letter-spacing: 1px;
+  line-height: 40px;
   font-family: Pretendard-Regular;
   font-size: 20px;
   font-weight: 500;
@@ -157,21 +172,21 @@ function Slider() {
           style={{ margin: "0", whiteSpace: "pre-wrap" }}
           breakpoints={{
             0: {
-              slidesPerView: 2.5,
-              spaceBetween: 10,
+              slidesPerView: 3.5,
+              spaceBetween: 0,
             },
             900: {
-              slidesPerView: 2.5,
-              spaceBetween: 10,
+              slidesPerView: 3.5,
+              spaceBetween: 0,
             },
           }}
           // freeMode={true} // 자유로운가
-          loop={true} // 무한 루프
+          //loop={true} // 무한 루프
           speed={3000} // 슬라이드 이동 속도
           // loopedSlides={1}
           loopAdditionalSlides={true}
           autoplay={{ delay: 3000, disableOnInteraction: false }} // 자동 이동
-          slidesOffsetBefore={50} // 슬라이드 출발 지점에 빈 공간
+          slidesOffsetBefore={65} // 슬라이드 출발 지점에 빈 공간
           slideToClickedSlide={true} // 슬라이드 클릭 시 이동
           className="swiper"
         >
@@ -185,9 +200,11 @@ function Slider() {
                 ></div>
                 <div className="swiperslide2" id="sliderhoverbg"></div>
                 <div className="swiperslide3" id="slidertext">
-                  <CardQuestion>{item.question}</CardQuestion>
-                  <CardTitle>{item.title}</CardTitle>
-                  <CardContent>{item.content}</CardContent>
+                  <div>
+                    <CardQuestion>{item.question}</CardQuestion>
+                    <CardTitle>{item.title}</CardTitle>
+                    <CardContent>{item.content}</CardContent>
+                  </div>
                   <div>
                     <TipContainer>
                       <img
@@ -199,7 +216,7 @@ function Slider() {
                           paddingRight: "15px",
                         }}
                       />
-                      <div>TIP</div>
+                      <div style={{ fontFamily: "Plaid" }}>TIP</div>
                     </TipContainer>
                     <CardTip>{item.tip}</CardTip>
                   </div>
@@ -212,8 +229,9 @@ function Slider() {
 
       <Fadein>
         <BigCont>
-          Discover
-          <br /> New Journey
+          DISCOVER
+          <br />
+          NEW JOURNEY
         </BigCont>
       </Fadein>
 
