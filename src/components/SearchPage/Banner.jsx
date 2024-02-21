@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import "../../style/banner.css";
 import scroll_Icon from "../../img/scrolldown_icon.png";
@@ -23,6 +24,7 @@ function Banner() {
   const savedAirport = localStorage.getItem("viaAirport");
   const savedATime = localStorage.getItem("arrivalTime");
   const savedDTime = localStorage.getItem("durationTime");
+
 
   const onAirport = (e) => {
     if (savedAirport !== null) {
@@ -72,6 +74,7 @@ function Banner() {
       공항: ${savedAirport}\n
       도착시간: ${savedATime}\n
       경유시간: ${savedDTime} `);
+
     }
   };
 
