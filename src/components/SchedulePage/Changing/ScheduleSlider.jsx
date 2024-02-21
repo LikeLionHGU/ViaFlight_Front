@@ -38,7 +38,6 @@ const TextContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 `;
 
 const EventName = styled.div`
@@ -48,6 +47,7 @@ const EventName = styled.div`
 
 const TimeLocation = styled.div`
   font-size: 13px;
+  padding-bottom: 50px;
 `;
 
 export default function ScheduleSldier() {
@@ -111,11 +111,16 @@ export default function ScheduleSldier() {
               <div className="schedule_swiperslide3" id="slidertext">
                 <TextContainer>
                   {/* <Attr>Attraction 01</Attr> */}
-                  <EventName>{item.eventName}</EventName>
+                  <EventName>
+                    {/* {item.eventName} */}
+                    {item.eventName.length > 23
+                      ? `${item.eventName.slice(0, 23)}...`
+                      : item.eventName}
+                  </EventName>
                   <TimeLocation>{`${item.businessHours} | ${item.location}`}</TimeLocation>
                   <div>
-                    {item.information.length > 55
-                      ? `${item.information.slice(0, 55)}...`
+                    {item.information.length > 80
+                      ? `${item.information.slice(0, 80)}...`
                       : item.information}
                   </div>
                 </TextContainer>
