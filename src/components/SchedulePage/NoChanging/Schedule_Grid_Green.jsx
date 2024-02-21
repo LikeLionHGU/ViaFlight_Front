@@ -22,6 +22,7 @@ const TitleCover = styled.div`
 `;
 const Title = styled.div`
   margin: 0 30px;
+  text-align: center;
 `;
 const ContainArrow = styled.div`
   height: 30px;
