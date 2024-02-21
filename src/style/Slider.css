@@ -74,6 +74,6 @@ body {
 
 @media (min-width: 900px) {
   .swiperslide {
-    height: 650px;
+    height: 450px; /*수정(24.02.22. 화면 비율 수정), original: 650px*/
   }
 }
