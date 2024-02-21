@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Header from "../layout/Header"; //header import
 import styled from "styled-components";
 import "../../style/banner.css";
 import scroll_Icon from "../../img/scrolldown_icon.png";
@@ -26,16 +25,12 @@ function Banner() {
   const savedATime = localStorage.getItem("arrivalTime");
   const savedDTime = localStorage.getItem("durationTime");
 
-  const savedColor = localStorage.getItem("Headercolor");
-
   /*Get한 데이터 저장하는 공간*/
-  const [infoAirport, setInfoAirport] = useState([]);
-  const navigate = useNavigate();
 
   // fetch 함수
   /*API 호출 방식*/
   /*fetch:  호출 할 url*/
-  const url = `https://api.zionhann.shop/app/viaflight/all-layover-airport?layoverAirportName=${savedAirport}&layoverArrivalTime=${savedATime}&layoverTime=${savedDTime}`;
+  // const url = `https://api.zionhann.shop/app/viaflight/all-layover-airport?layoverAirportName=${savedAirport}&layoverArrivalTime=${savedATime}&layoverTime=${savedDTime}`;
 
   const onAirport = (e) => {
     if (savedAirport !== null) {
@@ -89,19 +84,14 @@ function Banner() {
       경유시간: ${savedDTime} `);
 
       // 페이지 이동에 대해서 default
-      if (savedColor !== null) localStorage.removeItem("Headercolor");
 
       //# fetch 적용시키기 [API 호출]
-      fetch(url)
-        .then((response) => response.json())
-        .then((data) => {
-          setInfoAirport(data);
-        });
-      navigate("/Schedule", {
-        state: {
-          infoAirport: infoAirport,
-        },
-      });
+      // fetch(url)
+      //   .then((response) => response.json())
+      //   .then((data) => {
+      //     setInfoAirport(data);
+      //   })
+      //   .then(console.log(infoAirport));
     }
   };
 
@@ -166,9 +156,11 @@ function Banner() {
               ></input>
               {/* </div> */}
               {/*schedule-paige에 연결*/}
-              <div className="searchBtn" onClick={OnCheckInput}>
-                경유지 정보 입력
-              </div>
+              <Link to={`/schedule`} style={{ textDecoration: "none" }}>
+                <div className="searchBtn" onClick={OnCheckInput}>
+                  경유지 정보 입력
+                </div>
+              </Link>
               {/* S1. (은진) - 초기화 버튼 (제안해보기)*/}
               {/* <div className="blurBox"> </div> */}
             </form>
