@@ -30,8 +30,8 @@ const ContainArrow = styled.div`
 const UpArrow = styled.img`
   white-space: normal;
 
-  animation: motion 0.5s linear 0s infinite alternate; /* 무한 반복 */
-  @keyframes motion {
+  animation: motionSchedule 0.5s linear 0s infinite alternate; /* 무한 반복 */
+  @keyframes motionSchedule {
     0% {
       margin-bottom: 0px;
     } /* 처음 위치 */
