@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import Header from "../layout/Header"; //header import
+import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import "../../style/banner.css";
 import scroll_Icon from "../../img/scrolldown_icon.png";
@@ -26,15 +25,12 @@ function Banner() {
   const savedATime = localStorage.getItem("arrivalTime");
   const savedDTime = localStorage.getItem("durationTime");
 
-  const savedColor = localStorage.getItem("Headercolor");
-
   /*Get한 데이터 저장하는 공간*/
-  const [infoAirport, setInfoAirport] = useState([]);
 
   // fetch 함수
   /*API 호출 방식*/
   /*fetch:  호출 할 url*/
-  const url = `https://api.zionhann.shop/app/viaflight/all-layover-airport?layoverAirportName=${savedAirport}&layoverArrivalTime=${savedATime}&layoverTime=${savedDTime}`;
+  // const url = `https://api.zionhann.shop/app/viaflight/all-layover-airport?layoverAirportName=${savedAirport}&layoverArrivalTime=${savedATime}&layoverTime=${savedDTime}`;
 
   const onAirport = (e) => {
     if (savedAirport !== null) {
@@ -88,14 +84,14 @@ function Banner() {
       경유시간: ${savedDTime} `);
 
       // 페이지 이동에 대해서 default
-      if (savedColor !== null) localStorage.removeItem("Headercolor");
 
       //# fetch 적용시키기 [API 호출]
-      fetch(url)
-        .then((response) => response.json())
-        .then((data) => {
-          setInfoAirport(data);
-        });
+      // fetch(url)
+      //   .then((response) => response.json())
+      //   .then((data) => {
+      //     setInfoAirport(data);
+      //   })
+      //   .then(console.log(infoAirport));
     }
   };
 

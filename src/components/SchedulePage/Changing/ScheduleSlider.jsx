@@ -3,8 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
 import "swiper/css";
 import "../../../style/SchduleSlider.css";
-import { ServiceData } from "./SliderContents";
 import "../../../font/font.css";
+
+import { useEffect, useState } from "react";
 
 const Main = styled.div`
   background-color: black;
@@ -32,7 +33,39 @@ const Title = styled.div`
   font-size: 35px;
 `;
 
+const TextContainer = styled.div`
+  font-family: Pretendard-Regular;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+const EventName = styled.div`
+  font-family: Esamanru;
+  font-size: 22px;
+`;
+
+const TimeLocation = styled.div`
+  font-size: 13px;
+`;
+
 export default function ScheduleSldier() {
+  const savedAirport = localStorage.getItem("viaAirport");
+  const savedATime = localStorage.getItem("arrivalTime");
+  const savedDTime = localStorage.getItem("durationTime");
+
+  const [infoAirport, setInfoAirport] = useState([]);
+  const url = `https://api.zionhann.shop/app/viaflight/layover-airport-in?layoverAirportName=${savedAirport}&layoverArrivalTime=${savedATime}&layoverTime=${savedDTime}`;
+
+  useEffect(() => {
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        setInfoAirport(data);
+      });
+  }, []);
+
   return (
     <Main>
       <Left>
@@ -66,19 +99,26 @@ export default function ScheduleSldier() {
         slideToClickedSlide={true} // 슬라이드 클릭 시 이동
         className="schedule_swiper"
       >
-        {ServiceData.map((item, index) => (
-          <SwiperSlide key={item.title}>
+        {infoAirport?.airportEvents?.map((item) => (
+          <SwiperSlide key={item.eventName}>
             <div className="schedule_swiperslide">
               <div
                 className="schedule_swiperslide1"
                 id="sliderbg"
-                style={{ backgroundImage: `url(${item.backgroundImg})` }}
+                style={{ backgroundImage: `url(${item.imageURL})` }}
               ></div>
               <div className="schedule_swiperslide2" id="sliderhoverbg"></div>
               <div className="schedule_swiperslide3" id="slidertext">
-                <div>{item.name}</div>
-                <div>{item.time}</div>
-                <div>{item.cost}</div>
+                <TextContainer>
+                  {/* <Attr>Attraction 01</Attr> */}
+                  <EventName>{item.eventName}</EventName>
+                  <TimeLocation>{`${item.businessHours} | ${item.location}`}</TimeLocation>
+                  <div>
+                    {item.information.length > 55
+                      ? `${item.information.slice(0, 55)}...`
+                      : item.information}
+                  </div>
+                </TextContainer>
               </div>
             </div>
           </SwiperSlide>
