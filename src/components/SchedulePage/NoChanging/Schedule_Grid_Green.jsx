@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import upArrow from "../../../img/inairport_grid_UpArrow.png";
-import View from "../Changing/View";
+import View from "../Changing/InView";
 
 const Main = styled.div`
   background-color: rgba(44, 110, 73, 1);

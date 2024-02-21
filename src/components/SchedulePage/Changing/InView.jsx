@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import InViewFood from "./View/InViewFood";
 
 const StyleContainer = styled.div`
   font-size: 20px;
@@ -23,28 +24,22 @@ const Shopping = styled.div``;
 
 export default function View() {
   //   const [category, setCategory] = useState("0");
-  const [inFood, setInFood] = useState(false);
   const [inRest, setInRest] = useState(false);
   const [inShopping, setInShopping] = useState(false);
 
   const handleFood = () => {
-    setInFood(true);
     setInRest(false);
     setInShopping(false);
   };
 
   const handleRest = () => {
-    setInFood(false);
     setInRest(true);
     setInShopping(false);
   };
   const handleShopping = () => {
-    setInFood(false);
     setInRest(false);
     setInShopping(true);
   };
-
-  console.log(inShopping + "S");
 
   return (
     <StyleContainer>
@@ -58,12 +53,12 @@ export default function View() {
         <Shopping onClick={() => handleShopping()}>Shopping</Shopping>
       </div>
       <div style={{ color: " red" }}>
-        {inFood ? (
-          <div>Food & Beverages</div>
+        {inShopping ? (
+          <div>Shopping</div>
         ) : inRest ? (
           <div>Rest facilities</div>
         ) : (
-          <div>Shopping</div>
+          <InViewFood />
         )}
       </div>
     </StyleContainer>
