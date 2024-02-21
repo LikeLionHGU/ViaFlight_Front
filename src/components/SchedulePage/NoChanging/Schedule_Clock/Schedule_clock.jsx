@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 
 function Schedule_Clock() {
-  //���� �����ϴ� ����
-  const [IntervalTime, setIntervalTime] = useState("");
-
-  // �ð� ����
   const nowTime = () => {
     let now = new Date();
 
@@ -24,15 +20,12 @@ function Schedule_Clock() {
     return `${hour} : ${minute} ${letter}`;
     // return `${now.toLocaleTimeString}`;
   };
-
-  // useState �̿�, ������ �� ù ���� nowTime return �� ���
+  // useState 이용, 랜더링 후 첫 값은 nowTime return 값 사용
   const [Time, setTime] = useState(nowTime);
 
-  // 1�ʸ��� clock�� ���� �ٽ� ��� �� ������ (setClock �̿�)
+  // 1초마다 clock의 값을 다시 계산 후 랜더링 (setClock 이용)
   setInterval(() => setTime(nowTime), 60000);
 
-  // getclock();
-  // 1�� ���� �Լ��� �ݺ� ȣ��; (����, mili-second)
   // setInterval(getclock, 600000);
 
   return (

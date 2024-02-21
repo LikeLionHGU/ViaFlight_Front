@@ -32,7 +32,7 @@
 /*Header �κ� */
 .Schedule_Frame_Header {
   position: relative;
-  height: 439px;
+  height: 300px; /* 높이 간격 조정, 439px;*/
 
   text-align: center;
   background-color: rgba(244, 240, 231, 1);

@@ -4,13 +4,23 @@ import ScheduleBanner2 from "./NoChanging/Schedule_Banner2";
 import ScheduleGridGreen from "./NoChanging/Schedule_Grid_Green";
 import ScheduleSlider from "./Changing/ScheduleSlider";
 
+import Fadein from "../AboutPage/About_fadin"; //fadein È¿°ú
+
 function InAirport() {
   return (
     <>
-      <ScheduleBanner1 />
-      <ScheduleBanner2 />
-      <ScheduleGridGreen />
-      <ScheduleSlider />
+      <Fadein>
+        <ScheduleBanner1 />
+      </Fadein>
+      <Fadein>
+        <ScheduleBanner2 />
+      </Fadein>
+      <Fadein>
+        <ScheduleGridGreen />
+      </Fadein>
+      <Fadein>
+        <ScheduleSlider />
+      </Fadein>
     </>
   );
 }
