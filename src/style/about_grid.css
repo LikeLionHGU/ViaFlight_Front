@@ -1,4 +1,20 @@
 @font-face {
+  font-family: "EsaManru";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
   font-family: "EsaManru1";
   font-weight: 500;
   font-style: normal;
@@ -51,9 +67,7 @@
 }
 
 .about_Grid1 {
-  margin-top: 134.5%; /*banner, absolute °í·Á*/
-
-  border: 1px solid red;
+  margin-top: 134.5%;
 
   .about_Grid1_description {
     color: #ec4d27;
@@ -62,7 +76,6 @@
     font-size: 24px;
     line-height: 42px;
     padding-top: 50px;
-    padding-bottom: 50px;
     padding-left: 80px;
 
     .text-bold {
@@ -73,45 +86,81 @@
 }
 
 .about_Grid2 {
-  border: 1px solid red;
-
   .about_Grid2_tittle {
     color: #ec4d27;
     font-family: "EsaManru2";
     font-weight: 700;
-    font-size: 100px;
+    font-size: 120px;
+    padding-top: 180px;
     padding-left: 80px;
   }
 
   .about_Grid2_topic {
-    border: 1px solid blue;
     display: flex;
+    justify-content: space-between;
+    height: 500px;
 
-    height: 200px;
-
-    padding-top: 140px;
-    padding-bottom: 140px;
+    padding-top: 130px;
     padding-left: 80px;
+    padding-right: 80px;
 
     .Grid2_img {
       width: 30%;
-      border: 1px solid red;
     }
     .topic_text {
       width: 30%;
-      border: 1px solid red;
 
       .topic_title {
         color: #ec4d27;
         .topic_title_num {
           font-family: "EsaManru2";
+          font-size: 76px;
         }
         .topic_title_key {
           font-family: "EsaManru1";
+          font-size: 76px;
         }
       }
+    }
+    .topic_descript {
+      font-family: "Pretendard-Regular";
+      padding-top: 58px;
+      font-size: 17px;
+      line-height: 31px;
+    }
+  }
 
-      font-size: 76px;
+  .BtnContainer {
+    margin-top: 200px;
+    margin-bottom: 102px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+
+    .Btn {
+      /* border: 1px solid red; */
+      font-family: "EsaManru";
+
+      background-color: #ec4d27;
+      border-radius: 5px;
+      width: 349px;
+      text-align: center;
+      line-height: 64px;
+
+      font-size: 18px;
+
+      .LinkBTN {
+        text-decoration: none;
+        color: #f4f0e7;
+      }
+    }
+
+    .Btn:hover {
+      background-color: #f4f0e7;
+      border: 1px solid #ec4d27;
+      .LinkBTN {
+        color: #ec4d27;
+      }
     }
   }
 }
