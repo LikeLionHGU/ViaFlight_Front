@@ -11,8 +11,6 @@ const StyleContainer = styled.div`
 const TitleCover = styled.div`
   border-bottom: 1px solid white;
   padding-top: 130px;
-=======
-  
 
   font-family: EsaManru;
   font-size: 135px;
