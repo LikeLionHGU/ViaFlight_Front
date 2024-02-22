@@ -1,3 +1,8 @@
+/*
+# img - resource
+<a href="https://www.flaticon.com/kr/free-icons/" title="노트북 아이콘">노트북 아이콘  제작자: Freepik - Flaticon</a>
+*/
+
 @font-face {
   font-family: "EsaManru";
   font-weight: 700;
@@ -24,12 +29,9 @@
 }
 
 .about_Banner {
-  border: 1px solid red;
-  /*시작 위치 배경 삽입 위해서(viewport 좌측상단)*/
   position: absolute;
   top: 0%;
 
-  /*Banner 전체 w, h값 조정*/
   height: 200%;
   width: 100%;
 
@@ -63,27 +65,34 @@
       color: #f4f0e7;
     }
 
+    /*노트북  사진*/
     .imgBox {
+      background-image: url("../img/About-free-icon-student.png");
+      background-size: contain;
+      background-repeat: no-repeat;
       position: absolute;
       top: 130px;
       right: 80px;
 
-      border: 1px solid blue;
-      background-color: gray;
+      /* border: 1px solid blue; */
+      background-color: transparent;
+
       width: 300px;
       height: 350px;
     }
   }
 
+  /*memeber들 사진*/
   .about_Banner_picture {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
+
+    background-image: url("../img/About-us.jpg");
+    background-size: cover;
 
     margin-top: 350px;
     height: 710px;
 
     text-align: center;
     line-height: 500px;
-    /* width: 100%;
-    height: 500px; */
   }
 }
