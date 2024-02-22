@@ -3,12 +3,12 @@ import InAirport from "./SchedulePage/InAirport";
 import ToggleBtn from "./SchedulePage/Changing/ToggleBtn";
 // import Header from "./layout/Header";
 import ScheduleHeader from "./SchedulePage/NoChanging/Schedule_Header";
-import About_Header from "./AboutPage/About_Header"; //Èò»ö header
+import About_Header from "./AboutPage/About_Header"; //ï¿½ï¿½ï¿½ header
 
 function Schedule() {
-  // header »ö»ó ¹Ù²î°Ô ÇÏ´Â ÇÔ¼ö
+  // header ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
   const [scrollPosition, setScrollPosition] =
-    useState(0); /*scroll À§Ä¡¿¡ µû¶ó¼­ ÀúÀå ÇÔ¼ö*/
+    useState(0); /*scroll ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½*/
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,9 +24,9 @@ function Schedule() {
   }, []); // Empty dependency array to ensure effect runs only once
 
   const id =
-    scrollPosition > 420 /* header ¹Ù²î´Â ³ôÀÌ */
+    scrollPosition > 420 /* header ï¿½Ù²ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
       ? "second"
-      : "first"; /*scroll ³ôÀÌ¿¡ µû¶ó¼­ Á¶°ÇÀÌ ¹Ù²îµµ·Ï*/
+      : "first"; /*scroll ï¿½ï¿½ï¿½Ì¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²îµµï¿½ï¿½*/
 
   return (
     <>

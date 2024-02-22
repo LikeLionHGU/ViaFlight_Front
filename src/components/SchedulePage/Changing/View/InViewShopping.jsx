@@ -123,9 +123,9 @@ export default function Shopping() {
             ? item.type === "Fashtion" ||
               item.type === "Beauty" || (
                 <InViewCard
-                  key={item.ShoppingName}
+                  key={item.shoppingOptionsName}
                   imageURL={item.imageURL}
-                  name={item.ShoppingName}
+                  name={item.shoppingOptionsName}
                   businessHours={item.businessHours}
                   location={item.location}
                   information={item.information}
@@ -138,9 +138,9 @@ export default function Shopping() {
               item.type === "Snack" ||
               item.type === "Duty_free" || (
                 <InViewCard
-                  key={item.ShoppingName}
+                  key={item.shoppingOptionsName}
                   imageURL={item.imageURL}
-                  name={item.ShoppingName}
+                  name={item.shoppingOptionsName}
                   businessHours={item.businessHours}
                   location={item.location}
                   information={item.information}
@@ -150,9 +150,9 @@ export default function Shopping() {
               )
             : item.type === "Entertainment" && (
                 <InViewCard
-                  key={item.ShoppingName}
+                  key={item.shoppingOptionsName}
                   imageURL={item.imageURL}
-                  name={item.ShoppingName}
+                  name={item.shoppingOptionsName}
                   businessHours={item.businessHours}
                   location={item.location}
                   information={item.information}
