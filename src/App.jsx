@@ -4,23 +4,30 @@ import Search from "./components/Search";
 import Schedule from "./components/Schedule";
 import About from "./components/About";
 
-import TimeBox from "./components/SchedulePage/NoChanging/Schedule_Clock/Schedule_Timebox";
+//import Schedule_Modal_parent from "./components/SchedulePage/NoChanging/Schedule_Modal/Schedule_Modal_parent";
 
 function App() {
   return (
     <Router>
-      {/* <Routes>
+      <Routes>
         <Route path={process.env.PUBLIC_URL + "/"} element={<Search />} />
         <Route
           path={process.env.PUBLIC_URL + "/schedule"}
           element={<Schedule />}
         />
         <Route path={process.env.PUBLIC_URL + "/about"} element={<About />} />
+
+        {/*
+        # modal componet 사용 예시입니다!
+        
+          <Route
+          path={process.env.PUBLIC_URL + "/props"}
+          element={<Schedule_Modal_parent />}
+        />
+        
+        */}
       </Routes>
-      <Footer /> */}
-      <Routes>
-        <Route path={process.env.PUBLIC_URL + "/"} element={<TimeBox />} />
-      </Routes>
+      <Footer />
     </Router>
   );
 }
