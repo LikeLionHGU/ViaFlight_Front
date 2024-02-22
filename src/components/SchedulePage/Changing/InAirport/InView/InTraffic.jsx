@@ -2,6 +2,7 @@ import styled from "styled-components";
 import InTrainImg from "../../../../../img/SkyTrain.svg";
 import InBusImg from "../../../../../img/Bus.svg";
 import Fadein from "../../../../AboutPage/About_fadin";
+import ".././../../../../font/font.css";
 
 const StyleContainer = styled.div`
   background-color: black;
@@ -18,12 +19,16 @@ const Main = styled.div`
 `;
 
 const Left = styled.div`
-  font-size: 35px;
+  font-family: Esamanru;
+  font-weight: 300;
+  font-size: 40px;
 `;
 
 const Right = styled.div`
-  width: 65%;
+  width: 55%;
 
+  font-family: Plaid;
+  font-weight: 300;
   font-size: 18px;
   display: flex;
   justify-content: flex-end;

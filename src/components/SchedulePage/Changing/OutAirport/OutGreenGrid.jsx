@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import upArrow from "../../../img/inairport_grid_UpArrow.png";
-import InView from "../Changing/InAirport/InView/InView";
+import upArrow from "../../../../img/inairport_grid_UpArrow.png";
+import OutView from "./OutView/OutView";
+import AboutFadein from "../../../AboutPage/About_fadin";
 
 const Main = styled.div`
   background-color: rgba(44, 110, 73, 1);
@@ -9,6 +10,7 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* width: 100%; */
 
   /* white-space: nowrap; */
 `;
@@ -18,11 +20,11 @@ const ContainArrow = styled.div`
   padding-bottom: 15px;
 `;
 
-const ScheduleUpArrow = styled.img`
+const ScheduleOutUpArrow = styled.img`
   /* white-space: normal; */
 
-  animation: motionSchedule 0.5s linear 0s infinite alternate; /* 무한 반복 */
-  @keyframes motionSchedule {
+  animation: motionScheduleOut 0.5s linear 0s infinite alternate; /* 무한 반복 */
+  @keyframes motionScheduleOut {
     0% {
       margin-top: 0px;
     } /* 처음 위치 */
@@ -52,25 +54,27 @@ const UpBtn = styled.button`
   }
 `;
 
-function Schedule_Grid_Green() {
+function OutGreenGrid() {
   const scrollTorecommend = () => {
-    // window.scroll({
-    //   top: 0,
-    //   behavior: "smooth",
-    // });
-    window.scrollTo({ top: "1000", behavior: "smooth" });
+    window.scrollTo({ top: "1350", behavior: "smooth" });
   };
   return (
     <Main>
-      <InView />
-      <ContainArrow>
-        <ScheduleUpArrow src={upArrow} alt="화살표"></ScheduleUpArrow>
-      </ContainArrow>
-      <UpBtnCover>
-        <UpBtn onClick={scrollTorecommend}>공항 속 새로운 경험하러가기</UpBtn>
-      </UpBtnCover>
+      <AboutFadein>
+        <OutView />
+      </AboutFadein>
+      <AboutFadein>
+        <ContainArrow>
+          <ScheduleOutUpArrow src={upArrow} alt="화살표"></ScheduleOutUpArrow>
+        </ContainArrow>
+      </AboutFadein>
+      <AboutFadein>
+        <UpBtnCover>
+          <UpBtn onClick={scrollTorecommend}>공항 밖 새로운 경험하러가기</UpBtn>
+        </UpBtnCover>
+      </AboutFadein>
     </Main>
   );
 }
 
-export default Schedule_Grid_Green;
+export default OutGreenGrid;
