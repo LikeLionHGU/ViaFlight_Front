@@ -41,11 +41,12 @@ const Card = styled.div`
   justify-content: space-between;
   height: 130px;
   width: 130px;
-  padding: 0 20px;
+  margin: 0 20px;
 
   font-size: 18px;
   font-family: Plaid;
   font-weight: 300;
+  cursor: pointer;
 
   opacity: 0.8;
 

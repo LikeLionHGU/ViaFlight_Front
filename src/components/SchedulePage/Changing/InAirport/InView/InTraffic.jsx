@@ -42,14 +42,26 @@ const InTrainCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0.8;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 const InBusCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 
-  padding-left: 130px;
+  margin-left: 130px;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 const InTrainText = styled.div``;
