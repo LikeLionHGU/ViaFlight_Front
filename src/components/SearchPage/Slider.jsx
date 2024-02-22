@@ -124,16 +124,16 @@ const ContainArrow = styled.div`
   height: 30px;
 `;
 
-const UpArrow = styled.img`
+const SlideUpArrow = styled.img`
   white-space: normal;
 
-  animation: sliderMotion 0.5s linear 0s infinite alternate; /* 무한 반복 */
+  animation: SliderMotion 0.5s linear 0s infinite alternate; /* 무한 반복 */
   @keyframes SliderMotion {
     0% {
-      margin-top: 0px;
+      padding-top: 0px;
     } /* 처음 위치 */
     100% {
-      margin-top: 15px;
+      padding-top: 15px;
     } /* 마지막 위치 */
   }
 `;
@@ -261,7 +261,7 @@ function Slider() {
       <Fadein>
         <UpBtn>
           <ContainArrow>
-            <UpArrow src={Arrow} alt="logo" />
+            <SlideUpArrow src={Arrow} alt="logo" />
           </ContainArrow>
           <UpBtnStyled onClick={scrollToTop}>
             경유지 정보 입력하러 가기
