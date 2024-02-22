@@ -15,18 +15,19 @@ const Main = styled.div`
 
 const ContainArrow = styled.div`
   height: 30px;
+  padding-bottom: 15px;
 `;
 
 const ScheduleUpArrow = styled.img`
-  white-space: normal;
+  /* white-space: normal; */
 
   animation: motionSchedule 0.5s linear 0s infinite alternate; /* 무한 반복 */
   @keyframes motionSchedule {
     0% {
-      margin-bottom: 0px;
+      margin-top: 0px;
     } /* 처음 위치 */
     100% {
-      margin-bottom: 15px;
+      margin-top: 15px;
     } /* 마지막 위치 */
   }
 `;
