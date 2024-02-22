@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import InViewFoodBtnArrow from "../../../../img/InViewFoodBtnArrow.svg";
+import InViewRestBtnArrow from "../../../../img/InViewFoodBtnArrow.svg";
 import InViewCard from "./InViewCard";
 
 const StyleContainer = styled.div``;
 
-const FoodTitle = styled.div`
+const RestTitle = styled.div`
   font-size: 50px;
 `;
 
-const FoodBtnContainer = styled.div`
+const RestBtnContainer = styled.div`
   display: flex;
   padding: 50px 0;
 `;
 
-const FoodBtn = styled.button`
+const RestBtn = styled.button`
   background-color: rgba(44, 110, 73, 1);
   color: rgba(244, 240, 231, 1);
   border: 1px solid rgba(244, 240, 231, 1);
@@ -31,10 +31,9 @@ const FoodBtn = styled.button`
   font-size: 20px;
 `;
 
-export default function Food() {
-  const [inRestaurant, setInRestaurnat] = useState(true);
-  const [inCafe, setInCafe] = useState(false);
-  const [inDessert, setInDessert] = useState(false);
+export default function Rest() {
+  const [inLounge, setInLounge] = useState(true);
+  const [inHotel, setInHotel] = useState(false);
 
   const savedAirport = localStorage.getItem("viaAirport");
   const savedATime = localStorage.getItem("arrivalTime");
@@ -53,30 +52,22 @@ export default function Food() {
   }, []);
 
   const handleRestaurant = () => {
-    setInRestaurnat(true);
-    setInCafe(false);
-    setInDessert(false);
+    setInLounge(true);
+    setInHotel(false);
   };
 
   const handleCafe = () => {
-    setInRestaurnat(false);
-    setInCafe(true);
-    setInDessert(false);
-  };
-
-  const handleDessert = () => {
-    setInRestaurnat(false);
-    setInCafe(false);
-    setInDessert(true);
+    setInLounge(false);
+    setInHotel(true);
   };
 
   return (
     <StyleContainer>
-      <FoodTitle>Food & Beverages</FoodTitle>
-      <FoodBtnContainer>
-        <FoodBtn
+      <RestTitle>Rest facilities</RestTitle>
+      <RestBtnContainer>
+        <RestBtn
           style={
-            inRestaurant
+            inLounge
               ? {
                   background: "rgba(244, 240, 231, 1)",
                   color: "rgba(44, 110, 73, 1)",
@@ -86,11 +77,11 @@ export default function Food() {
           onClick={() => handleRestaurant()}
         >
           Restaurant
-          <img src={InViewFoodBtnArrow} alt="화살표" />
-        </FoodBtn>
-        <FoodBtn
+          <img src={InViewRestBtnArrow} alt="화살표" />
+        </RestBtn>
+        <RestBtn
           style={
-            inCafe
+            inHotel
               ? {
                   background: "rgba(244, 240, 231, 1)",
                   color: "rgba(44, 110, 73, 1)",
@@ -100,29 +91,15 @@ export default function Food() {
           onClick={() => handleCafe()}
         >
           Cafe
-          <img src={InViewFoodBtnArrow} alt="화살표" />
-        </FoodBtn>
-        <FoodBtn
-          style={
-            inDessert
-              ? {
-                  background: "rgba(244, 240, 231, 1)",
-                  color: "rgba(44, 110, 73, 1)",
-                }
-              : {}
-          }
-          onClick={() => handleDessert()}
-        >
-          Dessert
-          <img src={InViewFoodBtnArrow} alt="화살표" />
-        </FoodBtn>
-      </FoodBtnContainer>
-      {infoAirport?.foods?.map((item, index) => (
+          <img src={InViewRestBtnArrow} alt="화살표" />
+        </RestBtn>
+      </RestBtnContainer>
+      {infoAirport?.rests?.map((item, index) => (
         <div>
-          {inDessert
-            ? item.type === "Dessert" && (
+          {inHotel
+            ? item.type === "Hotel" && (
                 <InViewCard
-                  key={item.mealName}
+                  key={item.restName}
                   imageURL={item.imageURL}
                   name={item.mealName}
                   businessHours={item.businessHours}
@@ -132,22 +109,9 @@ export default function Food() {
                   index={index}
                 />
               )
-            : inCafe
-            ? item.type === "Cafe" && (
+            : item.type === "Lounge" && (
                 <InViewCard
-                  key={item.mealName}
-                  imageURL={item.imageURL}
-                  name={item.mealName}
-                  businessHours={item.businessHours}
-                  location={item.location}
-                  information={item.information}
-                  blog={item.blog}
-                  index={index}
-                />
-              )
-            : item.type === "Meal" && (
-                <InViewCard
-                  key={item.mealName}
+                  key={item.restName}
                   imageURL={item.imageURL}
                   name={item.mealName}
                   businessHours={item.businessHours}

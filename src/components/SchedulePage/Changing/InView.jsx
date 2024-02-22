@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import InViewFood from "./View/InViewFood";
+// import InViewRest from "./View/InViewRest";
 
 const StyleContainer = styled.div`
   font-size: 20px;
@@ -124,7 +125,8 @@ export default function View() {
           {inShopping ? (
             <div>Shopping</div>
           ) : inRest ? (
-            <div>Rest facilities</div>
+            // <InViewRest />
+            ""
           ) : (
             <InViewFood />
           )}
