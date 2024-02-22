@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
 import "swiper/css";
-import "../../../style/SchduleSlider.css";
-import "../../../font/font.css";
+import "../../../../style/SchduleSlider.css";
+import "../../../../font/font.css";
 
 import { useEffect, useState } from "react";
 

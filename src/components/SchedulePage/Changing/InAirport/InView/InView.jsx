@@ -1,8 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
-import InViewFood from "./View/InViewFood";
-import InViewRest from "./View/InViewRest";
-import InViewShopping from "./View/InViewShopping";
+import InViewFood from "./InViewFood";
+import InViewRest from "./InViewRest";
+import InViewShopping from "./InViewShopping";
 
 const StyleContainer = styled.div`
   font-size: 20px;

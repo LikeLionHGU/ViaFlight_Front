@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import "../../../../font/font.css";
+import "../../../../../font/font.css";
 
 const StyleContainer = styled.div``;
 

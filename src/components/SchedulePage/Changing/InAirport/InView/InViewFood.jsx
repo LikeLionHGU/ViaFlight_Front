@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import InViewFoodBtnArrow from "../../../../img/InViewFoodBtnArrow.svg";
+import InViewFoodBtnArrow from "../../../../../img/InViewFoodBtnArrow.svg";
 import InViewCard from "./InViewCard";
 
 const StyleContainer = styled.div``;

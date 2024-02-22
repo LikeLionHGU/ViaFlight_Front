@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import WifiIcon from "../../../img/wifi.svg";
-import InfoIcon from "../../../img/info.svg";
-import CigaretteIcon from "../../../img/cigarette.svg";
-import CallIcon from "../../../img/call.svg";
-import ShowerIcon from "../../../img/shower.svg";
-import MedicineIcon from "../../../img/medicine.svg";
+import WifiIcon from "../../../../img/wifi.svg";
+import InfoIcon from "../../../../img/info.svg";
+import CigaretteIcon from "../../../../img/cigarette.svg";
+import CallIcon from "../../../../img/call.svg";
+import ShowerIcon from "../../../../img/shower.svg";
+import MedicineIcon from "../../../../img/medicine.svg";
 
 const Main = styled.div`
   width: 250px;
