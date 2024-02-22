@@ -45,7 +45,9 @@ const ViewBtn = styled.button`
   margin-right: 20px;
   color: rgba(244, 240, 231, 1);
 
-  font-size: 15px;
+  font-family: Plaid;
+  font-weight: 300;
+  font-size: 20px;
 
   &:hover {
     background-color: #b8b8b8;

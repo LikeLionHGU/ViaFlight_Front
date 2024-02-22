@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import upArrow from "../../../../img/inairport_grid_UpArrow.png";
 import OutView from "./OutView/OutView";
+import AboutFadein from "../../../AboutPage/About_fadin";
 
 const Main = styled.div`
   background-color: rgba(44, 110, 73, 1);
@@ -9,6 +10,7 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* width: 100%; */
 
   /* white-space: nowrap; */
 `;
@@ -58,13 +60,19 @@ function OutGreenGrid() {
   };
   return (
     <Main>
-      <OutView />
-      <ContainArrow>
-        <ScheduleOutUpArrow src={upArrow} alt="화살표"></ScheduleOutUpArrow>
-      </ContainArrow>
-      <UpBtnCover>
-        <UpBtn onClick={scrollTorecommend}>공항 밖 새로운 경험하러가기</UpBtn>
-      </UpBtnCover>
+      <AboutFadein>
+        <OutView />
+      </AboutFadein>
+      <AboutFadein>
+        <ContainArrow>
+          <ScheduleOutUpArrow src={upArrow} alt="화살표"></ScheduleOutUpArrow>
+        </ContainArrow>
+      </AboutFadein>
+      <AboutFadein>
+        <UpBtnCover>
+          <UpBtn onClick={scrollTorecommend}>공항 밖 새로운 경험하러가기</UpBtn>
+        </UpBtnCover>
+      </AboutFadein>
     </Main>
   );
 }
