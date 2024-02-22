@@ -52,6 +52,16 @@ export default function Food() {
       });
   }, []);
 
+  const restaurantData = infoAirport?.foods?.filter(
+    (item) => item.type === "Meal"
+  );
+
+  const cafeData = infoAirport?.foods?.filter((item) => item.type === "Cafe");
+
+  const dessertData = infoAirport?.foods?.filter(
+    (item) => item.type === "Dessert"
+  );
+
   const handleRestaurant = () => {
     setInRestaurnat(true);
     setInCafe(false);
@@ -117,48 +127,55 @@ export default function Food() {
           <img src={InViewFoodBtnArrow} alt="화살표" />
         </FoodBtn>
       </FoodBtnContainer>
-      {infoAirport?.foods?.map((item, index) => (
-        <div>
-          {inDessert
-            ? item.type === "Dessert" && (
-                <InViewCard
-                  key={item.mealName}
-                  imageURL={item.imageURL}
-                  name={item.mealName}
-                  businessHours={item.businessHours}
-                  location={item.location}
-                  information={item.information}
-                  blog={item.blog}
-                  index={index}
-                />
-              )
-            : inCafe
-            ? item.type === "Cafe" && (
-                <InViewCard
-                  key={item.mealName}
-                  imageURL={item.imageURL}
-                  name={item.mealName}
-                  businessHours={item.businessHours}
-                  location={item.location}
-                  information={item.information}
-                  blog={item.blog}
-                  index={index}
-                />
-              )
-            : item.type === "Meal" && (
-                <InViewCard
-                  key={item.mealName}
-                  imageURL={item.imageURL}
-                  name={item.mealName}
-                  businessHours={item.businessHours}
-                  location={item.location}
-                  information={item.information}
-                  blog={item.blog}
-                  index={index}
-                />
-              )}
-        </div>
-      ))}
+      <div>
+        {dessertData?.map(
+          (item, index) =>
+            index < 3 && (
+              <InViewCard
+                key={item.mealName}
+                imageURL={item.imageURL}
+                name={item.mealName}
+                businessHours={item.businessHours}
+                location={item.location}
+                information={item.information}
+                blog={item.blog}
+                index={index}
+              />
+            )
+        )}
+        :
+        {cafeData?.map(
+          (item, index) =>
+            index < 3 && (
+              <InViewCard
+                key={item.mealName}
+                imageURL={item.imageURL}
+                name={item.mealName}
+                businessHours={item.businessHours}
+                location={item.location}
+                information={item.information}
+                blog={item.blog}
+                index={index}
+              />
+            )
+        )}
+        :
+        {restaurantData?.map(
+          (item, index) =>
+            index < 3 && (
+              <InViewCard
+                key={item.mealName}
+                imageURL={item.imageURL}
+                name={item.mealName}
+                businessHours={item.businessHours}
+                location={item.location}
+                information={item.information}
+                blog={item.blog}
+                index={index}
+              />
+            )
+        )}
+      </div>
     </StyleContainer>
   );
 }

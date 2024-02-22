@@ -52,6 +52,21 @@ export default function Shopping() {
       });
   }, []);
 
+  const fashionData = infoAirport?.shopping?.filter(
+    (item) => item.type === "Shopping" || item.type === "Beauty"
+  );
+
+  const dutyFreeData = infoAirport?.shopping?.filter(
+    (item) =>
+      item.type === "Beverage" ||
+      item.type === "Snack" ||
+      item.type === "Duty_free"
+  );
+
+  const entertainmentData = infoAirport?.shopping?.filter(
+    (item) => item.type === "Entertainment"
+  );
+
   const handleFashion = () => {
     setInFashion(true);
     setInDutyFree(false);
@@ -117,50 +132,56 @@ export default function Shopping() {
           <img src={InViewShoppingBtnArrow} alt="화살표" />
         </ShoppingBtn>
       </ShoppingBtnContainer>
-      {infoAirport?.shopping?.map((item, index) => (
-        <div>
-          {inFashion
-            ? (item.type === "Fashtion" || item.type === "Beauty") && (
-                <InViewCard
-                  key={item.shoppingOptionsName}
-                  imageURL={item.imageURL}
-                  name={item.shoppingOptionsName}
-                  businessHours={item.businessHours}
-                  location={item.location}
-                  information={item.information}
-                  blog={item.blog}
-                  index={index}
-                />
-              )
-            : inDutyFree
-            ? (item.type === "Beverage" ||
-                item.type === "Snack" ||
-                item.type === "Duty_free") && (
-                <InViewCard
-                  key={item.shoppingOptionsName}
-                  imageURL={item.imageURL}
-                  name={item.shoppingOptionsName}
-                  businessHours={item.businessHours}
-                  location={item.location}
-                  information={item.information}
-                  blog={item.blog}
-                  index={index}
-                />
-              )
-            : item.type === "Entertainment" && (
-                <InViewCard
-                  key={item.shoppingOptionsName}
-                  imageURL={item.imageURL}
-                  name={item.shoppingOptionsName}
-                  businessHours={item.businessHours}
-                  location={item.location}
-                  information={item.information}
-                  blog={item.blog}
-                  index={index}
-                />
-              )}
-        </div>
-      ))}
+      <div>
+        {fashionData?.map(
+          (item, index) =>
+            index < 3 && (
+              <InViewCard
+                key={item.shoppingOptionsName}
+                imageURL={item.imageURL}
+                name={item.shoppingOptionsName}
+                businessHours={item.businessHours}
+                location={item.location}
+                information={item.information}
+                blog={item.blog}
+                index={index}
+              />
+            )
+        )}
+        : (
+        {dutyFreeData?.map(
+          (item, index) =>
+            index < 3 && (
+              <InViewCard
+                key={item.shoppingOptionsName}
+                imageURL={item.imageURL}
+                name={item.shoppingOptionsName}
+                businessHours={item.businessHours}
+                location={item.location}
+                information={item.information}
+                blog={item.blog}
+                index={index}
+              />
+            )
+        )}
+        ) : (
+        {entertainmentData?.map(
+          (item, index) =>
+            index < 3 && (
+              <InViewCard
+                key={item.shoppingOptionsName}
+                imageURL={item.imageURL}
+                name={item.shoppingOptionsName}
+                businessHours={item.businessHours}
+                location={item.location}
+                information={item.information}
+                blog={item.blog}
+                index={index}
+              />
+            )
+        )}
+        )
+      </div>
     </StyleContainer>
   );
 }
