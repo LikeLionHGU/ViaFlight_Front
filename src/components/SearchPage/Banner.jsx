@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Header from "../layout/Header"; //header import
 import styled from "styled-components";
 import "../../style/banner.css";
-import scroll_Icon from "../../img/scrolldown_icon.png";
-import banner_Logo from "../../img/bannner_logo.png";
 
 import Fadein from "../AboutPage/About_fadin";
 

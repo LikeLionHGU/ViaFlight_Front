@@ -8,6 +8,7 @@ function Schedule_Clock() {
     let minute = now.getMinutes();
     let letter = "AM";
 
+    /*12시간 환산 식*/
     if (hour > 12) {
       hour -= 12;
       if (hour !== 24) letter = "PM";
@@ -17,22 +18,21 @@ function Schedule_Clock() {
       hour = 12;
       letter = "AM";
     }
-    return `${hour} : ${minute} ${letter}`;
-    // return `${now.toLocaleTimeString}`;
+
+    /*2자리 표기 시간 (error) */
+    let calHour = hour < 10 ? "0" + hour.toString() : hour.toString();
+    let calMin = minute < 10 ? "0" + minute.toString() : minute.toString();
+
+    return `${calHour} : ${calMin} ${letter}`;
   };
+
   // useState 이용, 랜더링 후 첫 값은 nowTime return 값 사용
   const [Time, setTime] = useState(nowTime);
 
-  // 1초마다 clock의 값을 다시 계산 후 랜더링 (setClock 이용)
+  // 1분마다 clock의 값을 다시 계산 후 랜더링 (setClock 이용)
   setInterval(() => setTime(nowTime), 60000);
 
-  // setInterval(getclock, 600000);
-
-  return (
-    <>
-      <div>{Time}</div>
-    </>
-  );
+  return <div>{Time}</div>;
 }
 
 export default Schedule_Clock;
