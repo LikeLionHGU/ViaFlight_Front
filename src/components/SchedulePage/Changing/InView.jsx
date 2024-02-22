@@ -1,7 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
 import InViewFood from "./View/InViewFood";
-// import InViewRest from "./View/InViewRest";
+import InViewRest from "./View/InViewRest";
+import InViewShopping from "./View/InViewShopping";
 
 const StyleContainer = styled.div`
   font-size: 20px;
@@ -123,10 +124,9 @@ export default function View() {
         </ViewBtnContainer>
         <CategoryTitle>
           {inShopping ? (
-            <div>Shopping</div>
+            <InViewShopping />
           ) : inRest ? (
-            // <InViewRest />
-            ""
+            <InViewRest />
           ) : (
             <InViewFood />
           )}

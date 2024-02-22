@@ -101,7 +101,7 @@ export default function Rest() {
                 <InViewCard
                   key={item.restName}
                   imageURL={item.imageURL}
-                  name={item.mealName}
+                  name={item.ShoppingName}
                   businessHours={item.businessHours}
                   location={item.location}
                   information={item.information}
@@ -113,7 +113,7 @@ export default function Rest() {
                 <InViewCard
                   key={item.restName}
                   imageURL={item.imageURL}
-                  name={item.mealName}
+                  name={item.ShoppingName}
                   businessHours={item.businessHours}
                   location={item.location}
                   information={item.information}

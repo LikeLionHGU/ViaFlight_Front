@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import InViewFoodBtnArrow from "../../../../img/InViewFoodBtnArrow.svg";
+import InViewShoppingBtnArrow from "../../../../img/InViewFoodBtnArrow.svg";
 import InViewCard from "./InViewCard";
 
 const StyleContainer = styled.div``;
 
-const FoodTitle = styled.div`
+const ShoppingTitle = styled.div`
   font-size: 50px;
 `;
 
-const FoodBtnContainer = styled.div`
+const ShoppingBtnContainer = styled.div`
   display: flex;
   padding: 50px 0;
 `;
 
-const FoodBtn = styled.button`
+const ShoppingBtn = styled.button`
   background-color: rgba(44, 110, 73, 1);
   color: rgba(244, 240, 231, 1);
   border: 1px solid rgba(244, 240, 231, 1);
@@ -31,10 +31,10 @@ const FoodBtn = styled.button`
   font-size: 20px;
 `;
 
-export default function Food() {
-  const [inRestaurant, setInRestaurnat] = useState(true);
-  const [inCafe, setInCafe] = useState(false);
-  const [inDessert, setInDessert] = useState(false);
+export default function Shopping() {
+  const [inFashion, setInFashion] = useState(true);
+  const [inDutyFree, setInDutyFree] = useState(false);
+  const [inEntertainment, setInEntertainment] = useState(false);
 
   const savedAirport = localStorage.getItem("viaAirport");
   const savedATime = localStorage.getItem("arrivalTime");
@@ -52,79 +52,80 @@ export default function Food() {
       });
   }, []);
 
-  const handleRestaurant = () => {
-    setInRestaurnat(true);
-    setInCafe(false);
-    setInDessert(false);
+  const handleFashion = () => {
+    setInFashion(true);
+    setInDutyFree(false);
+    setInEntertainment(false);
   };
 
-  const handleCafe = () => {
-    setInRestaurnat(false);
-    setInCafe(true);
-    setInDessert(false);
+  const handleDutyFree = () => {
+    setInFashion(false);
+    setInDutyFree(true);
+    setInEntertainment(false);
   };
 
-  const handleDessert = () => {
-    setInRestaurnat(false);
-    setInCafe(false);
-    setInDessert(true);
+  const handleEntertainment = () => {
+    setInFashion(false);
+    setInDutyFree(false);
+    setInEntertainment(true);
   };
 
   return (
     <StyleContainer>
-      <FoodTitle>Food & Beverages</FoodTitle>
-      <FoodBtnContainer>
-        <FoodBtn
+      <ShoppingTitle>Shopping & Entertainments</ShoppingTitle>
+      <ShoppingBtnContainer>
+        <ShoppingBtn
           style={
-            inRestaurant
+            inFashion
               ? {
                   background: "rgba(244, 240, 231, 1)",
                   color: "rgba(44, 110, 73, 1)",
                 }
               : {}
           }
-          onClick={() => handleRestaurant()}
+          onClick={() => handleFashion()}
         >
-          Restaurant
-          <img src={InViewFoodBtnArrow} alt="화살표" />
-        </FoodBtn>
-        <FoodBtn
+          Fashion & DutyFree
+          <img src={InViewShoppingBtnArrow} alt="화살표" />
+        </ShoppingBtn>
+        <ShoppingBtn
           style={
-            inCafe
+            inDutyFree
               ? {
                   background: "rgba(244, 240, 231, 1)",
                   color: "rgba(44, 110, 73, 1)",
                 }
               : {}
           }
-          onClick={() => handleCafe()}
+          onClick={() => handleDutyFree()}
         >
-          Cafe
-          <img src={InViewFoodBtnArrow} alt="화살표" />
-        </FoodBtn>
-        <FoodBtn
+          Beverage & Snack & Duty Free
+          <img src={InViewShoppingBtnArrow} alt="화살표" />
+        </ShoppingBtn>
+        <ShoppingBtn
           style={
-            inDessert
+            inEntertainment
               ? {
                   background: "rgba(244, 240, 231, 1)",
                   color: "rgba(44, 110, 73, 1)",
                 }
               : {}
           }
-          onClick={() => handleDessert()}
+          onClick={() => handleEntertainment()}
         >
-          Dessert
-          <img src={InViewFoodBtnArrow} alt="화살표" />
-        </FoodBtn>
-      </FoodBtnContainer>
-      {infoAirport?.foods?.map((item, index) => (
+          Entertainment
+          <img src={InViewShoppingBtnArrow} alt="화살표" />
+        </ShoppingBtn>
+      </ShoppingBtnContainer>
+      {infoAirport?.shopping?.map((item, index) => (
         <div>
-          {inDessert
-            ? item.type === "Dessert" && (
+          {inFashion
+            ? item.type === "Fashtion" ||
+              item.type === "Beauty" || (
                 <InViewCard
-                  key={item.mealName}
+                  key={item.ShoppingName}
                   imageURL={item.imageURL}
-                  name={item.mealName}
+                  name={item.ShoppingName}
                   businessHours={item.businessHours}
                   location={item.location}
                   information={item.information}
@@ -132,12 +133,14 @@ export default function Food() {
                   index={index}
                 />
               )
-            : inCafe
-            ? item.type === "Cafe" && (
+            : inDutyFree
+            ? item.type === "Beverage" ||
+              item.type === "Snack" ||
+              item.type === "Duty_free" || (
                 <InViewCard
-                  key={item.mealName}
+                  key={item.ShoppingName}
                   imageURL={item.imageURL}
-                  name={item.mealName}
+                  name={item.ShoppingName}
                   businessHours={item.businessHours}
                   location={item.location}
                   information={item.information}
@@ -145,11 +148,11 @@ export default function Food() {
                   index={index}
                 />
               )
-            : item.type === "Meal" && (
+            : item.type === "Entertainment" && (
                 <InViewCard
-                  key={item.mealName}
+                  key={item.ShoppingName}
                   imageURL={item.imageURL}
-                  name={item.mealName}
+                  name={item.ShoppingName}
                   businessHours={item.businessHours}
                   location={item.location}
                   information={item.information}
