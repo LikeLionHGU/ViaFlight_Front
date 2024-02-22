@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import InAirport from "./SchedulePage/InAirport";
+import OutAirport from "./SchedulePage/OutAirport";
 import ToggleBtn from "./SchedulePage/Changing/ToggleBtn";
 // import Header from "./layout/Header";
 import ScheduleHeader from "./SchedulePage/NoChanging/Schedule_Header";
@@ -39,7 +40,7 @@ function Schedule() {
     <>
       {id === "first" ? <ScheduleHeader /> : <About_Header />}
       <ToggleBtn isOn={isOn} toggleHandler={toggleHandler} />
-      {isOn ? "out" : <InAirport />}
+      {isOn ? <OutAirport /> : <InAirport />}
     </>
   );
 }
