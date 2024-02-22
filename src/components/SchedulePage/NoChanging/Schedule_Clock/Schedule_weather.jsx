@@ -33,18 +33,16 @@ function Schedule_Weather() {
         setCondition(data.current.condition.text);
         console.log(data);
       });
-  
-  
-  /* 날씨 Icon 적용 */
-  if(Weather_Condition_text.includes('rainny'));
-  if(Weather_Condition_text.includes('cloudy'));
-  if(Weather_Condition_text.includes('snowy'));
-  if(Weather_Condition_text.includes('windy'));
-  if(Weather_Condition_text.includes('sunny'));
-  else
 
-  
+    /* 날씨 Icon 적용 */
+    if (Weather_Condition_text.includes("rainny"));
+    if (Weather_Condition_text.includes("cloudy"));
+    if (Weather_Condition_text.includes("snowy"));
+    if (Weather_Condition_text.includes("windy"));
+    if (Weather_Condition_text.includes("sunny"));
+    else {
     }
+  }
   function onGeoError() {
     alert("Can't find you. No weather for you");
   }
