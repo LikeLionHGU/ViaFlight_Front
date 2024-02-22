@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import upArrow from "../../../img/inairport_grid_UpArrow.png";
-import InView from "../Changing/InAirport/InView/InView";
+import upArrow from "../../../../img/inairport_grid_UpArrow.png";
+import InView from "./InView/InView";
 
 const Main = styled.div`
   background-color: rgba(44, 110, 73, 1);
@@ -58,7 +58,7 @@ function Schedule_Grid_Green() {
     //   top: 0,
     //   behavior: "smooth",
     // });
-    window.scrollTo({ top: "1000", behavior: "smooth" });
+    window.scrollTo({ top: "1350", behavior: "smooth" });
   };
   return (
     <Main>
