@@ -37,53 +37,35 @@
 
 /*header_bar_line 이미지 위치 조정*/
 .Navigation_bar_line_div /*test*/ {
-  /* margin-top: 74px;
-  margin-left: 70px; */
-  /* width: 1800px; */
-  /* background-image: url("../img/Navigation_Bar_Line.png"); */
-  /* border: 1px solid blue; */
-
   background-size: 100%;
   background-repeat: no-repeat;
   height: 15px;
-  margin: 0 65px;
 }
 
 /*header 영역 구분선*/
 .header {
   position: relative; /*BTN, img_logo 위치 조정을 위해서 사용, [기준 위치]*/
-  /* border-bottom: 1px solid #ec4d27; */
   height: 80px;
 
-  background-color: rgba(255, 255, 255, 0.2); /*header 불투명도 주기*/
+  background-color: rgba(255, 255, 255, 0.3); /*header 불투명도 주기*/
 }
 
 /*header 영역 LOGO 부분*/
 
 .img_logo {
-  /* border: 1px solid blue; */
-
   margin-left: 67px;
-  /* width: 245px; */
   width: 100%;
   height: 103px;
   overflow: hidden;
   object-fit: scale-down;
-  /* left: 5%; 좌측 배치 간격 */
 }
 
 /*header 영역 BTN 부분*/
 .header-BTN {
-  /* border: 1px solid blue; */
-
-  position: absolute; /*BTN 위치 조정*/
-
   display: flex; /*요소들 높이 정렬 요인 [style-componet로 정렬되지 않은 높이를 맞출 수 있음]*/
   width: 100%;
-  height: 100%;
-
+  align-items: center;
   background-color: transparent; /*투명효과*/
-  /* color: #ec4d27; */
 }
 
 /*Link영역과 div영역 크기 맞추기 위해서 (.~_link) 작업함*/
@@ -91,22 +73,28 @@
 /*btn 요소별 간격 hard-coding (btn별로 하단, line이미지 참고하여 간격 조정)*/
 .ticket_link {
   /*logo와의 간격*/
-  margin-left: 15.8%; /*155px */
 }
 
 /*BTN들의 link크기, text 정렬*/
 .ticket_link,
 .schedule_link,
-.about_link {
-  /* border: 1px solid blue; */
-  width: 15%;
-  display: table-cell;
-  vertical-align: bottom;
-  /* text-align: center; */
-  padding-top: 25px;
-  /* margin-left: 5%; 151px */
-  /* color: #ec4d27; */
+.about_link,
+.location {
   text-decoration-line: none;
+}
+
+.ticket_link {
+  padding-left: 360px;
+}
+
+.schedule_link {
+  padding-left: 190px;
+}
+.about_link {
+  padding-left: 175px;
+}
+.location {
+  padding-left: 260px;
 }
 
 .ticket_text,
@@ -116,21 +104,25 @@
   line-height: 80px;
   /* margin-bottom: 0px; */
 }
+
+.ticket_text,
+.schedule_text,
+.about_text {
+}
+
+.schedule_text {
+  font-weight: 200;
+}
 .about_text {
   font-family: "Plaid"; /*font_style변경*/
   font-size: 18px;
   line-height: 80px;
-  margin-bottom: 18px;
 }
 
 .location {
-  /* border: 1px solid blue; */
-
   display: flex; /*icon, text 한줄 정렬*/
   font-family: "Plaid"; /*font_style변경*/
   font-size: 13px;
-  /* margin-bottom: 18px; */
-  padding-top: 60px;
 }
 
 .location_icon {
