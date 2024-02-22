@@ -25,6 +25,7 @@ const InGuideAirplaneImg = styled.img`
   width: 20px;
   height: 20px;
   transition: 0.5s;
+  cursor: pointer;
 `;
 
 const GuideQuestion = styled.div`

@@ -21,13 +21,15 @@ const Title = styled.div`
   font-size: 40px;
 `;
 
-const InGuideAirplaneImg = styled.img`
+const OutGuideAirplaneImg = styled.img`
   width: 20px;
   height: 20px;
   transition: 0.5s;
+
+  cursor: pointer;
 `;
 
-const GuideQuestion = styled.div`
+const OutGuideQuestion = styled.div`
   padding-left: 24px;
 
   font-family: Esamanru;
@@ -35,14 +37,14 @@ const GuideQuestion = styled.div`
   font-size: 22px;
 `;
 
-const GuideBox = styled.div`
+const OutGuideBox = styled.div`
   display: flex;
   align-items: center;
   padding-top: 20px;
   padding-bottom: 10px;
 `;
 
-const GuideText = styled.div`
+const OutGuideText = styled.div`
   height: 400px;
   padding-left: 40px;
 
@@ -52,7 +54,7 @@ const GuideText = styled.div`
   line-height: 30px;
 `;
 
-export default function InGuide() {
+export default function OutGuide() {
   const [showGuide, setShowGuide] = useState(false);
 
   const handleShowGuide = () => {
@@ -69,18 +71,18 @@ export default function InGuide() {
       <Fadin>
         <Main>
           <Title>여행자 안내 사항</Title>
-          <GuideBox>
-            <InGuideAirplaneImg
+          <OutGuideBox>
+            <OutGuideAirplaneImg
               src={GuideAirplane}
               onClick={handleShowGuide}
               style={showGuide ? { transform: "rotate(45deg)" } : {}}
             />
-            <GuideQuestion>
+            <OutGuideQuestion>
               택스 리펀(GST 환급) 은 어떻게 받을 수 있나요?
-            </GuideQuestion>
-          </GuideBox>
+            </OutGuideQuestion>
+          </OutGuideBox>
           {showGuide ? (
-            <GuideText>
+            <OutGuideText>
               상점이 여행자 환급 제도(TRS)에 참여하는지 확인하세요.
               <br />
               구매 조건 | SG $100 이상 구매 시 8% 세금 환급 가능.
@@ -100,12 +102,12 @@ export default function InGuide() {
               <br />
               - 터미널 3, 출국심사 전, 5번 출입구 부근 / 터미널 3 환승장
               <br />- 터미널 4, 출국심사 전, 3번 출입구 부근 / 터미널 4 환승장
-            </GuideText>
+            </OutGuideText>
           ) : (
             <div />
           )}
-          <GuideBox>
-            <InGuideAirplaneImg
+          <OutGuideBox>
+            <OutGuideAirplaneImg
               src={GuideAirplane}
               onClick={handleShowGuide2}
               style={
@@ -116,12 +118,12 @@ export default function InGuide() {
                   : {}
               }
             />
-            <GuideQuestion>
+            <OutGuideQuestion>
               택스 리펀(GST 환급) 은 어떻게 받을 수 있나요?
-            </GuideQuestion>
-          </GuideBox>
+            </OutGuideQuestion>
+          </OutGuideBox>
           {showGuide2 ? (
-            <GuideText>
+            <OutGuideText>
               상점이 여행자 환급 제도(TRS)에 참여하는지 확인하세요.
               <br />
               구매 조건 | SG $100 이상 구매 시 8% 세금 환급 가능.
@@ -141,7 +143,7 @@ export default function InGuide() {
               <br />
               - 터미널 3, 출국심사 전, 5번 출입구 부근 / 터미널 3 환승장
               <br />- 터미널 4, 출국심사 전, 3번 출입구 부근 / 터미널 4 환승장
-            </GuideText>
+            </OutGuideText>
           ) : (
             <div style={{ paddingBottom: "400px" }} />
           )}
