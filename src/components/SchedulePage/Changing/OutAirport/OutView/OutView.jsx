@@ -186,31 +186,37 @@ export default function View() {
         <CategoryTitle>
           {inEat ? (
             <div>
-              {infoAirport?.foodSpot?.map((item, index) => (
-                <InViewCard
-                  key={item.foodSpotName}
-                  imageURL={item.imageURL}
-                  name={item.foodSpotName}
-                  businessHours={item.businessTime}
-                  information={item.information}
-                  blog={item.homepage}
-                  index={index}
-                />
-              ))}
+              {infoAirport?.foodSpot?.map(
+                (item, index) =>
+                  index < 3 && (
+                    <InViewCard
+                      key={item.foodSpotName}
+                      imageURL={item.imageURL}
+                      name={item.foodSpotName}
+                      businessHours={item.businessTime}
+                      information={item.information}
+                      blog={item.homepage}
+                      index={index}
+                    />
+                  )
+              )}
             </div>
           ) : inActivity ? (
             <div>
-              {infoAirport?.activity?.map((item, index) => (
-                <InViewCard
-                  key={item.paidActivityName}
-                  imageURL={item.imageURL}
-                  name={item.paidActivityName}
-                  businessHours={item.businessTime}
-                  information={item.information}
-                  blog={item.homepage}
-                  index={index}
-                />
-              ))}
+              {infoAirport?.activity?.map(
+                (item, index) =>
+                  index < 3 && (
+                    <InViewCard
+                      key={item.paidActivityName}
+                      imageURL={item.imageURL}
+                      name={item.paidActivityName}
+                      businessHours={item.businessTime}
+                      information={item.information}
+                      blog={item.homepage}
+                      index={index}
+                    />
+                  )
+              )}
             </div>
           ) : (
             <FreeTour>
@@ -244,18 +250,21 @@ export default function View() {
                   </GuideContent>
                 </GuideCard>
               </TourGuide>
-              {infoAirport?.freeTour?.map((item, index) => (
-                <InViewCard
-                  key={item.freeTourName}
-                  imageURL={item.imageURL}
-                  name={item.freeTourName}
-                  businessHours={item.businessTime}
-                  location={item.route}
-                  information={item.information}
-                  blog={item.homepage}
-                  index={index}
-                />
-              ))}
+              {infoAirport?.freeTour?.map(
+                (item, index) =>
+                  index < 3 && (
+                    <InViewCard
+                      key={item.freeTourName}
+                      imageURL={item.imageURL}
+                      name={item.freeTourName}
+                      businessHours={item.businessTime}
+                      location={item.route}
+                      information={item.information}
+                      blog={item.homepage}
+                      index={index}
+                    />
+                  )
+              )}
             </FreeTour>
           )}
         </CategoryTitle>
