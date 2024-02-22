@@ -46,8 +46,7 @@
   background-size: 100%;
   background-repeat: no-repeat;
   height: 15px;
-  margin-left: 5.5556vw; /*80px 해당*/
-  margin-right: 5.5556vw;
+  margin: 0 65px;
 }
 
 /*header 영역 구분선*/

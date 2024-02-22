@@ -1,0 +1,68 @@
+/*설문지 양식*/
+.form_style {
+  z-index: 1;
+
+  margin-top: 530px;
+  margin-left: 60px;
+
+  font-family: "EsaManru";
+
+  display: flex;
+  position: relative;
+
+  .Atime::before {
+    content: "경유지 도착 시간:";
+  }
+
+  /*placeholder는 별도로 color지정하여 색상 지정*/
+  input::placeholder {
+    font-family: "EsaManru";
+    color: #ec4d27;
+  }
+  input,
+  select {
+    font-family: "EsaManru";
+    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.2);
+
+    color: #ec4d27;
+    margin-right: 76px;
+    border-bottom: 2.5px solid red;
+    width: 290px;
+  }
+
+  /*Time 아이콘 색상 입히기*/
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(34%) sepia(24%) saturate(5549%) hue-rotate(350deg)
+      brightness(99%) contrast(86%); /* RGB 색상 변경 */
+  }
+
+  /*경유 시간 입력 화살표 색상*/
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    filter: invert(34%) sepia(24%) saturate(5549%) hue-rotate(350deg)
+      brightness(99%) contrast(86%);
+  }
+
+  .searchBtn {
+    border: 1px solid#ec4d27;
+    border-radius: 5px;
+
+    margin-right: 46.87px; /*우측 간격 주기 위해서 삽입*/
+
+    /*text 중앙 정렬*/
+    text-align: center;
+    line-height: 52px;
+
+    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.22);
+    color: #ec4d27;
+    height: 52px;
+    width: 230px; /*284px*/
+  }
+
+  .searchBtn:hover {
+    background-color: rgba(236, 77, 39, 1);
+    color: rgba(25, 25, 25, 1);
+  }
+}
