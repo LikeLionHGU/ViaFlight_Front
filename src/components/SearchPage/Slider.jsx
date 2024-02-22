@@ -19,7 +19,7 @@ SwiperCore.use([FreeMode, Autoplay]);
 
 const StyledContainer = styled.div`
   // 추가된 부분
-  margin-top: 580px;
+  margin-top: 1000px;
   // hard 코딩으로 간격 조정
 
   display: flex;

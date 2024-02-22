@@ -75,6 +75,7 @@
   display: block;
 
   width: 100%; /*풀스크린*/
+  height: 100%;
   /* width: 1920px; */
   /* height: 5000px; */
 }
@@ -82,8 +83,8 @@
 .Enter {
   /* background-color: gray; */
   /* height: 1600px; */
+  width: 100%;
   height: 100%;
-
   background-image: url(../img/Mainimage.png);
   background-size: cover;
   color: #ec4d27;
@@ -93,36 +94,42 @@
 .Enterphrase {
   font-family: "Pretendard-Regular";
 
-  margin-left: 50px;
-  padding-top: 120px;
+  margin-left: 80px;
+  padding-top: 188px;
   height: 100px;
 
-  font-size: 42px;
+  font-size: 79px;
   font-weight: 400;
-  line-height: 50px;
+  line-height: 94px;
 }
 
 /*Via-flight logo공간*/
 .Via_flight_logoNForm {
   height: 250px;
-  margin-top: 67px;
-  margin-left: 50px;
+  margin-top: 280px;
+  margin-left: 80px;
 
   .logo_text {
     font-family: "EsaManru";
 
     width: fit-content;
-    font-size: 135px; /*236px*/ /* #기준: [] */
+    font-size: 300px; /*236px*/ /* #기준: [] */
     font-weight: 700;
-    line-height: 143px;
+    line-height: 317.79px;
   }
+
+  /*여기까지 작업*/
 
   .Flight_textNlogo {
     display: flex;
   }
-  .Flight_textNlogo > img {
-    height: 135px;
-    object-fit: scale-down;
+
+  .banner_logo {
+    background-image: url("../img/bannner_logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 275px;
   }
 }
 
@@ -134,11 +141,11 @@
 }
 
 .scrollIcon_arrow {
-  margin-top: 150px;
+  margin-top: 550px;
   /*img 가로, 세로 크기*/
 
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   animation: motion 0.4s /*반복되는 시간*/ linear 0s /*효과 일정하게 반복*/
     infinite alternate; /*애니매이션 효과 무한으로 반복; 상하로 움직이는 효과 */
 }

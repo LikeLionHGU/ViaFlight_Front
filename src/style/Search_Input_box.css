@@ -2,8 +2,11 @@
 .form_style {
   z-index: 1;
 
-  margin-top: 530px;
-  margin-left: 60px;
+  /* border: 1px solid blue; */
+  height: 66px;
+
+  margin-top: 1180px;
+  margin-left: 80px;
 
   font-family: "EsaManru";
 
@@ -12,12 +15,14 @@
 
   .Atime::before {
     content: "경유지 도착 시간:";
+    font-size: 25px;
   }
 
   /*placeholder는 별도로 color지정하여 색상 지정*/
   input::placeholder {
     font-family: "EsaManru";
     color: #ec4d27;
+    font-size: 25px;
   }
   input,
   select {
@@ -27,8 +32,8 @@
 
     color: #ec4d27;
     margin-right: 76px;
-    border-bottom: 2.5px solid red;
-    width: 290px;
+    border-bottom: 5px solid #ec4d27;
+    width: 800px;
   }
 
   /*Time 아이콘 색상 입히기*/
@@ -51,14 +56,16 @@
     margin-right: 46.87px; /*우측 간격 주기 위해서 삽입*/
 
     /*text 중앙 정렬*/
+    font-size: 25px;
+
     text-align: center;
-    line-height: 52px;
+    line-height: 66px;
 
     background-color: transparent;
     background-color: rgba(255, 255, 255, 0.22);
     color: #ec4d27;
-    height: 52px;
-    width: 230px; /*284px*/
+    height: 66px;
+    width: 360px; /*284px*/
   }
 
   .searchBtn:hover {
