@@ -144,14 +144,14 @@
   margin-top: 550px;
   /*img 가로, 세로 크기*/
 
-  width: 28px;
-  height: 28px;
-  animation: motion 0.4s /*반복되는 시간*/ linear 0s /*효과 일정하게 반복*/
-    infinite alternate; /*애니매이션 효과 무한으로 반복; 상하로 움직이는 효과 */
+  width: 20px;
+  height: 20px;
+  animation: BannerMotion 0.4s /*반복되는 시간*/ linear 0s
+    /*효과 일정하게 반복*/ infinite alternate; /*애니매이션 효과 무한으로 반복; 상하로 움직이는 효과 */
 }
 
 /*위-아래로 움직이는 효과*/
-@keyframes motion {
+@keyframes BannerMotion {
   /*처음 위치*/
   0% {
     padding-top: 0px;

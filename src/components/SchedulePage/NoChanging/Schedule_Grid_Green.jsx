@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import upArrow from "../../../img/inairport_grid_UpArrow.png";
-import View from "../Changing/InView";
+import InView from "../Changing/InView";
 
 const Main = styled.div`
   background-color: rgba(44, 110, 73, 1);
@@ -15,18 +15,19 @@ const Main = styled.div`
 
 const ContainArrow = styled.div`
   height: 30px;
+  padding-bottom: 15px;
 `;
 
 const ScheduleUpArrow = styled.img`
-  white-space: normal;
+  /* white-space: normal; */
 
   animation: motionSchedule 0.5s linear 0s infinite alternate; /* 무한 반복 */
   @keyframes motionSchedule {
     0% {
-      margin-bottom: 0px;
+      margin-top: 0px;
     } /* 처음 위치 */
     100% {
-      margin-bottom: 15px;
+      margin-top: 15px;
     } /* 마지막 위치 */
   }
 `;
@@ -61,7 +62,7 @@ function Schedule_Grid_Green() {
   };
   return (
     <Main>
-      <View />
+      <InView />
       <ContainArrow>
         <ScheduleUpArrow src={upArrow} alt="화살표"></ScheduleUpArrow>
       </ContainArrow>

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import FooterLogo from "../../img/FooterLogo.svg";
 import "../../font/font.css";
+import Fadein from "../AboutPage/About_fadin";
 
 const StyleContainer = styled.div`
   background-color: black;
@@ -75,30 +76,34 @@ const UnderLine = styled.div`
 function Footer() {
   return (
     <StyleContainer>
-      <Above>
-        <img src={FooterLogo} alt="logo" style={{ paddingRight: "15%" }} />
-        <Menu>
-          <div>내 경유지 조회</div>
-          <div>맞춤형 여행 일정</div>
-          <div style={{ fontFamily: "Plaid", fontWeight: "500" }}>ABOUT US</div>
-        </Menu>
-      </Above>
-      <Below>
-        <BelowOver>
-          <BelowCompany>© ViaFlight - 2024</BelowCompany>
-          <BelowContact>
-            <div>instagram</div>
-            <div>facebook</div>
-            <div>blog</div>
-          </BelowContact>
-        </BelowOver>
-        <BelowUnder>
-          <LineCover>
-            <UnderLine />
-          </LineCover>
-          <div>All rights reserved.</div>
-        </BelowUnder>
-      </Below>
+      <Fadein>
+        <Above>
+          <img src={FooterLogo} alt="logo" style={{ paddingRight: "15%" }} />
+          <Menu>
+            <div>내 경유지 조회</div>
+            <div>맞춤형 여행 일정</div>
+            <div style={{ fontFamily: "Plaid", fontWeight: "500" }}>
+              ABOUT US
+            </div>
+          </Menu>
+        </Above>
+        <Below>
+          <BelowOver>
+            <BelowCompany>© ViaFlight - 2024</BelowCompany>
+            <BelowContact>
+              <div>instagram</div>
+              <div>facebook</div>
+              <div>blog</div>
+            </BelowContact>
+          </BelowOver>
+          <BelowUnder>
+            <LineCover>
+              <UnderLine />
+            </LineCover>
+            <div>All rights reserved.</div>
+          </BelowUnder>
+        </Below>
+      </Fadein>
     </StyleContainer>
   );
 }
