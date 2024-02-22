@@ -18,7 +18,7 @@ const Main = styled.div`
 `;
 
 const Left = styled.div`
-  font-size: 35px;
+  font-size: 40px;
 `;
 
 const Right = styled.div`
