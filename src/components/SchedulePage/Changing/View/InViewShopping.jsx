@@ -120,8 +120,7 @@ export default function Shopping() {
       {infoAirport?.shopping?.map((item, index) => (
         <div>
           {inFashion
-            ? item.type === "Fashtion" ||
-              item.type === "Beauty" || (
+            ? (item.type === "Fashtion" || item.type === "Beauty") && (
                 <InViewCard
                   key={item.shoppingOptionsName}
                   imageURL={item.imageURL}
@@ -134,9 +133,9 @@ export default function Shopping() {
                 />
               )
             : inDutyFree
-            ? item.type === "Beverage" ||
-              item.type === "Snack" ||
-              item.type === "Duty_free" || (
+            ? (item.type === "Beverage" ||
+                item.type === "Snack" ||
+                item.type === "Duty_free") && (
                 <InViewCard
                   key={item.shoppingOptionsName}
                   imageURL={item.imageURL}

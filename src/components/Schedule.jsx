@@ -28,11 +28,18 @@ function Schedule() {
       ? "second"
       : "first"; /*scroll ���̿� ���� ������ �ٲ��*/
 
+  const [isOn, setisOn] = useState(false);
+
+  const toggleHandler = () => {
+    // isOn의 상태를 변경하는 메소드를 구현
+    setisOn(!isOn);
+  };
+
   return (
     <>
       {id === "first" ? <ScheduleHeader /> : <About_Header />}
-      <ToggleBtn />
-      <InAirport />
+      <ToggleBtn isOn={isOn} toggleHandler={toggleHandler} />
+      {isOn ? "out" : <InAirport />}
     </>
   );
 }

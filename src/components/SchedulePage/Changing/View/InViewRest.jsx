@@ -51,12 +51,12 @@ export default function Rest() {
       });
   }, []);
 
-  const handleRestaurant = () => {
+  const handleLounge = () => {
     setInLounge(true);
     setInHotel(false);
   };
 
-  const handleCafe = () => {
+  const handleHotel = () => {
     setInLounge(false);
     setInHotel(true);
   };
@@ -74,9 +74,9 @@ export default function Rest() {
                 }
               : {}
           }
-          onClick={() => handleRestaurant()}
+          onClick={() => handleLounge()}
         >
-          Restaurant
+          Lounge
           <img src={InViewRestBtnArrow} alt="화살표" />
         </RestBtn>
         <RestBtn
@@ -88,9 +88,9 @@ export default function Rest() {
                 }
               : {}
           }
-          onClick={() => handleCafe()}
+          onClick={() => handleHotel()}
         >
-          Cafe
+          Hotel
           <img src={InViewRestBtnArrow} alt="화살표" />
         </RestBtn>
       </RestBtnContainer>
