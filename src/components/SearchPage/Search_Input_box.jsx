@@ -36,7 +36,6 @@ function Search_Input_box() {
   //입력 유효성 검사하는 함수 [LocalStorage]
   const OnCheckInput = (e) => {
     //[Case1, 입력이 없는 경우]
-console.log(savedATime);
     if (savedAirport === null && savedATime === null && savedDTime === null) {
       e.preventDefault();
       alert(
@@ -64,6 +63,7 @@ console.log(savedATime);
           공항: ${savedAirport}\n
           도착시간: ${savedATime}\n
           경유시간: ${savedDTime} `);
+      scrollToTop();
     }
 
     //창이 공항 이외 정보 입력을 넣는 경우
@@ -72,6 +72,12 @@ console.log(savedATime);
 
       alert(`${airport} 정보는  준비중입니다:)`);
     }
+  };
+  const scrollToTop = () => {
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (

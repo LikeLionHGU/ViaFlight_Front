@@ -58,7 +58,7 @@ function Header() {
           </Link>
 
           <Link
-            to={`/schedule`}
+            to={`/no`}
             // to={emptyCheck === true ? `/schedule` : `/input`} //true: 입력 페이지로, flase: 유도 페이지로
             className="schedule_link"
             // onClick={onEmptyCheck}
