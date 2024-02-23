@@ -4,6 +4,7 @@ import Header from "./layout/Header";
 
 import Search_Banner from "./SearchPage/Search_Banner";
 import Search_Input_box from "./SearchPage/Search_Input_box";
+import styled from "styled-components";
 
 function Search() {
   return (

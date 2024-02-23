@@ -4,26 +4,19 @@ import Search from "./components/Search";
 import Schedule from "./components/Schedule";
 import About from "./components/About";
 
-
-
-
 function App() {
   return (
     <Router>
-
-       <Routes>
-
+      <Routes>
         <Route path={process.env.PUBLIC_URL + "/"} element={<Search />} />
         <Route
           path={process.env.PUBLIC_URL + "/schedule"}
           element={<Schedule />}
         />
         <Route path={process.env.PUBLIC_URL + "/about"} element={<About />} />
-
       </Routes>
 
       <Footer />
-
     </Router>
   );
 }
