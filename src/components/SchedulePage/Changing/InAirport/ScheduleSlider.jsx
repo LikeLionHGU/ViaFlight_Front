@@ -72,6 +72,7 @@ export default function ScheduleSldier() {
       .then((response) => response.json())
       .then((data) => {
         setInfoAirport(data);
+        console.log(data);
       });
   }, []);
 
@@ -103,7 +104,7 @@ export default function ScheduleSldier() {
             },
           }}
           // freeMode={true} // 자유로운가
-          loop={true} // 무한 루프
+          //loop={true} // 무한 루프
           speed={3000} // 슬라이드 이동 속도
           // loopedSlides={1}
           loopAdditionalSlides={true}

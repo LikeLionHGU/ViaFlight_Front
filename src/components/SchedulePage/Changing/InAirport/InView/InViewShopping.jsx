@@ -139,7 +139,7 @@ export default function Shopping() {
               (item, index) =>
                 index < 3 && (
                   <InViewCard
-                    key={item.shoppingOptionsName}
+                    key={item.shoppingOptionsName + item.location}
                     imageURL={item.imageURL}
                     name={item.shoppingOptionsName}
                     businessHours={item.businessHours}
@@ -157,7 +157,7 @@ export default function Shopping() {
               (item, index) =>
                 index < 3 && (
                   <InViewCard
-                    key={item.shoppingOptionsName}
+                    key={item.shoppingOptionsName + item.location}
                     imageURL={item.imageURL}
                     name={item.shoppingOptionsName}
                     businessHours={item.businessHours}
