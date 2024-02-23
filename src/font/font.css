@@ -128,7 +128,7 @@
 
 @font-face {
   font-family: "Pretendard-ExtraLight";
-  font-weight: medium;
+  font-weight: lighter;
   font-style: normal;
   src: url("Pretendard/Pretendard-ExtraLight.otf");
   src: url("Pretendard/Pretendard-ExtraLight.otf") format("embedded-opentype"),
@@ -147,5 +147,17 @@
     url("Pretendard/Pretendard-Light.otf") format("woff2"),
     url("Pretendard/Pretendard-Light.otf") format("woff"),
     url("Pretendard/Pretendard-Light.otf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard-Thin";
+  font-weight: lighter;
+  font-style: normal;
+  src: url("Pretendard/Pretendard-Thin.otf");
+  src: url("Pretendard/Pretendard-Thin.otf") format("embedded-opentype"),
+    url("Pretendard/Pretendard-Thin.otf") format("woff2"),
+    url("Pretendard/Pretendard-Thin.otf") format("woff"),
+    url("Pretendard/Pretendard-Thin.otf") format("truetype");
   font-display: swap;
 }

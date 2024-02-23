@@ -14,7 +14,8 @@ const Main = styled.div`
 `;
 
 const Title = styled.div`
-  padding-top: 50px;
+  padding-top: 100px;
+  padding-bottom: 30px;
 
   font-family: Esamanru;
   font-weight: 300;
@@ -32,8 +33,8 @@ const GuideQuestion = styled.div`
   padding-left: 24px;
 
   font-family: Esamanru;
-  font-weight: 300;
-  font-size: 22px;
+  font-weight: 500;
+  font-size: 25px;
 `;
 
 const GuideBox = styled.div`
@@ -44,13 +45,15 @@ const GuideBox = styled.div`
 `;
 
 const GuideText = styled.div`
-  height: 400px;
+  height: 500px;
   padding-left: 40px;
+  padding-top: 25px;
+  padding-bottom: 30px;
 
   font-family: Esamanru;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 18px;
-  line-height: 30px;
+  line-height: 40px;
 `;
 
 export default function InGuide() {

@@ -19,37 +19,60 @@ const ImageCard = styled.img`
 `;
 
 const InfoBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   padding: 0 80px;
 `;
 
 const Name = styled.div`
+  padding-bottom: 18px;
+
   font-family: EsaManru;
-  font-weight: 200;
-  font-size: 50px;
+  font-weight: 300;
+  font-size: 40px;
 `;
 
 const Hours = styled.div`
+  padding-bottom: 10px;
+
+  font-family: Pretendard-ExtraLight;
   font-weight: 300;
   font-size: 24px;
 `;
 
 const Location = styled.div`
+  padding-bottom: 50px;
+
+  font-family: Pretendard-Thin;
   font-size: 22px;
 `;
 
 const Info = styled.div`
+  padding-bottom: 50px;
   width: 700px;
 
-  font-size: 20px;
+  font-family: Pretendard-Thin;
+  font-size: 19px;
+  line-height: 30px;
 `;
 
 const BlogBtn = styled.button`
   border: 1px solid #f4f0e7;
-  padding: 20px 50px;
+  padding: 20px 40px;
   border-radius: 5px;
-
   background-color: #f4f0e7;
   color: #2c6e49;
+  cursor: pointer;
+
+  font-family: Plaid;
+  font-size: 20px;
+
+  &:hover {
+    color: #f4f0e7;
+    background-color: #2c6e49;
+  }
 `;
 
 function InViewCard({

@@ -26,7 +26,11 @@ const ViewContainer = styled.div`
   padding: 80px 0;
 `;
 
-const ViewTitle = styled.div``;
+const ViewTitle = styled.div`
+  font-family: Plaid;
+  font-size: 24px;
+  font-weight: 300;
+`;
 
 const ViewBtnContainer = styled.div`
   padding: 30px 0;
@@ -44,6 +48,7 @@ const ViewBtn = styled.button`
   padding: 15px 15px;
   margin-right: 20px;
   color: rgba(244, 240, 231, 1);
+  cursor: pointer;
 
   font-family: Plaid;
   font-weight: 300;

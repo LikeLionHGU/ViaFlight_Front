@@ -1,7 +1,7 @@
 import travel1 from "../../img/slide1.jpg";
 import travel2 from "../../img/slide2.jpg";
-import travel3 from "../../img/slide3.jpg";
-import travel4 from "../../img/slide4.jpg";
+import travel3 from "../../img/slide4.jpg";
+import travel4 from "../../img/slide4.svg";
 
 export const ServiceData = [
   {
@@ -9,7 +9,7 @@ export const ServiceData = [
     title: "최소 환승 시간(MCT)을\n어떻게 알 수 있나요?",
     content:
       "최소 환승 시간은 공항 및 항공사에 따라 다르며, 보통 항공권\n예약 시 제공됩니다. 우리 서비스에서는 경유지 공항 선택 시,\n예상되는 최소 환승 시간 정보를 제공합니다.",
-    tip: "여유를 두고 항공편을 예약하세요.\n예상치 못한 지연에 대비해 최소 2시간의 환승 시간을 계획하는 것이 안전합니다.",
+    tip: "여유를 두고 항공편을 예약하세요.\n예상치 못한 지연에 대비해 최소 2시간의 환승 시간을\n 계획하는 것이 안전합니다.",
     backgroundImg: travel1,
   },
   {
@@ -25,7 +25,7 @@ export const ServiceData = [
     title: "연결 비행의 탑승권은\n어떻게 받나요?",
     content:
       "첫 번째 체크인 시 대부분의 연결 비행 탑승권이 발급됩니다. 만약 발급받지 못한 경우, 환승 공항의 항공사 카운터에서 탑승권을 받을 수 있습니다. 이 경우 대부분 수하물 재수속이 요구됩니다.(우리 서비스는 환승 공항의 항공사 카운터 위치 정보를 제공합니다.) 대부분의 연결 비행의 탑승권도 함께 발급됩니다. 온라인으로 체크인한 경우, 연결 공항의 항공사 카운터에서 탑승권을 재발급 받을 수 있습니다.",
-    tip: "모든 탑승권을 출발 전에 받았는지 확인하고, 분실하지 않도록 주의하세요.",
+    tip: "모든 탑승권을 출발 전에 받았는지 확인하고,\n분실하지 않도록 주의하세요.",
     backgroundImg: travel3,
   },
   {

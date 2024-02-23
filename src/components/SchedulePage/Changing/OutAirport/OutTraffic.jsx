@@ -22,7 +22,7 @@ const StyleContainer = styled.div`
 `;
 
 const Main = styled.div`
-  padding: 50px 3.5%;
+  padding: 0 3.5%;
 `;
 
 const LineBox = styled.div`

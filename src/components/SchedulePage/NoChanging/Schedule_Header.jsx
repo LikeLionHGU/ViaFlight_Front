@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // colorCheck === false 때, (맞춤 페이지) [녹색 색상]
 import S_header_Logo from "../../../img/Schedule_header_Logo.png";
 import S_Earth_Icon from "../../../img/Schedule_Earth_Icon.png";
-import S_Navigation_bar from "../../../img/Schedule_Navigation_Bar_Line.png";
+import S_Navigation_bar from "../../../img/Schedule_Navigation_Bar_Line.svg";
 import styled from "styled-components";
 
 // Header BTN 영역(Button 역할)
@@ -19,6 +19,12 @@ const Main = styled.div`
 `;
 
 function Header() {
+  const scrollToTop = () => {
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   // 위치 정보 받아오는 함수
   const [lat, setlat] = useState("");
   const [lon, setlon] = useState("");
@@ -48,7 +54,7 @@ function Header() {
               alt="via-flight-logo"
             ></img>
           </div>
-          <Link to={`/`} className="ticket_link" style={{ color: "#2c6e49" }}>
+          <Link to={`/`} className="ticket_link" style={{ color: "#2c6e49" }} onClick={scrollToTop}>
             <div className="ticket_text">내 경유지 조회</div>
           </Link>
 
@@ -56,6 +62,7 @@ function Header() {
             to={`/schedule`}
             className="schedule_link"
             style={{ color: "#2c6e49" }}
+            onClick={scrollToTop}
           >
             <div className="schedule_text">맞춤형 여행 일정</div>
           </Link>
@@ -63,6 +70,7 @@ function Header() {
             to={`/about`}
             className="about_link"
             style={{ color: "#2c6e49" }}
+            onClick={scrollToTop}
           >
             <div className="about_text">ABOUT US</div>
           </Link>

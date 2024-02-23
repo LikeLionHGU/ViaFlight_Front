@@ -7,12 +7,15 @@
 }
 
 .time_box {
-  width: 350px;
+  width: 400px;
   height: 70px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 5px 20px;
+  border-radius: 5px;
+
+  font-family: Pretendard-Regular;
 }
 
 .clock,
@@ -27,23 +30,27 @@
 }
 
 .clock {
-  font-size: 30px;
-  border-right: 1px solid white;
+  font-size: 40px;
   padding-right: 20px;
+  letter-spacing: -2px;
 }
 
 .interval {
+  border-left: 1px solid white;
   border-right: 1px solid white;
-  padding-right: 20px;
+  padding: 0 25px;
 
   .interval_contry {
-    padding-top: 25%;
-    font-size: 12px;
+    font-size: 15px;
+    font-weight: 500;
   }
 }
 
 .weather {
+  font-size: 21px;
+  padding-left: 20px;
   img {
     width: 50px;
   }
 }
+

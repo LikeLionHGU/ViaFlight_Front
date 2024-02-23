@@ -9,7 +9,7 @@ import MedicineIcon from "../../../../img/medicine.svg";
 
 import { useState, useEffect } from "react";
 
-import Schedule_Modal from "../../NoChanging/Schedule_Modal/Schedule_Modal";
+import ScheduleModal from "../../NoChanging/Schedule_Modal/Schedule_Modal";
 
 import WifiB from "../../../../img/Wifi_black.png";
 import InfoB from "../../../../img/Info_black.png";
@@ -24,6 +24,9 @@ const Main = styled.div`
   align-items: center;
 `;
 
+const IconContainer = styled.div`
+  cursor: pointer;
+`
 // const Wifi = styled.img``;
 // const Info = styled.img``;
 // const Cigarette = styled.img``;
@@ -72,40 +75,49 @@ export default function SimpleInfo() {
       <Medicine src={MedicineIcon} /> */}
 
       {/*API연결*/}
-      <Schedule_Modal
+      <IconContainer>
+      <ScheduleModal
         tittle={infoAirport.wifiHeader}
         description={infoAirport.wifi}
         Modalicon={wifiIconbg}
         ModaliconBlack={wifiIconB}
-      ></Schedule_Modal>
+      ></ScheduleModal>
+</IconContainer>
+<IconContainer>
 
-      <Schedule_Modal
+      <ScheduleModal
         tittle={infoAirport.informationCenterHeader}
         description={infoAirport.informationCenter}
         Modalicon={infoIcon}
         ModaliconBlack={infoIconB}
-      ></Schedule_Modal>
+      ></ScheduleModal>
+</IconContainer>
+<IconContainer>
 
-      <Schedule_Modal
+      <ScheduleModal
         tittle={infoAirport.smokingHeader}
         description={infoAirport.smokingArea}
         Modalicon={CigarIcon}
         ModaliconBlack={CigarIconB}
-      ></Schedule_Modal>
+      ></ScheduleModal>
+      </IconContainer>
+      <IconContainer>
 
-      <Schedule_Modal
+      <ScheduleModal
         tittle={infoAirport.showerFacilitiesHeader}
         description={infoAirport.showerFacilities}
         Modalicon={showerIconbg}
         ModaliconBlack={ShowerIconB}
-      ></Schedule_Modal>
-
-      <Schedule_Modal
+      ></ScheduleModal>
+      </IconContainer>
+      <IconContainer>
+      <ScheduleModal
         tittle={infoAirport.clinicsPharmaciesHeader}
         description={infoAirport.pharmacy}
         Modalicon={PharmacyIcon}
         ModaliconBlack={PharmacyIconB}
-      ></Schedule_Modal>
+      ></ScheduleModal>
+      </IconContainer>
     </Main>
   );
 }

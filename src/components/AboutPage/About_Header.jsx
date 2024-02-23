@@ -10,6 +10,12 @@ import S_Navigation_bar from "../../img/About_Navigation_Bar_Line.png";
 // Header BTN 영역(Button 역할)
 
 function Header() {
+  const scrollToTop = () => {
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   // 위치 정보 받아오는 함수
   const [lat, setlat] = useState("");
   const [lon, setlon] = useState("");
@@ -36,21 +42,23 @@ function Header() {
               alt="via-flight-logo"
             ></img>
           </div>
-          <Link to={`/`} className="ticket_link" style={{ color: "#F4F0E7" }}>
-            <div className="ticket_text">내 경유지 조회</div>
+          <Link to={`/`} className="ticket_link" style={{ color: "#F4F0E7" }} onClick={scrollToTop}>
+            <div className="ticket_text"> <strong>내 경유지 조회</strong></div>
           </Link>
 
           <Link
             to={`/schedule`}
             className="schedule_link"
             style={{ color: "#F4F0E7" }}
+            onClick={scrollToTop}
           >
-            <div className="schedule_text">맞춤형 여행 일정</div>
+            <div className="schedule_text" style={{fontWeight: "300"}}>맞춤형 여행 일정</div>
           </Link>
           <Link
             to={`/about`}
             className="about_link"
             style={{ color: "#F4F0E7" }}
+            onClick={scrollToTop}
           >
             <div className="about_text">ABOUT US</div>
           </Link>

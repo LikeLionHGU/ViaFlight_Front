@@ -7,6 +7,8 @@ const StyleContainer = styled.div``;
 
 const ShoppingTitle = styled.div`
   font-size: 50px;
+  font-family: Esamanru;
+  font-weight: 300;
 `;
 
 const ShoppingBtnContainer = styled.div`
@@ -21,14 +23,17 @@ const ShoppingBtn = styled.button`
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   padding: 3px 10px;
-  width: 200px;
+  width: 220px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 
   text-align: left;
   font-size: 20px;
+  font-family: Esamanru;
+  font-weight: 300;
 `;
 
 export default function Shopping() {
@@ -53,7 +58,7 @@ export default function Shopping() {
   }, []);
 
   const fashionData = infoAirport?.shopping?.filter(
-    (item) => item.type === "Shopping" || item.type === "Beauty"
+    (item) => item.type === "Fashion" || item.type === "Beauty"
   );
 
   const dutyFreeData = infoAirport?.shopping?.filter(
@@ -100,7 +105,7 @@ export default function Shopping() {
           }
           onClick={() => handleFashion()}
         >
-          Fashion & DutyFree
+          Fashion & Beauty
           <img src={InViewShoppingBtnArrow} alt="화살표" />
         </ShoppingBtn>
         <ShoppingBtn
@@ -114,7 +119,7 @@ export default function Shopping() {
           }
           onClick={() => handleDutyFree()}
         >
-          Beverage & Snack & Duty Free
+          Bottle & Duty Free
           <img src={InViewShoppingBtnArrow} alt="화살표" />
         </ShoppingBtn>
         <ShoppingBtn

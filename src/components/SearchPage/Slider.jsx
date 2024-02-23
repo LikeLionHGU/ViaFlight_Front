@@ -19,7 +19,7 @@ SwiperCore.use([FreeMode, Autoplay]);
 
 const StyledContainer = styled.div`
   // 추가된 부분
-  margin-top: 850px;
+  margin-top: 780px;
   // hard 코딩으로 간격 조정
 
   display: flex;
@@ -55,23 +55,23 @@ const TitleSub = styled.div`
 const CardQuestion = styled.div`
   font-family: Plaid;
 
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 300;
 
   padding-bottom: 45px;
 `;
 const CardTitle = styled.div`
-  padding-bottom: 60px;
+  padding-bottom: 50px;
 
   font-family: Pretendard;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
-  line-height: 48px;
+  line-height: 40px;
 `;
 const CardContent = styled.div`
   font-family: Pretendard-ExtraLight;
-  font-size: 19px;
-  line-height: 33px;
+  font-size: 17px;
+  line-height: 30px;
   letter-spacing: 1px;
 `;
 const TipContainer = styled.div`
@@ -101,7 +101,7 @@ const BigCont = styled.div`
 const Contents = styled.div`
   display: flex;
   flex-direction: row-reverse;
-  padding: 200px 150px;
+  padding: 170px 150px;
 
   letter-spacing: 1px;
   line-height: 40px;
@@ -117,7 +117,7 @@ const UpBtn = styled.div`
   align-items: center;
 
   // padding: 150px 0;
-  padding: 50px;
+  padding-bottom: 60px;
 `;
 
 const ContainArrow = styled.div`
@@ -140,14 +140,14 @@ const SlideUpArrow = styled.img`
 
 const UpBtnStyled = styled.button`
   margin-top: 20px;
-  padding: 21px 80px;
+  padding: 25px 85px;
   border: none;
   border: 1px solid rgba(236, 77, 39, 1);
   border-radius: 5px;
 
   font-family: EsaManru;
-  font-weight: 300;
-  font-size: 17px;
+  font-weight: 100;
+  font-size: 23px;
 
   background-color: #ec4d27;
   color: white;
