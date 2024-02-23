@@ -128,50 +128,60 @@ export default function Food() {
         </FoodBtn>
       </FoodBtnContainer>
       <div>
-        {dessertData?.map(
-          (item, index) =>
-            index < 3 && (
-              <InViewCard
-                key={item.mealName}
-                imageURL={item.imageURL}
-                name={item.mealName}
-                businessHours={item.businessHours}
-                location={item.location}
-                information={item.information}
-                blog={item.blog}
-                index={index}
-              />
-            )
-        )}
-        {cafeData?.map(
-          (item, index) =>
-            index < 3 && (
-              <InViewCard
-                key={item.mealName}
-                imageURL={item.imageURL}
-                name={item.mealName}
-                businessHours={item.businessHours}
-                location={item.location}
-                information={item.information}
-                blog={item.blog}
-                index={index}
-              />
-            )
-        )}
-        {restaurantData?.map(
-          (item, index) =>
-            index < 3 && (
-              <InViewCard
-                key={item.mealName}
-                imageURL={item.imageURL}
-                name={item.mealName}
-                businessHours={item.businessHours}
-                location={item.location}
-                information={item.information}
-                blog={item.blog}
-                index={index}
-              />
-            )
+        {inDessert ? (
+          <div>
+            {dessertData?.map(
+              (item, index) =>
+                index < 3 && (
+                  <InViewCard
+                    key={item.mealName}
+                    imageURL={item.imageURL}
+                    name={item.mealName}
+                    businessHours={item.businessHours}
+                    location={item.location}
+                    information={item.information}
+                    blog={item.blog}
+                    index={index}
+                  />
+                )
+            )}
+          </div>
+        ) : inCafe ? (
+          <div>
+            {cafeData?.map(
+              (item, index) =>
+                index < 3 && (
+                  <InViewCard
+                    key={item.mealName}
+                    imageURL={item.imageURL}
+                    name={item.mealName}
+                    businessHours={item.businessHours}
+                    location={item.location}
+                    information={item.information}
+                    blog={item.blog}
+                    index={index}
+                  />
+                )
+            )}
+          </div>
+        ) : (
+          <div>
+            {restaurantData?.map(
+              (item, index) =>
+                index < 3 && (
+                  <InViewCard
+                    key={item.mealName}
+                    imageURL={item.imageURL}
+                    name={item.mealName}
+                    businessHours={item.businessHours}
+                    location={item.location}
+                    information={item.information}
+                    blog={item.blog}
+                    index={index}
+                  />
+                )
+            )}
+          </div>
         )}
       </div>
     </StyleContainer>

@@ -133,52 +133,60 @@ export default function Shopping() {
         </ShoppingBtn>
       </ShoppingBtnContainer>
       <div>
-        {fashionData?.map(
-          (item, index) =>
-            index < 3 && (
-              <InViewCard
-                key={item.shoppingOptionsName}
-                imageURL={item.imageURL}
-                name={item.shoppingOptionsName}
-                businessHours={item.businessHours}
-                location={item.location}
-                information={item.information}
-                blog={item.blog}
-                index={index}
-              />
-            )
-        )}
-
-        {dutyFreeData?.map(
-          (item, index) =>
-            index < 3 && (
-              <InViewCard
-                key={item.shoppingOptionsName}
-                imageURL={item.imageURL}
-                name={item.shoppingOptionsName}
-                businessHours={item.businessHours}
-                location={item.location}
-                information={item.information}
-                blog={item.blog}
-                index={index}
-              />
-            )
-        )}
-
-        {entertainmentData?.map(
-          (item, index) =>
-            index < 3 && (
-              <InViewCard
-                key={item.shoppingOptionsName}
-                imageURL={item.imageURL}
-                name={item.shoppingOptionsName}
-                businessHours={item.businessHours}
-                location={item.location}
-                information={item.information}
-                blog={item.blog}
-                index={index}
-              />
-            )
+        {inFashion ? (
+          <div>
+            {fashionData?.map(
+              (item, index) =>
+                index < 3 && (
+                  <InViewCard
+                    key={item.shoppingOptionsName}
+                    imageURL={item.imageURL}
+                    name={item.shoppingOptionsName}
+                    businessHours={item.businessHours}
+                    location={item.location}
+                    information={item.information}
+                    blog={item.blog}
+                    index={index}
+                  />
+                )
+            )}
+          </div>
+        ) : inDutyFree ? (
+          <div>
+            {dutyFreeData?.map(
+              (item, index) =>
+                index < 3 && (
+                  <InViewCard
+                    key={item.shoppingOptionsName}
+                    imageURL={item.imageURL}
+                    name={item.shoppingOptionsName}
+                    businessHours={item.businessHours}
+                    location={item.location}
+                    information={item.information}
+                    blog={item.blog}
+                    index={index}
+                  />
+                )
+            )}
+          </div>
+        ) : (
+          <div>
+            {entertainmentData?.map(
+              (item, index) =>
+                index < 3 && (
+                  <InViewCard
+                    key={item.shoppingOptionsName}
+                    imageURL={item.imageURL}
+                    name={item.shoppingOptionsName}
+                    businessHours={item.businessHours}
+                    location={item.location}
+                    information={item.information}
+                    blog={item.blog}
+                    index={index}
+                  />
+                )
+            )}
+          </div>
         )}
       </div>
     </StyleContainer>
