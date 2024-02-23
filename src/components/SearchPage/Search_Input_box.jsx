@@ -49,7 +49,10 @@ function Search_Input_box() {
     else if (
       savedAirport.length === 0 ||
       savedATime.length === 0 ||
-      savedDTime.length === 0
+      savedDTime.length === 0 ||
+      airport.length === 0 ||
+      arrivalTime.length === 0 ||
+      durationTime.length === 0
     ) {
       e.preventDefault();
       alert("입력이 누락된 부분이 있습니다. 다시 입력해주세요");
