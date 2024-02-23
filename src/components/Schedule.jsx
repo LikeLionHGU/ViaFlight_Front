@@ -36,10 +36,18 @@ function Schedule() {
     setisOn(!isOn);
   };
 
+  const savedDTime = localStorage.getItem("durationTime");
+
   return (
     <>
       {id === "first" ? <ScheduleHeader /> : <About_Header />}
-      <ToggleBtn isOn={isOn} toggleHandler={toggleHandler} />
+
+      {savedDTime > 4 ? (
+        <ToggleBtn isOn={isOn} toggleHandler={toggleHandler} />
+      ) : (
+        ""
+      )}
+
       {isOn ? <OutAirport /> : <InAirport />}
     </>
   );
