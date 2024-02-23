@@ -24,9 +24,7 @@ function About_banner() {
         </div>
       </About_fadin>
 
-      <About_fadin>
-        <div className="about_Banner_picture"></div>
-      </About_fadin>
+      <div className="about_Banner_picture"></div>
     </div>
   );
 }
