@@ -8,7 +8,7 @@ import ShowerIcon from "../../../../img/shower.svg";
 import MedicineIcon from "../../../../img/medicine.svg";
 
 const Main = styled.div`
-  width: 250px;
+  width: 300px;
   display: flex;
   justify-content: space-between;
 `;

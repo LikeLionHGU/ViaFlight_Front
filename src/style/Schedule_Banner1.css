@@ -35,7 +35,8 @@
   height: 300px; /* 높이 간격 조정, 439px;*/
 
   text-align: center;
-  background-color: rgba(244, 240, 231, 1);
+  backdrop-filter: blur(15px);
+
   color: rgba(44, 110, 73, 1);
 }
 

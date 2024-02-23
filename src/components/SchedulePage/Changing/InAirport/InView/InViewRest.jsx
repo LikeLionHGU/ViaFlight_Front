@@ -116,7 +116,6 @@ export default function Rest() {
               />
             )
         )}
-        :
         {loungeData?.map(
           (item, index) =>
             index < 3 && (

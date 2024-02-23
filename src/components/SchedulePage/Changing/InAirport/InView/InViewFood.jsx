@@ -143,7 +143,6 @@ export default function Food() {
               />
             )
         )}
-        :
         {cafeData?.map(
           (item, index) =>
             index < 3 && (
@@ -159,7 +158,6 @@ export default function Food() {
               />
             )
         )}
-        :
         {restaurantData?.map(
           (item, index) =>
             index < 3 && (

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import upArrow from "../../../../img/inairport_grid_UpArrow.png";
 import InView from "./InView/InView";
+import AboutFadin from "../../../AboutPage/About_fadin";
 
 const Main = styled.div`
   background-color: rgba(44, 110, 73, 1);
@@ -62,13 +63,19 @@ function Schedule_Grid_Green() {
   };
   return (
     <Main>
-      <InView />
-      <ContainArrow>
-        <ScheduleUpArrow src={upArrow} alt="화살표"></ScheduleUpArrow>
-      </ContainArrow>
-      <UpBtnCover>
-        <UpBtn onClick={scrollTorecommend}>공항 속 새로운 경험하러가기</UpBtn>
-      </UpBtnCover>
+      <AboutFadin>
+        <InView />
+      </AboutFadin>
+      <AboutFadin>
+        <ContainArrow>
+          <ScheduleUpArrow src={upArrow} alt="화살표"></ScheduleUpArrow>
+        </ContainArrow>
+      </AboutFadin>
+      <AboutFadin>
+        <UpBtnCover>
+          <UpBtn onClick={scrollTorecommend}>공항 속 새로운 경험하러가기</UpBtn>
+        </UpBtnCover>
+      </AboutFadin>
     </Main>
   );
 }

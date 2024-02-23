@@ -11,8 +11,11 @@ import styled from "styled-components";
 // Header BTN 영역(Button 역할)
 const NaviBar = styled.div`
   padding: 0 65px;
-  background-color: rgba(255, 255, 255, 0.3);
   /* backdrop-filter: blur(15px); */
+`;
+
+const Main = styled.div`
+  backdrop-filter: blur(15px);
 `;
 
 function Header() {
@@ -29,7 +32,10 @@ function Header() {
 
   return (
     <div className="header_sticky">
-      <div className="header">
+      <div
+        className="header"
+        style={{ background: "none", backdropFilter: "blur(15px)" }}
+      >
         {/* Header BTN 부분 */}
 
         {/* location색상 줄 수 있음 */}

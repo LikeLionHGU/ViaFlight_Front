@@ -148,7 +148,7 @@ export default function Shopping() {
               />
             )
         )}
-        : (
+
         {dutyFreeData?.map(
           (item, index) =>
             index < 3 && (
@@ -164,7 +164,7 @@ export default function Shopping() {
               />
             )
         )}
-        ) : (
+
         {entertainmentData?.map(
           (item, index) =>
             index < 3 && (
@@ -180,7 +180,6 @@ export default function Shopping() {
               />
             )
         )}
-        )
       </div>
     </StyleContainer>
   );

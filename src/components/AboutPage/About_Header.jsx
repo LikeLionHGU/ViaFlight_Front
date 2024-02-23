@@ -22,7 +22,7 @@ function Header() {
   }
 
   return (
-    <div className="header_sticky">
+    <div className="header_sticky" style={{ backdropFilter: "blur(15px)" }}>
       <div className="header">
         {/* Header BTN 부분 */}
 
@@ -71,6 +71,7 @@ function Header() {
         className="Navigation_bar_line_div"
         style={{
           backgroundImage: `url(${S_Navigation_bar})`,
+          margin: "0 65px",
         }}
       ></div>
     </div>
