@@ -107,7 +107,9 @@
     .Grid2_img {
       width: 30%;
     }
+
     .topic_text {
+      margin-left: 10px;
       width: 30%;
 
       .topic_title {
@@ -125,8 +127,8 @@
     .topic_descript {
       font-family: "Pretendard-Regular";
       padding-top: 58px;
-      font-size: 17px;
-      line-height: 31px;
+      font-size: 23px;
+      line-height: 40px;
     }
   }
 

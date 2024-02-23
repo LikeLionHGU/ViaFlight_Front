@@ -5,9 +5,9 @@ import About_fadin from "./About_fadin";
 import Explore from "../../img/About-free-icon-exploring.png";
 import Passion from "../../img/About-free-icon-passion.png";
 
-// [img - resource]
-// <a href="https://www.flaticon.com/kr/free-icons/" title="낡은 아이콘">낡은 아이콘  제작자: Smashicons - Flaticon</a>
-// <a href="https://www.flaticon.com/kr/free-icons/" title="열정 아이콘">열정 아이콘  제작자: surang - Flaticon</a>
+import About1_Img from "../../img/AboutImg/About1.png";
+import About2_Img from "../../img/AboutImg/About2.png";
+import About3_Img from "../../img/AboutImg/About3.png";
 
 function About_grid() {
   const scrollToTop = () => {
@@ -66,7 +66,7 @@ function About_grid() {
 
         <About_fadin>
           <div className="about_Grid2_topic">
-            <img src={Explore} className="Grid2_img"></img>
+            <img src={About3_Img} className="Grid2_img"></img>
             <div className="topic_text">
               <div className="topic_title">
                 <div className="topic_title_num">1</div>
@@ -82,7 +82,7 @@ function About_grid() {
               </div>
             </div>
             {/* display 간격을 위한 dummy값*/}
-            <img src="" className="Grid2_img"></img>
+            <img src={About2_Img} className="Grid2_img" id="Grid_img2"></img>
           </div>
         </About_fadin>
 
@@ -119,7 +119,7 @@ function About_grid() {
               </div>
             </div>
 
-            <img src={Passion} className="Grid2_img"></img>
+            <img src={About1_Img} className="Grid2_img" id="Grid_img1"></img>
           </div>
         </About_fadin>
 
