@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../../style/header.css";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 
 // colorCheck === false 때, (맞춤 페이지) [녹색 색상]
 import S_header_Logo from "../../img/About_header_Logo.png";
@@ -9,11 +8,6 @@ import S_Earth_Icon from "../../img/About_Earth_Icon.png";
 import S_Navigation_bar from "../../img/About_Navigation_Bar_Line.png";
 
 // Header BTN 영역(Button 역할)
-
-const NaviBar = styled.div`
-  padding: 0 65px;
-  background-color: rgba(255, 255, 255, 0.3);
-`;
 
 function Header() {
   // 위치 정보 받아오는 함수
@@ -73,15 +67,13 @@ function Header() {
           </div>
         </div>
       </div>
-      <NaviBar>
-        <div
-          className="Navigation_bar_line_div"
-          style={{
-            backgroundImage: `url(${S_Navigation_bar})`,
-            margin: "0.65px",
-          }}
-        ></div>
-      </NaviBar>
+      <div
+        className="Navigation_bar_line_div"
+        style={{
+          backgroundImage: `url(${S_Navigation_bar})`,
+          margin: "0 65px",
+        }}
+      ></div>
     </div>
   );
 }
