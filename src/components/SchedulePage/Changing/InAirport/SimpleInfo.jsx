@@ -73,35 +73,35 @@ export default function SimpleInfo() {
 
       {/*API연결*/}
       <Schedule_Modal
-        tittle={infoAirport.wifiHeader}
+        tittle={"Free Wifi"}
         description={infoAirport.wifi}
         Modalicon={wifiIconbg}
         ModaliconBlack={wifiIconB}
       ></Schedule_Modal>
 
       <Schedule_Modal
-        tittle={infoAirport.informationCenterHeader}
+        tittle={"INFO CENTER"}
         description={infoAirport.informationCenter}
         Modalicon={infoIcon}
         ModaliconBlack={infoIconB}
       ></Schedule_Modal>
 
       <Schedule_Modal
-        tittle={infoAirport.smokingHeader}
+        tittle={"smoking area"}
         description={infoAirport.smokingArea}
         Modalicon={CigarIcon}
         ModaliconBlack={CigarIconB}
       ></Schedule_Modal>
 
       <Schedule_Modal
-        tittle={infoAirport.showerFcilitiesHeader}
+        tittle={"Shower facilities"}
         description={infoAirport.showerFacilities}
         Modalicon={showerIconbg}
         ModaliconBlack={ShowerIconB}
       ></Schedule_Modal>
 
       <Schedule_Modal
-        tittle={infoAirport.clinicsPharmacies}
+        tittle={"Clinics & Pharmacies"}
         description={infoAirport.pharmacy}
         Modalicon={PharmacyIcon}
         ModaliconBlack={PharmacyIconB}

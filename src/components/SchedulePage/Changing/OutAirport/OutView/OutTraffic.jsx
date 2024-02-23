@@ -115,7 +115,7 @@ export default function OutTraffic() {
           <Right>
             <InTrainCard>
               <Schedule_Modal
-                tittle={infoAirport.trainMrtOutAirportHeader}
+                tittle={"Train MRT"}
                 description={infoAirport.trainMrtOutAirport}
                 Modalicon={TrainIcon}
                 ModaliconBlack={TrainIconB}
@@ -125,7 +125,7 @@ export default function OutTraffic() {
 
             <InBusCard>
               <Schedule_Modal
-                tittle={infoAirport.taxiOutAirportHeader}
+                tittle={"Taxi"}
                 description={infoAirport.taxiOutAirport}
                 Modalicon={TaxiIcon}
                 ModaliconBlack={TaxiIconB}
@@ -136,7 +136,7 @@ export default function OutTraffic() {
 
             <InBusCard>
               <Schedule_Modal
-                tittle={infoAirport.shuttleBusOutAirportHeader}
+                tittle={"Shuttle Service"}
                 description={infoAirport.airportShuttleBusOutAirport}
                 Modalicon={ShuttleIcon}
                 ModaliconBlack={ShuttleIconB}
@@ -147,7 +147,7 @@ export default function OutTraffic() {
 
             <InBusCard>
               <Schedule_Modal
-                tittle={infoAirport.publicBusOutAirportHeader}
+                tittle={"Public Bus"}
                 description={infoAirport.publicBusOutAirport}
                 Modalicon={publicIcon}
                 ModaliconBlack={publicIconB}
@@ -158,7 +158,7 @@ export default function OutTraffic() {
 
             <InBusCard>
               <Schedule_Modal
-                tittle={infoAirport.airportTransferOutAirportHeader}
+                tittle={"Airport Transfer"}
                 description={infoAirport.airportTransferBusOutAirport}
                 Modalicon={transferIcon}
                 ModaliconBlack={transferIconB}

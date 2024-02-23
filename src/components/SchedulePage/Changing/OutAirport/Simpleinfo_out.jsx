@@ -80,49 +80,49 @@ export default function Simpleinfo_out() {
       <Medicine src={MedicineIcon} /> */}
 
       <Schedule_Modal
-        tittle={infoAirport.wifiHeader}
+        tittle={"Free Wifi"}
         description={infoAirport.wifi}
         Modalicon={wifiIconbg}
         ModaliconBlack={wifiIconB}
       ></Schedule_Modal>
 
       <Schedule_Modal
-        tittle={infoAirport.informationCenterHeader}
+        tittle={"INFO CENTER"}
         description={infoAirport.informationCenter}
         Modalicon={infoIcon}
         ModaliconBlack={infoIconB}
       ></Schedule_Modal>
 
       <Schedule_Modal
-        tittle={infoAirport.smokingHeader}
+        tittle={"Smoking area"}
         description={infoAirport.smokingArea}
         Modalicon={CigarIcon}
         ModaliconBlack={CigarIconB}
       ></Schedule_Modal>
 
       <Schedule_Modal
-        tittle={infoAirport.showerFcilitiesHeader}
+        tittle={"Shower Facilities"}
         description={infoAirport.showerFacilities}
         Modalicon={showerIconbg}
         ModaliconBlack={ShowerIconB}
       ></Schedule_Modal>
 
       <Schedule_Modal
-        tittle={infoAirport.clinicsPharmacies}
+        tittle={"Clinics & Pharmacies"}
         description={infoAirport.pharmacy}
         Modalicon={PharmacyIcon}
         ModaliconBlack={PharmacyIconB}
       ></Schedule_Modal>
 
       <Schedule_Modal
-        tittle={infoAirport.currencyExchangeHeader}
+        tittle={"Currency Exchange"}
         description={infoAirport.currencyExchange}
         Modalicon={ExchangeIcon}
         ModaliconBlack={ExchangeIconB}
       ></Schedule_Modal>
 
       <Schedule_Modal
-        tittle={infoAirport.luggageStorageHeader}
+        tittle={"Luggage Storage"}
         description={infoAirport.luggageStorage}
         Modalicon={LuggageIcon}
         ModaliconBlack={LuggageIconB}

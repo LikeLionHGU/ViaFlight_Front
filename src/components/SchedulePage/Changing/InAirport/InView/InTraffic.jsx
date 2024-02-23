@@ -112,7 +112,7 @@ export default function InTraffic() {
           <Right>
             <InTrainCard>
               <Schedule_Modal
-                tittle={infoAirport.skyTrainInAirportHeader}
+                tittle={"SKY TRAIN"}
                 description={infoAirport.skytrainInAirport}
                 Modalicon={TrainIcon}
                 ModaliconBlack={TrainIconB}
@@ -123,7 +123,7 @@ export default function InTraffic() {
 
             <InBusCard>
               <Schedule_Modal
-                tittle={infoAirport.shuttleBusInAirporteHeader}
+                tittle={"SHUTTLE SERVICE"}
                 description={infoAirport.shuttleBusInAirport}
                 Modalicon={ShuttleIcon}
                 ModaliconBlack={ShuttleIconB}
