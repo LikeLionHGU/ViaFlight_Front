@@ -47,7 +47,7 @@
   position: relative; /*BTN, img_logo 위치 조정을 위해서 사용, [기준 위치]*/
   height: 70px;
 
-  background-color: rgba(255, 255, 255, 0.3); /*header 불투명도 주기*/
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 /*header 영역 LOGO 부분*/
@@ -100,14 +100,15 @@
 .ticket_text,
 .schedule_text {
   font-family: "EsaManru";
-  
+
+  font-weight: 300;
   /* margin-bottom: 0px; */
 }
 
 .ticket_text {
   font-size: 20px;
 }
-.schedule_text{
+.schedule_text {
   font-size: 19px;
 }
 .about_text {

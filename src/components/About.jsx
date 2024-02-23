@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from "react";
-import About_banner from "./AboutPage/About_banner";
-import About_grid1 from "./AboutPage/About_grid";
+import AboutBanner from "./AboutPage/About_banner";
+import AboutGrid1 from "./AboutPage/About_grid";
 import Header from "../components/layout/Header";
-import About_Header from "../components/AboutPage/About_Header";
+import AboutHeader from "../components/AboutPage/About_Header";
 
 function About() {
-  window.onload = function() {
-
-    setTimeout (function () {
-    
-    window.scrollTo(0,0);
-    
-    },100);
-    
-    }
+  window.onload = function () {
+    setTimeout(function () {
+      window.scrollTo(0, 0);
+    }, 100);
+  };
 
   const [scrollPosition, setScrollPosition] =
     useState(0); /*scroll 위치에 따라서 저장 함수*/
@@ -35,20 +31,19 @@ function About() {
     scrollPosition > 1300
       ? "second"
       : "first"; /*scroll 높이에 따라서 조건이 바뀌도록*/
-      
 
   return (
     <>
-      {id === "first" ? <About_Header /> : <Header />}
+      {id === "first" ? <AboutHeader /> : <Header />}
       <div id="first">
         {/* <About_Header /> white*/}
 
-        <About_banner />
+        <AboutBanner />
       </div>
 
       <div id="second">
         {/* <Header /> Orange(original)*/}
-        <About_grid1 />
+        <AboutGrid1 />
       </div>
     </>
   );
