@@ -1,0 +1,148 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "EsaManru2";
+  font-weight: 500;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+.no_input_banner {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 200px;
+
+  color: #2c6e49;
+  .banner_small_text {
+    font-family: "Pretendard-Regular";
+
+    font-size: 20px;
+    line-height: 80px;
+  }
+  .banner_Big_text {
+    font-family: "EsaManru2";
+
+    font-size: 65px;
+    padding-top: 10px;
+    padding-bottom: 135px;
+  }
+}
+
+.no_input_Grid1 {
+  /* border: 3px solid blue; */
+  background-color: #2c6e49;
+  height: 700px;
+
+  display: block;
+  .Bg-container {
+    width: 2700px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    padding-top: 30px;
+    animation: moveLeft 15s linear infinite;
+  }
+
+  .Bg-container2 {
+    width: 2700px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    padding-top: 30px;
+    animation: moveRight 15s linear infinite;
+  }
+}
+
+.no_input_Grid2 {
+  background-color: #2c6e49;
+
+  height: 550px;
+  padding-top: 500px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .grid_Big_text {
+    color: #ffffff;
+    font-family: "EsaManru";
+    font-weight: 500;
+    width: 900px;
+    text-align: center;
+    font-size: 55px;
+    line-height: 76px;
+  }
+
+  .BtnContainer {
+    padding-top: 200px;
+    padding-bottom: 102px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+
+    .Btn {
+      /* border: 1px solid red; */
+      font-family: "EsaManru";
+      font-weight: 300;
+      text-decoration: none;
+
+      background-color: #000000;
+      border-radius: 5px;
+      width: 349px;
+      text-align: center;
+      line-height: 64px;
+
+      font-size: 18px;
+
+      .LinkBTN {
+        color: #f4f0e7;
+      }
+    }
+
+    .Btn:hover {
+      background-color: #f4f0e7;
+      border: 1px solid 000000;
+      .LinkBTN {
+        color: #000000;
+      }
+    }
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(-30%);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(-30%);
+  }
+  100% {
+    transform: translateX(5%);
+  }
+}
