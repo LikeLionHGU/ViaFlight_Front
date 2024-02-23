@@ -18,7 +18,7 @@ import ShowerB from "../../../../img/Shower_black.png";
 import PharmarcyB from "../../../../img/pharmacy_black.png";
 
 const Main = styled.div`
-  width: 250px;
+  width: 300px;
   display: flex;
   justify-content: space-between;
 `;

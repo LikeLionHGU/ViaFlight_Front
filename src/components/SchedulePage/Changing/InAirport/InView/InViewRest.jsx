@@ -51,6 +51,12 @@ export default function Rest() {
       });
   }, []);
 
+  const hotelData = infoAirport?.rests?.filter((item) => item.type === "Hotel");
+
+  const loungeData = infoAirport?.rests?.filter(
+    (item) => item.type === "Lounge"
+  );
+
   const handleLounge = () => {
     setInLounge(true);
     setInHotel(false);
@@ -94,35 +100,38 @@ export default function Rest() {
           <img src={InViewRestBtnArrow} alt="화살표" />
         </RestBtn>
       </RestBtnContainer>
-      {infoAirport?.rests?.map((item, index) => (
-        <div>
-          {inHotel
-            ? item.type === "Hotel" && (
-                <InViewCard
-                  key={item.restName}
-                  imageURL={item.imageURL}
-                  name={item.ShoppingName}
-                  businessHours={item.businessHours}
-                  location={item.location}
-                  information={item.information}
-                  blog={item.blog}
-                  index={index}
-                />
-              )
-            : item.type === "Lounge" && (
-                <InViewCard
-                  key={item.restName}
-                  imageURL={item.imageURL}
-                  name={item.ShoppingName}
-                  businessHours={item.businessHours}
-                  location={item.location}
-                  information={item.information}
-                  blog={item.blog}
-                  index={index}
-                />
-              )}
-        </div>
-      ))}
+      <div>
+        {hotelData?.map(
+          (item, index) =>
+            index < 3 && (
+              <InViewCard
+                key={item.restName}
+                imageURL={item.imageURL}
+                name={item.ShoppingName}
+                businessHours={item.businessHours}
+                location={item.location}
+                information={item.information}
+                blog={item.blog}
+                index={index}
+              />
+            )
+        )}
+        {loungeData?.map(
+          (item, index) =>
+            index < 3 && (
+              <InViewCard
+                key={item.restName}
+                imageURL={item.imageURL}
+                name={item.ShoppingName}
+                businessHours={item.businessHours}
+                location={item.location}
+                information={item.information}
+                blog={item.blog}
+                index={index}
+              />
+            )
+        )}
+      </div>
     </StyleContainer>
   );
 }

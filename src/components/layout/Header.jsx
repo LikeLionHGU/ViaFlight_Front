@@ -4,8 +4,15 @@ import { Link } from "react-router-dom";
 import header_Logo from "../../img/header_logo.png";
 import Earth_Icon from "../../img/Earth_Icon.png";
 import Navigation_bar from "../../img/Navigation_Bar_Line.png";
+import styled from "styled-components";
 
 // Header BTN 영역(Button 역할)
+
+const NaviBar = styled.div`
+  padding: 0 65px;
+  background-color: rgba(255, 255, 255, 0.3);
+  /* backdrop-filter: blur(15px); */
+`;
 
 function Header() {
   const [colorCheck, setColor] = useState(true);
@@ -71,12 +78,14 @@ function Header() {
           </div>
         </div>
       </div>
-      <div
-        className="Navigation_bar_line_div"
-        style={{
-          backgroundImage: `url(${Navigation_bar})`,
-        }}
-      ></div>
+      <NaviBar>
+        <div
+          className="Navigation_bar_line_div"
+          style={{
+            backgroundImage: `url(${Navigation_bar})`,
+          }}
+        ></div>
+      </NaviBar>
     </div>
   );
 }

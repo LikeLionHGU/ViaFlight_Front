@@ -67,7 +67,7 @@
 }
 
 .about_Grid1 {
-  margin-top: 134.5%;
+  margin-top: 143%;
 
   .about_Grid1_description {
     color: #ec4d27;
@@ -131,8 +131,8 @@
   }
 
   .BtnContainer {
-    margin-top: 200px;
-    margin-bottom: 102px;
+    padding-top: 200px;
+    padding-bottom: 102px;
     height: 64px;
     display: flex;
     justify-content: center;

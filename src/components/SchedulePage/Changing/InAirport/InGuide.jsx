@@ -25,6 +25,7 @@ const InGuideAirplaneImg = styled.img`
   width: 20px;
   height: 20px;
   transition: 0.5s;
+  cursor: pointer;
 `;
 
 const GuideQuestion = styled.div`
@@ -68,7 +69,7 @@ export default function InGuide() {
             <InGuideAirplaneImg
               src={GuideAirplane}
               onClick={handleShowGuide}
-              style={showGuide ? { transform: "rotate(90deg)" } : {}}
+              style={showGuide ? { transform: "rotate(45deg)" } : {}}
             />
             <GuideQuestion>
               택스 리펀(GST 환급) 은 어떻게 받을 수 있나요?

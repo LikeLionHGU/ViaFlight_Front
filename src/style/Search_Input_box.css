@@ -5,7 +5,7 @@
   /* border: 1px solid blue; */
   height: 66px;
 
-  margin-top: 1180px;
+  margin-top: 680px;
   margin-left: 80px;
 
   font-family: "EsaManru";
@@ -15,24 +15,31 @@
 
   .Atime::before {
     content: "경유지 도착 시간:";
-    font-size: 25px;
+    font-size: 20px;
   }
 
   /*placeholder는 별도로 color지정하여 색상 지정*/
   input::placeholder {
     font-family: "EsaManru";
     color: #ec4d27;
-    font-size: 25px;
+    font-size: 20px;
   }
   input,
   select {
     font-family: "EsaManru";
-    background-color: transparent;
-    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 300;
 
+    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+
+    padding-top: 10px;
+    padding-left: 20px;
     color: #ec4d27;
     margin-right: 76px;
-    border-bottom: 5px solid #ec4d27;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 3px solid #ec4d27;
     width: 800px;
   }
 
@@ -56,13 +63,14 @@
     margin-right: 46.87px; /*우측 간격 주기 위해서 삽입*/
 
     /*text 중앙 정렬*/
-    font-size: 25px;
+    font-size: 20px;
 
     text-align: center;
     line-height: 66px;
 
     background-color: transparent;
-    background-color: rgba(255, 255, 255, 0.22);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
     color: #ec4d27;
     height: 66px;
     width: 360px; /*284px*/

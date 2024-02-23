@@ -1,9 +1,7 @@
 import React from "react";
 import "../../style/about_grid.css";
 import { Link } from "react-router-dom";
-
 import About_fadin from "./About_fadin";
-
 import Explore from "../../img/About-free-icon-exploring.png";
 import Passion from "../../img/About-free-icon-passion.png";
 
@@ -12,6 +10,12 @@ import Passion from "../../img/About-free-icon-passion.png";
 // <a href="https://www.flaticon.com/kr/free-icons/" title="열정 아이콘">열정 아이콘  제작자: surang - Flaticon</a>
 
 function About_grid() {
+  const scrollToTop = () => {
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="about_Grid">
       <div className="about_Grid1">
@@ -120,11 +124,9 @@ function About_grid() {
         </About_fadin>
 
         <div className="BtnContainer">
-          <div className="Btn">
-            <Link to={"/"} className="LinkBTN">
-              경유지 정보 입력하러 가기
-            </Link>
-          </div>
+          <Link to={"/"} className="Btn" onClick={scrollToTop}>
+            <div className="LinkBTN">경유지 정보 입력하러 가기</div>
+          </Link>
         </div>
       </div>
     </div>

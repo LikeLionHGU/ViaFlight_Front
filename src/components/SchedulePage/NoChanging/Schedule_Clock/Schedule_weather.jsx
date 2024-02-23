@@ -58,7 +58,6 @@ function Schedule_Weather() {
     <>
       <img src={Weather_Icon_path} alt="weateher"></img>
       <div>{Temp} °C</div>
-      <div>{Weather_Condition_text}</div>
     </>
   );
 }
