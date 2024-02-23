@@ -54,7 +54,6 @@ export default function SimpleInfo() {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
 
         setAirport(data.layoverAirport);
       });
