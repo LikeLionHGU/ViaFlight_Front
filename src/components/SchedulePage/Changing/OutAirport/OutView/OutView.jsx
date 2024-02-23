@@ -49,6 +49,7 @@ const ViewBtn = styled.button`
   font-family: Plaid;
   font-weight: 300;
   font-size: 20px;
+  cursor: pointer;
 
   &:hover {
     background-color: #b8b8b8;
