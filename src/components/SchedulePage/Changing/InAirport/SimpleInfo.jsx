@@ -21,6 +21,7 @@ const Main = styled.div`
   width: 300px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
 
 // const Wifi = styled.img``;
