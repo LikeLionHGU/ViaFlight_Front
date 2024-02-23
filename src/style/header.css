@@ -39,25 +39,25 @@
 .Navigation_bar_line_div /*test*/ {
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 25px;
+  height: 15px;
 }
 
 /*header 영역 구분선*/
 .header {
   position: relative; /*BTN, img_logo 위치 조정을 위해서 사용, [기준 위치]*/
-  height: 86px;
+  height: 80px;
 
   background-color: rgba(255, 255, 255, 0.3); /*header 불투명도 주기*/
 }
 
 /*header 영역 LOGO 부분*/
-.header_logo {
-  margin-left: 80px;
-}
 
 .img_logo {
+  margin-left: 67px;
   width: 100%;
-  height: 150px;
+  height: 103px;
+  overflow: hidden;
+  object-fit: scale-down;
 }
 
 /*header 영역 BTN 부분*/
@@ -84,25 +84,24 @@
 }
 
 .ticket_link {
-  margin-left: 670px;
+  margin-left: 360px;
 }
 
 .schedule_link {
-  margin-left: 335px;
+  margin-left: 190px;
 }
 .about_link {
-  margin-left: 310px;
+  margin-left: 175px;
 }
 .location {
-  margin-left: 385px;
+  margin-left: 260px;
 }
 
 .ticket_text,
 .schedule_text {
   font-family: "EsaManru";
-  font-weight: 200;
-  font-size: 26px;
-  line-height: 150px;
+  font-size: 18px;
+  line-height: 80px;
   /* margin-bottom: 0px; */
 }
 
@@ -116,22 +115,18 @@
 }
 .about_text {
   font-family: "Plaid"; /*font_style변경*/
-  font-size: 26px;
-  line-height: 150px;
+  font-size: 18px;
+  line-height: 80px;
 }
 
 .location {
   display: flex; /*icon, text 한줄 정렬*/
   font-family: "Plaid"; /*font_style변경*/
-  font-size: 26px;
+  font-size: 13px;
 }
 
 .location_icon {
-  width: 35px; /*icon, width폭에 맞춤*/
-}
-
-.location_icon > img {
-  width: 25px;
+  width: 14px; /*icon, width폭에 맞춤*/
 }
 
 .location_text {
