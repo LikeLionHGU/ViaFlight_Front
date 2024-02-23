@@ -22,17 +22,19 @@
   font-style: normal;
 }
 
+.closeBtn_container {
+  width: 18px;
+  background-color: transparent;
+  border: none;
+}
+
 .closeBtn {
   background-image: url("../img/cancel_btn.png");
   width: 16px;
   height: 16px;
   background-size: cover;
   margin-top: 32px;
-  margin-left: 843px;
-}
-
-.closeBtn > button {
-  border: none;
+  margin-left: 1100px;
 }
 
 .modal-wrapper {
@@ -44,22 +46,19 @@
 
 /*Modal Icon이 들어갈 자리*/
 .modal-wrapper .Info_Icon {
-  background-image: url("../img/Shower_black.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 24px;
-  width: 35px;
+  height: 50px;
+  width: 55px;
 }
 
 .modal-wrapper .Info_title {
   font-family: "EsaManru";
-  padding-top: 29px;
-  font-size: 28px;
+  padding-top: 55px;
+  font-size: 57px;
 }
 
 .modal-wrapper .Info_descrip {
   font-family: "Pretendard-Regular";
-  white-space: pre-line;
-  padding-top: 29px;
-  font-size: 20px;
+  white-space: pre-wrap;
+  padding-top: 55px;
+  font-size: 41px;
 }
