@@ -89,59 +89,57 @@ export default function ScheduleSldier() {
           <div>Promotion & Exhibitions</div>
         </Left>
       </AboutFadin>
-      <AboutFadin>
-        <Swiper
-          style={{ margin: "0", whiteSpace: "pre-wrap" }}
-          breakpoints={{
-            0: {
-              slidesPerView: 3.5,
-              spaceBetween: 0,
-            },
-            900: {
-              slidesPerView: 3.5,
-              spaceBetween: 0,
-            },
-          }}
-          // freeMode={true} // 자유로운가
-          loop={true} // 무한 루프
-          speed={3000} // 슬라이드 이동 속도
-          // loopedSlides={1}
-          loopAdditionalSlides={true}
-          autoplay={{ delay: 3000, disableOnInteraction: false }} // 자동 이동
-          slideToClickedSlide={true} // 슬라이드 클릭 시 이동
-          className="schedule_swiper"
-        >
-          {infoAirport?.airportEvents?.map((item) => (
-            <SwiperSlide key={item.eventName}>
-              <div className="schedule_swiperslide">
-                <div
-                  className="schedule_swiperslide1"
-                  id="sliderbg"
-                  style={{ backgroundImage: `url(${item.imageURL})` }}
-                ></div>
-                <div className="schedule_swiperslide2" id="sliderhoverbg"></div>
-                <div className="schedule_swiperslide3" id="slidertext">
-                  <TextContainer>
-                    {/* <Attr>Attraction 01</Attr> */}
-                    <EventName>
-                      {/* {item.eventName} */}
-                      {item.eventName.length > 17
-                        ? `${item.eventName.slice(0, 17)}...`
-                        : item.eventName}
-                    </EventName>
-                    <TimeLocation>{`${item.businessHours} | ${item.location}`}</TimeLocation>
-                    <div>
-                      {item.information.length > 120
-                        ? `${item.information.slice(0, 120)}...`
-                        : item.information}
-                    </div>
-                  </TextContainer>
-                </div>
+      <Swiper
+        style={{ margin: "0", whiteSpace: "pre-wrap" }}
+        breakpoints={{
+          0: {
+            slidesPerView: 3.5,
+            spaceBetween: 0,
+          },
+          900: {
+            slidesPerView: 3.5,
+            spaceBetween: 0,
+          },
+        }}
+        // freeMode={true} // 자유로운가
+        loop={true} // 무한 루프
+        speed={3000} // 슬라이드 이동 속도
+        // loopedSlides={1}
+        loopAdditionalSlides={true}
+        autoplay={{ delay: 3000, disableOnInteraction: false }} // 자동 이동
+        slideToClickedSlide={true} // 슬라이드 클릭 시 이동
+        className="schedule_swiper"
+      >
+        {infoAirport?.airportEvents?.map((item) => (
+          <SwiperSlide key={item.eventName}>
+            <div className="schedule_swiperslide">
+              <div
+                className="schedule_swiperslide1"
+                id="sliderbg"
+                style={{ backgroundImage: `url(${item.imageURL})` }}
+              ></div>
+              <div className="schedule_swiperslide2" id="sliderhoverbg"></div>
+              <div className="schedule_swiperslide3" id="slidertext">
+                <TextContainer>
+                  {/* <Attr>Attraction 01</Attr> */}
+                  <EventName>
+                    {/* {item.eventName} */}
+                    {item.eventName.length > 17
+                      ? `${item.eventName.slice(0, 17)}...`
+                      : item.eventName}
+                  </EventName>
+                  <TimeLocation>{`${item.businessHours} | ${item.location}`}</TimeLocation>
+                  <div>
+                    {item.information.length > 120
+                      ? `${item.information.slice(0, 120)}...`
+                      : item.information}
+                  </div>
+                </TextContainer>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </AboutFadin>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </Main>
   );
 }
