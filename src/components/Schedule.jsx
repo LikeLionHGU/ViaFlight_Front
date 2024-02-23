@@ -7,6 +7,7 @@ import ScheduleHeader from "./SchedulePage/NoChanging/Schedule_Header";
 import About_Header from "./AboutPage/About_Header"; //��� header
 
 function Schedule() {
+  const savedDTime = localStorage.getItem("durationTime");
   // header ���� �ٲ�� �ϴ� �Լ�
   const [scrollPosition, setScrollPosition] =
     useState(0); /*scroll ��ġ�� ���� ���� �Լ�*/
@@ -39,7 +40,12 @@ function Schedule() {
   return (
     <>
       {id === "first" ? <ScheduleHeader /> : <About_Header />}
-      <ToggleBtn isOn={isOn} toggleHandler={toggleHandler} />
+      {savedDTime > 4 ? (
+        <ToggleBtn isOn={isOn} toggleHandler={toggleHandler} />
+      ) : (
+        <div></div>
+      )}
+
       {isOn ? <OutAirport /> : <InAirport />}
     </>
   );
