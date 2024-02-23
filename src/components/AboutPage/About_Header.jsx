@@ -59,7 +59,7 @@ function Header() {
           </Link>
 
           <Link
-            to={`/schedule`}
+            to={`/no`}
             className="schedule_link"
             style={{ color: "#F4F0E7" }}
             onClick={scrollToTop}
