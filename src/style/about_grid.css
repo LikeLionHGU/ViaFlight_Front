@@ -131,8 +131,8 @@
   }
 
   .BtnContainer {
-    margin-top: 200px;
-    margin-bottom: 102px;
+    padding-top: 200px;
+    padding-bottom: 102px;
     height: 64px;
     display: flex;
     justify-content: center;
