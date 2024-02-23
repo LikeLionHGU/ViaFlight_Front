@@ -17,6 +17,7 @@ const Main = styled.div`
 
 const ContainArrow = styled.div`
   height: 30px;
+  padding-top: 100px;
   padding-bottom: 15px;
 `;
 

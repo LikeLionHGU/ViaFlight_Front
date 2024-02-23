@@ -7,6 +7,8 @@ const StyleContainer = styled.div``;
 
 const FoodTitle = styled.div`
   font-size: 50px;
+  font-family: Esamanru;
+  font-weight: 300;
 `;
 
 const FoodBtnContainer = styled.div`
@@ -26,9 +28,12 @@ const FoodBtn = styled.button`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 
   text-align: left;
   font-size: 20px;
+  font-family: Esamanru;
+  font-weight: 300;
 `;
 
 export default function Food() {
@@ -95,7 +100,7 @@ export default function Food() {
           }
           onClick={() => handleRestaurant()}
         >
-          Restaurant
+          RESTAURANT
           <img src={InViewFoodBtnArrow} alt="화살표" />
         </FoodBtn>
         <FoodBtn
@@ -109,7 +114,7 @@ export default function Food() {
           }
           onClick={() => handleCafe()}
         >
-          Cafe
+          CAFE
           <img src={InViewFoodBtnArrow} alt="화살표" />
         </FoodBtn>
         <FoodBtn
@@ -123,7 +128,7 @@ export default function Food() {
           }
           onClick={() => handleDessert()}
         >
-          Dessert
+          DESSERT
           <img src={InViewFoodBtnArrow} alt="화살표" />
         </FoodBtn>
       </FoodBtnContainer>

@@ -1,6 +1,6 @@
 import React from "react";
 import "../../../style/Schedule_Banner2.css";
-import SimpleInfo from "../Changing/InAirport/SimpleInfo";
+import SimpleInfo from "../Changing/InAirport/InSimpleInfo";
 import Schedule_Timebox from "./Schedule_Clock/Schedule_Timebox";
 
 function Schedule_Banner2() {

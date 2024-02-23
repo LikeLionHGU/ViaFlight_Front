@@ -75,31 +75,28 @@
 
 /*About 소개 paige*/
 .about {
-  margin-top: 890px;
-  height: 800px;
+  margin-top: 911px;
 
   background-color: #ec4d27;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 150px 0;
 }
 
 .AboutBox {
-  margin: 176px 1130px;
 
   width: 613px;
-  height: 448px;
 }
 
 .About1 {
   font-family: "EsaManru2";
   color: white;
 
-  height: 70px;
-  font-size: 51px;
-  font-weight: 500;
-  line-height: 64px;
+  font-size: 45px;
+  font-weight: 300;
+  line-height: 60px;
   text-align: center;
   letter-spacing: 2%;
 }
@@ -107,11 +104,10 @@
 .About2 {
   font-family: "Pretendard-Regular";
   color: white;
-  margin-top: 80px;
-  height: 45px;
+  padding-top: 40px;
 
-  font-weight: 400;
-  font-size: 22px;
+  font-weight: 300;
+  font-size: 18px;
   line-height: 26px;
   text-align: center;
 }
@@ -125,16 +121,17 @@
   font-family: "Plaid";
   color: #ec4d27;
 
-  font-size: 26px;
+  font-size: 22px;
 
   background-color: #f4f0e7;
 
   border: 1px solid #ec4d27;
   border-radius: 5px;
 
-  margin-top: 150px;
-  height: 110px;
-  width: 258px;
+  margin-top: 90px;
+  padding: 25px 45px ;
+
+  cursor: pointer;
 }
 
 .AboutBtn:hover {

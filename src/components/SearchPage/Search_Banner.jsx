@@ -45,8 +45,9 @@ function Search_Banner() {
               src={scroll_Icon}
               width={17.33}
               height={16}
+              alt="img"
             ></img>
-          </Fadein>
+            </Fadein>
         </div>
         <div className="bg_balance"></div>
       </div>

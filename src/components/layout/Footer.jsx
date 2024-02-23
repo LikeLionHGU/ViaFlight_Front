@@ -40,16 +40,6 @@ const BelowContact = styled.div`
   font-weight: 300;
 `;
 
-const Menu = styled.div`
-  display: flex;
-  justify-content: space-between;
-
-  width: 40%;
-
-  font-family: EsaManru;
-  font-weight: 200;
-  font-size: 15px;
-`;
 const BelowUnder = styled.div`
   display: flex;
   align-items: center;
@@ -73,27 +63,34 @@ const UnderLine = styled.div`
   width: 90%;
 `;
 
+const ToLink = styled.div`
+  cursor: pointer;
+`
+
 function Footer() {
+  const ToInsta = () => {
+    window.open("https://www.instagram.com/via_flight/")
+  }
+  const ToFaceBook = () => {
+    window.open("https://www.facebook.com/profile.php?id=61556486139944")
+  }
+  const ToBlog = () => {
+    window.open("https://blog.naver.com/via_flight")
+  }
   return (
     <StyleContainer>
       <Fadein>
         <Above>
           <img src={FooterLogo} alt="logo" style={{ paddingRight: "15%" }} />
-          <Menu>
-            <div>내 경유지 조회</div>
-            <div>맞춤형 여행 일정</div>
-            <div style={{ fontFamily: "Plaid", fontWeight: "500" }}>
-              ABOUT US
-            </div>
-          </Menu>
+          
         </Above>
         <Below>
           <BelowOver>
             <BelowCompany>© ViaFlight - 2024</BelowCompany>
             <BelowContact>
-              <div>instagram</div>
-              <div>facebook</div>
-              <div>blog</div>
+              <ToLink onClick={ToInsta}>instagram</ToLink>
+              <ToLink onClick={ToFaceBook}>facebook</ToLink>
+              <ToLink onClick={ToBlog}>blog</ToLink>
             </BelowContact>
           </BelowOver>
           <BelowUnder>

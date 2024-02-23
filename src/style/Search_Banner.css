@@ -96,25 +96,26 @@
   font-family: "Pretendard-Regular";
 
   margin-left: 80px;
-  padding-top: 140px;
+  padding-top: 120px;
   height: 100px;
 
-  font-size: 55px;
+  font-size: 50px;
   font-weight: 400;
-  line-height: 70px;
+  line-height: 60px;
 }
 
 /*Via-flight logo공간*/
 .Via_flight_logoNForm {
-  margin-top: 50px;
+  margin-top: 120px;
   margin-left: 80px;
 
   .logo_text {
     font-family: "EsaManru";
 
     width: fit-content;
-    font-size: 230px; /*236px*/ /* #기준: [] */
+    font-size: 200px; /*236px*/ /* #기준: [] */
     font-weight: 700;
+    line-height: 190px;
   }
 
   /*여기까지 작업*/
@@ -122,6 +123,7 @@
   .Flight_textNlogo {
     display: flex;
     align-items: center;
+    padding-left: 20px;
   }
 
   .banner_logo {
@@ -130,7 +132,6 @@
     background-repeat: no-repeat;
     width: 260px;
     height: 200px;
-    padding-bottom: 40px;
   }
 }
 
@@ -142,7 +143,7 @@
 }
 
 .scrollIcon_arrow {
-  margin-top: 105px;
+  margin-top: 140px;
   /*img 가로, 세로 크기*/
 
   width: 20px;

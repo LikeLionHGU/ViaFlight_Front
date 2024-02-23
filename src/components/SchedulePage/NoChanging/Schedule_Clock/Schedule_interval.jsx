@@ -17,7 +17,7 @@ function Schedule_Interval() {
 
   return (
     <>
-      <div className="Time">
+      <div className="Time" style={{fontSize: "30px"}}>
         {letter}
         {TimeInterval} hr
       </div>

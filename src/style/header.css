@@ -45,7 +45,7 @@
 /*header 영역 구분선*/
 .header {
   position: relative; /*BTN, img_logo 위치 조정을 위해서 사용, [기준 위치]*/
-  height: 80px;
+  height: 70px;
 
   background-color: rgba(255, 255, 255, 0.3); /*header 불투명도 주기*/
 }
@@ -84,53 +84,50 @@
 }
 
 .ticket_link {
-  margin-left: 360px;
+  margin-left: 362px;
 }
 
 .schedule_link {
-  margin-left: 190px;
-}
-.about_link {
   margin-left: 175px;
 }
+.about_link {
+  margin-left: 168px;
+}
 .location {
-  margin-left: 260px;
+  margin-left: 210px;
 }
 
 .ticket_text,
 .schedule_text {
   font-family: "EsaManru";
-  font-size: 18px;
-  line-height: 80px;
+  
   /* margin-bottom: 0px; */
 }
 
-.ticket_text,
-.schedule_text,
-.about_text {
+.ticket_text {
+  font-size: 20px;
 }
-
-.schedule_text {
-  font-weight: 200;
+.schedule_text{
+  font-size: 19px;
 }
 .about_text {
   font-family: "Plaid"; /*font_style변경*/
-  font-size: 18px;
   line-height: 80px;
+  font-size: 22px;
 }
 
 .location {
   display: flex; /*icon, text 한줄 정렬*/
+  align-items: center;
   font-family: "Plaid"; /*font_style변경*/
-  font-size: 13px;
 }
 
 .location_icon {
-  width: 14px; /*icon, width폭에 맞춤*/
 }
 
 .location_text {
   margin-left: 9px;
+  font-size: 18px;
 }
 /*header-logo부분*/
 .header_logo {

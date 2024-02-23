@@ -62,10 +62,12 @@ const TourContent = styled.div`
 
   font-size: 25px;
   font-family: Pretendard-Light;
-  line-height: 60px;
+  line-height: 43px;
 `;
 
 const TourTitle = styled.div`
+  padding-top: 35px;
+
   font-family: Esamanru;
   font-weight: 300;
   font-size: 70px;
@@ -73,15 +75,18 @@ const TourTitle = styled.div`
 
 const TourGuide = styled.div`
   display: flex;
+  padding-top: 20px;
+  padding-bottom: 70px;
 `;
 
 const GuideCard = styled.div`
-  padding-right: 70px;
+  padding-right: 100px;
 `;
 
 const GuideTitle = styled.div`
   border-bottom: 1px solid #f4f0e7;
   padding: 15px 0;
+  width: 480px;
 
   font-size: 27px;
   font-family: Esamanru;
@@ -89,9 +94,9 @@ const GuideTitle = styled.div`
 `;
 
 const GuideContent = styled.div`
-  padding-top: 20px;
+  padding-top: 25px;
 
-  font-size: 24px;
+  font-size: 20px;
   font-family: Pretendard-ExtraLight;
   line-height: 35px;
 `;
@@ -186,6 +191,7 @@ export default function View() {
         <CategoryTitle>
           {inEat ? (
             <div>
+              <TourTitle>Must-Eat</TourTitle>
               {infoAirport?.foodSpot?.map(
                 (item, index) =>
                   index < 3 && (
@@ -203,6 +209,7 @@ export default function View() {
             </div>
           ) : inActivity ? (
             <div>
+              <TourTitle>Tour & Activity</TourTitle>
               {infoAirport?.activity?.map(
                 (item, index) =>
                   index < 3 && (

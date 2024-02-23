@@ -3,7 +3,7 @@ import "../../style/header.css";
 import { Link } from "react-router-dom";
 import header_Logo from "../../img/header_logo.png";
 import Earth_Icon from "../../img/Earth_Icon.png";
-import Navigation_bar from "../../img/Navigation_Bar_Line.png";
+import Navigation_bar from "../../img/Navigation_Bar_Line.svg";
 import styled from "styled-components";
 
 // Header BTN 영역(Button 역할)
@@ -15,6 +15,12 @@ const NaviBar = styled.div`
 `;
 
 function Header() {
+  const scrollToTop = () => {
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   const [colorCheck, setColor] = useState(true);
 
   const savedColor = localStorage.getItem("Headercolor");
@@ -45,7 +51,7 @@ function Header() {
               alt="via-flight-logo"
             ></img>
           </div>
-          <Link to={`/`} className="ticket_link" style={{ color: "#ec4d27" }}>
+          <Link to={`/`} className="ticket_link" style={{ color: "#ec4d27" }}onClick={scrollToTop}>
             <div className="ticket_text">내 경유지 조회</div>
           </Link>
 
@@ -55,15 +61,17 @@ function Header() {
             className="schedule_link"
             // onClick={onEmptyCheck}
             style={{ color: "#ec4d27" }}
+            onClick={scrollToTop}
           >
-            <div className="schedule_text">맞춤형 여행 일정</div>
+            <div className="schedule_text" style={{fontWeight: "100"}}>맞춤형 여행 일정</div>
           </Link>
           <Link
             to={`/about`}
             className="about_link"
             style={{ color: !colorCheck ? "#2c6e49" : "#ec4d27" }}
+            onClick={scrollToTop}
           >
-            <div className="about_text">ABOUT US</div>
+            <div className="about_text" style={{fontWeight: "500"}}>ABOUT US</div>
           </Link>
 
           <div className="location">

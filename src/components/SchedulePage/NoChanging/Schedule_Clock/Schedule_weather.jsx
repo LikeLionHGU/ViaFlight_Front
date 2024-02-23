@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import Rainny from "../../../../img/Rain.png";
-import Snowy from "../../../../img/Snowy.png";
-import Windy from "../../../../img/Windy.png";
-import Cloudy from "../../../../img/Cloudy.png";
-import OtherCondition from "../../../../img/Other.png";
+
 
 function Schedule_Weather() {
   const [Temp, setTemperature] = useState(""); //기온!
@@ -12,12 +8,7 @@ function Schedule_Weather() {
   const [Weather_Condition_text, setCondition] = useState("");
 
   /*날씨 변수*/
-  const [Rain, setRain] = useState(false);
-  const [Cloud, setCloud] = useState(false);
-  const [Snow, setSnow] = useState(false);
-  const [Wind, setWind] = useState(false);
-  const [Sunny, setSunny] = useState(false);
-  const [Other, setOther] = useState(false);
+  
 
   function onGeoOk(position) {
     const lat = position.coords.latitude; // 위도 정보 추출
@@ -55,7 +46,7 @@ function Schedule_Weather() {
 
   return (
     <>
-      <img src={Weather_Icon_path} alt="weateher"></img>
+      <img style={{width: "30px"}} src={Weather_Icon_path} alt="weateher"></img>
       <div>{Temp} °C</div>
     </>
   );

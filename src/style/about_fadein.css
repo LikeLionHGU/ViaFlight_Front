@@ -1,7 +1,7 @@
-/*fade-in È¿°ú*/
+/*fade-in È¿ï¿½ï¿½*/
 .fade-in-section {
   opacity: 0;
-  transform: translateY(20vh);
+  transform: translateY(10vh);
   visibility: hidden;
   transition: opacity 1200ms ease-out, transform 600ms ease-out,
     visibility 1200ms ease-out;

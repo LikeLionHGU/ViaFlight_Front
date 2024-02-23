@@ -7,6 +7,8 @@ const StyleContainer = styled.div``;
 
 const RestTitle = styled.div`
   font-size: 50px;
+  font-family: Esamanru;
+  font-weight: 300;
 `;
 
 const RestBtnContainer = styled.div`
@@ -26,9 +28,12 @@ const RestBtn = styled.button`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 
   text-align: left;
   font-size: 20px;
+  font-family: Esamanru;
+  font-weight: 500;
 `;
 
 export default function Rest() {
@@ -82,7 +87,7 @@ export default function Rest() {
           }
           onClick={() => handleLounge()}
         >
-          Lounge
+          LOUNGE
           <img src={InViewRestBtnArrow} alt="화살표" />
         </RestBtn>
         <RestBtn
@@ -96,7 +101,7 @@ export default function Rest() {
           }
           onClick={() => handleHotel()}
         >
-          Hotel
+          HOTEL
           <img src={InViewRestBtnArrow} alt="화살표" />
         </RestBtn>
       </RestBtnContainer>

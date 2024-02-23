@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import Modal from "react-modal";
 import "../../../../style/Schedule_modal.css";
+import styled from "styled-components";
 
 function Schedule_Modal({ tittle, description, Modalicon, ModaliconBlack }) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -11,13 +12,20 @@ function Schedule_Modal({ tittle, description, Modalicon, ModaliconBlack }) {
       backgroundColor: "#00000080",
     },
     content: {
-      width: "1200px",
-      height: "799px",
-      inset: "unset",
-      margin: "55vh auto",
-      padding: 0,
-      transform: "translateY(-50%)",
-      position: "relative",
+      width: "850px",
+      height: "550px",
+      zIndex: "150",
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      borderRadius: "8px",
+      boxShadow: "2px 2px 2px rgba(0, 0, 0, 0.25)",
+      backgroundColor: "white",
+      justifyContent: "center",
+      padding: "40px 35px",
+      paddingLeft: "80px",
+      overflow: "hidden",
     },
   };
 
@@ -41,7 +49,7 @@ function Schedule_Modal({ tittle, description, Modalicon, ModaliconBlack }) {
         </button>
 
         <div className="modal-wrapper">
-          <img className="Info_Icon" src={ModaliconBlack}></img>
+          <img className="Info_Icon" src={ModaliconBlack} alt="infoIcon"></img>
           <div className="Info_title">{tittle}</div>
           <div className="Info_descrip">
             <p>{description}</p>

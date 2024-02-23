@@ -37,6 +37,16 @@ function Schedule() {
     setisOn(!isOn);
   };
 
+  window.onload = function() {
+
+    setTimeout (function () {
+    
+    window.scrollTo(0,0);
+    
+    },100);
+    
+    }
+
   return (
     <>
       {id === "first" ? <ScheduleHeader /> : <About_Header />}
