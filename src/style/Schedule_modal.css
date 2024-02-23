@@ -47,18 +47,18 @@
 /*Modal Icon이 들어갈 자리*/
 .modal-wrapper .Info_Icon {
   height: 50px;
-  width: 55px;
+  width: 45px;
 }
 
 .modal-wrapper .Info_title {
   font-family: "EsaManru";
   padding-top: 55px;
-  font-size: 57px;
+  font-size: 45px;
 }
 
 .modal-wrapper .Info_descrip {
   font-family: "Pretendard-Regular";
   white-space: pre-wrap;
   padding-top: 55px;
-  font-size: 41px;
+  font-size: 31px;
 }
