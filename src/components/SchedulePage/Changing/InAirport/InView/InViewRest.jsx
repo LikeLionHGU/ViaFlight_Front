@@ -101,35 +101,42 @@ export default function Rest() {
         </RestBtn>
       </RestBtnContainer>
       <div>
-        {hotelData?.map(
-          (item, index) =>
-            index < 3 && (
-              <InViewCard
-                key={item.restName}
-                imageURL={item.imageURL}
-                name={item.ShoppingName}
-                businessHours={item.businessHours}
-                location={item.location}
-                information={item.information}
-                blog={item.blog}
-                index={index}
-              />
-            )
-        )}
-        {loungeData?.map(
-          (item, index) =>
-            index < 3 && (
-              <InViewCard
-                key={item.restName}
-                imageURL={item.imageURL}
-                name={item.ShoppingName}
-                businessHours={item.businessHours}
-                location={item.location}
-                information={item.information}
-                blog={item.blog}
-                index={index}
-              />
-            )
+        {inHotel ? (
+          <div>
+            {hotelData?.map(
+              (item, index) =>
+                index < 3 && (
+                  <InViewCard
+                    key={item.restName}
+                    imageURL={item.imageURL}
+                    name={item.ShoppingName}
+                    businessHours={item.businessHours}
+                    location={item.location}
+                    information={item.information}
+                    blog={item.blog}
+                    index={index}
+                  />
+                )
+            )}
+          </div>
+        ) : (
+          <div>
+            {loungeData?.map(
+              (item, index) =>
+                index < 3 && (
+                  <InViewCard
+                    key={item.restName}
+                    imageURL={item.imageURL}
+                    name={item.ShoppingName}
+                    businessHours={item.businessHours}
+                    location={item.location}
+                    information={item.information}
+                    blog={item.blog}
+                    index={index}
+                  />
+                )
+            )}
+          </div>
         )}
       </div>
     </StyleContainer>
