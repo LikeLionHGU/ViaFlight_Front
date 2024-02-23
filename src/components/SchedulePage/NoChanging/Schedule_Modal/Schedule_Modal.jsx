@@ -2,23 +2,19 @@ import { React, useState } from "react";
 import Modal from "react-modal";
 import "../../../../style/Schedule_modal.css";
 
-import Shower_Icon from "../../../../img/shower.svg";
-
-function Schedule_Modal({ showerFacilities }) {
-  //추후에 props로 넘겨받을 데이터 저장하는 변수들
-  const title = "SHOWER FACILITIES";
-  const [modalIsOpen, setModalIsOpen] = useState(false); //modal이 클릭 되었는지 확인하는 변수
+function Schedule_Modal({ tittle, description, Modalicon, ModaliconBlack }) {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const customStyles = {
     overlay: {
       zIndex: 1000,
-      backgroundColor: "#00000070",
+      backgroundColor: "#00000080",
     },
     content: {
-      width: "892px",
-      height: "594px",
+      width: "1200px",
+      height: "799px",
       inset: "unset",
-      margin: "50vh auto",
+      margin: "55vh auto",
       padding: 0,
       transform: "translateY(-50%)",
       position: "relative",
@@ -29,12 +25,7 @@ function Schedule_Modal({ showerFacilities }) {
     <div className="list-container">
       {/* Before Modal, <div> */}
       <div className="rect3" onClick={() => setModalIsOpen(true)}>
-        {/*클릭시 Modal open*/}
-        <img
-          src={Shower_Icon}
-          alt="  ICON이 들어갈 자리 
-"
-        ></img>
+        <img src={Modalicon} alt=" ICON이 들어갈 자리 "></img>
       </div>
       {/* After Modal(Modal 화면) */}
       <Modal
@@ -42,14 +33,18 @@ function Schedule_Modal({ showerFacilities }) {
         onRequestClose={() => setModalIsOpen(false)}
         style={customStyles}
       >
-        <div className="closeBtn">
-          <button onClick={() => setModalIsOpen(false)}></button>
-        </div>
+        <button
+          onClick={() => setModalIsOpen(false)}
+          className="closeBtn_container"
+        >
+          <div className="closeBtn"> </div>
+        </button>
+
         <div className="modal-wrapper">
-          <div className="Info_Icon"></div>
-          <div className="Info_title">{title}</div>
+          <img className="Info_Icon" src={ModaliconBlack}></img>
+          <div className="Info_title">{tittle}</div>
           <div className="Info_descrip">
-            <p>{showerFacilities}</p>
+            <p>{description}</p>
           </div>
         </div>
       </Modal>
