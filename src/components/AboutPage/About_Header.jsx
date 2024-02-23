@@ -6,8 +6,15 @@ import { Link } from "react-router-dom";
 import S_header_Logo from "../../img/About_header_Logo.png";
 import S_Earth_Icon from "../../img/About_Earth_Icon.png";
 import S_Navigation_bar from "../../img/About_Navigation_Bar_Line.png";
+import styled from "styled-components";
 
 // Header BTN 영역(Button 역할)
+
+const AboutNaviBar = styled.div`
+  padding: 0 65px;
+  background-color: rgba(255, 255, 255, 0.3);
+  /* backdrop-filter: blur(15px); */
+`;
 
 function Header() {
   const scrollToTop = () => {
@@ -28,7 +35,7 @@ function Header() {
   }
 
   return (
-    <div className="header_sticky" style={{ backdropFilter: "blur(15px)" }}>
+    <div className="header_sticky">
       <div className="header">
         {/* Header BTN 부분 */}
 
@@ -42,8 +49,13 @@ function Header() {
               alt="via-flight-logo"
             ></img>
           </div>
-          <Link to={`/`} className="ticket_link" style={{ color: "#F4F0E7" }} onClick={scrollToTop}>
-            <div className="ticket_text"> <strong>내 경유지 조회</strong></div>
+          <Link
+            to={`/`}
+            className="ticket_link"
+            style={{ color: "#F4F0E7" }}
+            onClick={scrollToTop}
+          >
+            <div className="ticket_text">내 경유지 조회</div>
           </Link>
 
           <Link
@@ -52,7 +64,9 @@ function Header() {
             style={{ color: "#F4F0E7" }}
             onClick={scrollToTop}
           >
-            <div className="schedule_text" style={{fontWeight: "300"}}>맞춤형 여행 일정</div>
+            <div className="schedule_text" style={{ fontWeight: "300" }}>
+              맞춤형 여행 일정
+            </div>
           </Link>
           <Link
             to={`/about`}
@@ -75,13 +89,14 @@ function Header() {
           </div>
         </div>
       </div>
-      <div
-        className="Navigation_bar_line_div"
-        style={{
-          backgroundImage: `url(${S_Navigation_bar})`,
-          margin: "0 65px",
-        }}
-      ></div>
+      <AboutNaviBar>
+        <div
+          className="Navigation_bar_line_div"
+          style={{
+            backgroundImage: `url(${S_Navigation_bar})`,
+          }}
+        ></div>
+      </AboutNaviBar>
     </div>
   );
 }

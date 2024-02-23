@@ -21,9 +21,6 @@ function Header() {
       behavior: "smooth",
     });
   };
-  const [colorCheck, setColor] = useState(true);
-
-  const savedColor = localStorage.getItem("Headercolor");
 
   // 위치 정보 받아오는 함수
   const [lat, setlat] = useState("");
@@ -51,7 +48,12 @@ function Header() {
               alt="via-flight-logo"
             ></img>
           </div>
-          <Link to={`/`} className="ticket_link" style={{ color: "#ec4d27" }}onClick={scrollToTop}>
+          <Link
+            to={`/`}
+            className="ticket_link"
+            style={{ color: "#ec4d27" }}
+            onClick={scrollToTop}
+          >
             <div className="ticket_text">내 경유지 조회</div>
           </Link>
 
@@ -63,15 +65,17 @@ function Header() {
             style={{ color: "#ec4d27" }}
             onClick={scrollToTop}
           >
-            <div className="schedule_text" style={{fontWeight: "100"}}>맞춤형 여행 일정</div>
+            <div className="schedule_text" style={{ fontWeight: "100" }}>
+              맞춤형 여행 일정
+            </div>
           </Link>
-          <Link
-            to={`/about`}
-            className="about_link"
-            style={{ color: !colorCheck ? "#2c6e49" : "#ec4d27" }}
-            onClick={scrollToTop}
-          >
-            <div className="about_text" style={{fontWeight: "500"}}>ABOUT US</div>
+          <Link to={`/about`} className="about_link" onClick={scrollToTop}>
+            <div
+              className="about_text"
+              style={{ fontWeight: "500", color: "#ec4d27" }}
+            >
+              ABOUT US
+            </div>
           </Link>
 
           <div className="location">
