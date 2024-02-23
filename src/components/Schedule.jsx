@@ -4,7 +4,7 @@ import OutAirport from "./SchedulePage/OutAirport";
 import ToggleBtn from "./SchedulePage/Changing/ToggleBtn";
 // import Header from "./layout/Header";
 import ScheduleHeader from "./SchedulePage/NoChanging/Schedule_Header";
-import About_Header from "./AboutPage/About_Header"; //��� header
+import AboutHeader from "./AboutPage/About_Header"; //��� header
 
 function Schedule() {
   const savedDTime = localStorage.getItem("durationTime");
@@ -37,26 +37,22 @@ function Schedule() {
     setisOn(!isOn);
   };
 
-  window.onload = function() {
-
-    setTimeout (function () {
-    
-    window.scrollTo(0,0);
-    
-    },100);
-    
-    }
+  window.onload = function () {
+    setTimeout(function () {
+      window.scrollTo(0, 0);
+    }, 100);
+  };
 
   return (
     <>
-      {id === "first" ? <ScheduleHeader /> : <About_Header />}
+      {id === "first" ? <ScheduleHeader /> : <AboutHeader />}
       {savedDTime > 4 ? (
         <ToggleBtn isOn={isOn} toggleHandler={toggleHandler} />
       ) : (
         <div></div>
       )}
 
-      {isOn ? <OutAirport /> : <InAirport />}
+      {isOn ? <OutAirport isOn={isOn} /> : <InAirport />}
     </>
   );
 }

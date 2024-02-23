@@ -6,12 +6,12 @@ import CigaretteIcon from "../../../../img/cigarette.svg";
 import CallIcon from "../../../../img/call.svg";
 import ShowerIcon from "../../../../img/shower.svg";
 import MedicineIcon from "../../../../img/medicine.svg";
-import Exchange from "../../../../img/Exchange_icon.png";
-import Luggage from "../../../../img/Luggage.png";
+import Exchange from "../../../../img/Exchange_icon.svg";
+import Luggage from "../../../../img/Luggage.svg";
 
 import { useState, useEffect } from "react";
 
-import Schedule_Modal from "../../NoChanging/Schedule_Modal/Schedule_Modal";
+import ScheduleModal from "../../NoChanging/Schedule_Modal/Schedule_Modal";
 
 import WifiB from "../../../../img/Wifi_black.png";
 import InfoB from "../../../../img/Info_black.png";
@@ -22,9 +22,10 @@ import ExchangeB from "../../../../img/Exhancge_black.png";
 import LuggageB from "../../../../img/Luggage_black.png";
 
 const Main = styled.div`
-  width: 250px;
+  width: 300px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
 
 // const Wifi = styled.img``;
@@ -61,7 +62,6 @@ export default function Simpleinfo_out() {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-
         setAirport(data.layoverAirport);
       });
   }
@@ -78,54 +78,54 @@ export default function Simpleinfo_out() {
       <Shower src={ShowerIcon} />
       <Medicine src={MedicineIcon} /> */}
 
-      <Schedule_Modal
+      <ScheduleModal
         tittle={infoAirport.wifiHeader}
         description={infoAirport.wifi}
         Modalicon={wifiIconbg}
         ModaliconBlack={wifiIconB}
-      ></Schedule_Modal>
+      ></ScheduleModal>
 
-      <Schedule_Modal
+      <ScheduleModal
         tittle={infoAirport.informationCenterHeader}
         description={infoAirport.informationCenter}
         Modalicon={infoIcon}
         ModaliconBlack={infoIconB}
-      ></Schedule_Modal>
+      ></ScheduleModal>
 
-      <Schedule_Modal
+      <ScheduleModal
         tittle={infoAirport.smokingHeader}
         description={infoAirport.smokingArea}
         Modalicon={CigarIcon}
         ModaliconBlack={CigarIconB}
-      ></Schedule_Modal>
+      ></ScheduleModal>
 
-      <Schedule_Modal
+      <ScheduleModal
         tittle={infoAirport.showerFcilitiesHeader}
         description={infoAirport.showerFacilities}
         Modalicon={showerIconbg}
         ModaliconBlack={ShowerIconB}
-      ></Schedule_Modal>
+      ></ScheduleModal>
 
-      <Schedule_Modal
+      <ScheduleModal
         tittle={infoAirport.clinicsPharmacies}
         description={infoAirport.pharmacy}
         Modalicon={PharmacyIcon}
         ModaliconBlack={PharmacyIconB}
-      ></Schedule_Modal>
+      ></ScheduleModal>
 
-      <Schedule_Modal
+      <ScheduleModal
         tittle={infoAirport.currencyExchangeHeader}
         description={infoAirport.currencyExchange}
         Modalicon={ExchangeIcon}
         ModaliconBlack={ExchangeIconB}
-      ></Schedule_Modal>
+      ></ScheduleModal>
 
-      <Schedule_Modal
+      <ScheduleModal
         tittle={infoAirport.luggageStorageHeader}
         description={infoAirport.luggageStorage}
         Modalicon={LuggageIcon}
         ModaliconBlack={LuggageIconB}
-      ></Schedule_Modal>
+      ></ScheduleModal>
     </Main>
   );
 }
