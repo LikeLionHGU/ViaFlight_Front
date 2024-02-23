@@ -53,7 +53,6 @@ const BlogBtn = styled.button`
 `;
 
 function InViewCard({
-  key,
   imageURL,
   name,
   businessHours,

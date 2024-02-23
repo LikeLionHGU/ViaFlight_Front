@@ -134,7 +134,7 @@ export default function Food() {
               (item, index) =>
                 index < 3 && (
                   <InViewCard
-                    key={item.mealName}
+                    key={item.mealName + item.location}
                     imageURL={item.imageURL}
                     name={item.mealName}
                     businessHours={item.businessHours}
@@ -152,7 +152,7 @@ export default function Food() {
               (item, index) =>
                 index < 3 && (
                   <InViewCard
-                    key={item.mealName}
+                    key={item.mealName + item.location}
                     imageURL={item.imageURL}
                     name={item.mealName}
                     businessHours={item.businessHours}
@@ -170,7 +170,7 @@ export default function Food() {
               (item, index) =>
                 index < 3 && (
                   <InViewCard
-                    key={item.mealName}
+                    key={item.mealName + item.location}
                     imageURL={item.imageURL}
                     name={item.mealName}
                     businessHours={item.businessHours}
