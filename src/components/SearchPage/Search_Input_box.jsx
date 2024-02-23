@@ -36,7 +36,7 @@ function Search_Input_box() {
   //입력 유효성 검사하는 함수 [LocalStorage]
   const OnCheckInput = (e) => {
     //[Case1, 입력이 없는 경우]
-
+console.log(savedATime);
     if (savedAirport === null && savedATime === null && savedDTime === null) {
       e.preventDefault();
       alert(

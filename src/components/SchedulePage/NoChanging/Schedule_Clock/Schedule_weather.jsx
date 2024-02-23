@@ -31,7 +31,6 @@ function Schedule_Weather() {
         setTemperature(data.current.temp_c);
         setIconPath(`https:${data.current.condition.icon}`);
         setCondition(data.current.condition.text);
-        console.log(data);
       });
 
     /* 날씨 Icon 적용 */

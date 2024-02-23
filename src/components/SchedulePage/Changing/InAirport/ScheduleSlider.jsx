@@ -72,7 +72,6 @@ export default function ScheduleSldier() {
       .then((response) => response.json())
       .then((data) => {
         setInfoAirport(data);
-        console.log(data);
       });
   }, []);
 
