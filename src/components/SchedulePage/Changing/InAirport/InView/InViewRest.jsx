@@ -108,8 +108,8 @@ export default function Rest() {
                 index < 3 && (
                   <InViewCard
                     key={item.restName + item.location}
+                    name={item.restName}
                     imageURL={item.imageURL}
-                    name={item.ShoppingName}
                     businessHours={item.businessHours}
                     location={item.location}
                     information={item.information}
@@ -126,8 +126,8 @@ export default function Rest() {
                 index < 3 && (
                   <InViewCard
                     key={item.restName + item.location}
+                    name={item.restName}
                     imageURL={item.imageURL}
-                    name={item.ShoppingName}
                     businessHours={item.businessHours}
                     location={item.location}
                     information={item.information}
