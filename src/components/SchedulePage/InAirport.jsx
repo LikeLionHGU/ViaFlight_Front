@@ -11,18 +11,10 @@ import Fadein from "../AboutPage/About_fadin"; //fadein ȿ��
 function InAirport() {
   return (
     <>
-      <Fadein>
-        <ScheduleBanner1 />
-      </Fadein>
-      <Fadein>
-        <ScheduleBanner2 />
-      </Fadein>
-      <Fadein>
-        <ScheduleGridGreen />
-      </Fadein>
-      <Fadein>
-        <ScheduleSlider />
-      </Fadein>
+      <ScheduleBanner1 />
+      <ScheduleBanner2 />
+      <ScheduleGridGreen />
+      <ScheduleSlider />
       <InTraffic />
       <InGuide />
     </>

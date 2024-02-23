@@ -84,17 +84,17 @@
 }
 
 .ticket_link {
-  padding-left: 360px;
+  margin-left: 360px;
 }
 
 .schedule_link {
-  padding-left: 190px;
+  margin-left: 190px;
 }
 .about_link {
-  padding-left: 175px;
+  margin-left: 175px;
 }
 .location {
-  padding-left: 260px;
+  margin-left: 260px;
 }
 
 .ticket_text,

@@ -6,8 +6,17 @@ import { Link } from "react-router-dom";
 import S_header_Logo from "../../../img/Schedule_header_Logo.png";
 import S_Earth_Icon from "../../../img/Schedule_Earth_Icon.png";
 import S_Navigation_bar from "../../../img/Schedule_Navigation_Bar_Line.png";
+import styled from "styled-components";
 
 // Header BTN 영역(Button 역할)
+const NaviBar = styled.div`
+  padding: 0 65px;
+  /* backdrop-filter: blur(15px); */
+`;
+
+const Main = styled.div`
+  backdrop-filter: blur(15px);
+`;
 
 function Header() {
   // 위치 정보 받아오는 함수
@@ -23,7 +32,10 @@ function Header() {
 
   return (
     <div className="header_sticky">
-      <div className="header">
+      <div
+        className="header"
+        style={{ background: "none", backdropFilter: "blur(15px)" }}
+      >
         {/* Header BTN 부분 */}
 
         {/* location색상 줄 수 있음 */}
@@ -67,12 +79,14 @@ function Header() {
           </div>
         </div>
       </div>
-      <div
-        className="Navigation_bar_line_div"
-        style={{
-          backgroundImage: `url(${S_Navigation_bar})`,
-        }}
-      ></div>
+      <NaviBar>
+        <div
+          className="Navigation_bar_line_div"
+          style={{
+            backgroundImage: `url(${S_Navigation_bar})`,
+          }}
+        ></div>
+      </NaviBar>
     </div>
   );
 }
