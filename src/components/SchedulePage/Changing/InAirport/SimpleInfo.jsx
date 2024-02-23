@@ -94,14 +94,14 @@ export default function SimpleInfo() {
       ></Schedule_Modal>
 
       <Schedule_Modal
-        tittle={infoAirport.showerFcilitiesHeader}
+        tittle={infoAirport.showerFacilitiesHeader}
         description={infoAirport.showerFacilities}
         Modalicon={showerIconbg}
         ModaliconBlack={ShowerIconB}
       ></Schedule_Modal>
 
       <Schedule_Modal
-        tittle={infoAirport.clinicsPharmacies}
+        tittle={infoAirport.clinicsPharmaciesHeader}
         description={infoAirport.pharmacy}
         Modalicon={PharmacyIcon}
         ModaliconBlack={PharmacyIconB}

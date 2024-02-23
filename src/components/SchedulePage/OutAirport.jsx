@@ -6,19 +6,16 @@ import OutMove from "./Changing/OutAirport/OutMove";
 import OutTraffic from "./Changing/OutAirport/OutTraffic";
 import OutGuide from "./Changing/OutAirport/OutGuide";
 
-
 export default function OutAirport() {
   return (
     <>
       <ScheduleBanner1 />
       <ScheduleBanner2 />
-      {/* <OutBanner2 /> */}
       <OutGreenGrid />
 
       <OutMove />
       <OutTraffic />
       <OutGuide />
-
     </>
   );
 }
