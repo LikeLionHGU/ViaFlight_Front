@@ -15,6 +15,7 @@ function App() {
         />
         <Route path={process.env.PUBLIC_URL + "/about"} element={<About />} />
       </Routes>
+
       <Footer />
     </Router>
   );
