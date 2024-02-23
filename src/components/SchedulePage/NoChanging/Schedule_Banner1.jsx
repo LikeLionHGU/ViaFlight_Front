@@ -9,7 +9,9 @@ function Schedule_Banner1() {
         <AboutFadin>
           <div className="Schedule_Frame_Header_text">
             <div className="text1">one of the best airports in the world</div>
-            <div className="text2">SINGAPORE CHANGI AIRPORT</div>
+            <div className="text2">
+              SINGAPORE <br /> CHANGI AIRPORT
+            </div>
           </div>
         </AboutFadin>
       </div>
