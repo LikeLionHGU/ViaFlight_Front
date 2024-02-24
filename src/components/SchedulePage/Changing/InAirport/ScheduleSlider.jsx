@@ -106,7 +106,7 @@ export default function ScheduleSldier() {
         speed={3000} // 슬라이드 이동 속도
         // loopedSlides={1}
         loopAdditionalSlides={true}
-        autoplay={{ delay: 3000, disableOnInteraction: false }} // 자동 이동
+        autoplay={{ delay: 2000, disableOnInteraction: false }} // 자동 이동
         slideToClickedSlide={true} // 슬라이드 클릭 시 이동
         className="schedule_swiper"
       >
