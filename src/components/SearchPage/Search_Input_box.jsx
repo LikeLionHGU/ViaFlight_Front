@@ -90,6 +90,7 @@ function Search_Input_box() {
           placeholder="경유 공항"
           value={airport}
           onChange={onAirport}
+          style={{ fontSize: "20px" }}
         ></input>
 
         <datalist id="airport">
@@ -104,6 +105,7 @@ function Search_Input_box() {
           type="time"
           value={arrivalTime}
           onChange={onATime}
+          style={{ fontSize: "20px" }}
         ></input>
 
         <input
@@ -114,6 +116,7 @@ function Search_Input_box() {
           value={durationTime}
           onChange={onDTime}
           placeholder="경유시간"
+          style={{ fontSize: "20px" }}
         ></input>
 
         <Link to={`/schedule`} style={{ textDecoration: "none" }}>
