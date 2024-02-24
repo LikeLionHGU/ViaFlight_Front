@@ -6,11 +6,11 @@ import OutMove from "./Changing/OutAirport/OutMove";
 import OutTraffic from "./Changing/OutAirport/OutTraffic";
 import OutGuide from "./Changing/OutAirport/OutGuide";
 
-export default function OutAirport() {
+export default function OutAirport({ isOn }) {
   return (
     <>
       <ScheduleBanner1 />
-      <ScheduleBanner2 />
+      <ScheduleBanner2 isOn={isOn} />
       <OutGreenGrid />
 
       <OutMove />

@@ -1,19 +1,20 @@
 import React from "react";
 import "../../../style/Schedule_Banner2.css";
 import SimpleInfo from "../Changing/InAirport/InSimpleInfo";
-import Schedule_Timebox from "./Schedule_Clock/Schedule_Timebox";
+import ScheduleTimebox from "./Schedule_Clock/Schedule_Timebox";
+import SimpleinfoOut from "../Changing/OutAirport/Simpleinfo_out";
 
-function Schedule_Banner2() {
+function Schedule_Banner2({ isOn }) {
   return (
     <>
       <div className="Schedule_Frame_Banner">
         <div className="Schedule_Frame_Banner_infoBox">
           {/* sticky 효과를 위한 div */}
           <div className="Schedule_Frame_Banner_Icons">
-            <SimpleInfo />
+            {isOn ? <SimpleinfoOut /> : <SimpleInfo />}
           </div>
           <div className="Schedule_Frame_Banner_infoWeather">
-            <Schedule_Timebox /> {/*시간 정보*/}
+            <ScheduleTimebox /> {/*시간 정보*/}
           </div>
         </div>
       </div>
