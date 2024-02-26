@@ -1,9 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import styled from "styled-components";
 import WifiIcon from "../../../../img/wifi.svg";
 import InfoIcon from "../../../../img/info.svg";
 import CigaretteIcon from "../../../../img/cigarette.svg";
-import CallIcon from "../../../../img/call.svg";
 import ShowerIcon from "../../../../img/shower.svg";
 import MedicineIcon from "../../../../img/medicine.svg";
 
@@ -26,7 +26,7 @@ const Main = styled.div`
 
 const IconContainer = styled.div`
   cursor: pointer;
-`
+`;
 // const Wifi = styled.img``;
 // const Info = styled.img``;
 // const Cigarette = styled.img``;
@@ -57,7 +57,6 @@ export default function SimpleInfo() {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-
         setAirport(data.layoverAirport);
       });
   }
@@ -76,47 +75,44 @@ export default function SimpleInfo() {
 
       {/*API연결*/}
       <IconContainer>
-      <ScheduleModal
-        tittle={infoAirport.wifiHeader}
-        description={infoAirport.wifi}
-        Modalicon={wifiIconbg}
-        ModaliconBlack={wifiIconB}
-      ></ScheduleModal>
-</IconContainer>
-<IconContainer>
-
-      <ScheduleModal
-        tittle={infoAirport.informationCenterHeader}
-        description={infoAirport.informationCenter}
-        Modalicon={infoIcon}
-        ModaliconBlack={infoIconB}
-      ></ScheduleModal>
-</IconContainer>
-<IconContainer>
-
-      <ScheduleModal
-        tittle={infoAirport.smokingHeader}
-        description={infoAirport.smokingArea}
-        Modalicon={CigarIcon}
-        ModaliconBlack={CigarIconB}
-      ></ScheduleModal>
+        <ScheduleModal
+          tittle={infoAirport.wifiHeader}
+          description={infoAirport.wifi}
+          Modalicon={wifiIconbg}
+          ModaliconBlack={wifiIconB}
+        ></ScheduleModal>
       </IconContainer>
       <IconContainer>
-
-      <ScheduleModal
-        tittle={infoAirport.showerFacilitiesHeader}
-        description={infoAirport.showerFacilities}
-        Modalicon={showerIconbg}
-        ModaliconBlack={ShowerIconB}
-      ></ScheduleModal>
+        <ScheduleModal
+          tittle={infoAirport.informationCenterHeader}
+          description={infoAirport.informationCenter}
+          Modalicon={infoIcon}
+          ModaliconBlack={infoIconB}
+        ></ScheduleModal>
       </IconContainer>
       <IconContainer>
-      <ScheduleModal
-        tittle={infoAirport.clinicsPharmaciesHeader}
-        description={infoAirport.pharmacy}
-        Modalicon={PharmacyIcon}
-        ModaliconBlack={PharmacyIconB}
-      ></ScheduleModal>
+        <ScheduleModal
+          tittle={infoAirport.smokingHeader}
+          description={infoAirport.smokingArea}
+          Modalicon={CigarIcon}
+          ModaliconBlack={CigarIconB}
+        ></ScheduleModal>
+      </IconContainer>
+      <IconContainer>
+        <ScheduleModal
+          tittle={infoAirport.showerFacilitiesHeader}
+          description={infoAirport.showerFacilities}
+          Modalicon={showerIconbg}
+          ModaliconBlack={ShowerIconB}
+        ></ScheduleModal>
+      </IconContainer>
+      <IconContainer>
+        <ScheduleModal
+          tittle={infoAirport.clinicsPharmaciesHeader}
+          description={infoAirport.pharmacy}
+          Modalicon={PharmacyIcon}
+          ModaliconBlack={PharmacyIconB}
+        ></ScheduleModal>
       </IconContainer>
     </Main>
   );

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../../style/header.css";
 import { Link } from "react-router-dom";
 import header_Logo from "../../img/header_logo.png";
@@ -81,7 +81,7 @@ function Header() {
           <div className="location">
             {navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError)}
             <div className="location_icon">
-              <img src={Earth_Icon}></img>
+              <img src={Earth_Icon} alt="img"></img>
             </div>
             <div className="location_text">
               {typeof lat === "number" ? lat.toFixed(4) : ""}° N,

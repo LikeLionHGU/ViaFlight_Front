@@ -1,20 +1,20 @@
 import React from "react";
 import "../../style/about_banner.css";
 
-import About_fadin from "./About_fadin";
+import AboutFadin from "./About_fadin";
 
 function About_banner() {
   return (
     <div className="about_Banner">
-      <About_fadin>
+      <AboutFadin>
         <div className="about_Banner_tittle">
           <div>VIA</div>
           <div>FLIGHT</div>
           <div>A TO Z</div>
         </div>
-      </About_fadin>
+      </AboutFadin>
 
-      <About_fadin>
+      <AboutFadin>
         <div className="banner_box">
           <div className="about_Banner_text">
             <div>여행의 시작과 끝</div>
@@ -22,7 +22,7 @@ function About_banner() {
           </div>
           <div className="imgBox"></div>
         </div>
-      </About_fadin>
+      </AboutFadin>
 
       <div className="about_Banner_picture"></div>
     </div>

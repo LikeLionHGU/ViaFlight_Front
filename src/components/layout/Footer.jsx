@@ -65,24 +65,23 @@ const UnderLine = styled.div`
 
 const ToLink = styled.div`
   cursor: pointer;
-`
+`;
 
 function Footer() {
   const ToInsta = () => {
-    window.open("https://www.instagram.com/via_flight/")
-  }
+    window.open("https://www.instagram.com/via_flight/");
+  };
   const ToFaceBook = () => {
-    window.open("https://www.facebook.com/profile.php?id=61556486139944")
-  }
+    window.open("https://www.facebook.com/profile.php?id=61556486139944");
+  };
   const ToBlog = () => {
-    window.open("https://blog.naver.com/via_flight")
-  }
+    window.open("https://blog.naver.com/via_flight");
+  };
   return (
     <StyleContainer>
       <Fadein>
         <Above>
           <img src={FooterLogo} alt="logo" style={{ paddingRight: "15%" }} />
-          
         </Above>
         <Below>
           <BelowOver>

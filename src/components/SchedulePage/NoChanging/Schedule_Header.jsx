@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../../../style/header.css";
 import { Link } from "react-router-dom";
 
@@ -12,10 +12,6 @@ import styled from "styled-components";
 const NaviBar = styled.div`
   padding: 0 65px;
   /* backdrop-filter: blur(15px); */
-`;
-
-const Main = styled.div`
-  backdrop-filter: blur(15px);
 `;
 
 function Header() {
@@ -54,7 +50,12 @@ function Header() {
               alt="via-flight-logo"
             ></img>
           </div>
-          <Link to={`/`} className="ticket_link" style={{ color: "#2c6e49" }} onClick={scrollToTop}>
+          <Link
+            to={`/`}
+            className="ticket_link"
+            style={{ color: "#2c6e49" }}
+            onClick={scrollToTop}
+          >
             <div className="ticket_text">내 경유지 조회</div>
           </Link>
 
@@ -78,7 +79,7 @@ function Header() {
           <div className="location">
             {navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError)}
             <div className="location_icon">
-              <img src={S_Earth_Icon}></img>
+              <img src={S_Earth_Icon} alt="img"></img>
             </div>
             <div className="location_text">
               {typeof lat === "number" ? lat.toFixed(4) : ""}° N,

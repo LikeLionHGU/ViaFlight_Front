@@ -1,19 +1,19 @@
 import React from "react";
 import "../../../../style/Schedule_Banner2.css";
-import SimpleInfo_out from "./Simpleinfo_out";
-import Schedule_Timebox from "../../NoChanging/Schedule_Clock/Schedule_Timebox";
+import SimpleInfoOut from "./Simpleinfo_out";
+import ScheduleTimebox from "../../NoChanging/Schedule_Clock/Schedule_Timebox";
 
 function OutBanner2() {
   return (
     <>
       <div className="Schedule_Frame_Banner">
         <div className="Schedule_Frame_Banner_infoBox">
-          {/* sticky È¿°ú¸¦ À§ÇÑ div */}
+          {/* sticky È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ div */}
           <div className="Schedule_Frame_Banner_Icons">
-            <SimpleInfo_out />
+            <SimpleInfoOut />
           </div>
           <div className="Schedule_Frame_Banner_infoWeather">
-            <Schedule_Timebox /> {/*½Ã°£ Á¤º¸*/}
+            <ScheduleTimebox /> {/*ï¿½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½*/}
           </div>
         </div>
       </div>

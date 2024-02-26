@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../style/Search_Banner.css";
 import scroll_Icon from "../../img/scrolldown_icon.png";
 
@@ -47,7 +47,7 @@ function Search_Banner() {
               height={16}
               alt="img"
             ></img>
-            </Fadein>
+          </Fadein>
         </div>
         <div className="bg_balance"></div>
       </div>

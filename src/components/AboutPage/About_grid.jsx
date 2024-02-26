@@ -1,9 +1,7 @@
 import React from "react";
 import "../../style/about_grid.css";
 import { Link } from "react-router-dom";
-import About_fadin from "./About_fadin";
-import Explore from "../../img/About-free-icon-exploring.png";
-import Passion from "../../img/About-free-icon-passion.png";
+import AboutFadin from "./About_fadin";
 
 import About1_Img from "../../img/AboutImg/About1.png";
 import About2_Img from "../../img/AboutImg/About2.png";
@@ -19,7 +17,7 @@ function About_grid() {
   return (
     <div className="about_Grid">
       <div className="about_Grid1">
-        <About_fadin>
+        <AboutFadin>
           <div className="about_Grid1_description">
             <div>
               Via Flight은 경유 여행의 불편함과 두려움을 해결하기 위해 탄생한
@@ -55,18 +53,18 @@ function About_grid() {
               </span>
             </div>
           </div>
-        </About_fadin>
+        </AboutFadin>
       </div>
 
       {/*Grid2*/}
       <div className="about_Grid2">
-        <About_fadin>
+        <AboutFadin>
           <div className="about_Grid2_tittle">THE THREE E’S</div>
-        </About_fadin>
+        </AboutFadin>
 
-        <About_fadin>
+        <AboutFadin>
           <div className="about_Grid2_topic">
-            <img src={About3_Img} className="Grid2_img"></img>
+            <img src={About3_Img} className="Grid2_img" alt="img"></img>
             <div className="topic_text">
               <div className="topic_title">
                 <div className="topic_title_num">1</div>
@@ -82,11 +80,16 @@ function About_grid() {
               </div>
             </div>
             {/* display 간격을 위한 dummy값*/}
-            <img src={About2_Img} className="Grid2_img" id="Grid_img2"></img>
+            <img
+              src={About2_Img}
+              className="Grid2_img"
+              id="Grid_img2"
+              alt="img"
+            ></img>
           </div>
-        </About_fadin>
+        </AboutFadin>
 
-        <About_fadin>
+        <AboutFadin>
           <div className="about_Grid2_topic">
             <div className="topic_text">
               <div className="topic_title">
@@ -119,9 +122,14 @@ function About_grid() {
               </div>
             </div>
 
-            <img src={About1_Img} className="Grid2_img" id="Grid_img1"></img>
+            <img
+              src={About1_Img}
+              className="Grid2_img"
+              id="Grid_img1"
+              alt="img"
+            ></img>
           </div>
-        </About_fadin>
+        </AboutFadin>
 
         <div className="BtnContainer">
           <Link to={"/"} className="Btn" onClick={scrollToTop}>

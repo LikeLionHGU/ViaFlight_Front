@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react/jsx-pascal-case */
 import styled from "styled-components";
 import InTrainImg from "../../../../../img/SkyTrain.svg";
 import InBusImg from "../../../../../img/Bus.svg";
@@ -39,10 +41,6 @@ const Right = styled.div`
   font-size: 18px;
   display: flex;
   justify-content: flex-end;
-`;
-
-const InTrafficImg = styled.img`
-  padding-bottom: 15px;
 `;
 
 const InTrainCard = styled.div`

@@ -1,7 +1,6 @@
 import { React, useState } from "react";
 import Modal from "react-modal";
 import "../../../../style/Schedule_modal.css";
-import styled from "styled-components";
 
 function Schedule_Modal({ tittle, description, Modalicon, ModaliconBlack }) {
   const [modalIsOpen, setModalIsOpen] = useState(false);

@@ -1,6 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
-
-
 
 function Schedule_Weather() {
   const [Temp, setTemperature] = useState(""); //기온!
@@ -8,7 +7,6 @@ function Schedule_Weather() {
   const [Weather_Condition_text, setCondition] = useState("");
 
   /*날씨 변수*/
-  
 
   function onGeoOk(position) {
     const lat = position.coords.latitude; // 위도 정보 추출
@@ -46,7 +44,11 @@ function Schedule_Weather() {
 
   return (
     <>
-      <img style={{width: "30px"}} src={Weather_Icon_path} alt="weateher"></img>
+      <img
+        style={{ width: "30px" }}
+        src={Weather_Icon_path}
+        alt="weateher"
+      ></img>
       <div>{Temp} °C</div>
     </>
   );

@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-pascal-case */
+/* eslint-disable react-hooks/exhaustive-deps */
 import styled from "styled-components";
 import AboutFadin from "../../../AboutPage/About_fadin";
 import TrainIcon from "../../../../img/SkyTrain.svg";
@@ -63,12 +65,6 @@ const Card = styled.div`
     opacity: 1;
   }
 `;
-
-const Train = styled.img``;
-const Taxi = styled.img``;
-const Shuttle = styled.img``;
-const PublicBus = styled.img``;
-const AirportTransfer = styled.img``;
 
 export default function OutTraffic() {
   const viaAirport = localStorage.getItem("viaAirport");

@@ -6,8 +6,6 @@ import ScheduleSlider from "./Changing/InAirport/ScheduleSlider";
 import InTraffic from "./Changing/InAirport/InView/InTraffic";
 import InGuide from "./Changing/InAirport/InGuide";
 
-import Fadein from "../AboutPage/About_fadin"; //fadein ȿ��
-
 function InAirport() {
   return (
     <>

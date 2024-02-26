@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import "../../style/banner.css";
@@ -18,7 +18,7 @@ const Border = styled.div`
 const Above = styled.div`
   display: flex;
   flex-direction: column;
-`
+`;
 
 function Banner() {
   //입력이 하나도 없는 경우 [Case2, 입력이 하나도 없는 경우 ]
@@ -29,16 +29,16 @@ function Banner() {
         <Border className="about">
           <div className="AboutBox">
             <Above>
-            <Fadein>
-              <div className="About1">
-                <div>여행의 시작과 끝</div>
-                <div>"모든 순간이 의미 있게"</div>
-              </div>
+              <Fadein>
+                <div className="About1">
+                  <div>여행의 시작과 끝</div>
+                  <div>"모든 순간이 의미 있게"</div>
+                </div>
 
-              <div className="About2">
-                Via Flight와 함께라면 경유지도 특별한 여행지입니다
-              </div>
-            </Fadein>
+                <div className="About2">
+                  Via Flight와 함께라면 경유지도 특별한 여행지입니다
+                </div>
+              </Fadein>
             </Above>
             <Fadein>
               {/*about-paige에 연결*/}

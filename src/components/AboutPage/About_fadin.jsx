@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../../style/about_fadein.css";
 
 function About_fadin(props) {
