@@ -56,5 +56,3 @@ function Search_Banner() {
 }
 
 export default Search_Banner;
-
-//

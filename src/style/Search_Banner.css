@@ -87,7 +87,8 @@
   height: 961px;
   /* height: 100%; */
   background-image: url("../img/Mainimage.png");
-  /* background-size: cover; */
+  background-size: fill;
+
   color: #ec4d27;
 }
 
@@ -113,7 +114,7 @@
     font-family: "EsaManru";
 
     width: fit-content;
-    font-size: 200px; /*236px*/ /* #기준: [] */
+    font-size: 180px; /*236px*/ /* #기준: [] */
     font-weight: 700;
     line-height: 190px;
   }
