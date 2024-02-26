@@ -4,7 +4,7 @@
 경유 공항, 경유 시간에 기반하여 맞춤형 여행 일정과 공항 이용 정보를 제공받아, 경유 시간을 보다 효율적이고 즐겁게 보내자!
 
 ## 🖥️ 배포 주소
-viaflight.netlify.app/
+<a href="https://viaflight.netlify.app/">Via Flight</a>
 
 ## 🕰️ 개발 기간
 * 24.02.07 ~ ??.??.??
