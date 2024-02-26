@@ -41,12 +41,8 @@ function Header() {
         {/* location색상 줄 수 있음 */}
         <div className="header-BTN" style={{ color: "#ec4d27" }}>
           {/* Header Logo 부분 */}
-          <div className="header_logo">
-            <img
-              className="img_logo"
-              src={header_Logo}
-              alt="via-flight-logo"
-            ></img>
+          <div className="img_logo">
+            <img src={header_Logo} alt="via-flight-logo"></img>
           </div>
           <Link
             to={`/`}
