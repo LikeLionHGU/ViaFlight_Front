@@ -17,7 +17,6 @@ const TitleCover = styled.div`
   font-weight: 100;
 `;
 const Title = styled.div`
-  white-space: nowrap;
   margin: 0 30px;
   text-align: center;
 `;
