@@ -181,11 +181,11 @@ function Slider() {
           breakpoints={{
             0: {
               slidesPerView: 3.5,
-              spaceBetween: 0,
+              spaceBetween: 10,
             },
             900: {
               slidesPerView: 3.5,
-              spaceBetween: 0,
+              spaceBetween: 10,
             },
           }}
           // freeMode={true} // 자유로운가
@@ -193,7 +193,7 @@ function Slider() {
           speed={3000} // 슬라이드 이동 속도
           // loopedSlides={1}
           loopAdditionalSlides={true}
-          autoplay={{ delay: 3000, disableOnInteraction: false }} // 자동 이동
+          autoplay={{ delay: 2000, disableOnInteraction: false }} // 자동 이동
           slidesOffsetBefore={65} // 슬라이드 출발 지점에 빈 공간
           slideToClickedSlide={true} // 슬라이드 클릭 시 이동
           className="swiper"
