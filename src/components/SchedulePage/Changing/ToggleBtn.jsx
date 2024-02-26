@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styled from "styled-components";
 import Airplane from "../../../img/airplane icon.svg";
 import "../../../font/font.css";

@@ -3,7 +3,6 @@ import styled from "styled-components";
 import WifiIcon from "../../../../img/wifi.svg";
 import InfoIcon from "../../../../img/info.svg";
 import CigaretteIcon from "../../../../img/cigarette.svg";
-import CallIcon from "../../../../img/call.svg";
 import ShowerIcon from "../../../../img/shower.svg";
 import MedicineIcon from "../../../../img/medicine.svg";
 import Exchange from "../../../../img/Exchange_icon.svg";
@@ -68,6 +67,7 @@ export default function Simpleinfo_out() {
 
   useEffect(() => {
     getAirport();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

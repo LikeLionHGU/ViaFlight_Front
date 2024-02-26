@@ -1,6 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore from "swiper";
 import "swiper/css";
 import "../../../../style/SchduleSlider.css";
 import "../../../../font/font.css";
@@ -12,12 +12,6 @@ const Main = styled.div`
   background-color: black;
   color: rgba(255, 255, 255, 1);
 
-  display: flex;
-  padding: 130px 0;
-  padding-left: 4.5%;
-`;
-
-const StyleContainer = styled.div`
   display: flex;
   padding: 130px 0;
   padding-left: 4.5%;

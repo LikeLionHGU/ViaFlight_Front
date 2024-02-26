@@ -1,7 +1,7 @@
+/* eslint-disable no-multi-str */
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../style/Search_Input_box.css";
-import Fadein from "../AboutPage/About_fadin";
 
 function Search_Input_box() {
   const [airport, setAirport] = useState(""); // 경유공항 이름
