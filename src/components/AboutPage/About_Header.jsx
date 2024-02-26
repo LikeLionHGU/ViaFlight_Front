@@ -80,7 +80,7 @@ function Header() {
           <div className="location">
             {navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError)}
             <div className="location_icon">
-              <img src={S_Earth_Icon}></img>
+              <img src={S_Earth_Icon} alt="img"></img>
             </div>
             <div className="location_text">
               {typeof lat === "number" ? lat.toFixed(4) : ""}° N,
