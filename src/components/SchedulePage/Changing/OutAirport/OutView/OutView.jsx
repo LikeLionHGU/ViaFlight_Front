@@ -118,6 +118,8 @@ export default function View() {
   // const url = `https://api.zionhann.shop/app/viaflight/layover-airport-out?layoverAirportName=${savedAirport}&layoverArrivalTime=${savedATime}&layoverTime=${savedDTime}`;
   const url = `http://223.130.142.119:8080/layover-airport-out?layoverAirportName=${savedAirport}&layoverArrivalTime=${savedATime}&layoverTime=${savedDTime}`;
 
+  console.log(savedAirport, savedATime, savedDTime);
+
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
