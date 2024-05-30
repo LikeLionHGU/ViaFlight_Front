@@ -67,7 +67,7 @@ function Search_Input_box() {
     }
 
     //창이 공항 이외 정보 입력을 넣는 경우
-    if (airport !== "싱가포르 창이 공항(SIN)") {
+    if (airport !== "싱가포르창이공항(SIN)") {
       e.preventDefault();
 
       alert(`${airport} 정보는  준비중입니다:)`);
