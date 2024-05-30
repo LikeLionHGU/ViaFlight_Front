@@ -115,7 +115,8 @@ export default function View() {
 
   const [infoAirport, setInfoAirport] = useState([]);
 
-  const url = `https://api.zionhann.shop/app/viaflight/layover-airport-out?layoverAirportName=${savedAirport}&layoverArrivalTime=${savedATime}&layoverTime=${savedDTime}`;
+  // const url = `https://api.zionhann.shop/app/viaflight/layover-airport-out?layoverAirportName=${savedAirport}&layoverArrivalTime=${savedATime}&layoverTime=${savedDTime}`;
+  const url = `http://223.130.142.119:8080/layover-airport-out?layoverAirportName=${savedAirport}&layoverArrivalTime=${savedATime}&layoverTime=${savedDTime}`;
 
   useEffect(() => {
     fetch(url)
