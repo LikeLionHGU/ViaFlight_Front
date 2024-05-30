@@ -95,7 +95,7 @@ function Search_Input_box() {
 
         <datalist id="airport">
           {/* datalist # 공항 종류(선택 가능한)  */}
-          <option value="싱가포르 창이 공항(SIN)"></option>
+          <option value="싱가포르창이공항(SIN)"></option>
           <option value="나리타 국제 공항(NRT)"></option>
           <option value="두바이 국제 공항(DXB)"></option>
         </datalist>
