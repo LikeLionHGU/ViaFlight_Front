@@ -89,7 +89,7 @@ export default function OutTraffic() {
 
   function getAirport() {
     // const url = `https://api.zionhann.shop/app/viaflight/layover-airport?layoverAirportName=${viaAirport}&layoverArrivalTime=${arrivalTime}&layoverTime=${durationTime}`;
-    const url = `http://223.130.142.119:8080/layover-airport?layoverAirportName=${viaAirport}&layoverArrivalTime=${arrivalTime}&layoverTime=${durationTime}`;
+    const url = `http://local:8080/layover-airport?layoverAirportName=${viaAirport}&layoverArrivalTime=${arrivalTime}&layoverTime=${durationTime}`;
     fetch(url)
       .then((response) => response.json())
       .then((data) => {

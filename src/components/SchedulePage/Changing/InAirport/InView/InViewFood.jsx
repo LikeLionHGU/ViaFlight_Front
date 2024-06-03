@@ -49,7 +49,7 @@ export default function Food() {
   const [infoAirport, setInfoAirport] = useState([]);
 
   // const url = `https://api.zionhann.shop/app/viaflight/layover-airport-in?layoverAirportName=${savedAirport}&layoverArrivalTime=${savedATime}&layoverTime=${savedDTime}`;
-  const url = `http://223.130.142.119:8080/layover-airport-in?layoverAirportName=${savedAirport}&layoverArrivalTime=${savedATime}&layoverTime=${savedDTime}`;
+  const url = `http://local:8080/layover-airport-in?layoverAirportName=${savedAirport}&layoverArrivalTime=${savedATime}&layoverTime=${savedDTime}`;
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
