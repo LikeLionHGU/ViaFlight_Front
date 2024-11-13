@@ -57,7 +57,7 @@ export default function Simpleinfo_out() {
   const LuggageIconB = LuggageB;
   function getAirport() {
     // const url = `http://api.zionhann.shop/app/viaflight/layover-airport?layoverAirportName=${viaAirport}&layoverArrivalTime=${arrivalTime}&layoverTime=${durationTime}`;
-    const url = `http://52.79.149.240:8080/layover-airport?layoverAirportName=${viaAirport}&layoverArrivalTime=${arrivalTime}&layoverTime=${durationTime}`;
+    const url = `https://52.79.149.240:8080/layover-airport?layoverAirportName=${viaAirport}&layoverArrivalTime=${arrivalTime}&layoverTime=${durationTime}`;
     fetch(url)
       .then((response) => response.json())
       .then((data) => {

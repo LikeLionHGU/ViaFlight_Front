@@ -48,7 +48,7 @@ export default function Rest() {
   const [infoAirport, setInfoAirport] = useState([]);
 
   // const url = `https://api.zionhann.shop/app/viaflight/layover-airport-in?layoverAirportName=${savedAirport}&layoverArrivalTime=${savedATime}&layoverTime=${savedDTime}`;
-  const url = `http://52.79.149.240:8080/layover-airport-in?layoverAirportName=${savedAirport}&layoverArrivalTime=${savedATime}&layoverTime=${savedDTime}`;
+  const url = `https://52.79.149.240:8080/layover-airport-in?layoverAirportName=${savedAirport}&layoverArrivalTime=${savedATime}&layoverTime=${savedDTime}`;
 
   useEffect(() => {
     fetch(url)

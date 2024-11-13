@@ -27,11 +27,6 @@ const Main = styled.div`
 const IconContainer = styled.div`
   cursor: pointer;
 `;
-// const Wifi = styled.img``;
-// const Info = styled.img``;
-// const Cigarette = styled.img``;
-// const Shower = styled.img``;
-// const Medicine = styled.img``;
 
 export default function SimpleInfo() {
   const viaAirport = localStorage.getItem("viaAirport");
@@ -54,10 +49,11 @@ export default function SimpleInfo() {
 
   function getAirport() {
     // const url = `https://api.zionhann.shop/app/viaflight/layover-airport?layoverAirportName=${viaAirport}&layoverArrivalTime=${arrivalTime}&layoverTime=${durationTime}`;
-    const url = `http://52.79.149.240:8080/layover-airport?layoverAirportName=${viaAirport}&layoverArrivalTime=${arrivalTime}&layoverTime=${durationTime}`;
+    const url = `https://52.79.149.240:8080/layover-airport?layoverAirportName=${viaAirport}&layoverArrivalTime=${arrivalTime}&layoverTime=${durationTime}`;
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         setAirport(data.layoverAirport);
       });
   }
